@@ -1471,6 +1471,92 @@
     <Content Include="libgcc_s_dw2-1.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="ManageUI\css\app.v2.css" />
+    <Content Include="ManageUI\css\landing.css" />
+    <Content Include="ManageUI\fonts\fontawesome-webfont.svg" />
+    <Content Include="ManageUI\images\app.png" />
+    <Content Include="ManageUI\images\avatar.jpg" />
+    <Content Include="ManageUI\images\avatar_default.jpg" />
+    <Content Include="ManageUI\images\logo.png" />
+    <Content Include="ManageUI\images\main.png" />
+    <Content Include="ManageUI\images\phone-1.png" />
+    <Content Include="ManageUI\images\phone-2.png" />
+    <Content Include="ManageUI\images\render-1.png" />
+    <Content Include="ManageUI\images\thumb_1.png" />
+    <Content Include="ManageUI\images\thumb_2.png" />
+    <Content Include="ManageUI\images\thumb_3.png" />
+    <Content Include="ManageUI\js\app.v2.js" />
+    <Content Include="ManageUI\js\appear\jquery.appear.js" />
+    <Content Include="ManageUI\js\apps\notes.js" />
+    <Content Include="ManageUI\js\calendar\bootstrap_calendar.css" />
+    <Content Include="ManageUI\js\calendar\bootstrap_calendar.js" />
+    <Content Include="ManageUI\js\calendar\demo.js" />
+    <Content Include="ManageUI\js\charts\easypiechart\jquery.easy-pie-chart.js" />
+    <Content Include="ManageUI\js\charts\flot\demo.js" />
+    <Content Include="ManageUI\js\charts\flot\jquery.flot.grow.js" />
+    <Content Include="ManageUI\js\charts\flot\jquery.flot.min.js" />
+    <Content Include="ManageUI\js\charts\flot\jquery.flot.orderBars.js" />
+    <Content Include="ManageUI\js\charts\flot\jquery.flot.pie.min.js" />
+    <Content Include="ManageUI\js\charts\flot\jquery.flot.resize.js" />
+    <Content Include="ManageUI\js\charts\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="ManageUI\js\charts\sparkline\jquery.sparkline.min.js" />
+    <Content Include="ManageUI\js\combodate\combodate.js" />
+    <Content Include="ManageUI\js\datatables\datatables.css" />
+    <Content Include="ManageUI\js\datatables\jquery.dataTables.min.js" />
+    <Content Include="ManageUI\js\datepicker\bootstrap-datepicker.js" />
+    <Content Include="ManageUI\js\datepicker\datepicker.css" />
+    <Content Include="ManageUI\js\file-input\bootstrap-filestyle.min.js" />
+    <Content Include="ManageUI\js\fuelux\demo.datagrid.js" />
+    <Content Include="ManageUI\js\fuelux\fuelux.css" />
+    <Content Include="ManageUI\js\fuelux\fuelux.js" />
+    <Content Include="ManageUI\js\fullcalendar\demo.js" />
+    <Content Include="ManageUI\js\fullcalendar\fullcalendar.css" />
+    <Content Include="ManageUI\js\fullcalendar\fullcalendar.min.js" />
+    <Content Include="ManageUI\js\fullcalendar\theme.css" />
+    <Content Include="ManageUI\js\grid\gallery.css" />
+    <Content Include="ManageUI\js\grid\gallery.js" />
+    <Content Include="ManageUI\js\grid\jquery.grid-a-licious.min.js" />
+    <Content Include="ManageUI\js\ie\excanvas.js" />
+    <Content Include="ManageUI\js\ie\html5shiv.js" />
+    <Content Include="ManageUI\js\ie\respond.min.js" />
+    <Content Include="ManageUI\js\intro\demo.js" />
+    <Content Include="ManageUI\js\intro\intro.min.js" />
+    <Content Include="ManageUI\js\intro\introjs.css" />
+    <Content Include="ManageUI\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="ManageUI\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="ManageUI\js\landing.js" />
+    <Content Include="ManageUI\js\libs\backbone-min.js" />
+    <Content Include="ManageUI\js\libs\backbone.localStorage-min.js" />
+    <Content Include="ManageUI\js\libs\moment.min.js" />
+    <Content Include="ManageUI\js\libs\underscore-min.js" />
+    <Content Include="ManageUI\js\maps\demo.js" />
+    <Content Include="ManageUI\js\maps\gmaps.js" />
+    <Content Include="ManageUI\js\markdown\demo.js" />
+    <Content Include="ManageUI\js\markdown\epiceditor.min.js" />
+    <Content Include="ManageUI\js\nestable\demo.js" />
+    <Content Include="ManageUI\js\nestable\jquery.nestable.js" />
+    <Content Include="ManageUI\js\nestable\nestable.css" />
+    <Content Include="ManageUI\js\parsley\parsley.extend.js" />
+    <Content Include="ManageUI\js\parsley\parsley.min.js" />
+    <Content Include="ManageUI\js\prettyphoto\default\default_thumb.png" />
+    <Content Include="ManageUI\js\prettyphoto\default\loader.gif" />
+    <Content Include="ManageUI\js\prettyphoto\default\sprite.png" />
+    <Content Include="ManageUI\js\prettyphoto\default\sprite_next.png" />
+    <Content Include="ManageUI\js\prettyphoto\default\sprite_prev.png" />
+    <Content Include="ManageUI\js\prettyphoto\default\sprite_x.png" />
+    <Content Include="ManageUI\js\prettyphoto\default\sprite_y.png" />
+    <Content Include="ManageUI\js\prettyphoto\jquery.prettyPhoto.js" />
+    <Content Include="ManageUI\js\prettyphoto\prettyPhoto.css" />
+    <Content Include="ManageUI\js\scroll\smoothscroll.js" />
+    <Content Include="ManageUI\js\select2\select2.css" />
+    <Content Include="ManageUI\js\select2\select2.min.js" />
+    <Content Include="ManageUI\js\select2\theme.css" />
+    <Content Include="ManageUI\js\slider\bootstrap-slider.js" />
+    <Content Include="ManageUI\js\slider\slider.css" />
+    <Content Include="ManageUI\js\sortable\jquery.sortable.js" />
+    <Content Include="ManageUI\js\wysiwyg\bootstrap-wysiwyg.js" />
+    <Content Include="ManageUI\js\wysiwyg\demo.js" />
+    <Content Include="ManageUI\js\wysiwyg\jquery.hotkeys.js" />
     <Content Include="mingwm10.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1512,6 +1598,9 @@
     <Content Include="wkhtmltox0.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="ManageUI\fonts\fontawesome-webfont.eot" />
+    <Content Include="ManageUI\fonts\fontawesome-webfont.ttf" />
+    <Content Include="ManageUI\fonts\fontawesome-webfont.woff" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\sysvisa.pubxml" />
     <Content Include="sass\.DS_Store" />
@@ -1906,6 +1995,11 @@
     <Content Include="Views\ClientWeb\GeneratePDF.cshtml" />
     <Content Include="Views\ClientWeb\AppIndex.cshtml" />
     <Content Include="Views\ClientWeb\AppDetails.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\SystemConfiguration.cshtml" />
+    <Content Include="Views\Manage\TableStatic.cshtml" />
+    <Content Include="Views\Manage\TimeLine.cshtml" />
+    <Content Include="Views\Manage\ChartData.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1929,6 +2023,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LocalFreeLineController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ShowPageController.cs" />
     <Compile Include="Controllers\VisaAssessmentController.cs" />
     <Compile Include="Controllers\VisaProgressController.cs" />
@@ -1945,6 +2040,11 @@
     <Folder Include="Content\ueditor\net\Upload\" />
     <Folder Include="HtmlHelpers\" />
     <Folder Include="Hubs\" />
+    <Folder Include="ManageUI\js\prettyphoto\dark_rounded\" />
+    <Folder Include="ManageUI\js\prettyphoto\dark_square\" />
+    <Folder Include="ManageUI\js\prettyphoto\facebook\" />
+    <Folder Include="ManageUI\js\prettyphoto\light_rounded\" />
+    <Folder Include="ManageUI\js\prettyphoto\light_square\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
