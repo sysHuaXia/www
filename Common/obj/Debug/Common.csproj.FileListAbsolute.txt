@@ -1,0 +1,148 @@
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Common.dll.config
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Common.dll
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Common.pdb
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\EF.dll
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.dll
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.Security.dll
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Newtonsoft.Json.dll
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Owin.dll
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\EntityFramework.dll
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\EF.pdb
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\EF.dll.config
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.xml
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.Security.xml
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Newtonsoft.Json.xml
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\EntityFramework.xml
+G:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\zh-Hans\EntityFramework.resources.dll
+G:\华夏系统\SystemVisa\SysUI\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+G:\华夏系统\SystemVisa\SysUI\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+G:\华夏系统\SystemVisa\SysUI\Common\obj\Debug\Common.dll
+G:\华夏系统\SystemVisa\SysUI\Common\obj\Debug\Common.pdb
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Common.dll.config
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Common.dll
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Common.pdb
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\EF.dll
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.dll
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.Security.dll
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Newtonsoft.Json.dll
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Owin.dll
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\EntityFramework.dll
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\EF.pdb
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\EF.dll.config
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.xml
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.Security.xml
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Newtonsoft.Json.xml
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\EntityFramework.xml
+F:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\华夏系统\SystemVisa\SysUI\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+F:\华夏系统\SystemVisa\SysUI\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+F:\华夏系统\SystemVisa\SysUI\Common\obj\Debug\Common.dll
+F:\华夏系统\SystemVisa\SysUI\Common\obj\Debug\Common.pdb
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Common.dll.config
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Common.dll
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Common.pdb
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\ChnCharInfo.dll
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\CoreModels.dll
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\EF.dll
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.dll
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.Security.dll
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Newtonsoft.Json.dll
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Owin.dll
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\EntityFramework.dll
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\CoreModels.pdb
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\CoreModels.dll.config
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\EF.pdb
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\EF.dll.config
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.xml
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Microsoft.Owin.Security.xml
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\Newtonsoft.Json.xml
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\EntityFramework.xml
+E:\华夏系统\SystemVisa\SysUI\Common\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\华夏系统\SystemVisa\SysUI\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\华夏系统\SystemVisa\SysUI\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\华夏系统\SystemVisa\SysUI\Common\obj\Debug\Common.dll
+E:\华夏系统\SystemVisa\SysUI\Common\obj\Debug\Common.pdb
+E:\华夏WEB\Web\Common\bin\Debug\Common.dll.config
+E:\华夏WEB\Web\Common\bin\Debug\Common.dll
+E:\华夏WEB\Web\Common\bin\Debug\Common.pdb
+E:\华夏WEB\Web\Common\bin\Debug\ChnCharInfo.dll
+E:\华夏WEB\Web\Common\bin\Debug\CoreModels.dll
+E:\华夏WEB\Web\Common\bin\Debug\EF.dll
+E:\华夏WEB\Web\Common\bin\Debug\Microsoft.Owin.dll
+E:\华夏WEB\Web\Common\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+E:\华夏WEB\Web\Common\bin\Debug\Microsoft.Owin.Security.dll
+E:\华夏WEB\Web\Common\bin\Debug\Newtonsoft.Json.dll
+E:\华夏WEB\Web\Common\bin\Debug\Owin.dll
+E:\华夏WEB\Web\Common\bin\Debug\EntityFramework.dll
+E:\华夏WEB\Web\Common\bin\Debug\CoreModels.pdb
+E:\华夏WEB\Web\Common\bin\Debug\CoreModels.dll.config
+E:\华夏WEB\Web\Common\bin\Debug\EF.pdb
+E:\华夏WEB\Web\Common\bin\Debug\EF.dll.config
+E:\华夏WEB\Web\Common\bin\Debug\Microsoft.Owin.xml
+E:\华夏WEB\Web\Common\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+E:\华夏WEB\Web\Common\bin\Debug\Microsoft.Owin.Security.xml
+E:\华夏WEB\Web\Common\bin\Debug\Newtonsoft.Json.xml
+E:\华夏WEB\Web\Common\bin\Debug\EntityFramework.xml
+E:\华夏WEB\Web\Common\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\华夏WEB\Web\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\华夏WEB\Web\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\华夏WEB\Web\Common\obj\Debug\Common.dll
+E:\华夏WEB\Web\Common\obj\Debug\Common.pdb
+E:\华夏WEB\Web - Shared\Common\bin\Debug\Common.dll.config
+E:\华夏WEB\Web - Shared\Common\bin\Debug\Common.dll
+E:\华夏WEB\Web - Shared\Common\bin\Debug\Common.pdb
+E:\华夏WEB\Web - Shared\Common\bin\Debug\ChnCharInfo.dll
+E:\华夏WEB\Web - Shared\Common\bin\Debug\CoreModels.dll
+E:\华夏WEB\Web - Shared\Common\bin\Debug\EF.dll
+E:\华夏WEB\Web - Shared\Common\bin\Debug\Microsoft.Owin.dll
+E:\华夏WEB\Web - Shared\Common\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+E:\华夏WEB\Web - Shared\Common\bin\Debug\Microsoft.Owin.Security.dll
+E:\华夏WEB\Web - Shared\Common\bin\Debug\Newtonsoft.Json.dll
+E:\华夏WEB\Web - Shared\Common\bin\Debug\Owin.dll
+E:\华夏WEB\Web - Shared\Common\bin\Debug\EntityFramework.dll
+E:\华夏WEB\Web - Shared\Common\bin\Debug\CoreModels.pdb
+E:\华夏WEB\Web - Shared\Common\bin\Debug\CoreModels.dll.config
+E:\华夏WEB\Web - Shared\Common\bin\Debug\EF.pdb
+E:\华夏WEB\Web - Shared\Common\bin\Debug\EF.dll.config
+E:\华夏WEB\Web - Shared\Common\bin\Debug\Microsoft.Owin.xml
+E:\华夏WEB\Web - Shared\Common\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+E:\华夏WEB\Web - Shared\Common\bin\Debug\Microsoft.Owin.Security.xml
+E:\华夏WEB\Web - Shared\Common\bin\Debug\Newtonsoft.Json.xml
+E:\华夏WEB\Web - Shared\Common\bin\Debug\EntityFramework.xml
+E:\华夏WEB\Web - Shared\Common\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\华夏WEB\Web - Shared\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\华夏WEB\Web - Shared\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\华夏WEB\Web - Shared\Common\obj\Debug\Common.dll
+E:\华夏WEB\Web - Shared\Common\obj\Debug\Common.pdb
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\Common.dll.config
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\Common.dll
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\Common.pdb
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\ChnCharInfo.dll
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\CoreModels.dll
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\EF.dll
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\Microsoft.Owin.dll
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\Microsoft.Owin.Security.dll
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\Newtonsoft.Json.dll
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\Owin.dll
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\EntityFramework.dll
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\CoreModels.pdb
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\CoreModels.dll.config
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\EF.pdb
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\EF.dll.config
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\Microsoft.Owin.xml
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\Microsoft.Owin.Security.xml
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\Newtonsoft.Json.xml
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\EntityFramework.xml
+E:\华夏WEB\WebClientTest\WebDemo\Common\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\华夏WEB\WebClientTest\WebDemo\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\华夏WEB\WebClientTest\WebDemo\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\华夏WEB\WebClientTest\WebDemo\Common\obj\Debug\Common.dll
+E:\华夏WEB\WebClientTest\WebDemo\Common\obj\Debug\Common.pdb

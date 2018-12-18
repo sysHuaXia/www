@@ -148,3 +148,25 @@ E:\华夏WEB\Web - Shared\CoreModels\obj\Debug\CoreModels.csprojResolveAssemblyR
 E:\华夏WEB\Web - Shared\CoreModels\obj\Debug\CoreModels.csproj.CoreCompileInputs.cache
 E:\华夏WEB\Web - Shared\CoreModels\obj\Debug\CoreModels.dll
 E:\华夏WEB\Web - Shared\CoreModels\obj\Debug\CoreModels.pdb
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\CoreModels.dll.config
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\CoreModels.dll
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\CoreModels.pdb
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\EF.dll
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\Microsoft.Owin.dll
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\Microsoft.Owin.Security.dll
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\Newtonsoft.Json.dll
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\Owin.dll
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\EntityFramework.dll
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\EF.pdb
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\EF.dll.config
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\Microsoft.Owin.xml
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\Microsoft.Owin.Security.xml
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\Newtonsoft.Json.xml
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\EntityFramework.xml
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\obj\Debug\CoreModels.csprojResolveAssemblyReference.cache
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\obj\Debug\CoreModels.csproj.CoreCompileInputs.cache
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\obj\Debug\CoreModels.dll
+E:\华夏WEB\WebClientTest\WebDemo\CoreModels\obj\Debug\CoreModels.pdb

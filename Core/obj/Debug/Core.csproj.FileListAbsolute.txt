@@ -207,3 +207,34 @@ E:\华夏WEB\Web - Shared\Core\obj\Debug\Core.csprojResolveAssemblyReference.cac
 E:\华夏WEB\Web - Shared\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
 E:\华夏WEB\Web - Shared\Core\obj\Debug\Core.dll
 E:\华夏WEB\Web - Shared\Core\obj\Debug\Core.pdb
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\Core.dll.config
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\Core.dll
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\Core.pdb
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\Common.dll
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\CoreModels.dll
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\EF.dll
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\EntityFramework.dll
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\EntityFramework.SqlServer.dll
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\Microsoft.Owin.dll
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\Microsoft.Owin.Security.dll
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\Newtonsoft.Json.dll
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\Owin.dll
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\CoreModels.pdb
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\CoreModels.dll.config
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\EF.pdb
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\EF.dll.config
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\Common.pdb
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\Common.dll.config
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\EntityFramework.xml
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\EntityFramework.SqlServer.xml
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\Microsoft.Owin.xml
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\Microsoft.Owin.Security.xml
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\Newtonsoft.Json.xml
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\华夏WEB\WebClientTest\WebDemo\Core\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\华夏WEB\WebClientTest\WebDemo\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+E:\华夏WEB\WebClientTest\WebDemo\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+E:\华夏WEB\WebClientTest\WebDemo\Core\obj\Debug\Core.dll
+E:\华夏WEB\WebClientTest\WebDemo\Core\obj\Debug\Core.pdb
