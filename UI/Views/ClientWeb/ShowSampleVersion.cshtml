@@ -1,0 +1,447 @@
+﻿@model CoreModels.Models.MaterialsListViewModel
+@using System.Text;
+@{
+    Layout = null;
+    ViewBag.Title = "ShowSampleVersion";
+
+    ViewBag.tag = "-";
+    ViewBag.No = 1;
+    ViewBag.Nu = 1;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>清单打印</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <script src="/js/sweet-alert.js"></script>
+    <link rel="stylesheet" href="/css/sweet-alert.css">
+    <link href="/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="/css/style.css?v=2.2.0" rel="stylesheet">
+    <link href="/CSS/webuploader.css" rel="stylesheet" />
+    <link href="/CSS/style1.css" rel="stylesheet" />
+    @*新的webbox导入*@
+    <script src="/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="~/js/asyncbox/AsyncBox.js"></script>
+    <link href="~/js/asyncbox/asyncbox.css" rel="stylesheet" />
+    <link href="~/css/visa_detail_hua.css" rel="stylesheet" />
+    <style>
+        .origin-stuff {
+            padding: 0 2px;
+            font-size: 11px;
+            color: #fff;
+            background-color: #989898;
+            border-radius: 2px;
+        }
+    </style>
+
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+        /*.demo {
+            background: #ffded7;
+            padding: 2em 0;
+        }
+
+        a:hover, a:focus {
+            outline: none;
+            text-decoration: none;
+        }*/
+
+        .tab .nav-tabs {
+            padding-left: 15px;
+            border-bottom: 4px solid #692f6c;
+        }
+
+            .tab .nav-tabs li a {
+                color: #fff;
+                padding: 10px 5px;
+                margin-right: 5px;
+                background: #692f6c;
+                text-shadow: 1px 1px 2px #000;
+                border: none;
+                border-radius: 0;
+                opacity: 0.5;
+                position: relative;
+                transition: all 0.3s ease 0s;
+            }
+
+                .tab .nav-tabs li a:hover {
+                    background: #692f6c;
+                    opacity: 0.8;
+                }
+
+            .tab .nav-tabs li.active a {
+                opacity: 1;
+            }
+                .tab .nav-tabs li.active a,
+                .tab .nav-tabs li.active a:hover,
+                .tab .nav-tabs li.active a:focus {
+                    color: #fff;
+                    background: #692f6c;
+                    border: none;
+                    border-radius: 0;
+                }
+
+            .tab .nav-tabs li a:before,
+            .tab .nav-tabs li a:after {
+                content: "";
+                border-top: 42px solid transparent;
+                position: absolute;
+                top: -2px;
+            }
+
+            .tab .nav-tabs li a:before {
+                border-right: 15px solid #692f6c;
+                left: -15px;
+            }
+
+            .tab .nav-tabs li a:after {
+                border-left: 15px solid #692f6c;
+                right: -15px;
+            }
+
+            /*.tab .nav-tabs li a i,
+            .tab .nav-tabs li.active a i {
+                display: inline-block;
+                padding-right: 5px;
+                font-size: 15px;
+                text-shadow: none;
+            }*/
+
+            /*.tab .nav-tabs li a span {
+                display: inline-block;
+                font-size: 14px;
+                letter-spacing: -9px;
+                opacity: 0;
+                transition: all 0.3s ease 0s;
+            }*/
+
+            .tab .nav-tabs li a:hover span,
+            .tab .nav-tabs li.active a span {
+                letter-spacing: 1px;
+                opacity: 1;
+                transition: all 0.3s ease 0s;
+            }
+
+        .tab .tab-content {
+            padding: 0px;
+            background: #fff;
+            /*font-size: 16px;*/
+            color: #6c6c6c;
+            /*line-height: 25px;*/
+        }
+
+            /*.tab .tab-content h3 {
+                font-size: 24px;
+                margin-top: 0;
+            }
+
+        .only screen and (max-width: 479px) {
+            .tab .nav-tabs li
+
+        {
+            width: 100%;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .tab .nav-tabs li a span {
+            letter-spacing: 1px;
+            opacity: 1;
+        }*/
+        /*}*/
+    </style>
+
+
+</head>
+@if (ViewBag.Eerror != 400)
+{
+    <body class="gray-bg" onmousemove=/HideMenu()/ oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" onmouseup="document.selection.empty()">
+        <div class="wrapper-content1 animated fadeInRight">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox">
+                        <form name="form1" id="form1" action="">
+                            <div class="ibox-content">
+
+                                <div class="visa_table_box" style="padding-top:10px;">
+                                    <div class="visa_table_tab basefix">
+                                        @*@ViewBag.URL*@
+                                        <a href="###" class="tab_first cur" onClick="printdiv('div_print');">打印</a>
+                                        <a href="http://106.14.67.1:30002/BuildUpload/MaterialsList_PDF/@ViewBag.downPdf" target="_blank">生成PDF</a>
+                                    </div>
+                                </div>
+
+                                <div class="visa_table_info" style="display: block;">
+
+                                    <div style="padding-top: 20px; padding-bottom: 8px; margin: 0 auto;">
+                                        <span style="color:red;">★</span> 为必须提供的材料，其它为建议提供的材料
+                                    </div>
+
+                                    <div class="tab" role="tabpanel">
+                                        <!-- Nav tabs --> 
+                                        <ul class="nav nav-tabs" role="tablist">
+
+                                            @foreach (var initF in Model.FirstList.Keys)
+                                            {
+                                                string str = "";
+                                                string mo = "#Section";
+                                                if (ViewBag.No == 1) {
+                                                    str = "active";
+                                                }
+                                                <li role="presentation" class="@str" style="font-size:12px;"><a href="@mo@ViewBag.No" aria-controls="home" role="tab" data-toggle="tab"><span>@initF.CrowdTypeName</span></a></li>
+                                                ViewBag.No++;
+                                            }
+
+                                        </ul>
+                                        <!-- Tab panes -->
+                                        <div class="tab-content tabs" id="div_print">
+
+
+                                            @foreach (var init in Model.FirstList.Keys) {
+
+                                                string DocTypeStr = "";
+                                                string str1 = "";
+                                                string mo = "Section";
+                                                if (ViewBag.Nu == 1)
+                                                {
+                                                    str1 = "active";
+                                                }
+                                                <div role="tabpanel" class="tab-pane fade in @str1" id="@mo@ViewBag.Nu">
+                                                    @*<h3>Section 1</h3>*@
+                                                    
+
+                                                        <div style="padding-bottom:3px;">
+                                                            <span style="color:blue;">@init.AreaName@ViewBag.tag@init.CountryName@ViewBag.tag@init.TravelTypeName@ViewBag.tag@init.CrowdTypeName</span>
+                                                        </div>
+                                                        <table class="visa_table">
+                                                            <tbody>
+
+                                                                @foreach (var doc in Model.FirstList[init])
+                                                                {
+                                                                    var w = 1;
+
+                                                                    foreach (var shares in Model.SecondList[doc])
+                                                                    {
+
+
+                                                                        string tStr = "";
+                                                                        var UploadTxt = shares.UploadTxt;
+                                                                        if (UploadTxt != "")
+                                                                        {
+                                                                            if (UploadTxt != null)
+                                                                            {
+                                                                                var getListTitle = UploadTxt.Split(',');
+                                                                                for (var t = 0; t < getListTitle.Length; t++)
+                                                                                {
+                                                                                    string str = getListTitle[t];      //这是一字符串
+                                                                                    string[] strs = str.Split('/');      //字符分割
+                                                                                    string _str = strs[3];             //这是一字符串
+                                                                                    string[] _strs = _str.Split('[');    //字符分割
+                                                                                    var _dddd = _strs[0];
+
+                                                                                    //Encoding utf8 = Encoding.UTF8;
+                                                                                    //string code = HttpUtility.UrlDecode(str.ToUpper(), utf8);//首先用utf-8进行解码
+                                                                                    //string encode = HttpUtility.UrlEncode(code, utf8).ToUpper();//将已经解码的字符再次进行编码.
+
+                                                                                    tStr += "<a href='http://106.14.67.1:30002/" + str + "' class='visa_table_pic' target='_blank'><span></span>" + _dddd + "</a>";
+                                                                                }
+                                                                            }
+                                                                        }
+
+
+                                                                        string classStr = "";
+                                                                        if (shares.DocType == "身份证明")
+                                                                        {
+                                                                            classStr = "material_1";
+                                                                        }
+                                                                        else if (shares.DocType == "生活证明")
+                                                                        {
+                                                                            classStr = "material_2";
+                                                                        }
+                                                                        else if (shares.DocType == "工作证明")
+                                                                        {
+                                                                            classStr = "material_3";
+                                                                        }
+                                                                        else if (shares.DocType == "学习证明")
+                                                                        {
+                                                                            classStr = "material_4";
+                                                                        }
+                                                                        else if (shares.DocType == "资产证明")
+                                                                        {
+                                                                            classStr = "material_5";
+                                                                        }
+                                                                        else if (shares.DocType == "行程证明")
+                                                                        {
+                                                                            classStr = "material_6";
+                                                                        }
+                                                                        else if (shares.DocType == "申请表格")
+                                                                        {
+                                                                            classStr = "material_7";
+                                                                        }
+                                                                        else if (shares.DocType == "担保证明")
+                                                                        {
+                                                                            classStr = "material_8";
+                                                                        }
+                                                                        else if (shares.DocType == "邀请证明")
+                                                                        {
+                                                                            classStr = "material_9";
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            classStr = "material_10";
+                                                                        }
+
+
+
+                                                                        if (DocTypeStr == shares.DocType)
+                                                                        {
+
+                                                                            w++;
+                                                                            if (w != 1)
+                                                                            {
+                                                        <tr data_key="364803">
+                                                            <th class="visa_table_title_hua"></th>
+                                                            <td class="visa_table_second">
+                                                                @*@shares.UploadTitle*@
+
+                                                                @if (shares.UploadOptions == "必备")
+                                                                {
+                                                        <div>
+                                                            <span style="color:red;">★</span>@doc.UploadTitle<br>
+                                                            @if (shares.UploadType == "两者")
+                                                            {
+                                                        <span class="origin-stuff">原件和复印件</span>
+                                                            }
+                                                            else
+                                                            {
+                                                        <span class="origin-stuff">@shares.UploadType</span>
+                                                            }
+                                                        </div>
+                                                                }
+                                                                else
+                                                                {
+                                                        <span>@doc.UploadTitle</span>
+                                                                }
+                                                                @if (shares.labelStr == "1")
+                                                                {
+                                                        <br><span style="color:#B2B6B7; font-size:12px;">此证原件须在申请当日自带备查，未携带者影响签证递交我社不承担任何责任。</span>
+                                                                }
+
+                                                            </td>
+                                                            <td class="visa_noleft">
+                                                                <div class="visa_noleft_info">
+                                                                    <ul class="visa_table_sort">
+                                                                        @Html.Raw(doc.UploadNote)
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                            <td class="visa_noleft visa_table_second">
+                                                                @Html.Raw(tStr)
+                                                                @*<a href="#" class="visa_table_pic"><span></span>查看样图</a>*@
+                                                            </td>
+                                                        </tr>
+                                                                            }
+                                                                        }
+                                                                        else
+                                                                        {
+                                                        <tr data_key="364803">
+                                                            <td class="visa_table_title" rowspan="@Model.SecondList[doc].Count()">
+                                                                <span class="@classStr"></span>@shares.DocType
+                                                            </td>
+                                                            <td class="visa_table_second">
+                                                                @if (shares.UploadOptions == "必备")
+                                                                {
+                                                        <div>
+                                                            <span style="color:red;">★</span>@doc.UploadTitle<br>
+                                                            @if (shares.UploadType == "两者")
+                                                            {
+                                                        <span class="origin-stuff">原件和复印件</span>
+                                                            }
+                                                            else
+                                                            {
+                                                        <span class="origin-stuff">@shares.UploadType</span>
+                                                            }
+                                                        </div>
+                                                                }
+                                                                else
+                                                                {
+                                                        <span>@doc.UploadTitle</span>
+                                                                }
+                                                                @if (shares.labelStr == "1")
+                                                                {
+                                                                            <span style="color:#B2B6B7; font-size:12px;">此证原件须在申请当日自带备查，未携带者影响签证递交我社不承担任何责任。</span>
+                                                                }
+                                                                            </td>
+                                                                            <td class="visa_noleft">
+                                                                                <div class="visa_noleft_info">
+                                                                                    <ul class="visa_table_sort">
+                                                                                        @Html.Raw(doc.UploadNote)
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="visa_noleft visa_table_second">
+                                                                                @Html.Raw(tStr)
+                                                                            </td>
+                                                                        </tr>
+                                                                        }
+                                                                        DocTypeStr = shares.DocType;
+                                                                    }
+                                                                }
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="visa_table_gap"></div>
+
+                                                    
+                                                </div>
+
+                                                ViewBag.Nu++;
+                                            }
+
+                                            
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 全局js -->
+        <script src="/js/jquery-2.1.1.min.js"></script>
+        <script src="/js/bootstrap.min.js?v=3.4.0"></script>
+        <!-- Layer -->
+        <script src="/js/plugins/layer/layer.min.js"></script>
+        <!-- 自定义js -->
+        <script src="/js/content.js?v=1.0.0"></script>
+
+        <script language="javascript">
+            function printdiv(printpage) {
+                var headstr = "<html><head><title></title></head><body>";
+                var footstr = "</body>";
+                var newstr = document.all.item(printpage).innerHTML;
+                var oldstr = document.body.innerHTML;
+                document.body.innerHTML = headstr + newstr + footstr;
+                window.print();
+                document.body.innerHTML = oldstr;
+                return false;
+            }
+        </script>
+
+
+    </body>
+}
+
+</html>
+

@@ -1,0 +1,1547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dhgl2013Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CommonlyDate">
+    <Key>
+      <PropertyRef Name="Cid" />
+    </Key>
+    <Property Name="Cid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="v_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nums" Type="nvarchar" MaxLength="50" />
+    <Property Name="Visafee" Type="nvarchar" MaxLength="50" />
+    <Property Name="VisafeeChildren" Type="nvarchar" MaxLength="50" />
+    <Property Name="Updatedate" Type="nvarchar" MaxLength="50" />
+    <Property Name="puttime" Type="datetime" />
+    <Property Name="Sorting" Type="int" />
+    <Property Name="FeeLink" Type="nvarchar" MaxLength="300" />
+    <Property Name="Enable" Type="bit" />
+    <Property Name="StandardNumber" Type="int" />
+    <Property Name="Division" Type="int" />
+  </EntityType>
+  <EntityType Name="Order_FirstResult">
+    <Key>
+      <PropertyRef Name="FirstId" />
+    </Key>
+    <Property Name="FirstId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="order_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="created_time" Type="datetime" />
+    <Property Name="modified_time" Type="datetime" />
+    <Property Name="type" Type="nvarchar" MaxLength="50" />
+    <Property Name="buyer_email" Type="nvarchar" MaxLength="50" />
+    <Property Name="buyer_nick" Type="nvarchar" MaxLength="50" />
+    <Property Name="buyer_rate" Type="bit" />
+    <Property Name="seller_flag" Type="bigint" />
+    <Property Name="seller_memo" Type="nvarchar" MaxLength="350" />
+    <Property Name="seller_nick" Type="nvarchar" MaxLength="50" />
+    <Property Name="intime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Order_SubInfo">
+    <Key>
+      <PropertyRef Name="SubId" />
+    </Key>
+    <Property Name="SubId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstId" Type="int" />
+    <Property Name="sub_order_id" Type="bigint" />
+    <Property Name="biz_type" Type="tinyint" />
+    <Property Name="order_type" Type="tinyint" />
+    <Property Name="payment" Type="money" />
+    <Property Name="total_fee" Type="money" />
+    <Property Name="refund_status" Type="varchar" MaxLength="20" />
+    <Property Name="status" Type="varchar" MaxLength="50" />
+    <Property Name="category_id" Type="bigint" />
+    <Property Name="item_id" Type="bigint" />
+    <Property Name="item_title" Type="varchar" MaxLength="200" />
+    <Property Name="num" Type="tinyint" />
+    <Property Name="sku_id" Type="bigint" />
+    <Property Name="sku_properties" Type="varchar" MaxLength="200" />
+    <Property Name="name" Type="varchar" MaxLength="20" />
+    <Property Name="phone" Type="varchar" MaxLength="20" />
+    <Property Name="post_address" Type="varchar" MaxLength="200" />
+    <Property Name="intime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_AliPayRecord">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderID" Type="varchar" MaxLength="100" />
+    <Property Name="SerialNO" Type="int" />
+    <Property Name="BookedTime" Type="datetime" />
+    <Property Name="PayTradingNO" Type="varchar" MaxLength="100" />
+    <Property Name="PaySerialNO" Type="varchar" MaxLength="100" />
+    <Property Name="MerchantOrderNO" Type="varchar" MaxLength="100" />
+    <Property Name="FinancialType" Type="varchar" MaxLength="50" />
+    <Property Name="Income" Type="money" />
+    <Property Name="Spending" Type="money" />
+    <Property Name="AccountBalance" Type="money" />
+    <Property Name="ServiceFee" Type="money" />
+    <Property Name="PaymentChannel" Type="varchar" MaxLength="80" />
+    <Property Name="OtherPartyAccount" Type="varchar" MaxLength="80" />
+    <Property Name="OtherPartyName" Type="varchar" MaxLength="80" />
+    <Property Name="BankOrderNO" Type="varchar" MaxLength="100" />
+    <Property Name="TradingCommodity" Type="varchar" MaxLength="200" />
+    <Property Name="Note" Type="text" />
+    <Property Name="CreateUserId" Type="int" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="10" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="AddPaymentTypeInt" Type="int" />
+    <Property Name="AddPaymentTypeStr" Type="varchar" MaxLength="30" />
+    <Property Name="AddSubjectTypeInt" Type="int" />
+    <Property Name="AddSubjectTypeStr" Type="varchar" MaxLength="30" />
+    <Property Name="EnableAliRefundTag" Type="bit" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“dhgl2013.dbo.T_Area”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="T_Area">
+    <Key>
+      <PropertyRef Name="AId" />
+    </Key>
+    <Property Name="AId" Type="int" Nullable="false" />
+    <Property Name="AreaName" Type="varchar" MaxLength="20" />
+    <Property Name="Sorting" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“dhgl2013.dbo.T_AreaConsul”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="T_AreaConsul">
+    <Key>
+      <PropertyRef Name="CId" />
+    </Key>
+    <Property Name="CId" Type="int" Nullable="false" />
+    <Property Name="CName" Type="varchar" MaxLength="20" />
+    <Property Name="AreaId" Type="int" />
+    <Property Name="AreaName" Type="varchar" MaxLength="20" />
+    <Property Name="Sorting" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“dhgl2013.dbo.T_AreaConsulClass”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="T_AreaConsulClass">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="CId" Type="int" />
+    <Property Name="CName" Type="nvarchar" MaxLength="10" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="10" />
+    <Property Name="AreaId" Type="int" />
+    <Property Name="AreaName" Type="nvarchar" MaxLength="10" />
+    <Property Name="Sorting" Type="int" />
+  </EntityType>
+  <EntityType Name="T_Article">
+    <Key>
+      <PropertyRef Name="ArticleID" />
+    </Key>
+    <Property Name="ArticleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierTypeRight" Type="int" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="30" />
+    <Property Name="ItemID" Type="int" />
+    <Property Name="ArtTitle" Type="varchar" MaxLength="150" />
+    <Property Name="ArtIsIssue" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+    <Property Name="ArtDate" Type="datetime" />
+    <Property Name="ArtContent" Type="text" />
+    <Property Name="ArtSort" Type="int" />
+    <Property Name="opSupplierID" Type="int" />
+    <Property Name="opUserName" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="T_ArticleVisited">
+    <Key>
+      <PropertyRef Name="VisitedID" />
+    </Key>
+    <Property Name="VisitedID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ArticleID" Type="int" />
+    <Property Name="StateLabel" Type="int" />
+    <Property Name="ClientUserID" Type="int" />
+    <Property Name="ClientUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="GreatTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_AssessmentBase">
+    <Key>
+      <PropertyRef Name="BId" />
+    </Key>
+    <Property Name="BId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BType" Type="int" />
+    <Property Name="BValue" Type="int" />
+    <Property Name="BContent" Type="varchar" MaxLength="500" />
+    <Property Name="BTime" Type="datetime" />
+    <Property Name="CreateUserId" Type="int" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="T_AssessmentUserSalary">
+    <Key>
+      <PropertyRef Name="UId" />
+    </Key>
+    <Property Name="UId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UYear" Type="int" />
+    <Property Name="UMonth" Type="int" />
+    <Property Name="UUserId" Type="int" />
+    <Property Name="UUserName" Type="varchar" MaxLength="50" />
+    <Property Name="UAssessment" Type="money" />
+    <Property Name="ULoss" Type="money" />
+    <Property Name="UBasicSalary" Type="money" />
+    <Property Name="UFixedSalary" Type="money" />
+    <Property Name="UActualSum" Type="money" />
+    <Property Name="AWeekendDuty" Type="varchar" MaxLength="200" />
+    <Property Name="AGoodReward" Type="varchar" MaxLength="200" />
+    <Property Name="ATos" Type="varchar" MaxLength="200" />
+    <Property Name="ALate" Type="varchar" MaxLength="200" />
+    <Property Name="ALeaveDays" Type="varchar" MaxLength="200" />
+    <Property Name="UWorkDays" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="UThingsLeaveDays" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="UDiseaseLeaveDays" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="UMealFill" Type="money" />
+    <Property Name="UCommunicationFill" Type="money" />
+    <Property Name="UTrafficFill" Type="money" />
+    <Property Name="UContent" Type="text" />
+    <Property Name="UIsEnable" Type="bit" />
+    <Property Name="UTime" Type="datetime" />
+    <Property Name="SignatureTag" Type="bit" />
+    <Property Name="SignatureID" Type="int" />
+    <Property Name="SignatureName" Type="varchar" MaxLength="10" />
+    <Property Name="CreateUserID" Type="int" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="T_BigDataOperation">
+    <Key>
+      <PropertyRef Name="GId" />
+    </Key>
+    <Property Name="GId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GType" Type="int" />
+    <Property Name="GContent" Type="text" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_CommonlyMessage">
+    <Key>
+      <PropertyRef Name="MId" />
+    </Key>
+    <Property Name="MId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MType" Type="int" />
+    <Property Name="MInput" Type="varchar" MaxLength="300" />
+    <Property Name="MContent" Type="text" />
+    <Property Name="MTime" Type="datetime" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="CountryName" Type="varchar" MaxLength="10" />
+    <Property Name="CreatUserId" Type="int" />
+    <Property Name="CreatUserName" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="T_CommonlyMessageConsul">
+    <Key>
+      <PropertyRef Name="CId" />
+    </Key>
+    <Property Name="CId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MType" Type="int" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="CountryName" Type="varchar" MaxLength="20" />
+    <Property Name="AreaName" Type="varchar" MaxLength="100" />
+    <Property Name="AreaLink" Type="varchar" MaxLength="300" />
+    <Property Name="CreateUserId" Type="int" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="100" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_CreditCardImport">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CardNumber" Type="varchar" MaxLength="80" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="IsEnable" Type="int" />
+    <Property Name="EndTime" Type="int" />
+  </EntityType>
+  <EntityType Name="T_CreditCardUse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OId" Type="int" />
+    <Property Name="CardNumber" Type="varchar" MaxLength="80" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="UserName" Type="varchar" MaxLength="10" />
+    <Property Name="UserTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_EmailImport">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmailName" Type="varchar" MaxLength="50" />
+    <Property Name="EmailPassword" Type="varchar" MaxLength="50" />
+    <Property Name="EmailNum" Type="int" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="Enable" Type="int" />
+    <Property Name="EndTime" Type="int" />
+  </EntityType>
+  <EntityType Name="T_LinkDate">
+    <Key>
+      <PropertyRef Name="Tid" />
+    </Key>
+    <Property Name="Tid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cid" Type="int" />
+    <Property Name="v_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="AreaName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AreaLink" Type="nvarchar" MaxLength="250" />
+    <Property Name="AreaAddress" Type="nvarchar" MaxLength="250" />
+    <Property Name="AreaTime" Type="nvarchar" MaxLength="250" />
+    <Property Name="AreaContact" Type="nvarchar(max)" />
+    <Property Name="puttime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_MyWorkKPIInt">
+    <Key>
+      <PropertyRef Name="KId" />
+    </Key>
+    <Property Name="KId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeId" Type="int" />
+    <Property Name="TypeName" Type="varchar" MaxLength="50" />
+    <Property Name="KPINo" Type="int" />
+  </EntityType>
+  <EntityType Name="T_MyWorkReceive">
+    <Key>
+      <PropertyRef Name="RId" />
+    </Key>
+    <Property Name="RId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TId" Type="int" />
+    <Property Name="TTypeId" Type="int" />
+    <Property Name="SenderId" Type="int" />
+    <Property Name="RecipientId" Type="int" />
+    <Property Name="RecipientName" Type="varchar" MaxLength="10" />
+    <Property Name="TTypeName" Type="varchar" MaxLength="300" />
+    <Property Name="SContent" Type="text" />
+    <Property Name="SCreateTime" Type="datetime" />
+    <Property Name="RFeedback" Type="text" />
+    <Property Name="RPercentage" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="RFollowUpTime" Type="datetime" />
+    <Property Name="IsEnable" Type="bit" />
+  </EntityType>
+  <EntityType Name="T_MyWorkTask">
+    <Key>
+      <PropertyRef Name="TId" />
+    </Key>
+    <Property Name="TId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TTypeId" Type="int" />
+    <Property Name="TTypeName" Type="varchar" MaxLength="50" />
+    <Property Name="SenderId" Type="int" />
+    <Property Name="SenderName" Type="varchar" MaxLength="10" />
+    <Property Name="SContent" Type="text" />
+    <Property Name="SCreateTime" Type="datetime" />
+    <Property Name="strRecipientId" Type="text" />
+    <Property Name="strRecipientName" Type="text" />
+    <Property Name="IsEnable" Type="bit" />
+  </EntityType>
+  <EntityType Name="T_SmsDetail">
+    <Key>
+      <PropertyRef Name="DetailID" />
+    </Key>
+    <Property Name="DetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SmsID" Type="int" Nullable="false" />
+    <Property Name="ReceiveName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReceivePhone" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ValidCode" Type="varchar" MaxLength="50" />
+    <Property Name="ValidCodeIsCheck" Type="int" />
+  </EntityType>
+  <EntityType Name="T_SmsMain">
+    <Key>
+      <PropertyRef Name="SmsID" />
+    </Key>
+    <Property Name="SmsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="SupplierName" Type="varchar" MaxLength="80" />
+    <Property Name="SendUserID" Type="int" Nullable="false" />
+    <Property Name="SendUserName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="SendTime" Type="datetime" Nullable="false" />
+    <Property Name="SmsState" Type="varchar" MaxLength="200" />
+    <Property Name="SmsCount" Type="int" />
+    <Property Name="SmsContend" Type="varchar" MaxLength="1000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_SysBlackList">
+    <Key>
+      <PropertyRef Name="BId" />
+    </Key>
+    <Property Name="BId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BTypeId" Type="int" />
+    <Property Name="BTypeName" Type="varchar" MaxLength="20" />
+    <Property Name="BTypeItemId" Type="nchar" MaxLength="10" />
+    <Property Name="BTypeItemName" Type="varchar" MaxLength="50" />
+    <Property Name="OId" Type="int" />
+    <Property Name="OrderId" Type="varchar" MaxLength="200" />
+    <Property Name="BWWHao" Type="varchar" MaxLength="200" />
+    <Property Name="BMobile" Type="varchar" MaxLength="200" />
+    <Property Name="BUserName" Type="varchar" MaxLength="200" />
+    <Property Name="HistoryOrderID" Type="varchar" MaxLength="500" />
+    <Property Name="HistoryUserInfo" Type="varchar" MaxLength="200" />
+    <Property Name="HistoryContent" Type="text" />
+    <Property Name="HistoryClosingTime" Type="datetime" />
+    <Property Name="CreateUserId" Type="int" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_SysBlackType">
+    <Key>
+      <PropertyRef Name="BTypeId" />
+    </Key>
+    <Property Name="BTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BTypeName" Type="varchar" MaxLength="20" />
+    <Property Name="BTypeItemId" Type="int" />
+    <Property Name="BTypeItemName" Type="varchar" MaxLength="50" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="10" />
+    <Property Name="CteateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_SysLog">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LogType" Type="int" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="LogInfo" Type="text" />
+    <Property Name="EnterTime" Type="datetime" />
+    <Property Name="LeaveTime" Type="datetime" />
+    <Property Name="Minute" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“dhgl2013.dbo.T_SysMenu”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="T_SysMenu">
+    <Key>
+      <PropertyRef Name="MenuID" />
+      <PropertyRef Name="SupplierType" />
+      <PropertyRef Name="MenuName" />
+      <PropertyRef Name="UrlPage" />
+      <PropertyRef Name="UrlImage" />
+      <PropertyRef Name="UrlTarget" />
+      <PropertyRef Name="ParentID" />
+      <PropertyRef Name="IsVisible" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="SortSeq" />
+    </Key>
+    <Property Name="MenuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierType" Type="tinyint" Nullable="false" />
+    <Property Name="MenuName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UrlPage" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="UrlImage" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UrlTarget" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="IsVisible" Type="bit" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SortSeq" Type="int" Nullable="false" />
+    <Property Name="IsDisplay" Type="bit" />
+    <Property Name="ErpSorting" Type="int" />
+    <Property Name="ControllerName" Type="varchar" MaxLength="50" />
+    <Property Name="ActionName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="T_sysNewRole">
+    <Key>
+      <PropertyRef Name="RID" />
+    </Key>
+    <Property Name="RID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RContent" Type="varchar" MaxLength="50" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="InTime" Type="datetime" />
+    <Property Name="IsEnable" Type="bit" />
+  </EntityType>
+  <EntityType Name="T_sysNewRoleOperation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RID" Type="int" Nullable="false" />
+    <Property Name="OID" Type="int" Nullable="false" />
+    <Property Name="IsOperate" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_sysNewRoleRight">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RID" Type="int" Nullable="false" />
+    <Property Name="MenuID" Type="int" Nullable="false" />
+    <Property Name="SubIDs" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="T_SysOperation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuID" Type="int" Nullable="false" />
+    <Property Name="OperationName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_SysOperationLog">
+    <Key>
+      <PropertyRef Name="OOperationLogID" />
+    </Key>
+    <Property Name="OOperationLogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OUserID" Type="int" />
+    <Property Name="OUserName" Type="varchar" MaxLength="10" />
+    <Property Name="OContent" Type="text" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="OAddTime" Type="datetime" />
+    <Property Name="OLogID" Type="int" />
+    <Property Name="OMenuID" Type="int" />
+    <Property Name="OProject" Type="int" />
+    <Property Name="OType" Type="int" />
+    <Property Name="OSupplierID" Type="int" />
+    <Property Name="CashID" Type="int" />
+    <Property Name="IsOnline" Type="bit" />
+  </EntityType>
+  <EntityType Name="T_SysSetKey">
+    <Key>
+      <PropertyRef Name="SysID" />
+    </Key>
+    <Property Name="SysID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="grant_type" Type="varchar" MaxLength="300" />
+    <Property Name="code" Type="varchar" MaxLength="300" />
+    <Property Name="client_id" Type="varchar" MaxLength="300" />
+    <Property Name="client_secret" Type="varchar" MaxLength="300" />
+    <Property Name="redirect_uri" Type="varchar" MaxLength="300" />
+    <Property Name="get_view" Type="varchar" MaxLength="50" />
+    <Property Name="get_param" Type="text" />
+    <Property Name="get_Access_Token" Type="varchar" MaxLength="300" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_SysSupplier">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierType" Type="tinyint" />
+    <Property Name="SupplierGrade" Type="varchar" MaxLength="50" />
+    <Property Name="TopSupplierID" Type="int" />
+    <Property Name="SupplierCode" Type="varchar" MaxLength="30" />
+    <Property Name="SupplierName" Type="varchar" MaxLength="80" />
+    <Property Name="SupplierNameShort" Type="varchar" MaxLength="50" />
+    <Property Name="SupplierNameSubfix" Type="varchar" MaxLength="50" />
+    <Property Name="NationID" Type="int" />
+    <Property Name="NationName" Type="varchar" MaxLength="30" />
+    <Property Name="ProvinceID" Type="int" />
+    <Property Name="ProvinceName" Type="varchar" MaxLength="30" />
+    <Property Name="CityID" Type="int" />
+    <Property Name="CityName" Type="varchar" MaxLength="50" />
+    <Property Name="DistinctID" Type="int" />
+    <Property Name="DistinctName" Type="varchar" MaxLength="50" />
+    <Property Name="ZoneID" Type="int" />
+    <Property Name="ZoneName" Type="varchar" MaxLength="50" />
+    <Property Name="SupplierAddress" Type="varchar" MaxLength="300" />
+    <Property Name="opSupplierID" Type="int" />
+    <Property Name="opSupplierName" Type="varchar" MaxLength="50" />
+    <Property Name="IsEnable" Type="tinyint" />
+    <Property Name="IsDelete" Type="tinyint" />
+    <Property Name="SupplierBank" Type="varchar" MaxLength="1000" />
+    <Property Name="SupplierContact" Type="varchar" MaxLength="1000" />
+    <Property Name="Manager" Type="varchar" MaxLength="50" />
+    <Property Name="ManagerTel" Type="varchar" MaxLength="50" />
+    <Property Name="Logo" Type="varchar" MaxLength="50" />
+    <Property Name="LogoPrint" Type="varchar" MaxLength="50" />
+    <Property Name="Remark" Type="varchar" MaxLength="3000" />
+    <Property Name="IsReceiveSms" Type="tinyint" />
+    <Property Name="Tu8Nid" Type="varchar" MaxLength="50" />
+    <Property Name="Legal" Type="varchar" MaxLength="30" />
+    <Property Name="LegalTel" Type="varchar" MaxLength="30" />
+    <Property Name="LegalFax" Type="varchar" MaxLength="30" />
+    <Property Name="Recommend" Type="varchar" MaxLength="60" />
+    <Property Name="RegisterType" Type="tinyint" />
+    <Property Name="RegisterState" Type="tinyint" />
+    <Property Name="TotalScore" Type="int" />
+    <Property Name="RegisterCheckUser" Type="varchar" MaxLength="30" />
+    <Property Name="RegisterCheckTime" Type="datetime" />
+    <Property Name="CreateUser" Type="varchar" MaxLength="30" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="SortSeq" Type="int" />
+    <Property Name="Prermit" Type="varchar" MaxLength="200" />
+    <Property Name="SBusiness" Type="varchar" MaxLength="500" />
+    <Property Name="Protocol_DJS_Name" Type="varchar" MaxLength="200" />
+    <Property Name="Protocol_DJS_Contactor" Type="varchar" MaxLength="100" />
+    <Property Name="Protocol_DJS_ContactMobile" Type="varchar" MaxLength="100" />
+    <Property Name="Protocol_DJS_Prermit" Type="varchar" MaxLength="200" />
+    <Property Name="Protocol_DJS_SBusiness" Type="varchar" MaxLength="500" />
+    <Property Name="Protocol_DJS_Address" Type="varchar" MaxLength="200" />
+    <Property Name="Protocol_ZTS_Name" Type="varchar" MaxLength="200" />
+    <Property Name="Protocol_ZTS_Contactor" Type="varchar" MaxLength="100" />
+    <Property Name="Protocol_ZTS_ContactMobile" Type="varchar" MaxLength="100" />
+    <Property Name="Protocol_ZTS_Prermit" Type="varchar" MaxLength="200" />
+    <Property Name="Protocol_ZTS_SBusiness" Type="varchar" MaxLength="500" />
+    <Property Name="Protocol_ZTS_Address" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“dhgl2013.dbo.T_SysSupplierConfig”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="T_SysSupplierConfig">
+    <Key>
+      <PropertyRef Name="ConfigID" />
+      <PropertyRef Name="SupplierID" />
+      <PropertyRef Name="UsingPassword" />
+      <PropertyRef Name="SmsUrl" />
+      <PropertyRef Name="SmsAccount" />
+      <PropertyRef Name="SmsPassword" />
+      <PropertyRef Name="SmsProduct" />
+      <PropertyRef Name="SmsSign" />
+      <PropertyRef Name="FaxAccount" />
+      <PropertyRef Name="FaxCode" />
+      <PropertyRef Name="FaxPassword" />
+      <PropertyRef Name="FaxPassport" />
+      <PropertyRef Name="WebSiteIsOpen" />
+      <PropertyRef Name="WebSiteStyleIndex" />
+      <PropertyRef Name="WebSiteDepartureID" />
+      <PropertyRef Name="ErpValidateCode" />
+      <PropertyRef Name="WebSiteUrl" />
+    </Key>
+    <Property Name="ConfigID" Type="int" Nullable="false" />
+    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="UsingPassword" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SmsUrl" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SmsAccount" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SmsPassword" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SmsProduct" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SmsSign" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FaxAccount" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FaxCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FaxPassword" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FaxPassport" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="WebSiteIsOpen" Type="tinyint" Nullable="false" />
+    <Property Name="WebSiteStyleIndex" Type="tinyint" Nullable="false" />
+    <Property Name="WebSiteDepartureID" Type="int" Nullable="false" />
+    <Property Name="ErpValidateCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="WebSiteUrl" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_SysUserAllocationAmount">
+    <Key>
+      <PropertyRef Name="AId" />
+    </Key>
+    <Property Name="AId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AllocationAmount" Type="money" />
+    <Property Name="RemainingAmount" Type="money" />
+    <Property Name="AllocationUserId" Type="int" />
+    <Property Name="AllocationUserName" Type="varchar" MaxLength="10" />
+    <Property Name="AllocationContent" Type="text" />
+    <Property Name="AllocationTime" Type="datetime" />
+    <Property Name="CreateUserId" Type="int" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="10" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_SysUserAllocationDetails">
+    <Key>
+      <PropertyRef Name="DId" />
+    </Key>
+    <Property Name="DId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AId" Type="int" />
+    <Property Name="AllocationUserId" Type="int" />
+    <Property Name="AllocationAmount" Type="money" />
+    <Property Name="AllocationContent" Type="text" />
+    <Property Name="AllocationTime" Type="datetime" />
+    <Property Name="CreateUserId" Type="int" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_SysUserBranchPower">
+    <Key>
+      <PropertyRef Name="BId" />
+    </Key>
+    <Property Name="BId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="UserType" Type="int" />
+    <Property Name="CodeId" Type="int" />
+    <Property Name="UserName" Type="varchar" MaxLength="10" />
+    <Property Name="CityId" Type="int" />
+    <Property Name="CityName" Type="varchar" MaxLength="10" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="BranchName" Type="varchar" MaxLength="10" />
+    <Property Name="UserSubordinate" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="T_SysUserDocument">
+    <Key>
+      <PropertyRef Name="DId" />
+    </Key>
+    <Property Name="DId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DTitle" Type="varchar" MaxLength="50" />
+    <Property Name="DType" Type="int" />
+    <Property Name="DContent" Type="text" />
+    <Property Name="DUserId" Type="int" />
+    <Property Name="DUserName" Type="varchar" MaxLength="50" />
+    <Property Name="DTime" Type="datetime" />
+    <Property Name="CreateUserId" Type="int" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_SysUserRole">
+    <Key>
+      <PropertyRef Name="URId" />
+    </Key>
+    <Property Name="URId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="URName" Type="varchar" MaxLength="10" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="RoleId" Type="int" />
+    <Property Name="RoleContent" Type="varchar" MaxLength="20" />
+    <Property Name="UserId" Type="varchar" MaxLength="200" />
+    <Property Name="UserContent" Type="varchar" MaxLength="200" />
+    <Property Name="CreateUserId" Type="int" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_SysWaitProcessed">
+    <Key>
+      <PropertyRef Name="WId" />
+    </Key>
+    <Property Name="WId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InDateTime" Type="datetime" />
+    <Property Name="WWHao" Type="varchar" MaxLength="200" />
+    <Property Name="BeProName" Type="varchar" MaxLength="100" />
+    <Property Name="CurrentAmount" Type="money" />
+    <Property Name="RemAmount" Type="money" />
+    <Property Name="SumAmount" Type="money" />
+    <Property Name="GetUserId" Type="int" />
+    <Property Name="GetUserName" Type="varchar" MaxLength="10" />
+    <Property Name="GetCountryId" Type="int" />
+    <Property Name="GetCountryName" Type="varchar" MaxLength="10" />
+    <Property Name="CreateUserId" Type="int" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="10" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_UserChatRecord">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SenderID" Type="int" Nullable="false" />
+    <Property Name="SenderName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SendeeID" Type="int" Nullable="false" />
+    <Property Name="SendeeName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="RContent" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_UserScheduling">
+    <Key>
+      <PropertyRef Name="SID" />
+    </Key>
+    <Property Name="SID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STitle" Type="varchar" MaxLength="100" />
+    <Property Name="SType" Type="int" />
+    <Property Name="TypeItemId" Type="int" />
+    <Property Name="TypeItemName" Type="varchar" MaxLength="10" />
+    <Property Name="SUserID" Type="int" />
+    <Property Name="StartWorkTime" Type="datetime" />
+    <Property Name="EndWorkTime" Type="datetime" />
+    <Property Name="WorkLength" Type="int" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="CountryName" Type="varchar" MaxLength="10" />
+    <Property Name="SAddUserID" Type="int" />
+    <Property Name="SSupplierID" Type="int" />
+    <Property Name="SIsSign" Type="bit" />
+    <Property Name="SAddTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tmall_Country">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tmall_ID" Type="nvarchar" MaxLength="100" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="100" />
+    <Property Name="VisaType" Type="nvarchar" MaxLength="4" />
+    <Property Name="Enable" Type="bit" />
+    <Property Name="WeFingerprintToSend" Type="bit" />
+    <Property Name="WeToSend" Type="bit" />
+    <Property Name="CountrySorting" Type="int" />
+  </EntityType>
+  <EntityType Name="Tmall_CountryPackage">
+    <Key>
+      <PropertyRef Name="CPId" />
+    </Key>
+    <Property Name="CPId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="CountryName" Type="varchar" MaxLength="50" />
+    <Property Name="PackageSorting" Type="int" />
+    <Property Name="PackageId" Type="int" Nullable="false" />
+    <Property Name="PackageName" Type="varchar" MaxLength="50" />
+    <Property Name="TmallPackageName" Type="varchar" MaxLength="100" />
+    <Property Name="BaseShare" Type="int" />
+    <Property Name="ImgTag" Type="int" />
+    <Property Name="IsEnable" Type="bit" />
+    <Property Name="EffectivePackage" Type="int" />
+    <Property Name="PackageType" Type="int" />
+    <Property Name="IsUrgent" Type="bit" />
+    <Property Name="IsKeFuMetering" Type="bit" />
+    <Property Name="IsVisaFee" Type="bit" />
+    <Property Name="IsFingerprintsOff" Type="bit" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tmall_Package">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Huaxia_ID" Type="int" />
+    <Property Name="PackageName" Type="nvarchar" MaxLength="100" />
+    <Property Name="T_PackageId" Type="bigint" />
+    <Property Name="T_PackageName" Type="nvarchar" MaxLength="100" />
+    <Property Name="T_Type" Type="nvarchar" MaxLength="10" />
+    <Property Name="ImgTag" Type="int" />
+    <Property Name="IsEnable" Type="bit" />
+    <Property Name="Division" Type="int" />
+    <Property Name="PackageType" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="Tmall_Package8">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Huaxia_ID" Type="int" />
+    <Property Name="PackageName" Type="nvarchar" MaxLength="100" />
+    <Property Name="T_PackageId" Type="bigint" />
+    <Property Name="T_PackageName" Type="nvarchar" MaxLength="100" />
+    <Property Name="T_Type" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="v_cailiaolist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mainId" Type="int" />
+    <Property Name="areaId" Type="int" />
+    <Property Name="areaname" Type="nvarchar" MaxLength="50" />
+    <Property Name="c_nameId" Type="int" />
+    <Property Name="c_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="c_typeId" Type="int" />
+    <Property Name="c_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="CrowdTypeId" Type="int" />
+    <Property Name="CrowdType" Type="nvarchar" MaxLength="50" />
+    <Property Name="c_att" Type="nvarchar" MaxLength="50" />
+    <Property Name="c_atts" Type="nvarchar" MaxLength="200" />
+    <Property Name="v_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="inputtime" Type="smalldatetime" />
+    <Property Name="paix" Type="int" />
+  </EntityType>
+  <EntityType Name="v_cailiaolist_info">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="list_type" Type="int" />
+    <Property Name="list_time" Type="int" />
+    <Property Name="list_id" Type="int" />
+    <Property Name="list_name" Type="nvarchar" MaxLength="10" />
+    <Property Name="list_vtype" Type="nvarchar" MaxLength="10" />
+    <Property Name="list_ZXname" Type="nvarchar" MaxLength="50" />
+    <Property Name="list_num" Type="int" />
+    <Property Name="list_title" Type="nvarchar" MaxLength="250" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="50" />
+    <Property Name="UpdateTime" Type="datetime" />
+    <Property Name="inputtime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="v_coll_info">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="oid" Type="int" />
+    <Property Name="Dorder" Type="int" />
+    <Property Name="orderid" Type="nvarchar" MaxLength="100" />
+    <Property Name="paytype" Type="int" />
+    <Property Name="paymeth" Type="nvarchar" MaxLength="50" />
+    <Property Name="rency" Type="nvarchar" MaxLength="50" />
+    <Property Name="amount" Type="money" />
+    <Property Name="fphao" Type="nvarchar" MaxLength="100" />
+    <Property Name="sjhao" Type="nvarchar" MaxLength="100" />
+    <Property Name="contact" Type="nvarchar(max)" />
+    <Property Name="intime" Type="smalldatetime" />
+    <Property Name="profits" Type="int" />
+    <Property Name="hfyuefei" Type="int" />
+    <Property Name="hfnianfei" Type="int" />
+    <Property Name="hfjdrid" Type="int" />
+    <Property Name="hfczrid" Type="nvarchar" MaxLength="6" />
+    <Property Name="audit" Type="int" />
+    <Property Name="sum_amount" Type="money" />
+    <Property Name="pic_num" Type="money" />
+    <Property Name="loss_num" Type="money" />
+    <Property Name="CreateUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="EnableAliRefundTag" Type="bit" />
+    <Property Name="EnableSynchronous" Type="bit" />
+    <Property Name="EnableAliPay" Type="bit" />
+  </EntityType>
+  <EntityType Name="v_CustomFollowUp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Mobile" Type="varchar" MaxLength="15" />
+    <Property Name="CountryID" Type="int" />
+    <Property Name="CallDate" Type="datetime" />
+    <Property Name="OutDate" Type="datetime" />
+    <Property Name="Crowd" Type="varchar" MaxLength="255" />
+    <Property Name="Demand" Type="varchar" MaxLength="255" />
+    <Property Name="WeChat" Type="varchar" MaxLength="50" />
+    <Property Name="EMail" Type="varchar" MaxLength="80" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Remark" Type="varchar" MaxLength="255" />
+    <Property Name="IsAssigned" Type="bit" />
+    <Property Name="IsUnread" Type="bit" />
+    <Property Name="AddUserID" Type="int" />
+    <Property Name="AddUserName" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="AssignedUserId" Type="int" />
+    <Property Name="AssignedUserName" Type="varchar" MaxLength="10" />
+    <Property Name="SupplierID" Type="int" />
+  </EntityType>
+  <EntityType Name="v_CustomFollowUpDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FId" Type="int" Nullable="false" />
+    <Property Name="Content" Type="text" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="v_infolist">
+    <Key>
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Name="oid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsOnline" Type="bit" />
+    <Property Name="finger" Type="int" />
+    <Property Name="parent" Type="int" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="HArea" Type="nvarchar" MaxLength="10" />
+    <Property Name="HArea_hangzhou" Type="int" />
+    <Property Name="jdr_id" Type="int" />
+    <Property Name="title" Type="nvarchar" MaxLength="100" />
+    <Property Name="sku_properties_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="orderid" Type="nvarchar" MaxLength="100" />
+    <Property Name="v_name" Type="nvarchar" MaxLength="120" />
+    <Property Name="name_note" Type="nvarchar" MaxLength="500" />
+    <Property Name="v_starttime" Type="datetime" />
+    <Property Name="v_tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="loginID" Type="nvarchar" MaxLength="50" />
+    <Property Name="PassportNO" Type="nvarchar" MaxLength="50" />
+    <Property Name="Passport" Type="nvarchar" MaxLength="50" />
+    <Property Name="ActiveTime" Type="datetime" />
+    <Property Name="hxwwhao" Type="nvarchar" MaxLength="50" />
+    <Property Name="baoxian" Type="nvarchar" MaxLength="50" />
+    <Property Name="taocan" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_result" Type="nvarchar(max)" />
+    <Property Name="vtype_result" Type="nvarchar" MaxLength="10" />
+    <Property Name="v_stime" Type="datetime" />
+    <Property Name="v_qdao" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_otime" Type="datetime" />
+    <Property Name="jiedan_yuefei" Type="int" />
+    <Property Name="jiedan_nianfei" Type="int" />
+    <Property Name="v_number" Type="int" />
+    <Property Name="v_endtime" Type="datetime" />
+    <Property Name="v_email" Type="nvarchar" MaxLength="120" />
+    <Property Name="v_yshou" Type="money" />
+    <Property Name="visafee" Type="money" />
+    <Property Name="v_cash" Type="money" />
+    <Property Name="v_yshou_B" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_cvisa" Type="datetime" />
+    <Property Name="v_fPiao" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_pHao" Type="nvarchar" MaxLength="70" />
+    <Property Name="tmall_country_id" Type="int" />
+    <Property Name="v_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_package_new" Type="int" />
+    <Property Name="v_package" Type="int" />
+    <Property Name="v_tShu" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_contact" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_yFu" Type="money" />
+    <Property Name="v_yFu_B" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_xlv" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_lping" Type="nvarchar" MaxLength="100" />
+    <Property Name="viptc" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_yyemail" Type="nvarchar" MaxLength="50" />
+    <Property Name="countries" Type="nvarchar" MaxLength="50" />
+    <Property Name="record" Type="nvarchar" MaxLength="50" />
+    <Property Name="income" Type="nvarchar" MaxLength="50" />
+    <Property Name="bad_record" Type="nvarchar" MaxLength="50" />
+    <Property Name="conditions" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_vtype" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_vtype1" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_vtype2" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_vtype3" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_vtypeT" Type="nvarchar" MaxLength="50" />
+    <Property Name="inputtime" Type="datetime" />
+    <Property Name="v_yuefei" Type="int" />
+    <Property Name="v_nianfei" Type="int" />
+    <Property Name="wwhao" Type="nvarchar" MaxLength="100" />
+    <Property Name="birth" Type="datetime" />
+    <Property Name="birth_B" Type="nvarchar" MaxLength="100" />
+    <Property Name="v_tuanhao" Type="nvarchar" MaxLength="100" />
+    <Property Name="v_yuytime" Type="datetime" />
+    <Property Name="v_sqryId" Type="int" />
+    <Property Name="v_sqry" Type="nvarchar" MaxLength="100" />
+    <Property Name="v_sqadd" Type="nvarchar" MaxLength="100" />
+    <Property Name="v_stime_shi" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_stime_fen" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpTime" Type="datetime" />
+    <Property Name="qi_type" Type="int" />
+    <Property Name="qi_content" Type="nvarchar" MaxLength="460" />
+    <Property Name="fahuo" Type="nvarchar" MaxLength="8" />
+    <Property Name="fahuo_content" Type="nvarchar" MaxLength="80" />
+    <Property Name="xingcheng_content" Type="nvarchar(max)" />
+    <Property Name="xctijiaoren" Type="int" />
+    <Property Name="xctijiaorenname" Type="nvarchar" MaxLength="10" />
+    <Property Name="CLJieDanRen" Type="nvarchar" MaxLength="10" />
+    <Property Name="quvisa" Type="nvarchar" MaxLength="50" />
+    <Property Name="quvisa_num" Type="nvarchar" MaxLength="100" />
+    <Property Name="audit" Type="int" />
+    <Property Name="audittime" Type="datetime" />
+    <Property Name="fp_enable" Type="int" />
+    <Property Name="fp_type" Type="nvarchar" MaxLength="20" />
+    <Property Name="fp_title" Type="nvarchar" MaxLength="50" />
+    <Property Name="fp_num" Type="nvarchar" MaxLength="10" />
+    <Property Name="fp_content" Type="nvarchar" MaxLength="10" />
+    <Property Name="fp_hao" Type="nvarchar" MaxLength="50" />
+    <Property Name="fp_billNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="fp_drawerId" Type="int" />
+    <Property Name="fp_drawerName" Type="nvarchar" MaxLength="50" />
+    <Property Name="fp_time" Type="datetime" />
+    <Property Name="imgpath" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaxPic" Type="nvarchar" MaxLength="200" />
+    <Property Name="insurance" Type="nvarchar" MaxLength="50" />
+    <Property Name="insur_num" Type="nvarchar" MaxLength="50" />
+    <Property Name="V_jdrid" Type="int" />
+    <Property Name="V_jdrname" Type="nvarchar" MaxLength="10" />
+    <Property Name="audit_id" Type="int" />
+    <Property Name="audit_er" Type="nvarchar" MaxLength="50" />
+    <Property Name="auditer_time" Type="datetime" />
+    <Property Name="auditertime" Type="datetime" />
+    <Property Name="Yemail" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gemail" Type="int" />
+    <Property Name="xingji" Type="nvarchar" MaxLength="50" />
+    <Property Name="sjaddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="mat" Type="nvarchar" MaxLength="10" />
+    <Property Name="matinfo" Type="nvarchar(max)" />
+    <Property Name="mattime" Type="datetime" />
+    <Property Name="CourierNumber" Type="nvarchar" MaxLength="10" />
+    <Property Name="CourierNumberinfo" Type="nvarchar" MaxLength="50" />
+    <Property Name="CNumber" Type="nvarchar" MaxLength="10" />
+    <Property Name="CNumberinfo" Type="nvarchar" MaxLength="50" />
+    <Property Name="CNumberTime" Type="datetime" />
+    <Property Name="dstime" Type="datetime" />
+    <Property Name="endtime" Type="datetime" />
+    <Property Name="jiudian_DTime" Type="datetime" />
+    <Property Name="jiudian_EndTime" Type="datetime" />
+    <Property Name="jiudian_Num" Type="int" />
+    <Property Name="jiudian_Cancel" Type="int" />
+    <Property Name="jiudian_Note" Type="nvarchar(max)" />
+    <Property Name="have_card" Type="int" />
+    <Property Name="IsTicket" Type="int" />
+    <Property Name="TicketMemo" Type="nvarchar(max)" />
+    <Property Name="LackTime" Type="datetime" />
+    <Property Name="WeProfits" Type="money" />
+    <Property Name="WeToSend" Type="bit" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="v_infolistAfterPeople">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SId" Type="int" Nullable="false" />
+    <Property Name="AId" Type="int" />
+    <Property Name="OId" Type="int" Nullable="false" />
+    <Property Name="CodeID" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="KPINo" Type="int" />
+    <Property Name="QTypeId" Type="int" />
+    <Property Name="QTypeTxt" Type="varchar" MaxLength="50" />
+    <Property Name="CreatePeople" Type="varchar" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="v_infolistAfterSales">
+    <Key>
+      <PropertyRef Name="SId" />
+    </Key>
+    <Property Name="SId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FollowType" Type="int" />
+    <Property Name="OId" Type="int" />
+    <Property Name="OrderId" Type="varchar" MaxLength="50" />
+    <Property Name="QTypeId" Type="int" />
+    <Property Name="QTypeTxt" Type="varchar" MaxLength="50" />
+    <Property Name="OrderCountry" Type="varchar" MaxLength="50" />
+    <Property Name="DeductAmount" Type="money" />
+    <Property Name="OrderName" Type="varchar" MaxLength="50" />
+    <Property Name="OrderMobile" Type="varchar" MaxLength="50" />
+    <Property Name="OrderWWHao" Type="varchar" MaxLength="50" />
+    <Property Name="OrderUsers" Type="varchar" MaxLength="50" />
+    <Property Name="OrderTime" Type="datetime" />
+    <Property Name="SContent" Type="text" />
+    <Property Name="STime" Type="datetime" />
+    <Property Name="InputTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="v_infolistAfterSalesDetails">
+    <Key>
+      <PropertyRef Name="DId" />
+    </Key>
+    <Property Name="DId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SId" Type="int" />
+    <Property Name="OId" Type="int" />
+    <Property Name="DType" Type="int" />
+    <Property Name="DContent" Type="text" />
+    <Property Name="CreateUserId" Type="int" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="10" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="v_infolistAudit">
+    <Key>
+      <PropertyRef Name="AId" />
+    </Key>
+    <Property Name="AId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="oid" Type="int" />
+    <Property Name="cashId" Type="int" />
+    <Property Name="createId" Type="int" />
+    <Property Name="createUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="createTime" Type="datetime" />
+    <Property Name="audittime" Type="datetime" />
+    <Property Name="auditren" Type="nvarchar" MaxLength="50" />
+    <Property Name="auditSta" Type="int" />
+    <Property Name="greatetime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="v_infolistAuditRecords">
+    <Key>
+      <PropertyRef Name="AId" />
+    </Key>
+    <Property Name="AId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AOId" Type="int" />
+    <Property Name="ALevelId" Type="int" />
+    <Property Name="ALevel" Type="varchar" MaxLength="10" />
+    <Property Name="AOrderId" Type="varchar" MaxLength="50" />
+    <Property Name="AOrderName" Type="varchar" MaxLength="50" />
+    <Property Name="AOrderMobile" Type="varchar" MaxLength="50" />
+    <Property Name="AOrderWWHao" Type="varchar" MaxLength="50" />
+    <Property Name="AOrderUsers" Type="varchar" MaxLength="50" />
+    <Property Name="AOrderTime" Type="datetime" />
+    <Property Name="ASContent" Type="text" />
+    <Property Name="AuditUserID" Type="int" />
+    <Property Name="AuditUserName" Type="varchar" MaxLength="10" />
+    <Property Name="ASTime" Type="datetime" />
+    <Property Name="InputTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="v_infolistFollow">
+    <Key>
+      <PropertyRef Name="SId" />
+    </Key>
+    <Property Name="SId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OId" Type="int" />
+    <Property Name="OrderStatus" Type="varchar" MaxLength="10" />
+    <Property Name="SCourier" Type="varchar" MaxLength="10" />
+    <Property Name="SCContent" Type="varchar" MaxLength="300" />
+    <Property Name="SCNumber" Type="varchar" MaxLength="100" />
+    <Property Name="SCIsMail" Type="varchar" MaxLength="10" />
+    <Property Name="STake" Type="varchar" MaxLength="12" />
+    <Property Name="STContent" Type="varchar" MaxLength="300" />
+    <Property Name="STNumber" Type="varchar" MaxLength="100" />
+    <Property Name="STIsMail" Type="varchar" MaxLength="10" />
+    <Property Name="Auditor" Type="varchar" MaxLength="10" />
+    <Property Name="AuditTime" Type="datetime" />
+    <Property Name="Recipient" Type="varchar" MaxLength="10" />
+    <Property Name="RecipientTime" Type="datetime" />
+    <Property Name="VisaValidity" Type="varchar" MaxLength="20" />
+    <Property Name="SFOrderNoCreateTime" Type="datetime" />
+    <Property Name="InitRegistrationTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="v_infolistimg">
+    <Key>
+      <PropertyRef Name="ImgID" />
+    </Key>
+    <Property Name="ImgID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UpType" Type="bit" />
+    <Property Name="UserInfoID" Type="int" />
+    <Property Name="UserInfoName" Type="nvarchar" MaxLength="200" />
+    <Property Name="imgpath" Type="nvarchar" MaxLength="50" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaxPic" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsDisplay" Type="bit" />
+    <Property Name="uptime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="v_infolistRelevant">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="OrderId" Type="int" Nullable="false" />
+    <Property Name="UseNum" Type="int" />
+    <Property Name="IsEnable" Type="bit" />
+    <Property Name="ReTyple" Type="bit" />
+    <Property Name="GetCreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="v_kehuinfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kf_name" Type="nvarchar" MaxLength="80" />
+    <Property Name="orderid" Type="nvarchar" MaxLength="80" />
+    <Property Name="hfjdrid" Type="int" />
+    <Property Name="Dorder" Type="int" />
+    <Property Name="puttime" Type="datetime" />
+    <Property Name="Dbirth" Type="datetime" />
+    <Property Name="Enable" Type="bit" />
+  </EntityType>
+  <EntityType Name="v_OrderAudit">
+    <Key>
+      <PropertyRef Name="AuditId" />
+    </Key>
+    <Property Name="AuditId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OId" Type="int" />
+    <Property Name="CashId" Type="int" />
+    <Property Name="AuditUserId" Type="int" />
+    <Property Name="AuditUserName" Type="varchar" MaxLength="10" />
+    <Property Name="AuditTime" Type="datetime" />
+    <Property Name="AuditState" Type="bit" />
+    <Property Name="CreateUserId" Type="int" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="10" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="v_OrderAuditAccounting">
+    <Key>
+      <PropertyRef Name="AccId" />
+    </Key>
+    <Property Name="AccId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OId" Type="int" />
+    <Property Name="OrderId" Type="varchar" MaxLength="100" />
+    <Property Name="OrderState" Type="varchar" MaxLength="20" />
+    <Property Name="OrderTime" Type="datetime" />
+    <Property Name="OrderXCRId" Type="int" />
+    <Property Name="OrderJDRId" Type="int" />
+    <Property Name="OrderProfit" Type="money" />
+    <Property Name="AccState" Type="bit" />
+    <Property Name="AccDateTime" Type="datetime" />
+    <Property Name="CreateUserId" Type="int" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="10" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="v_OrderFillBalance">
+    <Key>
+      <PropertyRef Name="FId" />
+    </Key>
+    <Property Name="FId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OId" Type="int" />
+    <Property Name="OrderNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="WWHao" Type="nvarchar" MaxLength="100" />
+    <Property Name="JDRId" Type="int" />
+    <Property Name="JDRName" Type="varchar" MaxLength="50" />
+    <Property Name="CompleteTime" Type="datetime" />
+    <Property Name="OrderState" Type="varchar" MaxLength="50" />
+    <Property Name="FillOrderId" Type="int" />
+    <Property Name="FillAmount" Type="money" />
+    <Property Name="FillTime" Type="datetime" />
+    <Property Name="FillNotes" Type="text" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="v_OrderInvoice">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PStateName" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="v_OrderInvoiceInfo">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OId" Type="int" />
+    <Property Name="PType" Type="int" />
+    <Property Name="PTypeName" Type="varchar" MaxLength="50" />
+    <Property Name="PNo" Type="varchar" MaxLength="200" />
+    <Property Name="PTile" Type="varchar" MaxLength="200" />
+    <Property Name="PCategory" Type="varchar" MaxLength="50" />
+    <Property Name="PAmount" Type="money" />
+    <Property Name="PBillNo" Type="varchar" MaxLength="200" />
+    <Property Name="PEnable" Type="int" />
+    <Property Name="CreateId" Type="int" />
+    <Property Name="CreateName" Type="varchar" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="v_OrderPayProof">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OId" Type="int" />
+    <Property Name="PayId" Type="int" />
+    <Property Name="ProofStr" Type="nvarchar" MaxLength="200" />
+    <Property Name="UpUserId" Type="int" />
+    <Property Name="UpUserName" Type="varchar" MaxLength="10" />
+    <Property Name="UploadTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="v_OrderPeer">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OId" Type="int" />
+    <Property Name="OrderId" Type="nvarchar" MaxLength="100" />
+    <Property Name="BespeakEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="EnablePeer" Type="bit" />
+    <Property Name="CreateUserName" Type="nvarchar" MaxLength="15" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="v_OrderRefund">
+    <Key>
+      <PropertyRef Name="RefundID" />
+    </Key>
+    <Property Name="RefundID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Oid" Type="int" />
+    <Property Name="Sub_Order_Id" Type="bigint" />
+    <Property Name="Refund_Id" Type="bigint" />
+    <Property Name="Refund_Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="Payment" Type="money" />
+    <Property Name="Total_Fee" Type="money" />
+    <Property Name="End_Time" Type="datetime" />
+    <Property Name="Alipay_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pay_Time" Type="datetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="Created_Time" Type="datetime" />
+    <Property Name="ReceivedPayment" Type="money" />
+  </EntityType>
+  <EntityType Name="v_OrderStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StatusName" Type="varchar" MaxLength="10" />
+    <Property Name="PackageType" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="v_OrderStatusLimit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StatusId" Type="int" />
+    <Property Name="StatusName" Type="varchar" MaxLength="10" />
+    <Property Name="LimitName" Type="varchar" MaxLength="10" />
+    <Property Name="PackageType" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="v_OrderType">
+    <Key>
+      <PropertyRef Name="VId" />
+    </Key>
+    <Property Name="VId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VType" Type="varchar" MaxLength="10" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="CrowdType" Type="varchar" MaxLength="20" />
+    <Property Name="CityId" Type="int" />
+    <Property Name="CityName" Type="varchar" MaxLength="10" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="CountryName" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="V_SysAdmin">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sorting" Type="int" />
+    <Property Name="CodeID" Type="int" />
+    <Property Name="SysType" Type="int" />
+    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="UserDpt" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="UserCode" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="UserTel" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserMobile" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserFax" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserQQName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserQQ" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserMail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserAccount" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="UserPwd" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserBrief" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsReceiveSms" Type="bit" Nullable="false" />
+    <Property Name="IsOncallSms" Type="bit" Nullable="false" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="IsEnable" Type="bit" Nullable="false" />
+    <Property Name="IsDelete" Type="bit" Nullable="false" />
+    <Property Name="ActiveTime" Type="datetime" Nullable="false" />
+    <Property Name="LoginIP" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserSex" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UserPosition" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="UserPositionCall" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="UserBirthday" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="UserLogo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreateUserID" Type="int" Nullable="false" />
+    <Property Name="CreateUserName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="UserType" Type="int" />
+    <Property Name="InTime" Type="datetime" />
+    <Property Name="OutTime" Type="datetime" />
+    <Property Name="EmergencyUser" Type="varchar" MaxLength="30" />
+    <Property Name="EmergencyTel" Type="varchar" MaxLength="100" />
+    <Property Name="HomeAddress" Type="varchar" MaxLength="300" />
+    <Property Name="AttributionAreaId" Type="int" />
+    <Property Name="AttributionAreaName" Type="varchar" MaxLength="10" />
+    <Property Name="IdentityNo" Type="varchar" MaxLength="30" />
+    <Property Name="IdentityDescribe" Type="text" />
+    <Property Name="IdentiyValidity" Type="datetime" />
+    <Property Name="EnglishName" Type="varchar" MaxLength="30" />
+    <Property Name="NickName" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <Function Name="P_Article_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ArticleID" Type="int" Mode="In" />
+    <Parameter Name="ReturnValue" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="P_Order_Total" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="oid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="P_UserLogTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="P_UserSignValidate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserAccount" Type="varchar" Mode="In" />
+    <Parameter Name="Pwd" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="P_UserSignWebValidate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserAccount" Type="varchar" Mode="In" />
+    <Parameter Name="Pwd" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="T_Product_Recommend" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LineSite" Type="int" Mode="In" />
+  </Function>
+  <Function Name="V_Admin_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="int" Mode="In" />
+    <Parameter Name="ReturnValue" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="V_AdminSignValidate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserAccount" Type="varchar" Mode="In" />
+    <Parameter Name="Pwd" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="dhgl2013ModelStoreContainer">
+    <EntitySet Name="CommonlyDate" EntityType="Self.CommonlyDate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order_FirstResult" EntityType="Self.Order_FirstResult" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order_SubInfo" EntityType="Self.Order_SubInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_AliPayRecord" EntityType="Self.T_AliPayRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Article" EntityType="Self.T_Article" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_ArticleVisited" EntityType="Self.T_ArticleVisited" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_AssessmentBase" EntityType="Self.T_AssessmentBase" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_AssessmentUserSalary" EntityType="Self.T_AssessmentUserSalary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_BigDataOperation" EntityType="Self.T_BigDataOperation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_CommonlyMessage" EntityType="Self.T_CommonlyMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_CommonlyMessageConsul" EntityType="Self.T_CommonlyMessageConsul" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_CreditCardImport" EntityType="Self.T_CreditCardImport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_CreditCardUse" EntityType="Self.T_CreditCardUse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_EmailImport" EntityType="Self.T_EmailImport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_LinkDate" EntityType="Self.T_LinkDate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_MyWorkKPIInt" EntityType="Self.T_MyWorkKPIInt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_MyWorkReceive" EntityType="Self.T_MyWorkReceive" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_MyWorkTask" EntityType="Self.T_MyWorkTask" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SmsDetail" EntityType="Self.T_SmsDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SmsMain" EntityType="Self.T_SmsMain" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SysBlackList" EntityType="Self.T_SysBlackList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SysBlackType" EntityType="Self.T_SysBlackType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SysLog" EntityType="Self.T_SysLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_sysNewRole" EntityType="Self.T_sysNewRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_sysNewRoleOperation" EntityType="Self.T_sysNewRoleOperation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_sysNewRoleRight" EntityType="Self.T_sysNewRoleRight" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SysOperation" EntityType="Self.T_SysOperation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SysOperationLog" EntityType="Self.T_SysOperationLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SysSetKey" EntityType="Self.T_SysSetKey" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SysSupplier" EntityType="Self.T_SysSupplier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SysUserAllocationAmount" EntityType="Self.T_SysUserAllocationAmount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SysUserAllocationDetails" EntityType="Self.T_SysUserAllocationDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SysUserBranchPower" EntityType="Self.T_SysUserBranchPower" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SysUserDocument" EntityType="Self.T_SysUserDocument" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SysUserRole" EntityType="Self.T_SysUserRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SysWaitProcessed" EntityType="Self.T_SysWaitProcessed" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_UserChatRecord" EntityType="Self.T_UserChatRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_UserScheduling" EntityType="Self.T_UserScheduling" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tmall_Country" EntityType="Self.Tmall_Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tmall_CountryPackage" EntityType="Self.Tmall_CountryPackage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tmall_Package" EntityType="Self.Tmall_Package" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tmall_Package8" EntityType="Self.Tmall_Package8" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_cailiaolist" EntityType="Self.v_cailiaolist" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_cailiaolist_info" EntityType="Self.v_cailiaolist_info" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_coll_info" EntityType="Self.v_coll_info" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_CustomFollowUp" EntityType="Self.v_CustomFollowUp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_CustomFollowUpDetails" EntityType="Self.v_CustomFollowUpDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_infolist" EntityType="Self.v_infolist" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_infolistAfterPeople" EntityType="Self.v_infolistAfterPeople" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_infolistAfterSales" EntityType="Self.v_infolistAfterSales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_infolistAfterSalesDetails" EntityType="Self.v_infolistAfterSalesDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_infolistAudit" EntityType="Self.v_infolistAudit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_infolistAuditRecords" EntityType="Self.v_infolistAuditRecords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_infolistFollow" EntityType="Self.v_infolistFollow" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_infolistimg" EntityType="Self.v_infolistimg" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_infolistRelevant" EntityType="Self.v_infolistRelevant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_kehuinfo" EntityType="Self.v_kehuinfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_OrderAudit" EntityType="Self.v_OrderAudit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_OrderAuditAccounting" EntityType="Self.v_OrderAuditAccounting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_OrderFillBalance" EntityType="Self.v_OrderFillBalance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_OrderInvoice" EntityType="Self.v_OrderInvoice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_OrderInvoiceInfo" EntityType="Self.v_OrderInvoiceInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_OrderPayProof" EntityType="Self.v_OrderPayProof" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_OrderPeer" EntityType="Self.v_OrderPeer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_OrderRefund" EntityType="Self.v_OrderRefund" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_OrderStatus" EntityType="Self.v_OrderStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_OrderStatusLimit" EntityType="Self.v_OrderStatusLimit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_OrderType" EntityType="Self.v_OrderType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="V_SysAdmin" EntityType="Self.V_SysAdmin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Area" EntityType="Self.T_Area" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [T_Area].[AId] AS [AId], 
+    [T_Area].[AreaName] AS [AreaName], 
+    [T_Area].[Sorting] AS [Sorting]
+    FROM [dbo].[T_Area] AS [T_Area]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="T_AreaConsul" EntityType="Self.T_AreaConsul" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [T_AreaConsul].[CId] AS [CId], 
+    [T_AreaConsul].[CName] AS [CName], 
+    [T_AreaConsul].[AreaId] AS [AreaId], 
+    [T_AreaConsul].[AreaName] AS [AreaName], 
+    [T_AreaConsul].[Sorting] AS [Sorting]
+    FROM [dbo].[T_AreaConsul] AS [T_AreaConsul]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="T_AreaConsulClass" EntityType="Self.T_AreaConsulClass" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [T_AreaConsulClass].[ID] AS [ID], 
+    [T_AreaConsulClass].[CId] AS [CId], 
+    [T_AreaConsulClass].[CName] AS [CName], 
+    [T_AreaConsulClass].[CountryId] AS [CountryId], 
+    [T_AreaConsulClass].[CountryName] AS [CountryName], 
+    [T_AreaConsulClass].[AreaId] AS [AreaId], 
+    [T_AreaConsulClass].[AreaName] AS [AreaName], 
+    [T_AreaConsulClass].[Sorting] AS [Sorting]
+    FROM [dbo].[T_AreaConsulClass] AS [T_AreaConsulClass]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="T_SysMenu" EntityType="Self.T_SysMenu" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [T_SysMenu].[MenuID] AS [MenuID], 
+    [T_SysMenu].[SupplierType] AS [SupplierType], 
+    [T_SysMenu].[MenuName] AS [MenuName], 
+    [T_SysMenu].[UrlPage] AS [UrlPage], 
+    [T_SysMenu].[UrlImage] AS [UrlImage], 
+    [T_SysMenu].[UrlTarget] AS [UrlTarget], 
+    [T_SysMenu].[ParentID] AS [ParentID], 
+    [T_SysMenu].[IsVisible] AS [IsVisible], 
+    [T_SysMenu].[Description] AS [Description], 
+    [T_SysMenu].[SortSeq] AS [SortSeq], 
+    [T_SysMenu].[IsDisplay] AS [IsDisplay], 
+    [T_SysMenu].[ErpSorting] AS [ErpSorting], 
+    [T_SysMenu].[ControllerName] AS [ControllerName], 
+    [T_SysMenu].[ActionName] AS [ActionName]
+    FROM [dbo].[T_SysMenu] AS [T_SysMenu]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="T_SysSupplierConfig" EntityType="Self.T_SysSupplierConfig" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [T_SysSupplierConfig].[ConfigID] AS [ConfigID], 
+    [T_SysSupplierConfig].[SupplierID] AS [SupplierID], 
+    [T_SysSupplierConfig].[UsingPassword] AS [UsingPassword], 
+    [T_SysSupplierConfig].[SmsUrl] AS [SmsUrl], 
+    [T_SysSupplierConfig].[SmsAccount] AS [SmsAccount], 
+    [T_SysSupplierConfig].[SmsPassword] AS [SmsPassword], 
+    [T_SysSupplierConfig].[SmsProduct] AS [SmsProduct], 
+    [T_SysSupplierConfig].[SmsSign] AS [SmsSign], 
+    [T_SysSupplierConfig].[FaxAccount] AS [FaxAccount], 
+    [T_SysSupplierConfig].[FaxCode] AS [FaxCode], 
+    [T_SysSupplierConfig].[FaxPassword] AS [FaxPassword], 
+    [T_SysSupplierConfig].[FaxPassport] AS [FaxPassport], 
+    [T_SysSupplierConfig].[WebSiteIsOpen] AS [WebSiteIsOpen], 
+    [T_SysSupplierConfig].[WebSiteStyleIndex] AS [WebSiteStyleIndex], 
+    [T_SysSupplierConfig].[WebSiteDepartureID] AS [WebSiteDepartureID], 
+    [T_SysSupplierConfig].[ErpValidateCode] AS [ErpValidateCode], 
+    [T_SysSupplierConfig].[WebSiteUrl] AS [WebSiteUrl]
+    FROM [dbo].[T_SysSupplierConfig] AS [T_SysSupplierConfig]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

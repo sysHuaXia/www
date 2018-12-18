@@ -1,0 +1,2175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dhgl2013Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="dhgl2013Entities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="P_Article_Delete">
+      <Parameter Name="ArticleID" Mode="In" Type="Int32" />
+      <Parameter Name="ReturnValue" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_Order_Total" ReturnType="Collection(dhgl2013Model.P_Order_Total_Result)">
+      <Parameter Name="oid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="P_UserLogTime">
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="P_UserSignValidate" ReturnType="Collection(dhgl2013Model.P_UserSignValidate_Result)">
+      <Parameter Name="UserAccount" Mode="In" Type="String" />
+      <Parameter Name="Pwd" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_UserSignWebValidate" ReturnType="Collection(dhgl2013Model.P_UserSignWebValidate_Result)">
+      <Parameter Name="UserAccount" Mode="In" Type="String" />
+      <Parameter Name="Pwd" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="T_Product_Recommend" ReturnType="Collection(dhgl2013Model.T_Product_Recommend_Result)">
+      <Parameter Name="LineSite" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="V_Admin_Delete">
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+      <Parameter Name="ReturnValue" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="V_AdminSignValidate" ReturnType="Collection(dhgl2013Model.V_AdminSignValidate_Result)">
+      <Parameter Name="UserAccount" Mode="In" Type="String" />
+      <Parameter Name="Pwd" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Order_FirstResult" EntityType="dhgl2013Model.Order_FirstResult" />
+    <EntitySet Name="Order_SubInfo" EntityType="dhgl2013Model.Order_SubInfo" />
+    <EntitySet Name="T_Article" EntityType="dhgl2013Model.T_Article" />
+    <EntitySet Name="T_ArticleVisited" EntityType="dhgl2013Model.T_ArticleVisited" />
+    <EntitySet Name="T_AssessmentBase" EntityType="dhgl2013Model.T_AssessmentBase" />
+    <EntitySet Name="T_AssessmentUserSalary" EntityType="dhgl2013Model.T_AssessmentUserSalary" />
+    <EntitySet Name="T_CommonlyMessage" EntityType="dhgl2013Model.T_CommonlyMessage" />
+    <EntitySet Name="T_CommonlyMessageConsul" EntityType="dhgl2013Model.T_CommonlyMessageConsul" />
+    <EntitySet Name="T_CreditCardImport" EntityType="dhgl2013Model.T_CreditCardImport" />
+    <EntitySet Name="T_CreditCardUse" EntityType="dhgl2013Model.T_CreditCardUse" />
+    <EntitySet Name="T_EmailImport" EntityType="dhgl2013Model.T_EmailImport" />
+    <EntitySet Name="T_LinkDate" EntityType="dhgl2013Model.T_LinkDate" />
+    <EntitySet Name="T_SysBlackType" EntityType="dhgl2013Model.T_SysBlackType" />
+    <EntitySet Name="T_SysLog" EntityType="dhgl2013Model.T_SysLog" />
+    <EntitySet Name="T_sysNewRole" EntityType="dhgl2013Model.T_sysNewRole" />
+    <EntitySet Name="T_sysNewRoleOperation" EntityType="dhgl2013Model.T_sysNewRoleOperation" />
+    <EntitySet Name="T_sysNewRoleRight" EntityType="dhgl2013Model.T_sysNewRoleRight" />
+    <EntitySet Name="T_SysOperation" EntityType="dhgl2013Model.T_SysOperation" />
+    <EntitySet Name="T_SysOperationLog" EntityType="dhgl2013Model.T_SysOperationLog" />
+    <EntitySet Name="T_SysSupplier" EntityType="dhgl2013Model.T_SysSupplier" />
+    <EntitySet Name="T_SysUserBranchPower" EntityType="dhgl2013Model.T_SysUserBranchPower" />
+    <EntitySet Name="T_SysUserDocument" EntityType="dhgl2013Model.T_SysUserDocument" />
+    <EntitySet Name="T_SysUserRole" EntityType="dhgl2013Model.T_SysUserRole" />
+    <EntitySet Name="T_UserScheduling" EntityType="dhgl2013Model.T_UserScheduling" />
+    <EntitySet Name="v_cailiaolist" EntityType="dhgl2013Model.v_cailiaolist" />
+    <EntitySet Name="v_CustomFollowUp" EntityType="dhgl2013Model.v_CustomFollowUp" />
+    <EntitySet Name="v_CustomFollowUpDetails" EntityType="dhgl2013Model.v_CustomFollowUpDetails" />
+    <EntitySet Name="v_infolistAuditRecords" EntityType="dhgl2013Model.v_infolistAuditRecords" />
+    <EntitySet Name="v_infolistRelevant" EntityType="dhgl2013Model.v_infolistRelevant" />
+    <EntitySet Name="v_OrderAudit" EntityType="dhgl2013Model.v_OrderAudit" />
+    <EntitySet Name="v_OrderInvoice" EntityType="dhgl2013Model.v_OrderInvoice" />
+    <EntitySet Name="v_OrderPayProof" EntityType="dhgl2013Model.v_OrderPayProof" />
+    <EntitySet Name="v_OrderType" EntityType="dhgl2013Model.v_OrderType" />
+    <EntitySet Name="T_Area" EntityType="dhgl2013Model.T_Area" />
+    <EntitySet Name="T_AreaConsul" EntityType="dhgl2013Model.T_AreaConsul" />
+    <EntitySet Name="T_AreaConsulClass" EntityType="dhgl2013Model.T_AreaConsulClass" />
+    <EntitySet Name="T_SysUserAllocationAmount" EntityType="dhgl2013Model.T_SysUserAllocationAmount" />
+    <EntitySet Name="T_UserChatRecord" EntityType="dhgl2013Model.T_UserChatRecord" />
+    <EntitySet Name="T_SysWaitProcessed" EntityType="dhgl2013Model.T_SysWaitProcessed" />
+    <EntitySet Name="T_SysUserAllocationDetails" EntityType="dhgl2013Model.T_SysUserAllocationDetails" />
+    <EntitySet Name="v_coll_info" EntityType="dhgl2013Model.v_coll_info" />
+    <EntitySet Name="v_OrderAuditAccounting" EntityType="dhgl2013Model.v_OrderAuditAccounting" />
+    <EntitySet Name="V_SysAdmin" EntityType="dhgl2013Model.V_SysAdmin" />
+    <EntitySet Name="Tmall_Package" EntityType="dhgl2013Model.Tmall_Package" />
+    <EntitySet Name="v_OrderRefund" EntityType="dhgl2013Model.v_OrderRefund" />
+    <EntitySet Name="v_OrderPeer" EntityType="dhgl2013Model.v_OrderPeer" />
+    <EntitySet Name="v_OrderStatus" EntityType="dhgl2013Model.v_OrderStatus" />
+    <EntitySet Name="v_OrderStatusLimit" EntityType="dhgl2013Model.v_OrderStatusLimit" />
+    <EntitySet Name="T_BigDataOperation" EntityType="dhgl2013Model.T_BigDataOperation" />
+    <EntitySet Name="v_infolistFollow" EntityType="dhgl2013Model.v_infolistFollow" />
+    <EntitySet Name="v_infolistAfterSales" EntityType="dhgl2013Model.v_infolistAfterSales" />
+    <EntitySet Name="T_MyWorkKPIInt" EntityType="dhgl2013Model.T_MyWorkKPIInt" />
+    <EntitySet Name="v_infolistAfterPeople" EntityType="dhgl2013Model.v_infolistAfterPeople" />
+    <EntitySet Name="T_MyWorkReceive" EntityType="dhgl2013Model.T_MyWorkReceive" />
+    <EntitySet Name="T_MyWorkTask" EntityType="dhgl2013Model.T_MyWorkTask" />
+    <EntitySet Name="v_OrderFillBalance" EntityType="dhgl2013Model.v_OrderFillBalance" />
+    <EntitySet Name="T_SmsDetail" EntityType="dhgl2013Model.T_SmsDetail" />
+    <EntitySet Name="T_SmsMain" EntityType="dhgl2013Model.T_SmsMain" />
+    <EntitySet Name="v_cailiaolist_info" EntityType="dhgl2013Model.v_cailiaolist_info" />
+    <EntitySet Name="T_SysSetKey" EntityType="dhgl2013Model.T_SysSetKey" />
+    <EntitySet Name="T_SysBlackList" EntityType="dhgl2013Model.T_SysBlackList" />
+    <EntitySet Name="v_infolistAudit" EntityType="dhgl2013Model.v_infolistAudit" />
+    <EntitySet Name="T_SysMenu" EntityType="dhgl2013Model.T_SysMenu" />
+    <EntitySet Name="T_SysSupplierConfig" EntityType="dhgl2013Model.T_SysSupplierConfig" />
+    <EntitySet Name="CommonlyDate" EntityType="dhgl2013Model.CommonlyDate" />
+    <EntitySet Name="v_OrderEvaluation" EntityType="dhgl2013Model.v_OrderEvaluation" />
+    <EntitySet Name="v_infolistimg" EntityType="dhgl2013Model.v_infolistimg" />
+    <EntitySet Name="T_OrderTagTicket" EntityType="dhgl2013Model.T_OrderTagTicket" />
+    <EntitySet Name="Tmall_CountryPackage" EntityType="dhgl2013Model.Tmall_CountryPackage" />
+    <EntitySet Name="T_AreaSector" EntityType="dhgl2013Model.T_AreaSector" />
+    <EntitySet Name="T_SysDepPermissions" EntityType="dhgl2013Model.T_SysDepPermissions" />
+    <EntitySet Name="T_SectorCountry" EntityType="dhgl2013Model.T_SectorCountry" />
+    <EntitySet Name="T_AliPayRecord" EntityType="dhgl2013Model.T_AliPayRecord" />
+    <EntitySet Name="T_OrderExecutiveTag" EntityType="dhgl2013Model.T_OrderExecutiveTag" />
+    <EntitySet Name="T_CredentialType" EntityType="dhgl2013Model.T_CredentialType" />
+    <EntitySet Name="T_LogisticsCompanyCode" EntityType="dhgl2013Model.T_LogisticsCompanyCode" />
+    <EntitySet Name="Tmall_Country" EntityType="dhgl2013Model.Tmall_Country" />
+    <EntitySet Name="T_OrderDelivery" EntityType="dhgl2013Model.T_OrderDelivery" />
+    <EntitySet Name="v_infolist" EntityType="dhgl2013Model.v_infolist" />
+    <EntitySet Name="v_OrderInvoiceInfo" EntityType="dhgl2013Model.v_OrderInvoiceInfo" />
+    <EntitySet Name="WF_Order" EntityType="dhgl2013Model.WF_Order" />
+    <EntitySet Name="WF_OrderExtInfo" EntityType="dhgl2013Model.WF_OrderExtInfo" />
+    <EntitySet Name="WF_OrderPayment" EntityType="dhgl2013Model.WF_OrderPayment" />
+    <EntitySet Name="WF_OrderSupInfo" EntityType="dhgl2013Model.WF_OrderSupInfo" />
+    <EntitySet Name="T_MaterialList" EntityType="dhgl2013Model.T_MaterialList" />
+    <EntitySet Name="T_MaterialShares" EntityType="dhgl2013Model.T_MaterialShares" />
+    <EntitySet Name="T_MaterialUploadTxt" EntityType="dhgl2013Model.T_MaterialUploadTxt" />
+    <EntitySet Name="v_kehuinfo" EntityType="dhgl2013Model.v_kehuinfo" />
+    <EntitySet Name="T_AreaSendSign" EntityType="dhgl2013Model.T_AreaSendSign" />
+  </EntityContainer>
+  <ComplexType Name="P_Order_Total_Result">
+    <Property Type="Int32" Name="oid" Nullable="false" />
+    <Property Type="Int32" Name="finger" Nullable="true" />
+    <Property Type="Int32" Name="parent" Nullable="true" />
+    <Property Type="Int32" Name="RoleID" Nullable="true" />
+    <Property Type="String" Name="HArea" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="HArea_hangzhou" Nullable="true" />
+    <Property Type="Int32" Name="jdr_id" Nullable="true" />
+    <Property Type="String" Name="orderid" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="v_name" Nullable="true" MaxLength="120" />
+    <Property Type="String" Name="name_note" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="v_starttime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="v_tel" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="loginID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PassportNO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Passport" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="ActiveTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="hxwwhao" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="baoxian" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="taocan" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_result" Nullable="true" />
+    <Property Type="String" Name="vtype_result" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="v_stime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="v_qdao" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="v_otime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="jiedan_yuefei" Nullable="true" />
+    <Property Type="Int32" Name="jiedan_nianfei" Nullable="true" />
+    <Property Type="Int32" Name="v_number" Nullable="true" />
+    <Property Type="DateTime" Name="v_endtime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="v_email" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="v_yshou" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="v_cash" Nullable="true" Precision="19" />
+    <Property Type="String" Name="v_yshou_B" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="v_cvisa" Nullable="true" Precision="23" />
+    <Property Type="String" Name="v_fPiao" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_pHao" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_type" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="v_package_new" Nullable="true" />
+    <Property Type="Int32" Name="v_package" Nullable="true" />
+    <Property Type="String" Name="v_tShu" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_contact" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="v_yFu" Nullable="true" Precision="19" />
+    <Property Type="String" Name="v_yFu_B" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_xlv" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_lping" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="viptc" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_yyemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="countries" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="record" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="income" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="bad_record" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="conditions" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_vtype" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_vtype1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_vtype2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_vtype3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_vtypeT" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="inputtime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="v_yuefei" Nullable="true" />
+    <Property Type="Int32" Name="v_nianfei" Nullable="true" />
+    <Property Type="String" Name="wwhao" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="birth" Nullable="true" Precision="23" />
+    <Property Type="String" Name="birth_B" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="v_tuanhao" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="v_yuytime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="v_sqry" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="v_sqadd" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="v_stime_shi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_stime_fen" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="UpTime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="qi_type" Nullable="true" />
+    <Property Type="String" Name="qi_content" Nullable="true" MaxLength="180" />
+    <Property Type="String" Name="fahuo" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="fahuo_content" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="xingcheng_content" Nullable="true" />
+    <Property Type="Int32" Name="xctijiaoren" Nullable="true" />
+    <Property Type="String" Name="xctijiaorenname" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="CLJieDanRen" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="quvisa" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="quvisa_num" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="audit" Nullable="true" />
+    <Property Type="DateTime" Name="audittime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="fp_type" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fp_title" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fp_num" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fp_content" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fp_hao" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="imgpath" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaxPic" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="insurance" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="insur_num" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="V_jdrid" Nullable="true" />
+    <Property Type="String" Name="V_jdrname" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="audit_er" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="auditer_time" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="auditertime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Yemail" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Gemail" Nullable="true" />
+    <Property Type="String" Name="xingji" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="sjaddress" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="mat" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="matinfo" Nullable="true" />
+    <Property Type="DateTime" Name="mattime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CourierNumber" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="CourierNumberinfo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CNumber" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="CNumberinfo" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CNumberTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="dstime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="endtime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="jiudian_DTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="jiudian_EndTime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="jiudian_Num" Nullable="true" />
+    <Property Type="Int32" Name="jiudian_Cancel" Nullable="true" />
+    <Property Type="String" Name="jiudian_Note" Nullable="true" />
+    <Property Type="Int32" Name="have_card" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="P_UserSignValidate_Result">
+    <Property Type="Int32" Name="oid" Nullable="false" />
+    <Property Type="Int32" Name="finger" Nullable="true" />
+    <Property Type="Int32" Name="parent" Nullable="true" />
+    <Property Type="Int32" Name="RoleID" Nullable="true" />
+    <Property Type="String" Name="HArea" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="HArea_hangzhou" Nullable="true" />
+    <Property Type="Int32" Name="jdr_id" Nullable="true" />
+    <Property Type="String" Name="orderid" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="v_name" Nullable="true" MaxLength="120" />
+    <Property Type="String" Name="name_note" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="v_starttime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="v_tel" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="loginID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PassportNO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Passport" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="ActiveTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="hxwwhao" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="baoxian" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="taocan" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_result" Nullable="true" />
+    <Property Type="String" Name="vtype_result" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="v_stime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="v_qdao" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="v_otime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="jiedan_yuefei" Nullable="true" />
+    <Property Type="Int32" Name="jiedan_nianfei" Nullable="true" />
+    <Property Type="Int32" Name="v_number" Nullable="true" />
+    <Property Type="DateTime" Name="v_endtime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="v_email" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="v_yshou" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="v_cash" Nullable="true" Precision="19" />
+    <Property Type="String" Name="v_yshou_B" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="v_cvisa" Nullable="true" Precision="23" />
+    <Property Type="String" Name="v_fPiao" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_pHao" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_type" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="v_package_new" Nullable="true" />
+    <Property Type="Int32" Name="v_package" Nullable="true" />
+    <Property Type="String" Name="v_tShu" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_contact" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="v_yFu" Nullable="true" Precision="19" />
+    <Property Type="String" Name="v_yFu_B" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_xlv" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_lping" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="viptc" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_yyemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="countries" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="record" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="income" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="bad_record" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="conditions" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_vtype" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_vtype1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_vtype2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_vtype3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_vtypeT" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="inputtime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="v_yuefei" Nullable="true" />
+    <Property Type="Int32" Name="v_nianfei" Nullable="true" />
+    <Property Type="String" Name="wwhao" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="birth" Nullable="true" Precision="23" />
+    <Property Type="String" Name="birth_B" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="v_tuanhao" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="v_yuytime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="v_sqry" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="v_sqadd" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="v_stime_shi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_stime_fen" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="UpTime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="qi_type" Nullable="true" />
+    <Property Type="String" Name="qi_content" Nullable="true" MaxLength="180" />
+    <Property Type="String" Name="fahuo" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="fahuo_content" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="xingcheng_content" Nullable="true" />
+    <Property Type="Int32" Name="xctijiaoren" Nullable="true" />
+    <Property Type="String" Name="xctijiaorenname" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="CLJieDanRen" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="quvisa" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="quvisa_num" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="audit" Nullable="true" />
+    <Property Type="DateTime" Name="audittime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="fp_type" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fp_title" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fp_num" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fp_content" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fp_hao" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="imgpath" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaxPic" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="insurance" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="insur_num" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="V_jdrid" Nullable="true" />
+    <Property Type="String" Name="V_jdrname" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="audit_er" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="auditer_time" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="auditertime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Yemail" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Gemail" Nullable="true" />
+    <Property Type="String" Name="xingji" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="sjaddress" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="mat" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="matinfo" Nullable="true" />
+    <Property Type="DateTime" Name="mattime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CourierNumber" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="CourierNumberinfo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CNumber" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="CNumberinfo" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CNumberTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="dstime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="endtime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="jiudian_DTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="jiudian_EndTime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="jiudian_Num" Nullable="true" />
+    <Property Type="Int32" Name="jiudian_Cancel" Nullable="true" />
+    <Property Type="String" Name="jiudian_Note" Nullable="true" />
+    <Property Type="Int32" Name="have_card" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="P_UserSignWebValidate_Result">
+    <Property Type="Int32" Name="oid" Nullable="false" />
+    <Property Type="Int32" Name="finger" Nullable="true" />
+    <Property Type="Int32" Name="parent" Nullable="true" />
+    <Property Type="Int32" Name="RoleID" Nullable="true" />
+    <Property Type="String" Name="HArea" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="HArea_hangzhou" Nullable="true" />
+    <Property Type="Int32" Name="jdr_id" Nullable="true" />
+    <Property Type="String" Name="orderid" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="v_name" Nullable="true" MaxLength="120" />
+    <Property Type="String" Name="name_note" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="v_starttime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="v_tel" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="loginID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PassportNO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Passport" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="ActiveTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="hxwwhao" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="baoxian" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="taocan" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_result" Nullable="true" />
+    <Property Type="String" Name="vtype_result" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="v_stime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="v_qdao" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="v_otime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="jiedan_yuefei" Nullable="true" />
+    <Property Type="Int32" Name="jiedan_nianfei" Nullable="true" />
+    <Property Type="Int32" Name="v_number" Nullable="true" />
+    <Property Type="DateTime" Name="v_endtime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="v_email" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="v_yshou" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="v_cash" Nullable="true" Precision="19" />
+    <Property Type="String" Name="v_yshou_B" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="v_cvisa" Nullable="true" Precision="23" />
+    <Property Type="String" Name="v_fPiao" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_pHao" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_type" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="v_package_new" Nullable="true" />
+    <Property Type="Int32" Name="v_package" Nullable="true" />
+    <Property Type="String" Name="v_tShu" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_contact" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="v_yFu" Nullable="true" Precision="19" />
+    <Property Type="String" Name="v_yFu_B" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_xlv" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_lping" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="viptc" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_yyemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="countries" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="record" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="income" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="bad_record" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="conditions" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_vtype" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_vtype1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_vtype2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_vtype3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_vtypeT" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="inputtime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="v_yuefei" Nullable="true" />
+    <Property Type="Int32" Name="v_nianfei" Nullable="true" />
+    <Property Type="String" Name="wwhao" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="birth" Nullable="true" Precision="23" />
+    <Property Type="String" Name="birth_B" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="v_tuanhao" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="v_yuytime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="v_sqry" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="v_sqadd" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="v_stime_shi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="v_stime_fen" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="UpTime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="qi_type" Nullable="true" />
+    <Property Type="String" Name="qi_content" Nullable="true" MaxLength="180" />
+    <Property Type="String" Name="fahuo" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="fahuo_content" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="xingcheng_content" Nullable="true" />
+    <Property Type="Int32" Name="xctijiaoren" Nullable="true" />
+    <Property Type="String" Name="xctijiaorenname" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="CLJieDanRen" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="quvisa" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="quvisa_num" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="audit" Nullable="true" />
+    <Property Type="DateTime" Name="audittime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="fp_type" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fp_title" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fp_num" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fp_content" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fp_hao" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="imgpath" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaxPic" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="insurance" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="insur_num" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="V_jdrid" Nullable="true" />
+    <Property Type="String" Name="V_jdrname" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="audit_er" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="auditer_time" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="auditertime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Yemail" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Gemail" Nullable="true" />
+    <Property Type="String" Name="xingji" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="sjaddress" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="mat" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="matinfo" Nullable="true" />
+    <Property Type="DateTime" Name="mattime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CourierNumber" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="CourierNumberinfo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CNumber" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="CNumberinfo" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CNumberTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="dstime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="endtime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="jiudian_DTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="jiudian_EndTime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="jiudian_Num" Nullable="true" />
+    <Property Type="Int32" Name="jiudian_Cancel" Nullable="true" />
+    <Property Type="String" Name="jiudian_Note" Nullable="true" />
+    <Property Type="Int32" Name="have_card" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="T_Product_Recommend_Result">
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="String" Name="ProductBrand" Nullable="false" MaxLength="80" />
+    <Property Type="String" Name="ProductName" Nullable="false" MaxLength="300" />
+    <Property Type="Int32" Name="LineID" Nullable="false" />
+    <Property Type="Int32" Name="DepartureID" Nullable="false" />
+    <Property Type="String" Name="ProductBrand1" Nullable="false" MaxLength="80" />
+    <Property Type="Decimal" Name="Price1" Nullable="false" Precision="19" />
+  </ComplexType>
+  <ComplexType Name="V_AdminSignValidate_Result">
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="Int32" Name="CodeID" Nullable="true" />
+    <Property Type="Int32" Name="SysType" Nullable="true" />
+    <Property Type="Int32" Name="SupplierID" Nullable="false" />
+    <Property Type="String" Name="UserDpt" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="UserCode" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="UserTel" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UserMobile" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UserFax" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UserQQName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UserQQ" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UserMail" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UserAccount" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="UserPwd" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UserBrief" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="IsReceiveSms" Nullable="false" />
+    <Property Type="Boolean" Name="IsOncallSms" Nullable="false" />
+    <Property Type="Int32" Name="RoleID" Nullable="false" />
+    <Property Type="Boolean" Name="IsEnable" Nullable="false" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="false" />
+    <Property Type="DateTime" Name="ActiveTime" Nullable="false" Precision="23" />
+    <Property Type="String" Name="LoginIP" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UserSex" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="UserPosition" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="UserPositionCall" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="UserBirthday" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="UserLogo" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="CreateUserID" Nullable="false" />
+    <Property Type="String" Name="CreateUserName" Nullable="false" MaxLength="30" />
+  </ComplexType>
+  <EntityType Name="Order_FirstResult">
+    <Key>
+      <PropertyRef Name="FirstId" />
+    </Key>
+    <Property Name="FirstId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="order_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="created_time" Type="DateTime" Precision="3" />
+    <Property Name="modified_time" Type="DateTime" Precision="3" />
+    <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="buyer_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="buyer_nick" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="buyer_rate" Type="Boolean" />
+    <Property Name="seller_flag" Type="Int64" />
+    <Property Name="seller_memo" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="seller_nick" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="intime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Order_SubInfo">
+    <Key>
+      <PropertyRef Name="SubId" />
+    </Key>
+    <Property Name="SubId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstId" Type="Int32" />
+    <Property Name="sub_order_id" Type="Int64" />
+    <Property Name="biz_type" Type="Byte" />
+    <Property Name="order_type" Type="Byte" />
+    <Property Name="payment" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="total_fee" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="refund_status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="category_id" Type="Int64" />
+    <Property Name="item_id" Type="Int64" />
+    <Property Name="item_title" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="num" Type="Byte" />
+    <Property Name="sku_id" Type="Int64" />
+    <Property Name="sku_properties" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="post_address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="intime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_Article">
+    <Key>
+      <PropertyRef Name="ArticleID" />
+    </Key>
+    <Property Name="ArticleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierTypeRight" Type="Int32" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="CategoryName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ItemID" Type="Int32" />
+    <Property Name="ArtTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ArtIsIssue" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="ArtDate" Type="DateTime" Precision="3" />
+    <Property Name="ArtContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ArtSort" Type="Int32" />
+    <Property Name="opSupplierID" Type="Int32" />
+    <Property Name="opUserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_ArticleVisited">
+    <Key>
+      <PropertyRef Name="VisitedID" />
+    </Key>
+    <Property Name="VisitedID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ArticleID" Type="Int32" />
+    <Property Name="StateLabel" Type="Int32" />
+    <Property Name="ClientUserID" Type="Int32" />
+    <Property Name="ClientUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GreatTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_AssessmentBase">
+    <Key>
+      <PropertyRef Name="BId" />
+    </Key>
+    <Property Name="BId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BType" Type="Int32" />
+    <Property Name="BValue" Type="Int32" />
+    <Property Name="BContent" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="BTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUserId" Type="Int32" />
+    <Property Name="CreateUserName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_AssessmentUserSalary">
+    <Key>
+      <PropertyRef Name="UId" />
+    </Key>
+    <Property Name="UId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UYear" Type="Int32" />
+    <Property Name="UMonth" Type="Int32" />
+    <Property Name="UUserId" Type="Int32" />
+    <Property Name="UUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UAssessment" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ULoss" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="UBasicSalary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="UFixedSalary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="UActualSum" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AWeekendDuty" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AGoodReward" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ATos" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ALate" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ALeaveDays" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="UWorkDays" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="UThingsLeaveDays" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="UDiseaseLeaveDays" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="UMealFill" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="UCommunicationFill" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="UTrafficFill" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="UContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UIsEnable" Type="Boolean" />
+    <Property Name="UTime" Type="DateTime" Precision="3" />
+    <Property Name="SignatureTag" Type="Boolean" />
+    <Property Name="SignatureID" Type="Int32" />
+    <Property Name="SignatureName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreateUserID" Type="Int32" />
+    <Property Name="CreateUserName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_CommonlyMessage">
+    <Key>
+      <PropertyRef Name="MId" />
+    </Key>
+    <Property Name="MId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MType" Type="Int32" />
+    <Property Name="MInput" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="MContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MTime" Type="DateTime" Precision="3" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="CountryName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreatUserId" Type="Int32" />
+    <Property Name="CreatUserName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_CommonlyMessageConsul">
+    <Key>
+      <PropertyRef Name="CId" />
+    </Key>
+    <Property Name="CId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MType" Type="Int32" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="CountryName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AreaName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AreaLink" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="CreateUserId" Type="Int32" />
+    <Property Name="CreateUserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_CreditCardImport">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CardNumber" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="IsEnable" Type="Int32" />
+    <Property Name="EndTime" Type="Int32" />
+  </EntityType>
+  <EntityType Name="T_CreditCardUse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OId" Type="Int32" />
+    <Property Name="CardNumber" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UserTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_EmailImport">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmailName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailNum" Type="Int32" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="Enable" Type="Int32" />
+    <Property Name="EndTime" Type="Int32" />
+  </EntityType>
+  <EntityType Name="T_LinkDate">
+    <Key>
+      <PropertyRef Name="Tid" />
+    </Key>
+    <Property Name="Tid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cid" Type="Int32" />
+    <Property Name="v_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AreaName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AreaLink" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AreaAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AreaTime" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AreaContact" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="puttime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_SysBlackType">
+    <Key>
+      <PropertyRef Name="BTypeId" />
+    </Key>
+    <Property Name="BTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BTypeName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BTypeItemId" Type="Int32" />
+    <Property Name="BTypeItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateUserName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CteateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_SysLog">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LogType" Type="Int32" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LogInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EnterTime" Type="DateTime" Precision="3" />
+    <Property Name="LeaveTime" Type="DateTime" Precision="3" />
+    <Property Name="Minute" Type="Int32" />
+  </EntityType>
+  <EntityType Name="T_sysNewRole">
+    <Key>
+      <PropertyRef Name="RID" />
+    </Key>
+    <Property Name="RID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RContent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InTime" Type="DateTime" Precision="3" />
+    <Property Name="IsEnable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="T_sysNewRoleOperation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RID" Type="Int32" Nullable="false" />
+    <Property Name="OID" Type="Int32" Nullable="false" />
+    <Property Name="IsOperate" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_sysNewRoleRight">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RID" Type="Int32" Nullable="false" />
+    <Property Name="MenuID" Type="Int32" Nullable="false" />
+    <Property Name="SubIDs" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_SysOperation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MenuID" Type="Int32" Nullable="false" />
+    <Property Name="OperationName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_SysOperationLog">
+    <Key>
+      <PropertyRef Name="OOperationLogID" />
+    </Key>
+    <Property Name="OOperationLogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OUserID" Type="Int32" />
+    <Property Name="OUserName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="OrderID" Type="Int32" />
+    <Property Name="OAddTime" Type="DateTime" Precision="3" />
+    <Property Name="OLogID" Type="Int32" />
+    <Property Name="OMenuID" Type="Int32" />
+    <Property Name="OProject" Type="Int32" />
+    <Property Name="OType" Type="Int32" />
+    <Property Name="OSupplierID" Type="Int32" />
+    <Property Name="CashID" Type="Int32" />
+    <Property Name="IsOnline" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="T_SysSupplier">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierType" Type="Byte" />
+    <Property Name="SupplierGrade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TopSupplierID" Type="Int32" />
+    <Property Name="SupplierCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierNameShort" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierNameSubfix" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NationID" Type="Int32" />
+    <Property Name="NationName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ProvinceID" Type="Int32" />
+    <Property Name="ProvinceName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CityID" Type="Int32" />
+    <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DistinctID" Type="Int32" />
+    <Property Name="DistinctName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZoneID" Type="Int32" />
+    <Property Name="ZoneName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierAddress" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="opSupplierID" Type="Int32" />
+    <Property Name="opSupplierName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsEnable" Type="Byte" />
+    <Property Name="IsDelete" Type="Byte" />
+    <Property Name="SupplierBank" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierContact" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Manager" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ManagerTel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Logo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LogoPrint" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="IsReceiveSms" Type="Byte" />
+    <Property Name="Tu8Nid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Legal" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LegalTel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LegalFax" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Recommend" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="RegisterType" Type="Byte" />
+    <Property Name="RegisterState" Type="Byte" />
+    <Property Name="TotalScore" Type="Int32" />
+    <Property Name="RegisterCheckUser" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RegisterCheckTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="SortSeq" Type="Int32" />
+    <Property Name="Prermit" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SBusiness" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Protocol_DJS_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Protocol_DJS_Contactor" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Protocol_DJS_ContactMobile" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Protocol_DJS_Prermit" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Protocol_DJS_SBusiness" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Protocol_DJS_Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Protocol_ZTS_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Protocol_ZTS_Contactor" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Protocol_ZTS_ContactMobile" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Protocol_ZTS_Prermit" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Protocol_ZTS_SBusiness" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Protocol_ZTS_Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_SysUserBranchPower">
+    <Key>
+      <PropertyRef Name="BId" />
+    </Key>
+    <Property Name="BId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="UserType" Type="Int32" />
+    <Property Name="CodeId" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CityId" Type="Int32" />
+    <Property Name="CityName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BranchId" Type="Int32" />
+    <Property Name="BranchName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UserSubordinate" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_SysUserDocument">
+    <Key>
+      <PropertyRef Name="DId" />
+    </Key>
+    <Property Name="DId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DType" Type="Int32" />
+    <Property Name="DContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DUserId" Type="Int32" />
+    <Property Name="DUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUserId" Type="Int32" />
+    <Property Name="CreateUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_SysUserRole">
+    <Key>
+      <PropertyRef Name="URId" />
+    </Key>
+    <Property Name="URId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="URName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="RoleId" Type="Int32" />
+    <Property Name="RoleContent" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="UserContent" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CreateUserId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_UserScheduling">
+    <Key>
+      <PropertyRef Name="SID" />
+    </Key>
+    <Property Name="SID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="STitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SType" Type="Int32" />
+    <Property Name="TypeItemId" Type="Int32" />
+    <Property Name="TypeItemName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SUserID" Type="Int32" />
+    <Property Name="StartWorkTime" Type="DateTime" Precision="3" />
+    <Property Name="EndWorkTime" Type="DateTime" Precision="3" />
+    <Property Name="WorkLength" Type="Int32" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="CountryName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SAddUserID" Type="Int32" />
+    <Property Name="SSupplierID" Type="Int32" />
+    <Property Name="SIsSign" Type="Boolean" />
+    <Property Name="SAddTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="v_cailiaolist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mainId" Type="Int32" />
+    <Property Name="areaId" Type="Int32" />
+    <Property Name="areaname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="c_nameId" Type="Int32" />
+    <Property Name="c_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="c_typeId" Type="Int32" />
+    <Property Name="c_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CrowdTypeId" Type="Int32" />
+    <Property Name="CrowdType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="c_att" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="c_atts" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="v_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="inputtime" Type="DateTime" Precision="0" />
+    <Property Name="paix" Type="Int32" />
+  </EntityType>
+  <EntityType Name="v_CustomFollowUp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CountryID" Type="Int32" />
+    <Property Name="CallDate" Type="DateTime" Precision="3" />
+    <Property Name="OutDate" Type="DateTime" Precision="3" />
+    <Property Name="Crowd" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Demand" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="WeChat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMail" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsAssigned" Type="Boolean" />
+    <Property Name="IsUnread" Type="Boolean" />
+    <Property Name="AddUserID" Type="Int32" />
+    <Property Name="AddUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="AssignedUserId" Type="Int32" />
+    <Property Name="AssignedUserName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="v_CustomFollowUpDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FId" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="v_infolistAuditRecords">
+    <Key>
+      <PropertyRef Name="AId" />
+    </Key>
+    <Property Name="AId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AOId" Type="Int32" />
+    <Property Name="ALevelId" Type="Int32" />
+    <Property Name="ALevel" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AOrderId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AOrderName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AOrderMobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AOrderWWHao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AOrderUsers" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AOrderTime" Type="DateTime" Precision="3" />
+    <Property Name="ASContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AuditUserID" Type="Int32" />
+    <Property Name="AuditUserName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ASTime" Type="DateTime" Precision="3" />
+    <Property Name="InputTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="v_infolistRelevant">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="UseNum" Type="Int32" />
+    <Property Name="IsEnable" Type="Boolean" />
+    <Property Name="ReTyple" Type="Boolean" />
+    <Property Name="GetCreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="v_OrderAudit">
+    <Key>
+      <PropertyRef Name="AuditId" />
+    </Key>
+    <Property Name="AuditId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OId" Type="Int32" />
+    <Property Name="CashId" Type="Int32" />
+    <Property Name="AuditUserId" Type="Int32" />
+    <Property Name="AuditUserName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AuditTime" Type="DateTime" Precision="3" />
+    <Property Name="AuditState" Type="Boolean" />
+    <Property Name="CreateUserId" Type="Int32" />
+    <Property Name="CreateUserName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="v_OrderInvoice">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PStateName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="v_OrderPayProof">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OId" Type="Int32" />
+    <Property Name="PayId" Type="Int32" />
+    <Property Name="ProofStr" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="UpUserId" Type="Int32" />
+    <Property Name="UpUserName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UploadTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="v_OrderType">
+    <Key>
+      <PropertyRef Name="VId" />
+    </Key>
+    <Property Name="VId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="CrowdType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CityId" Type="Int32" />
+    <Property Name="CityName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="CountryName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SortingId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="T_Area">
+    <Key>
+      <PropertyRef Name="AId" />
+    </Key>
+    <Property Name="AId" Type="Int32" Nullable="false" />
+    <Property Name="AreaName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Sorting" Type="Int32" />
+  </EntityType>
+  <EntityType Name="T_AreaConsul">
+    <Key>
+      <PropertyRef Name="CId" />
+    </Key>
+    <Property Name="CId" Type="Int32" Nullable="false" />
+    <Property Name="CName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AreaId" Type="Int32" />
+    <Property Name="AreaName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Sorting" Type="Int32" />
+  </EntityType>
+  <EntityType Name="T_AreaConsulClass">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="CId" Type="Int32" />
+    <Property Name="CName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="CountryName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="AreaId" Type="Int32" />
+    <Property Name="AreaName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Sorting" Type="Int32" />
+  </EntityType>
+  <EntityType Name="T_SysUserAllocationAmount">
+    <Key>
+      <PropertyRef Name="AId" />
+    </Key>
+    <Property Name="AId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllocationAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="RemainingAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AllocationUserId" Type="Int32" />
+    <Property Name="AllocationUserName" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="AllocationContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AllocationTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUserId" Type="Int32" />
+    <Property Name="CreateUserName" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_UserChatRecord">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SenderID" Type="Int32" Nullable="false" />
+    <Property Name="SenderName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SendeeID" Type="Int32" Nullable="false" />
+    <Property Name="SendeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RContent" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_SysWaitProcessed">
+    <Key>
+      <PropertyRef Name="WId" />
+    </Key>
+    <Property Name="WId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InDateTime" Type="DateTime" Precision="3" />
+    <Property Name="WWHao" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="BeProName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="RemAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SumAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="GetUserId" Type="Int32" />
+    <Property Name="GetUserName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GetCountryId" Type="Int32" />
+    <Property Name="GetCountryName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreateUserId" Type="Int32" />
+    <Property Name="CreateUserName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_SysUserAllocationDetails">
+    <Key>
+      <PropertyRef Name="DId" />
+    </Key>
+    <Property Name="DId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AId" Type="Int32" />
+    <Property Name="AllocationUserId" Type="Int32" />
+    <Property Name="AllocationAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AllocationContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AllocationTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUserId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="v_coll_info">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="oid" Type="Int32" />
+    <Property Name="Dorder" Type="Int32" />
+    <Property Name="orderid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="paytype" Type="Int32" />
+    <Property Name="paymeth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="rency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="fphao" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="sjhao" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="contact" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="intime" Type="DateTime" Precision="0" />
+    <Property Name="profits" Type="Int32" />
+    <Property Name="hfyuefei" Type="Int32" />
+    <Property Name="hfnianfei" Type="Int32" />
+    <Property Name="hfjdrid" Type="Int32" />
+    <Property Name="hfczrid" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="audit" Type="Int32" />
+    <Property Name="sum_amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="pic_num" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="loss_num" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EnableAliRefundTag" Type="Boolean" />
+    <Property Name="EnableSynchronous" Type="Boolean" />
+    <Property Name="EnableAliPay" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="v_OrderAuditAccounting">
+    <Key>
+      <PropertyRef Name="AccId" />
+    </Key>
+    <Property Name="AccId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OId" Type="Int32" />
+    <Property Name="OrderId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OrderState" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OrderTime" Type="DateTime" Precision="3" />
+    <Property Name="OrderXCRId" Type="Int32" />
+    <Property Name="OrderJDRId" Type="Int32" />
+    <Property Name="OrderProfit" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AccState" Type="Boolean" />
+    <Property Name="AccDateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUserId" Type="Int32" />
+    <Property Name="CreateUserName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="V_SysAdmin">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Sorting" Type="Int32" />
+    <Property Name="CodeID" Type="Int32" />
+    <Property Name="SysType" Type="Int32" />
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="UserDpt" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="UserCode" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="UserTel" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserMobile" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserFax" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserQQName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserQQ" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserMail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserAccount" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="UserPwd" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserBrief" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsReceiveSms" Type="Boolean" Nullable="false" />
+    <Property Name="IsOncallSms" Type="Boolean" Nullable="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="IsEnable" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="ActiveTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LoginIP" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserSex" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UserPosition" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="UserPositionCall" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="UserBirthday" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="UserLogo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateUserID" Type="Int32" Nullable="false" />
+    <Property Name="CreateUserName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="UserType" Type="Int32" />
+    <Property Name="InTime" Type="DateTime" Precision="3" />
+    <Property Name="OutTime" Type="DateTime" Precision="3" />
+    <Property Name="EmergencyUser" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="EmergencyTel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HomeAddress" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="AttributionAreaId" Type="Int32" />
+    <Property Name="AttributionAreaName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="IdentityNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="IdentityDescribe" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IdentiyValidity" Type="DateTime" Precision="3" />
+    <Property Name="EnglishName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="NickName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tmall_Package">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Huaxia_ID" Type="Int32" />
+    <Property Name="PackageName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="T_PackageId" Type="Int64" />
+    <Property Name="T_PackageName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="T_Type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ImgTag" Type="Int32" />
+    <Property Name="IsEnable" Type="Boolean" />
+    <Property Name="Division" Type="Int32" />
+    <Property Name="PackageType" Type="Byte" />
+  </EntityType>
+  <EntityType Name="v_OrderRefund">
+    <Key>
+      <PropertyRef Name="RefundID" />
+    </Key>
+    <Property Name="RefundID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Oid" Type="Int32" />
+    <Property Name="Sub_Order_Id" Type="Int64" />
+    <Property Name="Refund_Id" Type="Int64" />
+    <Property Name="Refund_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Payment" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Total_Fee" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="End_Time" Type="DateTime" Precision="3" />
+    <Property Name="Alipay_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pay_Time" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Created_Time" Type="DateTime" Precision="3" />
+    <Property Name="ReceivedPayment" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="InPutTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="v_OrderPeer">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OId" Type="Int32" />
+    <Property Name="OrderId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BespeakEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EnablePeer" Type="Boolean" />
+    <Property Name="CreateUserName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="v_OrderStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PackageType" Type="Byte" />
+  </EntityType>
+  <EntityType Name="v_OrderStatusLimit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="StatusName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LimitName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PackageType" Type="Byte" />
+  </EntityType>
+  <EntityType Name="T_BigDataOperation">
+    <Key>
+      <PropertyRef Name="GId" />
+    </Key>
+    <Property Name="GId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GType" Type="Int32" />
+    <Property Name="GContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreateUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="v_infolistFollow">
+    <Key>
+      <PropertyRef Name="SId" />
+    </Key>
+    <Property Name="SId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OId" Type="Int32" />
+    <Property Name="OrderStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SCourier" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SCContent" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="SCNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SCIsMail" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="STake" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="STContent" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="STNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STIsMail" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Auditor" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AuditTime" Type="DateTime" Precision="3" />
+    <Property Name="Recipient" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RecipientTime" Type="DateTime" Precision="3" />
+    <Property Name="VisaValidity" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SFOrderNoCreateTime" Type="DateTime" Precision="3" />
+    <Property Name="InitRegistrationTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="v_infolistAfterSales">
+    <Key>
+      <PropertyRef Name="SId" />
+    </Key>
+    <Property Name="SId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FollowType" Type="Int32" />
+    <Property Name="OId" Type="Int32" />
+    <Property Name="OrderId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="QTypeId" Type="Int32" />
+    <Property Name="QTypeTxt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OrderCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeductAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OrderName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OrderMobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OrderWWHao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OrderUsers" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OrderTime" Type="DateTime" Precision="3" />
+    <Property Name="SContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="STime" Type="DateTime" Precision="3" />
+    <Property Name="InputTime" Type="DateTime" Precision="3" />
+    <Property Name="QTitleId" Type="Int32" />
+    <Property Name="QTitleTxt" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_MyWorkKPIInt">
+    <Key>
+      <PropertyRef Name="KId" />
+    </Key>
+    <Property Name="KId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeId" Type="Int32" />
+    <Property Name="TypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KPINo" Type="Int32" />
+  </EntityType>
+  <EntityType Name="v_infolistAfterPeople">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SId" Type="Int32" Nullable="false" />
+    <Property Name="AId" Type="Int32" />
+    <Property Name="OId" Type="Int32" Nullable="false" />
+    <Property Name="CodeID" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KPINo" Type="Int32" />
+    <Property Name="QTypeId" Type="Int32" />
+    <Property Name="QTypeTxt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatePeople" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_MyWorkReceive">
+    <Key>
+      <PropertyRef Name="RId" />
+    </Key>
+    <Property Name="RId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TId" Type="Int32" />
+    <Property Name="TTypeId" Type="Int32" />
+    <Property Name="SenderId" Type="Int32" />
+    <Property Name="RecipientId" Type="Int32" />
+    <Property Name="RecipientName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TTypeName" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="SContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SCreateTime" Type="DateTime" Precision="3" />
+    <Property Name="RFeedback" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RPercentage" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="RFollowUpTime" Type="DateTime" Precision="3" />
+    <Property Name="IsEnable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="T_MyWorkTask">
+    <Key>
+      <PropertyRef Name="TId" />
+    </Key>
+    <Property Name="TId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TTypeId" Type="Int32" />
+    <Property Name="TTypeName" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="SenderId" Type="Int32" />
+    <Property Name="SenderName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SCreateTime" Type="DateTime" Precision="3" />
+    <Property Name="strRecipientId" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="strRecipientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsEnable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="v_OrderFillBalance">
+    <Key>
+      <PropertyRef Name="FId" />
+    </Key>
+    <Property Name="FId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OId" Type="Int32" />
+    <Property Name="OrderNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WWHao" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="JDRId" Type="Int32" />
+    <Property Name="JDRName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompleteTime" Type="DateTime" Precision="3" />
+    <Property Name="OrderState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FillOrderId" Type="Int32" />
+    <Property Name="FillAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="FillTime" Type="DateTime" Precision="3" />
+    <Property Name="FillNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreateUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_SmsDetail">
+    <Key>
+      <PropertyRef Name="DetailID" />
+    </Key>
+    <Property Name="DetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SmsID" Type="Int32" Nullable="false" />
+    <Property Name="ReceiveName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ReceivePhone" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ValidCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ValidCodeIsCheck" Type="Int32" />
+  </EntityType>
+  <EntityType Name="T_SmsMain">
+    <Key>
+      <PropertyRef Name="SmsID" />
+    </Key>
+    <Property Name="SmsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="SupplierName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="SendUserID" Type="Int32" Nullable="false" />
+    <Property Name="SendUserName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SendTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SmsState" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SmsCount" Type="Int32" />
+    <Property Name="SmsContend" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="v_cailiaolist_info">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="list_type" Type="Int32" />
+    <Property Name="list_time" Type="Int32" />
+    <Property Name="list_id" Type="Int32" />
+    <Property Name="list_name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="list_vtype" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="list_ZXname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="list_num" Type="Int32" />
+    <Property Name="list_title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CreateUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="inputtime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_SysSetKey">
+    <Key>
+      <PropertyRef Name="SysID" />
+    </Key>
+    <Property Name="SysID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="grant_type" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="code" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="client_id" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="client_secret" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="redirect_uri" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="get_view" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="get_param" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="get_Access_Token" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="CreateUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_SysBlackList">
+    <Key>
+      <PropertyRef Name="BId" />
+    </Key>
+    <Property Name="BId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BTypeId" Type="Int32" />
+    <Property Name="BTypeName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BTypeItemId" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="BTypeItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OId" Type="Int32" />
+    <Property Name="OrderId" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="BWWHao" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="BMobile" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="BUserName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="HistoryOrderID" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="HistoryUserInfo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="HistoryContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="HistoryClosingTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUserId" Type="Int32" />
+    <Property Name="CreateUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="v_infolistAudit">
+    <Key>
+      <PropertyRef Name="AId" />
+    </Key>
+    <Property Name="AId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="oid" Type="Int32" />
+    <Property Name="audittime" Type="DateTime" Precision="3" />
+    <Property Name="auditren" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="greatetime" Type="DateTime" Precision="3" />
+    <Property Name="auditSta" Type="Int32" />
+  </EntityType>
+  <EntityType Name="T_SysMenu">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierType" Type="Byte" Nullable="false" />
+    <Property Name="MenuName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UrlPage" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="UrlImage" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UrlTarget" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ParentID" Type="Int32" Nullable="false" />
+    <Property Name="IsVisible" Type="Boolean" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SortSeq" Type="Int32" Nullable="false" />
+    <Property Name="IsDisplay" Type="Boolean" />
+    <Property Name="ErpSorting" Type="Int32" />
+    <Property Name="ControllerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ActionName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_SysSupplierConfig">
+    <Key>
+      <PropertyRef Name="ConfigID" />
+    </Key>
+    <Property Name="ConfigID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="UsingPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SmsUrl" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SmsAccount" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SmsPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SmsProduct" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SmsSign" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FaxAccount" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FaxCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FaxPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FaxPassport" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="WebSiteIsOpen" Type="Byte" Nullable="false" />
+    <Property Name="WebSiteStyleIndex" Type="Byte" Nullable="false" />
+    <Property Name="WebSiteDepartureID" Type="Int32" Nullable="false" />
+    <Property Name="ErpValidateCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WebSiteUrl" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CommonlyDate">
+    <Key>
+      <PropertyRef Name="Cid" />
+    </Key>
+    <Property Name="Cid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="v_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Nums" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Visafee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VisafeeChildren" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EVisafee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EVisafeeChildren" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Updatedate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="puttime" Type="DateTime" Precision="3" />
+    <Property Name="Sorting" Type="Int32" />
+    <Property Name="FeeLink" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="StandardNumber" Type="Int32" />
+    <Property Name="Division" Type="Int32" />
+  </EntityType>
+  <EntityType Name="v_OrderEvaluation">
+    <Key>
+      <PropertyRef Name="EId" />
+    </Key>
+    <Property Name="EId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OId" Type="Int64" />
+    <Property Name="RateType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Result" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PeerNick" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="OReply" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="OCreated" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="v_infolistimg">
+    <Key>
+      <PropertyRef Name="ImgID" />
+    </Key>
+    <Property Name="ImgID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UpType" Type="Boolean" />
+    <Property Name="UserInfoID" Type="Int32" />
+    <Property Name="UserInfoName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="imgpath" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaxPic" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsDisplay" Type="Boolean" />
+    <Property Name="uptime" Type="DateTime" Precision="3" />
+    <Property Name="IsElectronic" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="T_OrderTagTicket">
+    <Key>
+      <PropertyRef Name="TId" />
+    </Key>
+    <Property Name="TId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OId" Type="Int32" />
+    <Property Name="OrderId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LinkTag" Type="Boolean" />
+    <Property Name="LinkUserName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="LinkTel" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="TagTicket" Type="Int32" />
+    <Property Name="TagMemo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreateData" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Tmall_CountryPackage">
+    <Key>
+      <PropertyRef Name="CPId" />
+    </Key>
+    <Property Name="CPId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PackageSorting" Type="Int32" />
+    <Property Name="PackageId" Type="Int32" Nullable="false" />
+    <Property Name="PackageName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TmallPackageName" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="BaseShare" Type="Int32" />
+    <Property Name="ImgTag" Type="Int32" />
+    <Property Name="IsEnable" Type="Boolean" />
+    <Property Name="EffectivePackage" Type="Int32" />
+    <Property Name="PackageType" Type="Int32" />
+    <Property Name="IsUrgent" Type="Boolean" />
+    <Property Name="IsKeFuMetering" Type="Boolean" />
+    <Property Name="IsVisaFee" Type="Boolean" />
+    <Property Name="IsFingerprintsOff" Type="Boolean" />
+    <Property Name="CreateUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="IsFuVisaFee" Type="Boolean" />
+    <Property Name="IsElectronicVisa" Type="Boolean" />
+    <Property Name="ProgressType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T_AreaSector">
+    <Key>
+      <PropertyRef Name="SId" />
+    </Key>
+    <Property Name="SId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AId" Type="Int32" />
+    <Property Name="AName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsEnable" Type="Boolean" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_SysDepPermissions">
+    <Key>
+      <PropertyRef Name="DId" />
+    </Key>
+    <Property Name="DId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AId" Type="Int32" />
+    <Property Name="AName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SId" Type="Int32" />
+    <Property Name="SName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PId" Type="Int32" />
+    <Property Name="PName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="CodeId" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_SectorCountry">
+    <Key>
+      <PropertyRef Name="SCId" />
+    </Key>
+    <Property Name="SCId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SectorId" Type="Int32" />
+    <Property Name="SectorName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_AliPayRecord">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SerialNO" Type="Int32" />
+    <Property Name="BookedTime" Type="DateTime" Precision="3" />
+    <Property Name="PayTradingNO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PaySerialNO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MerchantOrderNO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FinancialType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Income" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Spending" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AccountBalance" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ServiceFee" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PaymentChannel" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="OtherPartyAccount" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="OtherPartyName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="BankOrderNO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TradingCommodity" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreateUserId" Type="Int32" />
+    <Property Name="CreateUserName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="AddPaymentTypeInt" Type="Int32" />
+    <Property Name="AddPaymentTypeStr" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="AddSubjectTypeInt" Type="Int32" />
+    <Property Name="AddSubjectTypeStr" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="EnableAliRefundTag" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="T_OrderExecutiveTag">
+    <Key>
+      <PropertyRef Name="TId" />
+    </Key>
+    <Property Name="TId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OId" Type="Int32" />
+    <Property Name="TagContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreateUserId" Type="Int32" />
+    <Property Name="CreateUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_CredentialType">
+    <Key>
+      <PropertyRef Name="CId" />
+    </Key>
+    <Property Name="CId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CredentialId" Type="Int32" />
+    <Property Name="CredentialName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_LogisticsCompanyCode">
+    <Key>
+      <PropertyRef Name="LId" />
+    </Key>
+    <Property Name="LId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Company" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tmall_Country">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tmall_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CountryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="VisaType" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="WeFingerprintToSend" Type="Boolean" />
+    <Property Name="WeToSend" Type="Boolean" />
+    <Property Name="CountrySorting" Type="Int32" />
+    <Property Name="EnableDelivery" Type="Boolean" />
+    <Property Name="ProgressType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SectorID" Type="Int32" />
+    <Property Name="EnableDeliveryLockOf" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="T_OrderDelivery">
+    <Key>
+      <PropertyRef Name="DId" />
+    </Key>
+    <Property Name="DId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OId" Type="Int32" />
+    <Property Name="OrderId" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="EnabledDelivery" Type="Boolean" />
+    <Property Name="CreateUser" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="v_infolist">
+    <Key>
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Name="oid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IsOnline" Type="Boolean" />
+    <Property Name="finger" Type="Int32" />
+    <Property Name="parent" Type="Int32" />
+    <Property Name="RoleID" Type="Int32" />
+    <Property Name="HArea" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="HArea_hangzhou" Type="Int32" />
+    <Property Name="jdr_id" Type="Int32" />
+    <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="sku_properties_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="orderid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="v_name" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="name_note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="v_starttime" Type="DateTime" Precision="3" />
+    <Property Name="v_tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="loginID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PassportNO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Passport" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ActiveTime" Type="DateTime" Precision="3" />
+    <Property Name="hxwwhao" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="baoxian" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="taocan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_result" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vtype_result" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="v_stime" Type="DateTime" Precision="3" />
+    <Property Name="v_qdao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_otime" Type="DateTime" Precision="3" />
+    <Property Name="jiedan_yuefei" Type="Int32" />
+    <Property Name="jiedan_nianfei" Type="Int32" />
+    <Property Name="v_number" Type="Int32" />
+    <Property Name="v_endtime" Type="DateTime" Precision="3" />
+    <Property Name="v_email" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="v_yshou" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="visafee" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="v_cash" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="v_yshou_B" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_cvisa" Type="DateTime" Precision="3" />
+    <Property Name="v_fPiao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_pHao" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="tmall_country_id" Type="Int32" />
+    <Property Name="v_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_package_new" Type="Int32" />
+    <Property Name="v_package" Type="Int32" />
+    <Property Name="v_tShu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_yFu" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="v_yFu_B" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_xlv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_lping" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="viptc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_yyemail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="countries" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="record" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="income" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bad_record" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="conditions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_vtype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_vtype1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_vtype2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_vtype3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_vtypeT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="inputtime" Type="DateTime" Precision="3" />
+    <Property Name="v_yuefei" Type="Int32" />
+    <Property Name="v_nianfei" Type="Int32" />
+    <Property Name="wwhao" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="birth" Type="DateTime" Precision="3" />
+    <Property Name="birth_B" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="v_tuanhao" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="v_yuytime" Type="DateTime" Precision="3" />
+    <Property Name="v_sqryId" Type="Int32" />
+    <Property Name="v_sqry" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="v_sqadd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="v_stime_shi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_stime_fen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpTime" Type="DateTime" Precision="3" />
+    <Property Name="qi_type" Type="Int32" />
+    <Property Name="qi_content" Type="String" MaxLength="460" FixedLength="false" Unicode="true" />
+    <Property Name="fahuo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="fahuo_content" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="xingcheng_content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="xctijiaoren" Type="Int32" />
+    <Property Name="xctijiaorenname" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CLJieDanRen" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="quvisa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="quvisa_num" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="audit" Type="Int32" />
+    <Property Name="audittime" Type="DateTime" Precision="3" />
+    <Property Name="fp_enable" Type="Int32" />
+    <Property Name="fp_type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="fp_title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fp_num" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="fp_content" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="fp_hao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fp_billNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fp_PackageMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fp_CourierNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fp_drawerId" Type="Int32" />
+    <Property Name="fp_drawerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fp_time" Type="DateTime" Precision="3" />
+    <Property Name="imgpath" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaxPic" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="insurance" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insur_num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="V_jdrid" Type="Int32" />
+    <Property Name="V_jdrname" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="audit_id" Type="Int32" />
+    <Property Name="audit_er" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="auditer_time" Type="DateTime" Precision="3" />
+    <Property Name="auditertime" Type="DateTime" Precision="3" />
+    <Property Name="Yemail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gemail" Type="Int32" />
+    <Property Name="xingji" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sjaddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="mat" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="matinfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mattime" Type="DateTime" Precision="3" />
+    <Property Name="CourierNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CourierNumberinfo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CNumberinfo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CNumberTime" Type="DateTime" Precision="3" />
+    <Property Name="dstime" Type="DateTime" Precision="3" />
+    <Property Name="endtime" Type="DateTime" Precision="3" />
+    <Property Name="jiudian_DTime" Type="DateTime" Precision="3" />
+    <Property Name="jiudian_EndTime" Type="DateTime" Precision="3" />
+    <Property Name="jiudian_Num" Type="Int32" />
+    <Property Name="jiudian_Cancel" Type="Int32" />
+    <Property Name="jiudian_Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="have_card" Type="Int32" />
+    <Property Name="IsTicket" Type="Int32" />
+    <Property Name="TicketMemo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LackTime" Type="DateTime" Precision="3" />
+    <Property Name="WeProfits" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="WeToSend" Type="Boolean" />
+    <Property Name="RowVersion" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Init_VisaNumber" Type="Int32" />
+    <Property Name="VisaType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="v_OrderInvoiceInfo">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OId" Type="Int32" />
+    <Property Name="PType" Type="Int32" />
+    <Property Name="PTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PTile" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PBillNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PEnable" Type="Int32" />
+    <Property Name="PackageMail" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CourierNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateId" Type="Int32" />
+    <Property Name="CreateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="WF_Order">
+    <Key>
+      <PropertyRef Name="WFId" />
+    </Key>
+    <Property Name="WFId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="BizType" Type="Int32" />
+    <Property Name="CustomerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerPhone" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerWWHao" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="OrderId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="OPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ONumber" Type="Int32" />
+    <Property Name="OState" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="OCreatedTime" Type="DateTime" Precision="3" />
+    <Property Name="SellerFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SellerMemo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="JDRId" Type="Int32" />
+    <Property Name="JDRName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryId" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ItemId" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ItemTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SkuId" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="SkuProperties" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TripStartDate" Type="DateTime" Precision="3" />
+    <Property Name="TripEndDate" Type="DateTime" Precision="3" />
+    <Property Name="PackageType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PackageName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="PackageCoding" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryExtInfos" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SupplierName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="InTime" Type="DateTime" Precision="3" />
+    <Property Name="PayAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="VendorOrderId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TmallStatus" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="OMCOrderProgress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="IsOnline" Type="Boolean" />
+    <Property Name="IsInvoice" Type="Boolean" />
+    <Property Name="isSendSms" Type="Boolean" />
+    <Property Name="shipWay" Type="Int32" />
+    <Property Name="wayAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="depositMode" Type="Int32" />
+    <Property Name="errorCoding" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="equipmentNum" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WF_OrderExtInfo">
+    <Key>
+      <PropertyRef Name="EId" />
+    </Key>
+    <Property Name="EId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WFId" Type="Int32" />
+    <Property Name="OrderId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WifiNonDepo" Type="Boolean" />
+    <Property Name="HireDays" Type="Int32" />
+    <Property Name="RegionName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ObtainProvince" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ObtainCity" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ObtainPosition" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ObtainAddress" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="CountryName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ObtainType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CreatTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="WF_OrderPayment">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WFId" Type="Int32" />
+    <Property Name="OrderId" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="IsAudit" Type="Boolean" />
+    <Property Name="PaySpeType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreateUserId" Type="Int32" />
+    <Property Name="CreateUserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="IsOnLine" Type="Boolean" />
+    <Property Name="PaySpeWay" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PaySpeUser" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PaySpeTag" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WF_OrderSupInfo">
+    <Key>
+      <PropertyRef Name="SId" />
+    </Key>
+    <Property Name="SId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WFId" Type="Int32" />
+    <Property Name="OrderId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="OrderProgress" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="OrderType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="OrderState" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TakeType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="GroupType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_MaterialList">
+    <Key>
+      <PropertyRef Name="MId" />
+    </Key>
+    <Property Name="MId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AreaId" Type="Int32" />
+    <Property Name="AreaName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="CountryName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TravelTypeId" Type="Int32" />
+    <Property Name="TravelTypeName" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="CrowdTypeId" Type="Int32" />
+    <Property Name="CrowdTypeName" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="UploadTitle" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="UploadNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UploadOptions" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UploadType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UploadNote" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="labelStr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DocId" Type="Int32" />
+    <Property Name="DocType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SortingId" Type="Int32" />
+    <Property Name="CreateUserName" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_MaterialShares">
+    <Key>
+      <PropertyRef Name="SharesId" />
+    </Key>
+    <Property Name="SharesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AreaId" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="CountryId" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="TravelTypeId" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="CrowdTypeId" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="UploadTitle" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="UploadNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UploadOptions" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UploadType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UploadNote" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UploadTxt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="labelStr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DocId" Type="Int32" />
+    <Property Name="DocType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SortingId" Type="Int32" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUserName" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_MaterialUploadTxt">
+    <Key>
+      <PropertyRef Name="UpId" />
+    </Key>
+    <Property Name="UpId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MId" Type="Int32" />
+    <Property Name="SharesId" Type="Int32" />
+    <Property Name="UploadTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UploadNote" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UploadTxt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DocId" Type="Int32" />
+    <Property Name="DocType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SortingId" Type="Int32" />
+    <Property Name="CreateUserName" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="v_kehuinfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kf_name" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="orderid" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="hfjdrid" Type="Int32" />
+    <Property Name="Dorder" Type="Int32" />
+    <Property Name="puttime" Type="DateTime" Precision="3" />
+    <Property Name="Dbirth" Type="DateTime" Precision="0" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="zhiwei" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="company" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="guoji" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="zaizhi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hunying" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="chuyou" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="gengxin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="v_vtype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="type_1" Type="Int32" />
+    <Property Name="type_2" Type="Int32" />
+    <Property Name="type_3" Type="Int32" />
+    <Property Name="type_4" Type="Int32" />
+    <Property Name="type_5" Type="Int32" />
+    <Property Name="type_5_1" Type="Int32" />
+    <Property Name="type_6" Type="Int32" />
+    <Property Name="type_7" Type="Int32" />
+    <Property Name="type_7_1" Type="Int32" />
+    <Property Name="type_8" Type="Int32" />
+    <Property Name="type_9" Type="Int32" />
+    <Property Name="type_10" Type="Int32" />
+    <Property Name="type_11" Type="Int32" />
+    <Property Name="type_12" Type="Int32" />
+    <Property Name="type_12_1" Type="Int32" />
+    <Property Name="type_13" Type="Int32" />
+    <Property Name="type_14" Type="Int32" />
+    <Property Name="type_15" Type="Int32" />
+    <Property Name="type_16" Type="Int32" />
+    <Property Name="type_17" Type="Int32" />
+    <Property Name="UpLoadPDF" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UpLoadDate" Type="DateTime" Precision="3" />
+    <Property Name="UpLoadUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ApplyId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UserPhone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HoldStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentApplyStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Credential_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Credential_No" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Extend_Attributes_Info" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CrowdTypeId" Type="Int32" />
+    <Property Name="CrowdTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_AreaSendSign">
+    <Key>
+      <PropertyRef Name="SId" />
+    </Key>
+    <Property Name="SId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="CountryName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AId" Type="Int32" />
+    <Property Name="AreaName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CreateUserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

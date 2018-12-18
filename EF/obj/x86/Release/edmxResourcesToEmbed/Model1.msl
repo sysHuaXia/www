@@ -1,0 +1,1810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dhgl2013ModelStoreContainer" CdmEntityContainer="dhgl2013Entities">
+    <FunctionImportMapping FunctionImportName="P_Article_Delete" FunctionName="dhgl2013Model.Store.P_Article_Delete" />
+    <FunctionImportMapping FunctionImportName="P_Order_Total" FunctionName="dhgl2013Model.Store.P_Order_Total">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dhgl2013Model.P_Order_Total_Result">
+          <ScalarProperty Name="oid" ColumnName="oid" />
+          <ScalarProperty Name="finger" ColumnName="finger" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="HArea" ColumnName="HArea" />
+          <ScalarProperty Name="HArea_hangzhou" ColumnName="HArea_hangzhou" />
+          <ScalarProperty Name="jdr_id" ColumnName="jdr_id" />
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="v_name" ColumnName="v_name" />
+          <ScalarProperty Name="name_note" ColumnName="name_note" />
+          <ScalarProperty Name="v_starttime" ColumnName="v_starttime" />
+          <ScalarProperty Name="v_tel" ColumnName="v_tel" />
+          <ScalarProperty Name="loginID" ColumnName="loginID" />
+          <ScalarProperty Name="PassportNO" ColumnName="PassportNO" />
+          <ScalarProperty Name="Passport" ColumnName="Passport" />
+          <ScalarProperty Name="ActiveTime" ColumnName="ActiveTime" />
+          <ScalarProperty Name="hxwwhao" ColumnName="hxwwhao" />
+          <ScalarProperty Name="baoxian" ColumnName="baoxian" />
+          <ScalarProperty Name="taocan" ColumnName="taocan" />
+          <ScalarProperty Name="v_result" ColumnName="v_result" />
+          <ScalarProperty Name="vtype_result" ColumnName="vtype_result" />
+          <ScalarProperty Name="v_stime" ColumnName="v_stime" />
+          <ScalarProperty Name="v_qdao" ColumnName="v_qdao" />
+          <ScalarProperty Name="v_otime" ColumnName="v_otime" />
+          <ScalarProperty Name="jiedan_yuefei" ColumnName="jiedan_yuefei" />
+          <ScalarProperty Name="jiedan_nianfei" ColumnName="jiedan_nianfei" />
+          <ScalarProperty Name="v_number" ColumnName="v_number" />
+          <ScalarProperty Name="v_endtime" ColumnName="v_endtime" />
+          <ScalarProperty Name="v_email" ColumnName="v_email" />
+          <ScalarProperty Name="v_yshou" ColumnName="v_yshou" />
+          <ScalarProperty Name="v_cash" ColumnName="v_cash" />
+          <ScalarProperty Name="v_yshou_B" ColumnName="v_yshou_B" />
+          <ScalarProperty Name="v_cvisa" ColumnName="v_cvisa" />
+          <ScalarProperty Name="v_fPiao" ColumnName="v_fPiao" />
+          <ScalarProperty Name="v_pHao" ColumnName="v_pHao" />
+          <ScalarProperty Name="v_type" ColumnName="v_type" />
+          <ScalarProperty Name="v_package_new" ColumnName="v_package_new" />
+          <ScalarProperty Name="v_package" ColumnName="v_package" />
+          <ScalarProperty Name="v_tShu" ColumnName="v_tShu" />
+          <ScalarProperty Name="v_contact" ColumnName="v_contact" />
+          <ScalarProperty Name="v_yFu" ColumnName="v_yFu" />
+          <ScalarProperty Name="v_yFu_B" ColumnName="v_yFu_B" />
+          <ScalarProperty Name="v_xlv" ColumnName="v_xlv" />
+          <ScalarProperty Name="v_lping" ColumnName="v_lping" />
+          <ScalarProperty Name="viptc" ColumnName="viptc" />
+          <ScalarProperty Name="v_yyemail" ColumnName="v_yyemail" />
+          <ScalarProperty Name="countries" ColumnName="countries" />
+          <ScalarProperty Name="record" ColumnName="record" />
+          <ScalarProperty Name="income" ColumnName="income" />
+          <ScalarProperty Name="bad_record" ColumnName="bad_record" />
+          <ScalarProperty Name="conditions" ColumnName="conditions" />
+          <ScalarProperty Name="v_vtype" ColumnName="v_vtype" />
+          <ScalarProperty Name="v_vtype1" ColumnName="v_vtype1" />
+          <ScalarProperty Name="v_vtype2" ColumnName="v_vtype2" />
+          <ScalarProperty Name="v_vtype3" ColumnName="v_vtype3" />
+          <ScalarProperty Name="v_vtypeT" ColumnName="v_vtypeT" />
+          <ScalarProperty Name="inputtime" ColumnName="inputtime" />
+          <ScalarProperty Name="v_yuefei" ColumnName="v_yuefei" />
+          <ScalarProperty Name="v_nianfei" ColumnName="v_nianfei" />
+          <ScalarProperty Name="wwhao" ColumnName="wwhao" />
+          <ScalarProperty Name="birth" ColumnName="birth" />
+          <ScalarProperty Name="birth_B" ColumnName="birth_B" />
+          <ScalarProperty Name="v_tuanhao" ColumnName="v_tuanhao" />
+          <ScalarProperty Name="v_yuytime" ColumnName="v_yuytime" />
+          <ScalarProperty Name="v_sqry" ColumnName="v_sqry" />
+          <ScalarProperty Name="v_sqadd" ColumnName="v_sqadd" />
+          <ScalarProperty Name="v_stime_shi" ColumnName="v_stime_shi" />
+          <ScalarProperty Name="v_stime_fen" ColumnName="v_stime_fen" />
+          <ScalarProperty Name="UpTime" ColumnName="UpTime" />
+          <ScalarProperty Name="qi_type" ColumnName="qi_type" />
+          <ScalarProperty Name="qi_content" ColumnName="qi_content" />
+          <ScalarProperty Name="fahuo" ColumnName="fahuo" />
+          <ScalarProperty Name="fahuo_content" ColumnName="fahuo_content" />
+          <ScalarProperty Name="xingcheng_content" ColumnName="xingcheng_content" />
+          <ScalarProperty Name="xctijiaoren" ColumnName="xctijiaoren" />
+          <ScalarProperty Name="xctijiaorenname" ColumnName="xctijiaorenname" />
+          <ScalarProperty Name="CLJieDanRen" ColumnName="CLJieDanRen" />
+          <ScalarProperty Name="quvisa" ColumnName="quvisa" />
+          <ScalarProperty Name="quvisa_num" ColumnName="quvisa_num" />
+          <ScalarProperty Name="audit" ColumnName="audit" />
+          <ScalarProperty Name="audittime" ColumnName="audittime" />
+          <ScalarProperty Name="fp_type" ColumnName="fp_type" />
+          <ScalarProperty Name="fp_title" ColumnName="fp_title" />
+          <ScalarProperty Name="fp_num" ColumnName="fp_num" />
+          <ScalarProperty Name="fp_content" ColumnName="fp_content" />
+          <ScalarProperty Name="fp_hao" ColumnName="fp_hao" />
+          <ScalarProperty Name="imgpath" ColumnName="imgpath" />
+          <ScalarProperty Name="MaxPic" ColumnName="MaxPic" />
+          <ScalarProperty Name="insurance" ColumnName="insurance" />
+          <ScalarProperty Name="insur_num" ColumnName="insur_num" />
+          <ScalarProperty Name="V_jdrid" ColumnName="V_jdrid" />
+          <ScalarProperty Name="V_jdrname" ColumnName="V_jdrname" />
+          <ScalarProperty Name="audit_er" ColumnName="audit_er" />
+          <ScalarProperty Name="auditer_time" ColumnName="auditer_time" />
+          <ScalarProperty Name="auditertime" ColumnName="auditertime" />
+          <ScalarProperty Name="Yemail" ColumnName="Yemail" />
+          <ScalarProperty Name="Gemail" ColumnName="Gemail" />
+          <ScalarProperty Name="xingji" ColumnName="xingji" />
+          <ScalarProperty Name="sjaddress" ColumnName="sjaddress" />
+          <ScalarProperty Name="mat" ColumnName="mat" />
+          <ScalarProperty Name="matinfo" ColumnName="matinfo" />
+          <ScalarProperty Name="mattime" ColumnName="mattime" />
+          <ScalarProperty Name="CourierNumber" ColumnName="CourierNumber" />
+          <ScalarProperty Name="CourierNumberinfo" ColumnName="CourierNumberinfo" />
+          <ScalarProperty Name="CNumber" ColumnName="CNumber" />
+          <ScalarProperty Name="CNumberinfo" ColumnName="CNumberinfo" />
+          <ScalarProperty Name="CNumberTime" ColumnName="CNumberTime" />
+          <ScalarProperty Name="dstime" ColumnName="dstime" />
+          <ScalarProperty Name="endtime" ColumnName="endtime" />
+          <ScalarProperty Name="jiudian_DTime" ColumnName="jiudian_DTime" />
+          <ScalarProperty Name="jiudian_EndTime" ColumnName="jiudian_EndTime" />
+          <ScalarProperty Name="jiudian_Num" ColumnName="jiudian_Num" />
+          <ScalarProperty Name="jiudian_Cancel" ColumnName="jiudian_Cancel" />
+          <ScalarProperty Name="jiudian_Note" ColumnName="jiudian_Note" />
+          <ScalarProperty Name="have_card" ColumnName="have_card" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="P_UserLogTime" FunctionName="dhgl2013Model.Store.P_UserLogTime" />
+    <FunctionImportMapping FunctionImportName="P_UserSignValidate" FunctionName="dhgl2013Model.Store.P_UserSignValidate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dhgl2013Model.P_UserSignValidate_Result">
+          <ScalarProperty Name="oid" ColumnName="oid" />
+          <ScalarProperty Name="finger" ColumnName="finger" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="HArea" ColumnName="HArea" />
+          <ScalarProperty Name="HArea_hangzhou" ColumnName="HArea_hangzhou" />
+          <ScalarProperty Name="jdr_id" ColumnName="jdr_id" />
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="v_name" ColumnName="v_name" />
+          <ScalarProperty Name="name_note" ColumnName="name_note" />
+          <ScalarProperty Name="v_starttime" ColumnName="v_starttime" />
+          <ScalarProperty Name="v_tel" ColumnName="v_tel" />
+          <ScalarProperty Name="loginID" ColumnName="loginID" />
+          <ScalarProperty Name="PassportNO" ColumnName="PassportNO" />
+          <ScalarProperty Name="Passport" ColumnName="Passport" />
+          <ScalarProperty Name="ActiveTime" ColumnName="ActiveTime" />
+          <ScalarProperty Name="hxwwhao" ColumnName="hxwwhao" />
+          <ScalarProperty Name="baoxian" ColumnName="baoxian" />
+          <ScalarProperty Name="taocan" ColumnName="taocan" />
+          <ScalarProperty Name="v_result" ColumnName="v_result" />
+          <ScalarProperty Name="vtype_result" ColumnName="vtype_result" />
+          <ScalarProperty Name="v_stime" ColumnName="v_stime" />
+          <ScalarProperty Name="v_qdao" ColumnName="v_qdao" />
+          <ScalarProperty Name="v_otime" ColumnName="v_otime" />
+          <ScalarProperty Name="jiedan_yuefei" ColumnName="jiedan_yuefei" />
+          <ScalarProperty Name="jiedan_nianfei" ColumnName="jiedan_nianfei" />
+          <ScalarProperty Name="v_number" ColumnName="v_number" />
+          <ScalarProperty Name="v_endtime" ColumnName="v_endtime" />
+          <ScalarProperty Name="v_email" ColumnName="v_email" />
+          <ScalarProperty Name="v_yshou" ColumnName="v_yshou" />
+          <ScalarProperty Name="v_cash" ColumnName="v_cash" />
+          <ScalarProperty Name="v_yshou_B" ColumnName="v_yshou_B" />
+          <ScalarProperty Name="v_cvisa" ColumnName="v_cvisa" />
+          <ScalarProperty Name="v_fPiao" ColumnName="v_fPiao" />
+          <ScalarProperty Name="v_pHao" ColumnName="v_pHao" />
+          <ScalarProperty Name="v_type" ColumnName="v_type" />
+          <ScalarProperty Name="v_package_new" ColumnName="v_package_new" />
+          <ScalarProperty Name="v_package" ColumnName="v_package" />
+          <ScalarProperty Name="v_tShu" ColumnName="v_tShu" />
+          <ScalarProperty Name="v_contact" ColumnName="v_contact" />
+          <ScalarProperty Name="v_yFu" ColumnName="v_yFu" />
+          <ScalarProperty Name="v_yFu_B" ColumnName="v_yFu_B" />
+          <ScalarProperty Name="v_xlv" ColumnName="v_xlv" />
+          <ScalarProperty Name="v_lping" ColumnName="v_lping" />
+          <ScalarProperty Name="viptc" ColumnName="viptc" />
+          <ScalarProperty Name="v_yyemail" ColumnName="v_yyemail" />
+          <ScalarProperty Name="countries" ColumnName="countries" />
+          <ScalarProperty Name="record" ColumnName="record" />
+          <ScalarProperty Name="income" ColumnName="income" />
+          <ScalarProperty Name="bad_record" ColumnName="bad_record" />
+          <ScalarProperty Name="conditions" ColumnName="conditions" />
+          <ScalarProperty Name="v_vtype" ColumnName="v_vtype" />
+          <ScalarProperty Name="v_vtype1" ColumnName="v_vtype1" />
+          <ScalarProperty Name="v_vtype2" ColumnName="v_vtype2" />
+          <ScalarProperty Name="v_vtype3" ColumnName="v_vtype3" />
+          <ScalarProperty Name="v_vtypeT" ColumnName="v_vtypeT" />
+          <ScalarProperty Name="inputtime" ColumnName="inputtime" />
+          <ScalarProperty Name="v_yuefei" ColumnName="v_yuefei" />
+          <ScalarProperty Name="v_nianfei" ColumnName="v_nianfei" />
+          <ScalarProperty Name="wwhao" ColumnName="wwhao" />
+          <ScalarProperty Name="birth" ColumnName="birth" />
+          <ScalarProperty Name="birth_B" ColumnName="birth_B" />
+          <ScalarProperty Name="v_tuanhao" ColumnName="v_tuanhao" />
+          <ScalarProperty Name="v_yuytime" ColumnName="v_yuytime" />
+          <ScalarProperty Name="v_sqry" ColumnName="v_sqry" />
+          <ScalarProperty Name="v_sqadd" ColumnName="v_sqadd" />
+          <ScalarProperty Name="v_stime_shi" ColumnName="v_stime_shi" />
+          <ScalarProperty Name="v_stime_fen" ColumnName="v_stime_fen" />
+          <ScalarProperty Name="UpTime" ColumnName="UpTime" />
+          <ScalarProperty Name="qi_type" ColumnName="qi_type" />
+          <ScalarProperty Name="qi_content" ColumnName="qi_content" />
+          <ScalarProperty Name="fahuo" ColumnName="fahuo" />
+          <ScalarProperty Name="fahuo_content" ColumnName="fahuo_content" />
+          <ScalarProperty Name="xingcheng_content" ColumnName="xingcheng_content" />
+          <ScalarProperty Name="xctijiaoren" ColumnName="xctijiaoren" />
+          <ScalarProperty Name="xctijiaorenname" ColumnName="xctijiaorenname" />
+          <ScalarProperty Name="CLJieDanRen" ColumnName="CLJieDanRen" />
+          <ScalarProperty Name="quvisa" ColumnName="quvisa" />
+          <ScalarProperty Name="quvisa_num" ColumnName="quvisa_num" />
+          <ScalarProperty Name="audit" ColumnName="audit" />
+          <ScalarProperty Name="audittime" ColumnName="audittime" />
+          <ScalarProperty Name="fp_type" ColumnName="fp_type" />
+          <ScalarProperty Name="fp_title" ColumnName="fp_title" />
+          <ScalarProperty Name="fp_num" ColumnName="fp_num" />
+          <ScalarProperty Name="fp_content" ColumnName="fp_content" />
+          <ScalarProperty Name="fp_hao" ColumnName="fp_hao" />
+          <ScalarProperty Name="imgpath" ColumnName="imgpath" />
+          <ScalarProperty Name="MaxPic" ColumnName="MaxPic" />
+          <ScalarProperty Name="insurance" ColumnName="insurance" />
+          <ScalarProperty Name="insur_num" ColumnName="insur_num" />
+          <ScalarProperty Name="V_jdrid" ColumnName="V_jdrid" />
+          <ScalarProperty Name="V_jdrname" ColumnName="V_jdrname" />
+          <ScalarProperty Name="audit_er" ColumnName="audit_er" />
+          <ScalarProperty Name="auditer_time" ColumnName="auditer_time" />
+          <ScalarProperty Name="auditertime" ColumnName="auditertime" />
+          <ScalarProperty Name="Yemail" ColumnName="Yemail" />
+          <ScalarProperty Name="Gemail" ColumnName="Gemail" />
+          <ScalarProperty Name="xingji" ColumnName="xingji" />
+          <ScalarProperty Name="sjaddress" ColumnName="sjaddress" />
+          <ScalarProperty Name="mat" ColumnName="mat" />
+          <ScalarProperty Name="matinfo" ColumnName="matinfo" />
+          <ScalarProperty Name="mattime" ColumnName="mattime" />
+          <ScalarProperty Name="CourierNumber" ColumnName="CourierNumber" />
+          <ScalarProperty Name="CourierNumberinfo" ColumnName="CourierNumberinfo" />
+          <ScalarProperty Name="CNumber" ColumnName="CNumber" />
+          <ScalarProperty Name="CNumberinfo" ColumnName="CNumberinfo" />
+          <ScalarProperty Name="CNumberTime" ColumnName="CNumberTime" />
+          <ScalarProperty Name="dstime" ColumnName="dstime" />
+          <ScalarProperty Name="endtime" ColumnName="endtime" />
+          <ScalarProperty Name="jiudian_DTime" ColumnName="jiudian_DTime" />
+          <ScalarProperty Name="jiudian_EndTime" ColumnName="jiudian_EndTime" />
+          <ScalarProperty Name="jiudian_Num" ColumnName="jiudian_Num" />
+          <ScalarProperty Name="jiudian_Cancel" ColumnName="jiudian_Cancel" />
+          <ScalarProperty Name="jiudian_Note" ColumnName="jiudian_Note" />
+          <ScalarProperty Name="have_card" ColumnName="have_card" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="P_UserSignWebValidate" FunctionName="dhgl2013Model.Store.P_UserSignWebValidate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dhgl2013Model.P_UserSignWebValidate_Result">
+          <ScalarProperty Name="oid" ColumnName="oid" />
+          <ScalarProperty Name="finger" ColumnName="finger" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="HArea" ColumnName="HArea" />
+          <ScalarProperty Name="HArea_hangzhou" ColumnName="HArea_hangzhou" />
+          <ScalarProperty Name="jdr_id" ColumnName="jdr_id" />
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="v_name" ColumnName="v_name" />
+          <ScalarProperty Name="name_note" ColumnName="name_note" />
+          <ScalarProperty Name="v_starttime" ColumnName="v_starttime" />
+          <ScalarProperty Name="v_tel" ColumnName="v_tel" />
+          <ScalarProperty Name="loginID" ColumnName="loginID" />
+          <ScalarProperty Name="PassportNO" ColumnName="PassportNO" />
+          <ScalarProperty Name="Passport" ColumnName="Passport" />
+          <ScalarProperty Name="ActiveTime" ColumnName="ActiveTime" />
+          <ScalarProperty Name="hxwwhao" ColumnName="hxwwhao" />
+          <ScalarProperty Name="baoxian" ColumnName="baoxian" />
+          <ScalarProperty Name="taocan" ColumnName="taocan" />
+          <ScalarProperty Name="v_result" ColumnName="v_result" />
+          <ScalarProperty Name="vtype_result" ColumnName="vtype_result" />
+          <ScalarProperty Name="v_stime" ColumnName="v_stime" />
+          <ScalarProperty Name="v_qdao" ColumnName="v_qdao" />
+          <ScalarProperty Name="v_otime" ColumnName="v_otime" />
+          <ScalarProperty Name="jiedan_yuefei" ColumnName="jiedan_yuefei" />
+          <ScalarProperty Name="jiedan_nianfei" ColumnName="jiedan_nianfei" />
+          <ScalarProperty Name="v_number" ColumnName="v_number" />
+          <ScalarProperty Name="v_endtime" ColumnName="v_endtime" />
+          <ScalarProperty Name="v_email" ColumnName="v_email" />
+          <ScalarProperty Name="v_yshou" ColumnName="v_yshou" />
+          <ScalarProperty Name="v_cash" ColumnName="v_cash" />
+          <ScalarProperty Name="v_yshou_B" ColumnName="v_yshou_B" />
+          <ScalarProperty Name="v_cvisa" ColumnName="v_cvisa" />
+          <ScalarProperty Name="v_fPiao" ColumnName="v_fPiao" />
+          <ScalarProperty Name="v_pHao" ColumnName="v_pHao" />
+          <ScalarProperty Name="v_type" ColumnName="v_type" />
+          <ScalarProperty Name="v_package_new" ColumnName="v_package_new" />
+          <ScalarProperty Name="v_package" ColumnName="v_package" />
+          <ScalarProperty Name="v_tShu" ColumnName="v_tShu" />
+          <ScalarProperty Name="v_contact" ColumnName="v_contact" />
+          <ScalarProperty Name="v_yFu" ColumnName="v_yFu" />
+          <ScalarProperty Name="v_yFu_B" ColumnName="v_yFu_B" />
+          <ScalarProperty Name="v_xlv" ColumnName="v_xlv" />
+          <ScalarProperty Name="v_lping" ColumnName="v_lping" />
+          <ScalarProperty Name="viptc" ColumnName="viptc" />
+          <ScalarProperty Name="v_yyemail" ColumnName="v_yyemail" />
+          <ScalarProperty Name="countries" ColumnName="countries" />
+          <ScalarProperty Name="record" ColumnName="record" />
+          <ScalarProperty Name="income" ColumnName="income" />
+          <ScalarProperty Name="bad_record" ColumnName="bad_record" />
+          <ScalarProperty Name="conditions" ColumnName="conditions" />
+          <ScalarProperty Name="v_vtype" ColumnName="v_vtype" />
+          <ScalarProperty Name="v_vtype1" ColumnName="v_vtype1" />
+          <ScalarProperty Name="v_vtype2" ColumnName="v_vtype2" />
+          <ScalarProperty Name="v_vtype3" ColumnName="v_vtype3" />
+          <ScalarProperty Name="v_vtypeT" ColumnName="v_vtypeT" />
+          <ScalarProperty Name="inputtime" ColumnName="inputtime" />
+          <ScalarProperty Name="v_yuefei" ColumnName="v_yuefei" />
+          <ScalarProperty Name="v_nianfei" ColumnName="v_nianfei" />
+          <ScalarProperty Name="wwhao" ColumnName="wwhao" />
+          <ScalarProperty Name="birth" ColumnName="birth" />
+          <ScalarProperty Name="birth_B" ColumnName="birth_B" />
+          <ScalarProperty Name="v_tuanhao" ColumnName="v_tuanhao" />
+          <ScalarProperty Name="v_yuytime" ColumnName="v_yuytime" />
+          <ScalarProperty Name="v_sqry" ColumnName="v_sqry" />
+          <ScalarProperty Name="v_sqadd" ColumnName="v_sqadd" />
+          <ScalarProperty Name="v_stime_shi" ColumnName="v_stime_shi" />
+          <ScalarProperty Name="v_stime_fen" ColumnName="v_stime_fen" />
+          <ScalarProperty Name="UpTime" ColumnName="UpTime" />
+          <ScalarProperty Name="qi_type" ColumnName="qi_type" />
+          <ScalarProperty Name="qi_content" ColumnName="qi_content" />
+          <ScalarProperty Name="fahuo" ColumnName="fahuo" />
+          <ScalarProperty Name="fahuo_content" ColumnName="fahuo_content" />
+          <ScalarProperty Name="xingcheng_content" ColumnName="xingcheng_content" />
+          <ScalarProperty Name="xctijiaoren" ColumnName="xctijiaoren" />
+          <ScalarProperty Name="xctijiaorenname" ColumnName="xctijiaorenname" />
+          <ScalarProperty Name="CLJieDanRen" ColumnName="CLJieDanRen" />
+          <ScalarProperty Name="quvisa" ColumnName="quvisa" />
+          <ScalarProperty Name="quvisa_num" ColumnName="quvisa_num" />
+          <ScalarProperty Name="audit" ColumnName="audit" />
+          <ScalarProperty Name="audittime" ColumnName="audittime" />
+          <ScalarProperty Name="fp_type" ColumnName="fp_type" />
+          <ScalarProperty Name="fp_title" ColumnName="fp_title" />
+          <ScalarProperty Name="fp_num" ColumnName="fp_num" />
+          <ScalarProperty Name="fp_content" ColumnName="fp_content" />
+          <ScalarProperty Name="fp_hao" ColumnName="fp_hao" />
+          <ScalarProperty Name="imgpath" ColumnName="imgpath" />
+          <ScalarProperty Name="MaxPic" ColumnName="MaxPic" />
+          <ScalarProperty Name="insurance" ColumnName="insurance" />
+          <ScalarProperty Name="insur_num" ColumnName="insur_num" />
+          <ScalarProperty Name="V_jdrid" ColumnName="V_jdrid" />
+          <ScalarProperty Name="V_jdrname" ColumnName="V_jdrname" />
+          <ScalarProperty Name="audit_er" ColumnName="audit_er" />
+          <ScalarProperty Name="auditer_time" ColumnName="auditer_time" />
+          <ScalarProperty Name="auditertime" ColumnName="auditertime" />
+          <ScalarProperty Name="Yemail" ColumnName="Yemail" />
+          <ScalarProperty Name="Gemail" ColumnName="Gemail" />
+          <ScalarProperty Name="xingji" ColumnName="xingji" />
+          <ScalarProperty Name="sjaddress" ColumnName="sjaddress" />
+          <ScalarProperty Name="mat" ColumnName="mat" />
+          <ScalarProperty Name="matinfo" ColumnName="matinfo" />
+          <ScalarProperty Name="mattime" ColumnName="mattime" />
+          <ScalarProperty Name="CourierNumber" ColumnName="CourierNumber" />
+          <ScalarProperty Name="CourierNumberinfo" ColumnName="CourierNumberinfo" />
+          <ScalarProperty Name="CNumber" ColumnName="CNumber" />
+          <ScalarProperty Name="CNumberinfo" ColumnName="CNumberinfo" />
+          <ScalarProperty Name="CNumberTime" ColumnName="CNumberTime" />
+          <ScalarProperty Name="dstime" ColumnName="dstime" />
+          <ScalarProperty Name="endtime" ColumnName="endtime" />
+          <ScalarProperty Name="jiudian_DTime" ColumnName="jiudian_DTime" />
+          <ScalarProperty Name="jiudian_EndTime" ColumnName="jiudian_EndTime" />
+          <ScalarProperty Name="jiudian_Num" ColumnName="jiudian_Num" />
+          <ScalarProperty Name="jiudian_Cancel" ColumnName="jiudian_Cancel" />
+          <ScalarProperty Name="jiudian_Note" ColumnName="jiudian_Note" />
+          <ScalarProperty Name="have_card" ColumnName="have_card" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="T_Product_Recommend" FunctionName="dhgl2013Model.Store.T_Product_Recommend">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dhgl2013Model.T_Product_Recommend_Result">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductBrand" ColumnName="ProductBrand" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="DepartureID" ColumnName="DepartureID" />
+          <ScalarProperty Name="ProductBrand1" ColumnName="ProductBrand1" />
+          <ScalarProperty Name="Price1" ColumnName="Price1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="V_Admin_Delete" FunctionName="dhgl2013Model.Store.V_Admin_Delete" />
+    <FunctionImportMapping FunctionImportName="V_AdminSignValidate" FunctionName="dhgl2013Model.Store.V_AdminSignValidate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dhgl2013Model.V_AdminSignValidate_Result">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+          <ScalarProperty Name="SysType" ColumnName="SysType" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="UserDpt" ColumnName="UserDpt" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserTel" ColumnName="UserTel" />
+          <ScalarProperty Name="UserMobile" ColumnName="UserMobile" />
+          <ScalarProperty Name="UserFax" ColumnName="UserFax" />
+          <ScalarProperty Name="UserQQName" ColumnName="UserQQName" />
+          <ScalarProperty Name="UserQQ" ColumnName="UserQQ" />
+          <ScalarProperty Name="UserMail" ColumnName="UserMail" />
+          <ScalarProperty Name="UserAccount" ColumnName="UserAccount" />
+          <ScalarProperty Name="UserPwd" ColumnName="UserPwd" />
+          <ScalarProperty Name="UserBrief" ColumnName="UserBrief" />
+          <ScalarProperty Name="IsReceiveSms" ColumnName="IsReceiveSms" />
+          <ScalarProperty Name="IsOncallSms" ColumnName="IsOncallSms" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="ActiveTime" ColumnName="ActiveTime" />
+          <ScalarProperty Name="LoginIP" ColumnName="LoginIP" />
+          <ScalarProperty Name="UserSex" ColumnName="UserSex" />
+          <ScalarProperty Name="UserPosition" ColumnName="UserPosition" />
+          <ScalarProperty Name="UserPositionCall" ColumnName="UserPositionCall" />
+          <ScalarProperty Name="UserBirthday" ColumnName="UserBirthday" />
+          <ScalarProperty Name="UserLogo" ColumnName="UserLogo" />
+          <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="CommonlyDate">
+      <EntityTypeMapping TypeName="dhgl2013Model.CommonlyDate">
+        <MappingFragment StoreEntitySet="CommonlyDate">
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="StandardNumber" ColumnName="StandardNumber" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="FeeLink" ColumnName="FeeLink" />
+          <ScalarProperty Name="Sorting" ColumnName="Sorting" />
+          <ScalarProperty Name="puttime" ColumnName="puttime" />
+          <ScalarProperty Name="Updatedate" ColumnName="Updatedate" />
+          <ScalarProperty Name="VisafeeChildren" ColumnName="VisafeeChildren" />
+          <ScalarProperty Name="Visafee" ColumnName="Visafee" />
+          <ScalarProperty Name="Nums" ColumnName="Nums" />
+          <ScalarProperty Name="v_type" ColumnName="v_type" />
+          <ScalarProperty Name="Cid" ColumnName="Cid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_FirstResult">
+      <EntityTypeMapping TypeName="dhgl2013Model.Order_FirstResult">
+        <MappingFragment StoreEntitySet="Order_FirstResult">
+          <ScalarProperty Name="intime" ColumnName="intime" />
+          <ScalarProperty Name="seller_nick" ColumnName="seller_nick" />
+          <ScalarProperty Name="seller_memo" ColumnName="seller_memo" />
+          <ScalarProperty Name="seller_flag" ColumnName="seller_flag" />
+          <ScalarProperty Name="buyer_rate" ColumnName="buyer_rate" />
+          <ScalarProperty Name="buyer_nick" ColumnName="buyer_nick" />
+          <ScalarProperty Name="buyer_email" ColumnName="buyer_email" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="modified_time" ColumnName="modified_time" />
+          <ScalarProperty Name="created_time" ColumnName="created_time" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="FirstId" ColumnName="FirstId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_SubInfo">
+      <EntityTypeMapping TypeName="dhgl2013Model.Order_SubInfo">
+        <MappingFragment StoreEntitySet="Order_SubInfo">
+          <ScalarProperty Name="intime" ColumnName="intime" />
+          <ScalarProperty Name="post_address" ColumnName="post_address" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="sku_properties" ColumnName="sku_properties" />
+          <ScalarProperty Name="sku_id" ColumnName="sku_id" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="item_title" ColumnName="item_title" />
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="refund_status" ColumnName="refund_status" />
+          <ScalarProperty Name="total_fee" ColumnName="total_fee" />
+          <ScalarProperty Name="payment" ColumnName="payment" />
+          <ScalarProperty Name="order_type" ColumnName="order_type" />
+          <ScalarProperty Name="biz_type" ColumnName="biz_type" />
+          <ScalarProperty Name="sub_order_id" ColumnName="sub_order_id" />
+          <ScalarProperty Name="FirstId" ColumnName="FirstId" />
+          <ScalarProperty Name="SubId" ColumnName="SubId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Article">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_Article">
+        <MappingFragment StoreEntitySet="T_Article">
+          <ScalarProperty Name="opUserName" ColumnName="opUserName" />
+          <ScalarProperty Name="opSupplierID" ColumnName="opSupplierID" />
+          <ScalarProperty Name="ArtSort" ColumnName="ArtSort" />
+          <ScalarProperty Name="ArtContent" ColumnName="ArtContent" />
+          <ScalarProperty Name="ArtDate" ColumnName="ArtDate" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="ArtIsIssue" ColumnName="ArtIsIssue" />
+          <ScalarProperty Name="ArtTitle" ColumnName="ArtTitle" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="SupplierTypeRight" ColumnName="SupplierTypeRight" />
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_ArticleVisited">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_ArticleVisited">
+        <MappingFragment StoreEntitySet="T_ArticleVisited">
+          <ScalarProperty Name="GreatTime" ColumnName="GreatTime" />
+          <ScalarProperty Name="ClientUserName" ColumnName="ClientUserName" />
+          <ScalarProperty Name="ClientUserID" ColumnName="ClientUserID" />
+          <ScalarProperty Name="StateLabel" ColumnName="StateLabel" />
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="VisitedID" ColumnName="VisitedID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_AssessmentBase">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_AssessmentBase">
+        <MappingFragment StoreEntitySet="T_AssessmentBase">
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="BTime" ColumnName="BTime" />
+          <ScalarProperty Name="BContent" ColumnName="BContent" />
+          <ScalarProperty Name="BValue" ColumnName="BValue" />
+          <ScalarProperty Name="BType" ColumnName="BType" />
+          <ScalarProperty Name="BId" ColumnName="BId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_AssessmentUserSalary">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_AssessmentUserSalary">
+        <MappingFragment StoreEntitySet="T_AssessmentUserSalary">
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
+          <ScalarProperty Name="SignatureName" ColumnName="SignatureName" />
+          <ScalarProperty Name="SignatureID" ColumnName="SignatureID" />
+          <ScalarProperty Name="SignatureTag" ColumnName="SignatureTag" />
+          <ScalarProperty Name="UTime" ColumnName="UTime" />
+          <ScalarProperty Name="UIsEnable" ColumnName="UIsEnable" />
+          <ScalarProperty Name="UContent" ColumnName="UContent" />
+          <ScalarProperty Name="UTrafficFill" ColumnName="UTrafficFill" />
+          <ScalarProperty Name="UCommunicationFill" ColumnName="UCommunicationFill" />
+          <ScalarProperty Name="UMealFill" ColumnName="UMealFill" />
+          <ScalarProperty Name="UDiseaseLeaveDays" ColumnName="UDiseaseLeaveDays" />
+          <ScalarProperty Name="UThingsLeaveDays" ColumnName="UThingsLeaveDays" />
+          <ScalarProperty Name="UWorkDays" ColumnName="UWorkDays" />
+          <ScalarProperty Name="ALeaveDays" ColumnName="ALeaveDays" />
+          <ScalarProperty Name="ALate" ColumnName="ALate" />
+          <ScalarProperty Name="ATos" ColumnName="ATos" />
+          <ScalarProperty Name="AGoodReward" ColumnName="AGoodReward" />
+          <ScalarProperty Name="AWeekendDuty" ColumnName="AWeekendDuty" />
+          <ScalarProperty Name="UActualSum" ColumnName="UActualSum" />
+          <ScalarProperty Name="UFixedSalary" ColumnName="UFixedSalary" />
+          <ScalarProperty Name="UBasicSalary" ColumnName="UBasicSalary" />
+          <ScalarProperty Name="ULoss" ColumnName="ULoss" />
+          <ScalarProperty Name="UAssessment" ColumnName="UAssessment" />
+          <ScalarProperty Name="UUserName" ColumnName="UUserName" />
+          <ScalarProperty Name="UUserId" ColumnName="UUserId" />
+          <ScalarProperty Name="UMonth" ColumnName="UMonth" />
+          <ScalarProperty Name="UYear" ColumnName="UYear" />
+          <ScalarProperty Name="UId" ColumnName="UId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_CommonlyMessage">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_CommonlyMessage">
+        <MappingFragment StoreEntitySet="T_CommonlyMessage">
+          <ScalarProperty Name="CreatUserName" ColumnName="CreatUserName" />
+          <ScalarProperty Name="CreatUserId" ColumnName="CreatUserId" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="MTime" ColumnName="MTime" />
+          <ScalarProperty Name="MContent" ColumnName="MContent" />
+          <ScalarProperty Name="MInput" ColumnName="MInput" />
+          <ScalarProperty Name="MType" ColumnName="MType" />
+          <ScalarProperty Name="MId" ColumnName="MId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_CommonlyMessageConsul">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_CommonlyMessageConsul">
+        <MappingFragment StoreEntitySet="T_CommonlyMessageConsul">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="AreaLink" ColumnName="AreaLink" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="MType" ColumnName="MType" />
+          <ScalarProperty Name="CId" ColumnName="CId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_CreditCardImport">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_CreditCardImport">
+        <MappingFragment StoreEntitySet="T_CreditCardImport">
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_CreditCardUse">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_CreditCardUse">
+        <MappingFragment StoreEntitySet="T_CreditCardUse">
+          <ScalarProperty Name="UserTime" ColumnName="UserTime" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="OId" ColumnName="OId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_EmailImport">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_EmailImport">
+        <MappingFragment StoreEntitySet="T_EmailImport">
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EmailNum" ColumnName="EmailNum" />
+          <ScalarProperty Name="EmailPassword" ColumnName="EmailPassword" />
+          <ScalarProperty Name="EmailName" ColumnName="EmailName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_LinkDate">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_LinkDate">
+        <MappingFragment StoreEntitySet="T_LinkDate">
+          <ScalarProperty Name="puttime" ColumnName="puttime" />
+          <ScalarProperty Name="AreaContact" ColumnName="AreaContact" />
+          <ScalarProperty Name="AreaTime" ColumnName="AreaTime" />
+          <ScalarProperty Name="AreaAddress" ColumnName="AreaAddress" />
+          <ScalarProperty Name="AreaLink" ColumnName="AreaLink" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+          <ScalarProperty Name="v_type" ColumnName="v_type" />
+          <ScalarProperty Name="Cid" ColumnName="Cid" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SysBlackType">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SysBlackType">
+        <MappingFragment StoreEntitySet="T_SysBlackType">
+          <ScalarProperty Name="CteateTime" ColumnName="CteateTime" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="BTypeItemName" ColumnName="BTypeItemName" />
+          <ScalarProperty Name="BTypeItemId" ColumnName="BTypeItemId" />
+          <ScalarProperty Name="BTypeName" ColumnName="BTypeName" />
+          <ScalarProperty Name="BTypeId" ColumnName="BTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SysLog">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SysLog">
+        <MappingFragment StoreEntitySet="T_SysLog">
+          <ScalarProperty Name="Minute" ColumnName="Minute" />
+          <ScalarProperty Name="LeaveTime" ColumnName="LeaveTime" />
+          <ScalarProperty Name="EnterTime" ColumnName="EnterTime" />
+          <ScalarProperty Name="LogInfo" ColumnName="LogInfo" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LogType" ColumnName="LogType" />
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_sysNewRole">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_sysNewRole">
+        <MappingFragment StoreEntitySet="T_sysNewRole">
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="InTime" ColumnName="InTime" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RContent" ColumnName="RContent" />
+          <ScalarProperty Name="RID" ColumnName="RID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_sysNewRoleOperation">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_sysNewRoleOperation">
+        <MappingFragment StoreEntitySet="T_sysNewRoleOperation">
+          <ScalarProperty Name="IsOperate" ColumnName="IsOperate" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="RID" ColumnName="RID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_sysNewRoleRight">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_sysNewRoleRight">
+        <MappingFragment StoreEntitySet="T_sysNewRoleRight">
+          <ScalarProperty Name="SubIDs" ColumnName="SubIDs" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="RID" ColumnName="RID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SysOperation">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SysOperation">
+        <MappingFragment StoreEntitySet="T_SysOperation">
+          <ScalarProperty Name="OperationName" ColumnName="OperationName" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SysOperationLog">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SysOperationLog">
+        <MappingFragment StoreEntitySet="T_SysOperationLog">
+          <ScalarProperty Name="IsOnline" ColumnName="IsOnline" />
+          <ScalarProperty Name="CashID" ColumnName="CashID" />
+          <ScalarProperty Name="OSupplierID" ColumnName="OSupplierID" />
+          <ScalarProperty Name="OType" ColumnName="OType" />
+          <ScalarProperty Name="OProject" ColumnName="OProject" />
+          <ScalarProperty Name="OMenuID" ColumnName="OMenuID" />
+          <ScalarProperty Name="OLogID" ColumnName="OLogID" />
+          <ScalarProperty Name="OAddTime" ColumnName="OAddTime" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OContent" ColumnName="OContent" />
+          <ScalarProperty Name="OUserName" ColumnName="OUserName" />
+          <ScalarProperty Name="OUserID" ColumnName="OUserID" />
+          <ScalarProperty Name="OOperationLogID" ColumnName="OOperationLogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SysSupplier">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SysSupplier">
+        <MappingFragment StoreEntitySet="T_SysSupplier">
+          <ScalarProperty Name="Protocol_ZTS_Address" ColumnName="Protocol_ZTS_Address" />
+          <ScalarProperty Name="Protocol_ZTS_SBusiness" ColumnName="Protocol_ZTS_SBusiness" />
+          <ScalarProperty Name="Protocol_ZTS_Prermit" ColumnName="Protocol_ZTS_Prermit" />
+          <ScalarProperty Name="Protocol_ZTS_ContactMobile" ColumnName="Protocol_ZTS_ContactMobile" />
+          <ScalarProperty Name="Protocol_ZTS_Contactor" ColumnName="Protocol_ZTS_Contactor" />
+          <ScalarProperty Name="Protocol_ZTS_Name" ColumnName="Protocol_ZTS_Name" />
+          <ScalarProperty Name="Protocol_DJS_Address" ColumnName="Protocol_DJS_Address" />
+          <ScalarProperty Name="Protocol_DJS_SBusiness" ColumnName="Protocol_DJS_SBusiness" />
+          <ScalarProperty Name="Protocol_DJS_Prermit" ColumnName="Protocol_DJS_Prermit" />
+          <ScalarProperty Name="Protocol_DJS_ContactMobile" ColumnName="Protocol_DJS_ContactMobile" />
+          <ScalarProperty Name="Protocol_DJS_Contactor" ColumnName="Protocol_DJS_Contactor" />
+          <ScalarProperty Name="Protocol_DJS_Name" ColumnName="Protocol_DJS_Name" />
+          <ScalarProperty Name="SBusiness" ColumnName="SBusiness" />
+          <ScalarProperty Name="Prermit" ColumnName="Prermit" />
+          <ScalarProperty Name="SortSeq" ColumnName="SortSeq" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="RegisterCheckTime" ColumnName="RegisterCheckTime" />
+          <ScalarProperty Name="RegisterCheckUser" ColumnName="RegisterCheckUser" />
+          <ScalarProperty Name="TotalScore" ColumnName="TotalScore" />
+          <ScalarProperty Name="RegisterState" ColumnName="RegisterState" />
+          <ScalarProperty Name="RegisterType" ColumnName="RegisterType" />
+          <ScalarProperty Name="Recommend" ColumnName="Recommend" />
+          <ScalarProperty Name="LegalFax" ColumnName="LegalFax" />
+          <ScalarProperty Name="LegalTel" ColumnName="LegalTel" />
+          <ScalarProperty Name="Legal" ColumnName="Legal" />
+          <ScalarProperty Name="Tu8Nid" ColumnName="Tu8Nid" />
+          <ScalarProperty Name="IsReceiveSms" ColumnName="IsReceiveSms" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="LogoPrint" ColumnName="LogoPrint" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="ManagerTel" ColumnName="ManagerTel" />
+          <ScalarProperty Name="Manager" ColumnName="Manager" />
+          <ScalarProperty Name="SupplierContact" ColumnName="SupplierContact" />
+          <ScalarProperty Name="SupplierBank" ColumnName="SupplierBank" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="opSupplierName" ColumnName="opSupplierName" />
+          <ScalarProperty Name="opSupplierID" ColumnName="opSupplierID" />
+          <ScalarProperty Name="SupplierAddress" ColumnName="SupplierAddress" />
+          <ScalarProperty Name="ZoneName" ColumnName="ZoneName" />
+          <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+          <ScalarProperty Name="DistinctName" ColumnName="DistinctName" />
+          <ScalarProperty Name="DistinctID" ColumnName="DistinctID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="ProvinceName" ColumnName="ProvinceName" />
+          <ScalarProperty Name="ProvinceID" ColumnName="ProvinceID" />
+          <ScalarProperty Name="NationName" ColumnName="NationName" />
+          <ScalarProperty Name="NationID" ColumnName="NationID" />
+          <ScalarProperty Name="SupplierNameSubfix" ColumnName="SupplierNameSubfix" />
+          <ScalarProperty Name="SupplierNameShort" ColumnName="SupplierNameShort" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+          <ScalarProperty Name="TopSupplierID" ColumnName="TopSupplierID" />
+          <ScalarProperty Name="SupplierGrade" ColumnName="SupplierGrade" />
+          <ScalarProperty Name="SupplierType" ColumnName="SupplierType" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SysUserBranchPower">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SysUserBranchPower">
+        <MappingFragment StoreEntitySet="T_SysUserBranchPower">
+          <ScalarProperty Name="UserSubordinate" ColumnName="UserSubordinate" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="CodeId" ColumnName="CodeId" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="BId" ColumnName="BId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SysUserDocument">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SysUserDocument">
+        <MappingFragment StoreEntitySet="T_SysUserDocument">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="DTime" ColumnName="DTime" />
+          <ScalarProperty Name="DUserName" ColumnName="DUserName" />
+          <ScalarProperty Name="DUserId" ColumnName="DUserId" />
+          <ScalarProperty Name="DContent" ColumnName="DContent" />
+          <ScalarProperty Name="DType" ColumnName="DType" />
+          <ScalarProperty Name="DTitle" ColumnName="DTitle" />
+          <ScalarProperty Name="DId" ColumnName="DId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SysUserRole">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SysUserRole">
+        <MappingFragment StoreEntitySet="T_SysUserRole">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="UserContent" ColumnName="UserContent" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleContent" ColumnName="RoleContent" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="URName" ColumnName="URName" />
+          <ScalarProperty Name="URId" ColumnName="URId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_UserScheduling">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_UserScheduling">
+        <MappingFragment StoreEntitySet="T_UserScheduling">
+          <ScalarProperty Name="SAddTime" ColumnName="SAddTime" />
+          <ScalarProperty Name="SIsSign" ColumnName="SIsSign" />
+          <ScalarProperty Name="SSupplierID" ColumnName="SSupplierID" />
+          <ScalarProperty Name="SAddUserID" ColumnName="SAddUserID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="WorkLength" ColumnName="WorkLength" />
+          <ScalarProperty Name="EndWorkTime" ColumnName="EndWorkTime" />
+          <ScalarProperty Name="StartWorkTime" ColumnName="StartWorkTime" />
+          <ScalarProperty Name="SUserID" ColumnName="SUserID" />
+          <ScalarProperty Name="TypeItemName" ColumnName="TypeItemName" />
+          <ScalarProperty Name="TypeItemId" ColumnName="TypeItemId" />
+          <ScalarProperty Name="SType" ColumnName="SType" />
+          <ScalarProperty Name="STitle" ColumnName="STitle" />
+          <ScalarProperty Name="SID" ColumnName="SID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_cailiaolist">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_cailiaolist">
+        <MappingFragment StoreEntitySet="v_cailiaolist">
+          <ScalarProperty Name="paix" ColumnName="paix" />
+          <ScalarProperty Name="inputtime" ColumnName="inputtime" />
+          <ScalarProperty Name="v_type" ColumnName="v_type" />
+          <ScalarProperty Name="c_atts" ColumnName="c_atts" />
+          <ScalarProperty Name="c_att" ColumnName="c_att" />
+          <ScalarProperty Name="CrowdType" ColumnName="CrowdType" />
+          <ScalarProperty Name="CrowdTypeId" ColumnName="CrowdTypeId" />
+          <ScalarProperty Name="c_type" ColumnName="c_type" />
+          <ScalarProperty Name="c_typeId" ColumnName="c_typeId" />
+          <ScalarProperty Name="c_name" ColumnName="c_name" />
+          <ScalarProperty Name="c_nameId" ColumnName="c_nameId" />
+          <ScalarProperty Name="areaname" ColumnName="areaname" />
+          <ScalarProperty Name="areaId" ColumnName="areaId" />
+          <ScalarProperty Name="mainId" ColumnName="mainId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_CustomFollowUp">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_CustomFollowUp">
+        <MappingFragment StoreEntitySet="v_CustomFollowUp">
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="AssignedUserName" ColumnName="AssignedUserName" />
+          <ScalarProperty Name="AssignedUserId" ColumnName="AssignedUserId" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddUserName" ColumnName="AddUserName" />
+          <ScalarProperty Name="AddUserID" ColumnName="AddUserID" />
+          <ScalarProperty Name="IsUnread" ColumnName="IsUnread" />
+          <ScalarProperty Name="IsAssigned" ColumnName="IsAssigned" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="WeChat" ColumnName="WeChat" />
+          <ScalarProperty Name="Demand" ColumnName="Demand" />
+          <ScalarProperty Name="Crowd" ColumnName="Crowd" />
+          <ScalarProperty Name="OutDate" ColumnName="OutDate" />
+          <ScalarProperty Name="CallDate" ColumnName="CallDate" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_CustomFollowUpDetails">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_CustomFollowUpDetails">
+        <MappingFragment StoreEntitySet="v_CustomFollowUpDetails">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="FId" ColumnName="FId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_infolistAudit">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_infolistAudit">
+        <MappingFragment StoreEntitySet="v_infolistAudit">
+          <ScalarProperty Name="greatetime" ColumnName="greatetime" />
+          <ScalarProperty Name="auditSta" ColumnName="auditSta" />
+          <ScalarProperty Name="auditren" ColumnName="auditren" />
+          <ScalarProperty Name="audittime" ColumnName="audittime" />
+          <ScalarProperty Name="createTime" ColumnName="createTime" />
+          <ScalarProperty Name="createUserName" ColumnName="createUserName" />
+          <ScalarProperty Name="createId" ColumnName="createId" />
+          <ScalarProperty Name="cashId" ColumnName="cashId" />
+          <ScalarProperty Name="oid" ColumnName="oid" />
+          <ScalarProperty Name="AId" ColumnName="AId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_infolistAuditRecords">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_infolistAuditRecords">
+        <MappingFragment StoreEntitySet="v_infolistAuditRecords">
+          <ScalarProperty Name="InputTime" ColumnName="InputTime" />
+          <ScalarProperty Name="ASTime" ColumnName="ASTime" />
+          <ScalarProperty Name="AuditUserName" ColumnName="AuditUserName" />
+          <ScalarProperty Name="AuditUserID" ColumnName="AuditUserID" />
+          <ScalarProperty Name="ASContent" ColumnName="ASContent" />
+          <ScalarProperty Name="AOrderTime" ColumnName="AOrderTime" />
+          <ScalarProperty Name="AOrderUsers" ColumnName="AOrderUsers" />
+          <ScalarProperty Name="AOrderWWHao" ColumnName="AOrderWWHao" />
+          <ScalarProperty Name="AOrderMobile" ColumnName="AOrderMobile" />
+          <ScalarProperty Name="AOrderName" ColumnName="AOrderName" />
+          <ScalarProperty Name="AOrderId" ColumnName="AOrderId" />
+          <ScalarProperty Name="ALevel" ColumnName="ALevel" />
+          <ScalarProperty Name="ALevelId" ColumnName="ALevelId" />
+          <ScalarProperty Name="AOId" ColumnName="AOId" />
+          <ScalarProperty Name="AId" ColumnName="AId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_infolistimg">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_infolistimg">
+        <MappingFragment StoreEntitySet="v_infolistimg">
+          <ScalarProperty Name="uptime" ColumnName="uptime" />
+          <ScalarProperty Name="IsDisplay" ColumnName="IsDisplay" />
+          <ScalarProperty Name="MaxPic" ColumnName="MaxPic" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="imgpath" ColumnName="imgpath" />
+          <ScalarProperty Name="UserInfoName" ColumnName="UserInfoName" />
+          <ScalarProperty Name="UserInfoID" ColumnName="UserInfoID" />
+          <ScalarProperty Name="UpType" ColumnName="UpType" />
+          <ScalarProperty Name="ImgID" ColumnName="ImgID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_infolistRelevant">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_infolistRelevant">
+        <MappingFragment StoreEntitySet="v_infolistRelevant">
+          <ScalarProperty Name="GetCreateTime" ColumnName="GetCreateTime" />
+          <ScalarProperty Name="ReTyple" ColumnName="ReTyple" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="UseNum" ColumnName="UseNum" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_kehuinfo">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_kehuinfo">
+        <MappingFragment StoreEntitySet="v_kehuinfo">
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="Dbirth" ColumnName="Dbirth" />
+          <ScalarProperty Name="puttime" ColumnName="puttime" />
+          <ScalarProperty Name="Dorder" ColumnName="Dorder" />
+          <ScalarProperty Name="hfjdrid" ColumnName="hfjdrid" />
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="kf_name" ColumnName="kf_name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_OrderAudit">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_OrderAudit">
+        <MappingFragment StoreEntitySet="v_OrderAudit">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="AuditState" ColumnName="AuditState" />
+          <ScalarProperty Name="AuditTime" ColumnName="AuditTime" />
+          <ScalarProperty Name="AuditUserName" ColumnName="AuditUserName" />
+          <ScalarProperty Name="AuditUserId" ColumnName="AuditUserId" />
+          <ScalarProperty Name="CashId" ColumnName="CashId" />
+          <ScalarProperty Name="OId" ColumnName="OId" />
+          <ScalarProperty Name="AuditId" ColumnName="AuditId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_OrderInvoice">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_OrderInvoice">
+        <MappingFragment StoreEntitySet="v_OrderInvoice">
+          <ScalarProperty Name="PStateName" ColumnName="PStateName" />
+          <ScalarProperty Name="PId" ColumnName="PId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_OrderInvoiceInfo">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_OrderInvoiceInfo">
+        <MappingFragment StoreEntitySet="v_OrderInvoiceInfo">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateName" ColumnName="CreateName" />
+          <ScalarProperty Name="CreateId" ColumnName="CreateId" />
+          <ScalarProperty Name="PEnable" ColumnName="PEnable" />
+          <ScalarProperty Name="PBillNo" ColumnName="PBillNo" />
+          <ScalarProperty Name="PAmount" ColumnName="PAmount" />
+          <ScalarProperty Name="PCategory" ColumnName="PCategory" />
+          <ScalarProperty Name="PTile" ColumnName="PTile" />
+          <ScalarProperty Name="PNo" ColumnName="PNo" />
+          <ScalarProperty Name="PTypeName" ColumnName="PTypeName" />
+          <ScalarProperty Name="PType" ColumnName="PType" />
+          <ScalarProperty Name="OId" ColumnName="OId" />
+          <ScalarProperty Name="PId" ColumnName="PId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_OrderPayProof">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_OrderPayProof">
+        <MappingFragment StoreEntitySet="v_OrderPayProof">
+          <ScalarProperty Name="UploadTime" ColumnName="UploadTime" />
+          <ScalarProperty Name="UpUserName" ColumnName="UpUserName" />
+          <ScalarProperty Name="UpUserId" ColumnName="UpUserId" />
+          <ScalarProperty Name="ProofStr" ColumnName="ProofStr" />
+          <ScalarProperty Name="PayId" ColumnName="PayId" />
+          <ScalarProperty Name="OId" ColumnName="OId" />
+          <ScalarProperty Name="PId" ColumnName="PId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_OrderType">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_OrderType">
+        <MappingFragment StoreEntitySet="v_OrderType">
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="CrowdType" ColumnName="CrowdType" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="VType" ColumnName="VType" />
+          <ScalarProperty Name="VId" ColumnName="VId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Area">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_Area">
+        <MappingFragment StoreEntitySet="T_Area">
+          <ScalarProperty Name="Sorting" ColumnName="Sorting" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+          <ScalarProperty Name="AId" ColumnName="AId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_AreaConsul">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_AreaConsul">
+        <MappingFragment StoreEntitySet="T_AreaConsul">
+          <ScalarProperty Name="Sorting" ColumnName="Sorting" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+          <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+          <ScalarProperty Name="CName" ColumnName="CName" />
+          <ScalarProperty Name="CId" ColumnName="CId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_AreaConsulClass">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_AreaConsulClass">
+        <MappingFragment StoreEntitySet="T_AreaConsulClass">
+          <ScalarProperty Name="Sorting" ColumnName="Sorting" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+          <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="CName" ColumnName="CName" />
+          <ScalarProperty Name="CId" ColumnName="CId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SysMenu">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SysMenu">
+        <MappingFragment StoreEntitySet="T_SysMenu">
+          <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+          <ScalarProperty Name="ControllerName" ColumnName="ControllerName" />
+          <ScalarProperty Name="ErpSorting" ColumnName="ErpSorting" />
+          <ScalarProperty Name="IsDisplay" ColumnName="IsDisplay" />
+          <ScalarProperty Name="SortSeq" ColumnName="SortSeq" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="UrlTarget" ColumnName="UrlTarget" />
+          <ScalarProperty Name="UrlImage" ColumnName="UrlImage" />
+          <ScalarProperty Name="UrlPage" ColumnName="UrlPage" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="SupplierType" ColumnName="SupplierType" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SysUserAllocationAmount">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SysUserAllocationAmount">
+        <MappingFragment StoreEntitySet="T_SysUserAllocationAmount">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="AllocationTime" ColumnName="AllocationTime" />
+          <ScalarProperty Name="AllocationContent" ColumnName="AllocationContent" />
+          <ScalarProperty Name="AllocationUserName" ColumnName="AllocationUserName" />
+          <ScalarProperty Name="AllocationUserId" ColumnName="AllocationUserId" />
+          <ScalarProperty Name="RemainingAmount" ColumnName="RemainingAmount" />
+          <ScalarProperty Name="AllocationAmount" ColumnName="AllocationAmount" />
+          <ScalarProperty Name="AId" ColumnName="AId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_UserChatRecord">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_UserChatRecord">
+        <MappingFragment StoreEntitySet="T_UserChatRecord">
+          <ScalarProperty Name="RContent" ColumnName="RContent" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="SendeeName" ColumnName="SendeeName" />
+          <ScalarProperty Name="SendeeID" ColumnName="SendeeID" />
+          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+          <ScalarProperty Name="SenderID" ColumnName="SenderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SysWaitProcessed">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SysWaitProcessed">
+        <MappingFragment StoreEntitySet="T_SysWaitProcessed">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="GetCountryName" ColumnName="GetCountryName" />
+          <ScalarProperty Name="GetCountryId" ColumnName="GetCountryId" />
+          <ScalarProperty Name="GetUserName" ColumnName="GetUserName" />
+          <ScalarProperty Name="GetUserId" ColumnName="GetUserId" />
+          <ScalarProperty Name="SumAmount" ColumnName="SumAmount" />
+          <ScalarProperty Name="RemAmount" ColumnName="RemAmount" />
+          <ScalarProperty Name="CurrentAmount" ColumnName="CurrentAmount" />
+          <ScalarProperty Name="BeProName" ColumnName="BeProName" />
+          <ScalarProperty Name="WWHao" ColumnName="WWHao" />
+          <ScalarProperty Name="InDateTime" ColumnName="InDateTime" />
+          <ScalarProperty Name="WId" ColumnName="WId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SysUserAllocationDetails">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SysUserAllocationDetails">
+        <MappingFragment StoreEntitySet="T_SysUserAllocationDetails">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="AllocationTime" ColumnName="AllocationTime" />
+          <ScalarProperty Name="AllocationContent" ColumnName="AllocationContent" />
+          <ScalarProperty Name="AllocationAmount" ColumnName="AllocationAmount" />
+          <ScalarProperty Name="AllocationUserId" ColumnName="AllocationUserId" />
+          <ScalarProperty Name="AId" ColumnName="AId" />
+          <ScalarProperty Name="DId" ColumnName="DId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_coll_info">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_coll_info">
+        <MappingFragment StoreEntitySet="v_coll_info">
+          <ScalarProperty Name="EnableAliPay" ColumnName="EnableAliPay" />
+          <ScalarProperty Name="EnableSynchronous" ColumnName="EnableSynchronous" />
+          <ScalarProperty Name="EnableAliRefundTag" ColumnName="EnableAliRefundTag" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="loss_num" ColumnName="loss_num" />
+          <ScalarProperty Name="pic_num" ColumnName="pic_num" />
+          <ScalarProperty Name="sum_amount" ColumnName="sum_amount" />
+          <ScalarProperty Name="audit" ColumnName="audit" />
+          <ScalarProperty Name="hfczrid" ColumnName="hfczrid" />
+          <ScalarProperty Name="hfjdrid" ColumnName="hfjdrid" />
+          <ScalarProperty Name="hfnianfei" ColumnName="hfnianfei" />
+          <ScalarProperty Name="hfyuefei" ColumnName="hfyuefei" />
+          <ScalarProperty Name="profits" ColumnName="profits" />
+          <ScalarProperty Name="intime" ColumnName="intime" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="sjhao" ColumnName="sjhao" />
+          <ScalarProperty Name="fphao" ColumnName="fphao" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="rency" ColumnName="rency" />
+          <ScalarProperty Name="paymeth" ColumnName="paymeth" />
+          <ScalarProperty Name="paytype" ColumnName="paytype" />
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="Dorder" ColumnName="Dorder" />
+          <ScalarProperty Name="oid" ColumnName="oid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_AliPayRecord">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_AliPayRecord">
+        <MappingFragment StoreEntitySet="T_AliPayRecord">
+          <ScalarProperty Name="EnableAliRefundTag" ColumnName="EnableAliRefundTag" />
+          <ScalarProperty Name="AddSubjectTypeStr" ColumnName="AddSubjectTypeStr" />
+          <ScalarProperty Name="AddSubjectTypeInt" ColumnName="AddSubjectTypeInt" />
+          <ScalarProperty Name="AddPaymentTypeStr" ColumnName="AddPaymentTypeStr" />
+          <ScalarProperty Name="AddPaymentTypeInt" ColumnName="AddPaymentTypeInt" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="TradingCommodity" ColumnName="TradingCommodity" />
+          <ScalarProperty Name="BankOrderNO" ColumnName="BankOrderNO" />
+          <ScalarProperty Name="OtherPartyName" ColumnName="OtherPartyName" />
+          <ScalarProperty Name="OtherPartyAccount" ColumnName="OtherPartyAccount" />
+          <ScalarProperty Name="PaymentChannel" ColumnName="PaymentChannel" />
+          <ScalarProperty Name="ServiceFee" ColumnName="ServiceFee" />
+          <ScalarProperty Name="AccountBalance" ColumnName="AccountBalance" />
+          <ScalarProperty Name="Spending" ColumnName="Spending" />
+          <ScalarProperty Name="Income" ColumnName="Income" />
+          <ScalarProperty Name="FinancialType" ColumnName="FinancialType" />
+          <ScalarProperty Name="MerchantOrderNO" ColumnName="MerchantOrderNO" />
+          <ScalarProperty Name="PaySerialNO" ColumnName="PaySerialNO" />
+          <ScalarProperty Name="PayTradingNO" ColumnName="PayTradingNO" />
+          <ScalarProperty Name="BookedTime" ColumnName="BookedTime" />
+          <ScalarProperty Name="SerialNO" ColumnName="SerialNO" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="PId" ColumnName="PId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_OrderAuditAccounting">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_OrderAuditAccounting">
+        <MappingFragment StoreEntitySet="v_OrderAuditAccounting">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="AccDateTime" ColumnName="AccDateTime" />
+          <ScalarProperty Name="AccState" ColumnName="AccState" />
+          <ScalarProperty Name="OrderProfit" ColumnName="OrderProfit" />
+          <ScalarProperty Name="OrderJDRId" ColumnName="OrderJDRId" />
+          <ScalarProperty Name="OrderXCRId" ColumnName="OrderXCRId" />
+          <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
+          <ScalarProperty Name="OrderState" ColumnName="OrderState" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="OId" ColumnName="OId" />
+          <ScalarProperty Name="AccId" ColumnName="AccId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_SysAdmin">
+      <EntityTypeMapping TypeName="dhgl2013Model.V_SysAdmin">
+        <MappingFragment StoreEntitySet="V_SysAdmin">
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+          <ScalarProperty Name="IdentiyValidity" ColumnName="IdentiyValidity" />
+          <ScalarProperty Name="IdentityDescribe" ColumnName="IdentityDescribe" />
+          <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
+          <ScalarProperty Name="AttributionAreaName" ColumnName="AttributionAreaName" />
+          <ScalarProperty Name="AttributionAreaId" ColumnName="AttributionAreaId" />
+          <ScalarProperty Name="HomeAddress" ColumnName="HomeAddress" />
+          <ScalarProperty Name="EmergencyTel" ColumnName="EmergencyTel" />
+          <ScalarProperty Name="EmergencyUser" ColumnName="EmergencyUser" />
+          <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+          <ScalarProperty Name="InTime" ColumnName="InTime" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
+          <ScalarProperty Name="UserLogo" ColumnName="UserLogo" />
+          <ScalarProperty Name="UserBirthday" ColumnName="UserBirthday" />
+          <ScalarProperty Name="UserPositionCall" ColumnName="UserPositionCall" />
+          <ScalarProperty Name="UserPosition" ColumnName="UserPosition" />
+          <ScalarProperty Name="UserSex" ColumnName="UserSex" />
+          <ScalarProperty Name="LoginIP" ColumnName="LoginIP" />
+          <ScalarProperty Name="ActiveTime" ColumnName="ActiveTime" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="IsOncallSms" ColumnName="IsOncallSms" />
+          <ScalarProperty Name="IsReceiveSms" ColumnName="IsReceiveSms" />
+          <ScalarProperty Name="UserBrief" ColumnName="UserBrief" />
+          <ScalarProperty Name="UserPwd" ColumnName="UserPwd" />
+          <ScalarProperty Name="UserAccount" ColumnName="UserAccount" />
+          <ScalarProperty Name="UserMail" ColumnName="UserMail" />
+          <ScalarProperty Name="UserQQ" ColumnName="UserQQ" />
+          <ScalarProperty Name="UserQQName" ColumnName="UserQQName" />
+          <ScalarProperty Name="UserFax" ColumnName="UserFax" />
+          <ScalarProperty Name="UserMobile" ColumnName="UserMobile" />
+          <ScalarProperty Name="UserTel" ColumnName="UserTel" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserDpt" ColumnName="UserDpt" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="SysType" ColumnName="SysType" />
+          <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+          <ScalarProperty Name="Sorting" ColumnName="Sorting" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tmall_Package">
+      <EntityTypeMapping TypeName="dhgl2013Model.Tmall_Package">
+        <MappingFragment StoreEntitySet="Tmall_Package">
+          <ScalarProperty Name="PackageType" ColumnName="PackageType" />
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="ImgTag" ColumnName="ImgTag" />
+          <ScalarProperty Name="T_Type" ColumnName="T_Type" />
+          <ScalarProperty Name="T_PackageName" ColumnName="T_PackageName" />
+          <ScalarProperty Name="T_PackageId" ColumnName="T_PackageId" />
+          <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+          <ScalarProperty Name="Huaxia_ID" ColumnName="Huaxia_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_OrderRefund">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_OrderRefund">
+        <MappingFragment StoreEntitySet="v_OrderRefund">
+          <ScalarProperty Name="ReceivedPayment" ColumnName="ReceivedPayment" />
+          <ScalarProperty Name="Created_Time" ColumnName="Created_Time" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Pay_Time" ColumnName="Pay_Time" />
+          <ScalarProperty Name="Alipay_No" ColumnName="Alipay_No" />
+          <ScalarProperty Name="End_Time" ColumnName="End_Time" />
+          <ScalarProperty Name="Total_Fee" ColumnName="Total_Fee" />
+          <ScalarProperty Name="Payment" ColumnName="Payment" />
+          <ScalarProperty Name="Refund_Status" ColumnName="Refund_Status" />
+          <ScalarProperty Name="Refund_Id" ColumnName="Refund_Id" />
+          <ScalarProperty Name="Sub_Order_Id" ColumnName="Sub_Order_Id" />
+          <ScalarProperty Name="Oid" ColumnName="Oid" />
+          <ScalarProperty Name="RefundID" ColumnName="RefundID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_OrderPeer">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_OrderPeer">
+        <MappingFragment StoreEntitySet="v_OrderPeer">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="EnablePeer" ColumnName="EnablePeer" />
+          <ScalarProperty Name="BespeakEmail" ColumnName="BespeakEmail" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="OId" ColumnName="OId" />
+          <ScalarProperty Name="PId" ColumnName="PId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_OrderStatus">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_OrderStatus">
+        <MappingFragment StoreEntitySet="v_OrderStatus">
+          <ScalarProperty Name="PackageType" ColumnName="PackageType" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_OrderStatusLimit">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_OrderStatusLimit">
+        <MappingFragment StoreEntitySet="v_OrderStatusLimit">
+          <ScalarProperty Name="PackageType" ColumnName="PackageType" />
+          <ScalarProperty Name="LimitName" ColumnName="LimitName" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_BigDataOperation">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_BigDataOperation">
+        <MappingFragment StoreEntitySet="T_BigDataOperation">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="GContent" ColumnName="GContent" />
+          <ScalarProperty Name="GType" ColumnName="GType" />
+          <ScalarProperty Name="GId" ColumnName="GId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_infolistFollow">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_infolistFollow">
+        <MappingFragment StoreEntitySet="v_infolistFollow">
+          <ScalarProperty Name="InitRegistrationTime" ColumnName="InitRegistrationTime" />
+          <ScalarProperty Name="SFOrderNoCreateTime" ColumnName="SFOrderNoCreateTime" />
+          <ScalarProperty Name="VisaValidity" ColumnName="VisaValidity" />
+          <ScalarProperty Name="RecipientTime" ColumnName="RecipientTime" />
+          <ScalarProperty Name="Recipient" ColumnName="Recipient" />
+          <ScalarProperty Name="AuditTime" ColumnName="AuditTime" />
+          <ScalarProperty Name="Auditor" ColumnName="Auditor" />
+          <ScalarProperty Name="STIsMail" ColumnName="STIsMail" />
+          <ScalarProperty Name="STNumber" ColumnName="STNumber" />
+          <ScalarProperty Name="STContent" ColumnName="STContent" />
+          <ScalarProperty Name="STake" ColumnName="STake" />
+          <ScalarProperty Name="SCIsMail" ColumnName="SCIsMail" />
+          <ScalarProperty Name="SCNumber" ColumnName="SCNumber" />
+          <ScalarProperty Name="SCContent" ColumnName="SCContent" />
+          <ScalarProperty Name="SCourier" ColumnName="SCourier" />
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+          <ScalarProperty Name="OId" ColumnName="OId" />
+          <ScalarProperty Name="SId" ColumnName="SId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_infolistAfterSales">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_infolistAfterSales">
+        <MappingFragment StoreEntitySet="v_infolistAfterSales">
+          <ScalarProperty Name="InputTime" ColumnName="InputTime" />
+          <ScalarProperty Name="STime" ColumnName="STime" />
+          <ScalarProperty Name="SContent" ColumnName="SContent" />
+          <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
+          <ScalarProperty Name="OrderUsers" ColumnName="OrderUsers" />
+          <ScalarProperty Name="OrderWWHao" ColumnName="OrderWWHao" />
+          <ScalarProperty Name="OrderMobile" ColumnName="OrderMobile" />
+          <ScalarProperty Name="OrderName" ColumnName="OrderName" />
+          <ScalarProperty Name="DeductAmount" ColumnName="DeductAmount" />
+          <ScalarProperty Name="OrderCountry" ColumnName="OrderCountry" />
+          <ScalarProperty Name="QTypeTxt" ColumnName="QTypeTxt" />
+          <ScalarProperty Name="QTypeId" ColumnName="QTypeId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="OId" ColumnName="OId" />
+          <ScalarProperty Name="FollowType" ColumnName="FollowType" />
+          <ScalarProperty Name="SId" ColumnName="SId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_MyWorkKPIInt">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_MyWorkKPIInt">
+        <MappingFragment StoreEntitySet="T_MyWorkKPIInt">
+          <ScalarProperty Name="KPINo" ColumnName="KPINo" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="KId" ColumnName="KId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_infolistAfterPeople">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_infolistAfterPeople">
+        <MappingFragment StoreEntitySet="v_infolistAfterPeople">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreatePeople" ColumnName="CreatePeople" />
+          <ScalarProperty Name="QTypeTxt" ColumnName="QTypeTxt" />
+          <ScalarProperty Name="QTypeId" ColumnName="QTypeId" />
+          <ScalarProperty Name="KPINo" ColumnName="KPINo" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+          <ScalarProperty Name="OId" ColumnName="OId" />
+          <ScalarProperty Name="AId" ColumnName="AId" />
+          <ScalarProperty Name="SId" ColumnName="SId" />
+          <ScalarProperty Name="PId" ColumnName="PId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_MyWorkReceive">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_MyWorkReceive">
+        <MappingFragment StoreEntitySet="T_MyWorkReceive">
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="RFollowUpTime" ColumnName="RFollowUpTime" />
+          <ScalarProperty Name="RPercentage" ColumnName="RPercentage" />
+          <ScalarProperty Name="RFeedback" ColumnName="RFeedback" />
+          <ScalarProperty Name="SCreateTime" ColumnName="SCreateTime" />
+          <ScalarProperty Name="SContent" ColumnName="SContent" />
+          <ScalarProperty Name="TTypeName" ColumnName="TTypeName" />
+          <ScalarProperty Name="RecipientName" ColumnName="RecipientName" />
+          <ScalarProperty Name="RecipientId" ColumnName="RecipientId" />
+          <ScalarProperty Name="SenderId" ColumnName="SenderId" />
+          <ScalarProperty Name="TTypeId" ColumnName="TTypeId" />
+          <ScalarProperty Name="TId" ColumnName="TId" />
+          <ScalarProperty Name="RId" ColumnName="RId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_MyWorkTask">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_MyWorkTask">
+        <MappingFragment StoreEntitySet="T_MyWorkTask">
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="strRecipientName" ColumnName="strRecipientName" />
+          <ScalarProperty Name="strRecipientId" ColumnName="strRecipientId" />
+          <ScalarProperty Name="SCreateTime" ColumnName="SCreateTime" />
+          <ScalarProperty Name="SContent" ColumnName="SContent" />
+          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+          <ScalarProperty Name="SenderId" ColumnName="SenderId" />
+          <ScalarProperty Name="TTypeName" ColumnName="TTypeName" />
+          <ScalarProperty Name="TTypeId" ColumnName="TTypeId" />
+          <ScalarProperty Name="TId" ColumnName="TId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_OrderFillBalance">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_OrderFillBalance">
+        <MappingFragment StoreEntitySet="v_OrderFillBalance">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="FillNotes" ColumnName="FillNotes" />
+          <ScalarProperty Name="FillTime" ColumnName="FillTime" />
+          <ScalarProperty Name="FillAmount" ColumnName="FillAmount" />
+          <ScalarProperty Name="FillOrderId" ColumnName="FillOrderId" />
+          <ScalarProperty Name="OrderState" ColumnName="OrderState" />
+          <ScalarProperty Name="CompleteTime" ColumnName="CompleteTime" />
+          <ScalarProperty Name="JDRName" ColumnName="JDRName" />
+          <ScalarProperty Name="JDRId" ColumnName="JDRId" />
+          <ScalarProperty Name="WWHao" ColumnName="WWHao" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="OId" ColumnName="OId" />
+          <ScalarProperty Name="FId" ColumnName="FId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SmsDetail">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SmsDetail">
+        <MappingFragment StoreEntitySet="T_SmsDetail">
+          <ScalarProperty Name="ValidCodeIsCheck" ColumnName="ValidCodeIsCheck" />
+          <ScalarProperty Name="ValidCode" ColumnName="ValidCode" />
+          <ScalarProperty Name="ReceivePhone" ColumnName="ReceivePhone" />
+          <ScalarProperty Name="ReceiveName" ColumnName="ReceiveName" />
+          <ScalarProperty Name="SmsID" ColumnName="SmsID" />
+          <ScalarProperty Name="DetailID" ColumnName="DetailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SmsMain">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SmsMain">
+        <MappingFragment StoreEntitySet="T_SmsMain">
+          <ScalarProperty Name="SmsContend" ColumnName="SmsContend" />
+          <ScalarProperty Name="SmsCount" ColumnName="SmsCount" />
+          <ScalarProperty Name="SmsState" ColumnName="SmsState" />
+          <ScalarProperty Name="SendTime" ColumnName="SendTime" />
+          <ScalarProperty Name="SendUserName" ColumnName="SendUserName" />
+          <ScalarProperty Name="SendUserID" ColumnName="SendUserID" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="SmsID" ColumnName="SmsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SysSupplierConfig">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SysSupplierConfig">
+        <MappingFragment StoreEntitySet="T_SysSupplierConfig">
+          <ScalarProperty Name="WebSiteUrl" ColumnName="WebSiteUrl" />
+          <ScalarProperty Name="ErpValidateCode" ColumnName="ErpValidateCode" />
+          <ScalarProperty Name="WebSiteDepartureID" ColumnName="WebSiteDepartureID" />
+          <ScalarProperty Name="WebSiteStyleIndex" ColumnName="WebSiteStyleIndex" />
+          <ScalarProperty Name="WebSiteIsOpen" ColumnName="WebSiteIsOpen" />
+          <ScalarProperty Name="FaxPassport" ColumnName="FaxPassport" />
+          <ScalarProperty Name="FaxPassword" ColumnName="FaxPassword" />
+          <ScalarProperty Name="FaxCode" ColumnName="FaxCode" />
+          <ScalarProperty Name="FaxAccount" ColumnName="FaxAccount" />
+          <ScalarProperty Name="SmsSign" ColumnName="SmsSign" />
+          <ScalarProperty Name="SmsProduct" ColumnName="SmsProduct" />
+          <ScalarProperty Name="SmsPassword" ColumnName="SmsPassword" />
+          <ScalarProperty Name="SmsAccount" ColumnName="SmsAccount" />
+          <ScalarProperty Name="SmsUrl" ColumnName="SmsUrl" />
+          <ScalarProperty Name="UsingPassword" ColumnName="UsingPassword" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="ConfigID" ColumnName="ConfigID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_cailiaolist_info">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_cailiaolist_info">
+        <MappingFragment StoreEntitySet="v_cailiaolist_info">
+          <ScalarProperty Name="inputtime" ColumnName="inputtime" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="list_title" ColumnName="list_title" />
+          <ScalarProperty Name="list_num" ColumnName="list_num" />
+          <ScalarProperty Name="list_ZXname" ColumnName="list_ZXname" />
+          <ScalarProperty Name="list_vtype" ColumnName="list_vtype" />
+          <ScalarProperty Name="list_name" ColumnName="list_name" />
+          <ScalarProperty Name="list_id" ColumnName="list_id" />
+          <ScalarProperty Name="list_time" ColumnName="list_time" />
+          <ScalarProperty Name="list_type" ColumnName="list_type" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SysSetKey">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SysSetKey">
+        <MappingFragment StoreEntitySet="T_SysSetKey">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="get_Access_Token" ColumnName="get_Access_Token" />
+          <ScalarProperty Name="get_param" ColumnName="get_param" />
+          <ScalarProperty Name="get_view" ColumnName="get_view" />
+          <ScalarProperty Name="redirect_uri" ColumnName="redirect_uri" />
+          <ScalarProperty Name="client_secret" ColumnName="client_secret" />
+          <ScalarProperty Name="client_id" ColumnName="client_id" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="grant_type" ColumnName="grant_type" />
+          <ScalarProperty Name="SysID" ColumnName="SysID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tmall_CountryPackage">
+      <EntityTypeMapping TypeName="dhgl2013Model.Tmall_CountryPackage">
+        <MappingFragment StoreEntitySet="Tmall_CountryPackage">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="IsFingerprintsOff" ColumnName="IsFingerprintsOff" />
+          <ScalarProperty Name="IsVisaFee" ColumnName="IsVisaFee" />
+          <ScalarProperty Name="IsKeFuMetering" ColumnName="IsKeFuMetering" />
+          <ScalarProperty Name="IsUrgent" ColumnName="IsUrgent" />
+          <ScalarProperty Name="PackageType" ColumnName="PackageType" />
+          <ScalarProperty Name="EffectivePackage" ColumnName="EffectivePackage" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="ImgTag" ColumnName="ImgTag" />
+          <ScalarProperty Name="BaseShare" ColumnName="BaseShare" />
+          <ScalarProperty Name="TmallPackageName" ColumnName="TmallPackageName" />
+          <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+          <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+          <ScalarProperty Name="PackageSorting" ColumnName="PackageSorting" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="CPId" ColumnName="CPId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_infolist">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_infolist">
+        <MappingFragment StoreEntitySet="v_infolist">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="WeToSend" ColumnName="WeToSend" />
+          <ScalarProperty Name="WeProfits" ColumnName="WeProfits" />
+          <ScalarProperty Name="LackTime" ColumnName="LackTime" />
+          <ScalarProperty Name="TicketMemo" ColumnName="TicketMemo" />
+          <ScalarProperty Name="IsTicket" ColumnName="IsTicket" />
+          <ScalarProperty Name="have_card" ColumnName="have_card" />
+          <ScalarProperty Name="jiudian_Note" ColumnName="jiudian_Note" />
+          <ScalarProperty Name="jiudian_Cancel" ColumnName="jiudian_Cancel" />
+          <ScalarProperty Name="jiudian_Num" ColumnName="jiudian_Num" />
+          <ScalarProperty Name="jiudian_EndTime" ColumnName="jiudian_EndTime" />
+          <ScalarProperty Name="jiudian_DTime" ColumnName="jiudian_DTime" />
+          <ScalarProperty Name="endtime" ColumnName="endtime" />
+          <ScalarProperty Name="dstime" ColumnName="dstime" />
+          <ScalarProperty Name="CNumberTime" ColumnName="CNumberTime" />
+          <ScalarProperty Name="CNumberinfo" ColumnName="CNumberinfo" />
+          <ScalarProperty Name="CNumber" ColumnName="CNumber" />
+          <ScalarProperty Name="CourierNumberinfo" ColumnName="CourierNumberinfo" />
+          <ScalarProperty Name="CourierNumber" ColumnName="CourierNumber" />
+          <ScalarProperty Name="mattime" ColumnName="mattime" />
+          <ScalarProperty Name="matinfo" ColumnName="matinfo" />
+          <ScalarProperty Name="mat" ColumnName="mat" />
+          <ScalarProperty Name="sjaddress" ColumnName="sjaddress" />
+          <ScalarProperty Name="xingji" ColumnName="xingji" />
+          <ScalarProperty Name="Gemail" ColumnName="Gemail" />
+          <ScalarProperty Name="Yemail" ColumnName="Yemail" />
+          <ScalarProperty Name="auditertime" ColumnName="auditertime" />
+          <ScalarProperty Name="auditer_time" ColumnName="auditer_time" />
+          <ScalarProperty Name="audit_er" ColumnName="audit_er" />
+          <ScalarProperty Name="audit_id" ColumnName="audit_id" />
+          <ScalarProperty Name="V_jdrname" ColumnName="V_jdrname" />
+          <ScalarProperty Name="V_jdrid" ColumnName="V_jdrid" />
+          <ScalarProperty Name="insur_num" ColumnName="insur_num" />
+          <ScalarProperty Name="insurance" ColumnName="insurance" />
+          <ScalarProperty Name="MaxPic" ColumnName="MaxPic" />
+          <ScalarProperty Name="imgpath" ColumnName="imgpath" />
+          <ScalarProperty Name="fp_time" ColumnName="fp_time" />
+          <ScalarProperty Name="fp_drawerName" ColumnName="fp_drawerName" />
+          <ScalarProperty Name="fp_drawerId" ColumnName="fp_drawerId" />
+          <ScalarProperty Name="fp_billNo" ColumnName="fp_billNo" />
+          <ScalarProperty Name="fp_hao" ColumnName="fp_hao" />
+          <ScalarProperty Name="fp_content" ColumnName="fp_content" />
+          <ScalarProperty Name="fp_num" ColumnName="fp_num" />
+          <ScalarProperty Name="fp_title" ColumnName="fp_title" />
+          <ScalarProperty Name="fp_type" ColumnName="fp_type" />
+          <ScalarProperty Name="fp_enable" ColumnName="fp_enable" />
+          <ScalarProperty Name="audittime" ColumnName="audittime" />
+          <ScalarProperty Name="audit" ColumnName="audit" />
+          <ScalarProperty Name="quvisa_num" ColumnName="quvisa_num" />
+          <ScalarProperty Name="quvisa" ColumnName="quvisa" />
+          <ScalarProperty Name="CLJieDanRen" ColumnName="CLJieDanRen" />
+          <ScalarProperty Name="xctijiaorenname" ColumnName="xctijiaorenname" />
+          <ScalarProperty Name="xctijiaoren" ColumnName="xctijiaoren" />
+          <ScalarProperty Name="xingcheng_content" ColumnName="xingcheng_content" />
+          <ScalarProperty Name="fahuo_content" ColumnName="fahuo_content" />
+          <ScalarProperty Name="fahuo" ColumnName="fahuo" />
+          <ScalarProperty Name="qi_content" ColumnName="qi_content" />
+          <ScalarProperty Name="qi_type" ColumnName="qi_type" />
+          <ScalarProperty Name="UpTime" ColumnName="UpTime" />
+          <ScalarProperty Name="v_stime_fen" ColumnName="v_stime_fen" />
+          <ScalarProperty Name="v_stime_shi" ColumnName="v_stime_shi" />
+          <ScalarProperty Name="v_sqadd" ColumnName="v_sqadd" />
+          <ScalarProperty Name="v_sqry" ColumnName="v_sqry" />
+          <ScalarProperty Name="v_sqryId" ColumnName="v_sqryId" />
+          <ScalarProperty Name="v_yuytime" ColumnName="v_yuytime" />
+          <ScalarProperty Name="v_tuanhao" ColumnName="v_tuanhao" />
+          <ScalarProperty Name="birth_B" ColumnName="birth_B" />
+          <ScalarProperty Name="birth" ColumnName="birth" />
+          <ScalarProperty Name="wwhao" ColumnName="wwhao" />
+          <ScalarProperty Name="v_nianfei" ColumnName="v_nianfei" />
+          <ScalarProperty Name="v_yuefei" ColumnName="v_yuefei" />
+          <ScalarProperty Name="inputtime" ColumnName="inputtime" />
+          <ScalarProperty Name="v_vtypeT" ColumnName="v_vtypeT" />
+          <ScalarProperty Name="v_vtype3" ColumnName="v_vtype3" />
+          <ScalarProperty Name="v_vtype2" ColumnName="v_vtype2" />
+          <ScalarProperty Name="v_vtype1" ColumnName="v_vtype1" />
+          <ScalarProperty Name="v_vtype" ColumnName="v_vtype" />
+          <ScalarProperty Name="conditions" ColumnName="conditions" />
+          <ScalarProperty Name="bad_record" ColumnName="bad_record" />
+          <ScalarProperty Name="income" ColumnName="income" />
+          <ScalarProperty Name="record" ColumnName="record" />
+          <ScalarProperty Name="countries" ColumnName="countries" />
+          <ScalarProperty Name="v_yyemail" ColumnName="v_yyemail" />
+          <ScalarProperty Name="viptc" ColumnName="viptc" />
+          <ScalarProperty Name="v_lping" ColumnName="v_lping" />
+          <ScalarProperty Name="v_xlv" ColumnName="v_xlv" />
+          <ScalarProperty Name="v_yFu_B" ColumnName="v_yFu_B" />
+          <ScalarProperty Name="v_yFu" ColumnName="v_yFu" />
+          <ScalarProperty Name="v_contact" ColumnName="v_contact" />
+          <ScalarProperty Name="v_tShu" ColumnName="v_tShu" />
+          <ScalarProperty Name="v_package" ColumnName="v_package" />
+          <ScalarProperty Name="v_package_new" ColumnName="v_package_new" />
+          <ScalarProperty Name="v_type" ColumnName="v_type" />
+          <ScalarProperty Name="tmall_country_id" ColumnName="tmall_country_id" />
+          <ScalarProperty Name="v_pHao" ColumnName="v_pHao" />
+          <ScalarProperty Name="v_fPiao" ColumnName="v_fPiao" />
+          <ScalarProperty Name="v_cvisa" ColumnName="v_cvisa" />
+          <ScalarProperty Name="v_yshou_B" ColumnName="v_yshou_B" />
+          <ScalarProperty Name="v_cash" ColumnName="v_cash" />
+          <ScalarProperty Name="visafee" ColumnName="visafee" />
+          <ScalarProperty Name="v_yshou" ColumnName="v_yshou" />
+          <ScalarProperty Name="v_email" ColumnName="v_email" />
+          <ScalarProperty Name="v_endtime" ColumnName="v_endtime" />
+          <ScalarProperty Name="v_number" ColumnName="v_number" />
+          <ScalarProperty Name="jiedan_nianfei" ColumnName="jiedan_nianfei" />
+          <ScalarProperty Name="jiedan_yuefei" ColumnName="jiedan_yuefei" />
+          <ScalarProperty Name="v_otime" ColumnName="v_otime" />
+          <ScalarProperty Name="v_qdao" ColumnName="v_qdao" />
+          <ScalarProperty Name="v_stime" ColumnName="v_stime" />
+          <ScalarProperty Name="vtype_result" ColumnName="vtype_result" />
+          <ScalarProperty Name="v_result" ColumnName="v_result" />
+          <ScalarProperty Name="taocan" ColumnName="taocan" />
+          <ScalarProperty Name="baoxian" ColumnName="baoxian" />
+          <ScalarProperty Name="hxwwhao" ColumnName="hxwwhao" />
+          <ScalarProperty Name="ActiveTime" ColumnName="ActiveTime" />
+          <ScalarProperty Name="Passport" ColumnName="Passport" />
+          <ScalarProperty Name="PassportNO" ColumnName="PassportNO" />
+          <ScalarProperty Name="loginID" ColumnName="loginID" />
+          <ScalarProperty Name="v_tel" ColumnName="v_tel" />
+          <ScalarProperty Name="v_starttime" ColumnName="v_starttime" />
+          <ScalarProperty Name="name_note" ColumnName="name_note" />
+          <ScalarProperty Name="v_name" ColumnName="v_name" />
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="sku_properties_name" ColumnName="sku_properties_name" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="jdr_id" ColumnName="jdr_id" />
+          <ScalarProperty Name="HArea_hangzhou" ColumnName="HArea_hangzhou" />
+          <ScalarProperty Name="HArea" ColumnName="HArea" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="finger" ColumnName="finger" />
+          <ScalarProperty Name="IsOnline" ColumnName="IsOnline" />
+          <ScalarProperty Name="oid" ColumnName="oid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tmall_Country">
+      <EntityTypeMapping TypeName="dhgl2013Model.Tmall_Country">
+        <MappingFragment StoreEntitySet="Tmall_Country">
+          <ScalarProperty Name="CountrySorting" ColumnName="CountrySorting" />
+          <ScalarProperty Name="WeToSend" ColumnName="WeToSend" />
+          <ScalarProperty Name="WeFingerprintToSend" ColumnName="WeFingerprintToSend" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="VisaType" ColumnName="VisaType" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="Tmall_ID" ColumnName="Tmall_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SysBlackList">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_SysBlackList">
+        <MappingFragment StoreEntitySet="T_SysBlackList">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="HistoryClosingTime" ColumnName="HistoryClosingTime" />
+          <ScalarProperty Name="HistoryContent" ColumnName="HistoryContent" />
+          <ScalarProperty Name="HistoryUserInfo" ColumnName="HistoryUserInfo" />
+          <ScalarProperty Name="HistoryOrderID" ColumnName="HistoryOrderID" />
+          <ScalarProperty Name="BUserName" ColumnName="BUserName" />
+          <ScalarProperty Name="BMobile" ColumnName="BMobile" />
+          <ScalarProperty Name="BWWHao" ColumnName="BWWHao" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="OId" ColumnName="OId" />
+          <ScalarProperty Name="BTypeItemName" ColumnName="BTypeItemName" />
+          <ScalarProperty Name="BTypeItemId" ColumnName="BTypeItemId" />
+          <ScalarProperty Name="BTypeName" ColumnName="BTypeName" />
+          <ScalarProperty Name="BTypeId" ColumnName="BTypeId" />
+          <ScalarProperty Name="BId" ColumnName="BId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,44 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body,
+input{font-family:微软雅黑;}
+body{color:#505050;}
+input{color:#000;}
+body,ul,li{padding:0; margin:0;}
+ul,li{list-style:none;}
+a{text-decoration:none;}
+.clear{clear:both;}
+.menu ul li a{display:block;}
+.fl,
+.imglogo,
+.menu ul,
+.menu ul li,
+.inputName,
+.inputBox01,
+.inputBox02{float:left;}
+.hotline{float:right;}
+.imglogo,
+.menu ul li{background-image:url(../Img/bg_norepeat.gif); background-repeat:no-repeat;}
+.quicknav ul li,
+.searchNav li a{background-image:url(images/bg_pngNorepeat.png); background-repeat:no-repeat;}
+.weixin li.gz,
+.title01,
+.title02,
+.icn {
+    background-image: url(../Img/bg_norepeat.gif);
+    background-repeat: no-repeat;
+}
+.f10{font-size:10px;}
+.f12{font-size:12px;}
+.f13{font-size:13px;}
+.f14{font-size:14px;}
+.f15{font-size:15px;}
+.f16{font-size:16px;}
+.f18{font-size:16px;}
+.f20{font-size:20px;}
+.fb{font-weight:bold;}
+.marginW10{width:10px; height:1px;}
+.marginH5{height:5px;}
+.marginH10{height:10px;}
+
+.put1 {color: #D2D2D2;}

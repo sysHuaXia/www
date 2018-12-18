@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="2" virtualPath="/Views/Contact/Index.cshtml" hash="ffffffff8ee60aa1" filehash="ffffd61087f9876f" flags="110000" assembly="App_Web_1n53irbf" type="ASP._Page_Views_Contact_Index_cshtml">
+    <filedeps>
+        <filedep name="/Views/Contact/Index.cshtml" />
+    </filedeps>
+</preserve>

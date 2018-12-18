@@ -1,0 +1,997 @@
+﻿@model EF.v_infolist
+@using Common.DataHelp;
+@{
+    Layout = null;
+    ViewBag.Title = "ClientShow";
+
+
+    string checkedStr = "";
+    string checkedStr1 = "";
+    string checkedStr2 = "";
+    string checkedStr3 = "";
+    if (ViewBag.LY != "旅游")
+    {
+        checkedStr = "display:none;";
+    }
+    if (ViewBag.SW != "商务")
+    {
+        checkedStr1 = "display:none;";
+    }
+    if (ViewBag.TQ != "探亲")
+    {
+        checkedStr2 = "display:none;";
+    }
+    if (ViewBag.FY != "访友")
+    {
+        checkedStr3 = "display:none;";
+    }
+
+    ViewBag.tag = "补差订单";
+
+    ViewBag.m = 1;
+
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>上海华夏签证中心</title>
+    <link href="~/ClientWebJsCss/Css/global.css" rel="stylesheet" />
+    <link href="~/ClientWebJsCss/Css/common.css" rel="stylesheet" />
+    <script src="~/ClientWebJsCss/Js/AsyncBox.js"></script>
+    <link href="~/ClientWebJsCss/Css/asyncbox.css" rel="stylesheet" />
+    <script src="~/ClientWebJsCss/Js/jquery.min.js"></script>
+    <link href="~/ClientWebJsCss/Css/frame.css" rel="stylesheet" />
+    <script src="~/ClientWebJsCss/Js/Public.js"></script>
+    <script src="~/ClientWebJsCss/Js/float.js"></script>
+
+
+    <script src="~/ClientWebJsCss/Js/jquery-1.7.2.min.js"></script>
+    <script src="~/ClientWebJsCss/Js/jquery.slide.js" type="text/javascript"></script>
+    <link href="~/ClientWebJsCss/Css/base.css" rel="stylesheet" />
+    <link href="~/ClientWebJsCss/Css/style.css" rel="stylesheet" />
+    <link href="~/ClientWebJsCss/Css/responsive.css" rel="stylesheet" />
+
+
+    <style type="text/css">
+        body {
+            /*background-image: url('../../ClientWebJsCss/Img/bg.gif');*/
+            font-family: "微软雅黑", "黑体";
+            font-size: 13px;
+        }
+
+        a:hover {
+            color: #FC9;
+        }
+
+        .top_t_h {
+            height: 30px;
+            line-height: 30px;
+            background-color: #EDEDED;
+            color: #959595;
+        }
+
+        .dingyicss {
+            width: 1080px;
+            margin: 0 auto;
+            padding: 8px 0;
+        }
+
+        .top_t_h p span, .top_t_h p a, .top_t_h p i {
+            display: block;
+            float: left;
+            color: #959595;
+            height: 30px;
+        }
+
+        .top_t_h p {
+            display: block;
+            text-align: left;
+            width: 1080px;
+            height: 30px;
+            margin: 0 auto;
+            font-size: 12px;
+        }
+
+            .top_t_h p span {
+                width: 150px;
+            }
+
+            .top_t_h p a {
+                width: 65px;
+                text-align: center;
+            }
+
+            .top_t_h p i {
+                width: 1px;
+                font-style: normal;
+            }
+
+            .top_t_h p em {
+                display: block;
+                float: right;
+                width: 65px;
+                height: 20px;
+                margin: 5px;
+                text-align: center;
+                background: url(images/top_an.gif) no-repeat center center;
+                line-height: 20px;
+                color: #FFF;
+                font-style: normal;
+            }
+
+        .auto-style1 {
+            width: 127px;
+        }
+
+        .auto-style3 {
+            width: 133px;
+        }
+
+        .auto-style4 {
+            width: 206px;
+        }
+
+        .auto-style5 {
+            width: 128px;
+        }
+
+        .top_nav {
+            height: 45px;
+            background-color: #370354;
+            clear: both;
+        }
+
+            .top_nav .top_nav_c {
+                width: 1080px;
+                height: 45px;
+                margin: 0 auto;
+                color: #FFF;
+            }
+
+                .top_nav .top_nav_c span {
+                    display: block;
+                    float: left;
+                    width: 200px;
+                    height: 45px;
+                    line-height: 45px;
+                    text-align: left;
+                    padding: 0 30px;
+                    margin-right: 5px;
+                    background: #E41661 url() no-repeat 210px center;
+                }
+
+                .top_nav .top_nav_c a {
+                    display: block;
+                    float: left;
+                    width: 100px;
+                    height: 45px;
+                    line-height: 40px;
+                    background: url(images/top_a_li.gif) no-repeat right center;
+                    color: #FFF;
+                }
+
+                    .top_nav .top_nav_c a:hover, .top_nav .top_nav_c a.on {
+                        background-color: #FFF;
+                        cursor: pointer;
+                        background-image: none;
+                        height: 40px;
+                        margin-top: 5px;
+                        color: #000;
+                        text-decoration: none;
+                        line-height: 35px;
+                        font-weight: bold;
+                    }
+
+        .gysDP {
+            width: 1080px;
+            height: 80px;
+            margin: 0 auto;
+            background: url(../../ClientWebJsCss/Img/gys_bd.gif) no-repeat right bottom;
+            margin-top: 5px;
+        }
+
+            .gysDP img {
+                margin-left: 20px;
+                width: 160px;
+                height: 80px;
+                float: left;
+            }
+
+            .gysDP font {
+                line-height: 80px;
+                float: right;
+                font-size: 24px;
+                font-weight: bold;
+                margin-right: 60px;
+                color: #F00;
+            }
+
+        .gysDH {
+            width: 1080px;
+            margin: 0 auto;
+            height: 38px;
+            background-color: #FFF;
+        }
+
+            .gysDH .gysDHL, .gysDH .gysDHC, .gysDH .gysDHR {
+                float: left;
+                height: 38px;
+                line-height: 38PX;
+            }
+
+            .gysDH .gysDHL {
+                width: 3px;
+                background: url(images/gys_sy.jpg) no-repeat right bottom;
+            }
+
+            .gysDH .gysDHC {
+                width: 1074px;
+                background: url(images/gys_sy2.jpg) center bottom;
+                float: left;
+            }
+
+            .gysDH .gysDHR {
+                width: 3px;
+                background: url(images/gys_sy4.jpg) no-repeat left bottom;
+                float: right;
+            }
+
+        .main {
+            width: 1080px;
+            margin: auto;
+            padding: 5px 0px;
+            overflow: hidden;
+            background: url(images/menu_bg.gif) repeat-x;
+        }
+
+        .menu_on {
+            background: url(images/menu.gif) 0px 0px no-repeat;
+        }
+
+            .menu_on a {
+                background: url(images/menu.gif) right -61px no-repeat;
+                color: #935006;
+            }
+
+        .menu_off {
+            background: url(images/menu.gif) 0px -31px no-repeat;
+        }
+
+            .menu_off a {
+                background: url(images/menu.gif) right -93px no-repeat;
+                color: #956946;
+            }
+
+        .left {
+            width: 236px;
+            margin-right: 5px;
+            float: left;
+            overflow: hidden;
+        }
+
+        .left_box {
+            width: 234px;
+            clear: both;
+            border: 1px solid #FB6199;
+            background-color: #FFFCF7;
+        }
+
+        .sh_box {
+            width: 232px;
+            clear: both;
+            border: 1px solid #fff;
+            background: url(images/left_bg.gif) top repeat-x;
+        }
+
+        .sh_xhx {
+            background: url(../../ClientWebJsCss/Img/dot.gif) bottom repeat-x;
+        }
+
+        .sh_xhx2 {
+            background: url(../../ClientWebJsCss/Img/dot.gif) top repeat-x;
+        }
+
+        .sh_nb, .sh_nb2, .sh_nb3 {
+            width: 205px;
+            padding: 5px;
+            margin: auto;
+            clear: both;
+        }
+
+        .sh_tit {
+            width: auto;
+            text-align: center;
+            line-height: 22px;
+            clear: both;
+            padding: 10px 0px;
+        }
+
+        .sh_box h2 {
+            font-size: 20px;
+            line-height: 22px;
+            font-weight: bold;
+            margin: 0px;
+            padding: 0px;
+            color: #935006;
+        }
+
+        .sh_nb {
+            background: url(../../ClientWebJsCss/Img/dot.gif) top repeat-x;
+        }
+
+        .sh_nb2 {
+            background: url(../../ClientWebJsCss/Img/dot.gif) top repeat-x;
+        }
+
+        .sh_nb3 {
+        }
+
+        .sh_pic01, .sh_pic02, .sh_pic03 {
+            padding: 5px 0px;
+            padding-left: 40px;
+            clear: both;
+            width: auto;
+            text-align: left;
+        }
+
+        .sh_pic01 {
+            background: url(../../ClientWebJsCss/Img/left_pic.gif) 0px 5px no-repeat;
+        }
+
+            .sh_pic01 a {
+                color: #F00;
+            }
+
+        .sh_pic02 {
+            background: url(../../ClientWebJsCss/Img/left_pic.gif) 0px -95px no-repeat;
+        }
+
+        .sh_pic03 {
+            background: url(../../ClientWebJsCss/Img/left_pic.gif) 0px -395px no-repeat;
+        }
+
+        .sh_ptit {
+            width: auto;
+            display: block;
+            font-family: Arial;
+            line-height: 20px;
+            clear: both;
+            color: #555;
+            text-align: left;
+        }
+
+            .sh_ptit img {
+                margin: 2px 1px -1px 0px;
+            }
+
+        .sh_nb font, .sh_nb2 font {
+            display: block;
+            font-size: 12px;
+            width: 125px;
+            line-height: 20px;
+            clear: both;
+            padding-left: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            font-family: arial;
+        }
+
+        .sh_nb font {
+            background: url(../../ClientWebJsCss/Img/left_pic2.gif) 0px -145px no-repeat;
+        }
+
+            .sh_nb font a {
+                color: #555;
+            }
+
+        .sh_nb2 font {
+            background: url(../../ClientWebJsCss/Img/left_pic2.gif) 0px 5px no-repeat;
+            color: #999;
+        }
+
+        .lxfs_box {
+            width: 234px;
+            clear: both;
+            border-top: 1px solid #DF8600;
+        }
+
+        .lxfs_titb {
+            height: 26px;
+            clear: both;
+            border: 1px solid #FFDEA7;
+            background: url(images/left_titbg.gif) repeat-x;
+            background-color: #EFDAE2;
+        }
+
+            .lxfs_titb h2 {
+                width: auto;
+                font-size: 14px;
+                font-weight: bold;
+                display: block;
+                padding: 0px;
+                margin: 0px;
+                text-indent: 20px;
+                line-height: 21px;
+                padding-top: 3px;
+                background: url(../../ClientWebJsCss/Img/left_pic2.gif) 7px -192px no-repeat;
+                color: #C83C18;
+                margin-left: -10px;
+            }
+
+        .lxfs_nb {
+            width: 224px;
+            padding: 5px;
+            margin: auto;
+            clear: both;
+            border-top: 1px solid #DF8600;
+        }
+
+        .lx_nb {
+            width: 224px;
+            clear: both;
+            padding: 8px 0px;
+        }
+
+        .xyxq_nr {
+            width: 195px;
+            margin: auto;
+            clear: both;
+            text-align: left;
+        }
+
+            .xyxq_nr span {
+                width: auto;
+                line-height: 22px;
+                display: block;
+                clear: both;
+                font-family: arial;
+            }
+
+        .ckqb a {
+            width: auto;
+            font-weight: bold;
+            text-indent: 15px;
+            line-height: 22px;
+            display: block;
+            clear: both;
+            text-align: right;
+        }
+
+        .right {
+            width: 834px;
+            float: right;
+            overflow: hidden;
+        }
+
+            .right .gysJDT {
+                width: 830px;
+                height: 260px;
+            }
+
+            .right .gysSOU {
+                width: 834px;
+                height: 596px;
+                background: url(../../ClientWebJsCss/Img/tit_dot02.gif) top repeat-x;
+                clear: both;
+                overflow: hidden;
+                margin-top: 5px;
+            }
+
+                .right .gysSOU h2 {
+                    width: auto;
+                    clear: both;
+                    height: 30px;
+                    line-height: 30px;
+                    display: block;
+                    padding: 0px;
+                    margin: 0px;
+                    text-align: left;
+                    font-size: 16px;
+                }
+
+                    .right .gysSOU h2.ftt18 {
+                        background: url(../../ClientWebJsCss/Img/left_pic2.gif) 0px -599px no-repeat;
+                        text-indent: 24px;
+                        font-size: 15px;
+                        font-weight: bold;
+                    }
+
+                .right .gysSOU .rili {
+                    background: #fff url(images/rili.gif) no-repeat right center;
+                }
+
+                .right .gysSOU input {
+                    width: 150px;
+                    height: 25px;
+                    line-height: 25px;
+                    padding: 0 5px;
+                    background-color: #FFF;
+                    border: 1px solid #DDDDDD;
+                }
+
+                .right .gysSOU .xiala {
+                    background: #fff url(images/xiala.gif) no-repeat right center;
+                }
+
+        .xianlu {
+            background-color: #FFF;
+            border: 1px solid #EAEAEA;
+            float: left;
+        }
+
+            .xianlu th {
+                color: #FFF;
+                font-size: 15px;
+                height: 35px;
+                line-height: 35px;
+                background-color: #000;
+            }
+
+            .xianlu td {
+                font-size: 14px;
+                text-align: center;
+                padding: 4px;
+            }
+
+        .i_day {
+            background: url(images/rili2.gif) no-repeat center center;
+        }
+
+        .xianlu td.align_l {
+            text-align: left;
+        }
+
+        .td_odd {
+            background-color: #F7F7F7;
+        }
+    </style>
+
+    <style type="text/css">
+        .More {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .Mores {
+            text-decoration: none;
+        }
+
+        .bottom {
+            height: 25px;
+            background-color: #dedede;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .TMlogo {
+            width: 1080px;
+            margin: 0 auto;
+            padding: 8px 0;
+        }
+
+        .imglogo {
+            height: 45px;
+            width: 245px;
+        }
+
+        .hotline {
+            color: #e60012;
+            font-size: 25px;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+
+    <style type="text/css">
+        .ulclass li {
+            float: left;
+            font-size: 12px;
+        }
+
+        .warnBox {
+            /*padding: 1px 3px 1px 3px;
+            border: 2px solid #ffca80;
+            background-color: #fffee2;*/
+
+            padding: 5px 5px 5px 5px;
+            border: 1px solid #ffca80;
+            background-color: #fffee2;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <form id="form1" runat="server">
+
+
+        <div class="top_t_h">
+            <div class="dingyicss">
+                <ul class="ulclass">
+                    <li>
+                        <span style="padding-right: 10px; width: auto;">您好: @Model.v_name</span>
+                    </li>
+                    <li style="margin-left: -10px;" id="HowAreyou">
+                        <span style="margin-left: 3px;">|</span>
+                    </li>
+                    <li>
+                        <span id="Tui" style="padding-left: 5px;"><a href="/ClientWeb/ClientCannel" style="color:#959595;">安全退出</a></span>
+                    </li>
+                    <li style="float: right; margin-right: 200px;"></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="TMlogo">
+                <div class="imglogo"></div>
+                <div class="hotline">华夏国旅 专注签证20年</div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="top_nav">
+            <div class="top_nav_c" style="text-align: center;">
+                <span id="AllCategories" style="cursor: pointer;" class="f16">详细信息</span>
+                @*<div id="CategoriesMenu"><a href="javascript:void(0);" onclick="opChangePwd();">更改密码</a></div>
+                <div id="Div1"><a id="btnNew" href="" />在线留言</a></div>*@
+            </div>
+        </div>
+        <div class="gysDP" style="display:none;">
+            <dt runat="server" id="dtImg"></dt>
+            <font style="display:none;">
+                <label id="vtype" runat="server" style="color: #ff0000; font-size:26px;"></label>
+                <label id="vvtype" runat="server" style="color: #ff0000; font-size:26px;"></label>
+                <label id="vvtype1" runat="server" style="color: #ff0000; font-size:26px;"></label>
+                <label id="vvtype2" runat="server" style="color: #ff0000; font-size:26px;"></label>
+                <label id="vvtype3" runat="server" style="color: #ff0000; font-size:26px;"></label>
+            </font>
+        </div>
+
+
+        <div class="project">
+            <div class="content">
+                <div class="wrapper">
+                    <div class="contTop clearfix">
+                        <div class="rightModHua fr" style="background-image: url('../../ClientWebJsCss/Img/bg.png');">
+                            <div class="mainBox">
+                                <div class="member clearfix">
+                                    <div class="pic">
+                                        <img src="~/ClientWebJsCss/Img/img2.png" />
+                                    </div>
+                                    <div class="info">
+                                        <span><a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=@ViewBag.NickName&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=@ViewBag.NickName&site=cntaobao&s=1&charset=utf-8" alt="@ViewBag.NickName" /></a></span>
+                                        <span>@Model.v_name (ID: @Model.wwhao)&nbsp;&nbsp;&nbsp;手机号: @Model.v_tel<a style="display: inline-block;padding: 0 2px; color: #fff;font-size: 12px; background: #ff7f00;">修改</a></span>
+                                    </div>
+                                </div>
+                                <div class="adress">
+                                    <p><span>收货地址：</span>@Model.sjaddress</p>
+                                    @*<p></p>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contBom clearfix">
+                        <div class="leftMod fl">
+                            <div class="list">
+                                <ul>
+                                    <li class="on my_div">
+                                        <a>
+                                            <img src="~/ClientWebJsCss/Img/add.png" class="my_img01" />
+                                            <img src="~/ClientWebJsCss/Img/minus.png" class="my_img02" />
+                                            我的订单
+                                            <i></i>
+                                        </a>
+                                        <ul>
+                                            @foreach (var h in ViewBag.HistryList)
+                                            {
+                                                
+                                                if (h.tmall_country_id == 34)
+                                                {
+                                                    <li><a href="#" style="color:gray;"><span style="color:blue;">@ViewBag.m.</span> @h.v_otime.ToString("D")&nbsp;@ViewBag.tag</a></li>
+                                                }
+                                                else
+                                                {
+                                                    string OId = Base64Helper.Base64Encode(Base64Helper.get_uft8(h.oid.ToString()));
+                                                    <li><a href="~/ClientWeb/ClientShow?oid=@OId"><span style="color:blue;">@ViewBag.m.</span>&nbsp;@h.v_type@h.v_vtype@h.v_vtype1@h.v_vtype2@h.v_vtype3 @h.v_otime.ToString("D")</a></li>
+                                                }
+                                                ViewBag.m++;
+                                            }
+                                        </ul>
+                                    </li>
+                                    <li class="my_div" style="display:none;">
+                                        <a>
+                                            <img src="~/ClientWebJsCss/Img/add.png" class="my_img01" />
+                                            <img src="~/ClientWebJsCss/Img/minus.png" class="my_img02" />
+                                            材料下载
+                                            <i></i>
+                                        </a>
+                                        <ul>
+                                            <li style="@checkedStr"><a href="my_order.html">清单1</a></li>
+                                            <li style="@checkedStr1"><a href="my_order.html">清单2</a></li>
+                                            <li style="@checkedStr2"><a href="my_order.html">清单3</a></li>
+                                            <li style="@checkedStr3"><a href="my_order.html">清单4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="rightMod fr">
+                            <div class="table">
+                                <h3><span>订单进度</span>&nbsp;<span class="warnBox" style="color:green;">@ViewBag.CurrentStateArray @Model.v_result</span></h3>
+
+                                <div class="mainHua">
+                                    <div class="list">
+                                        <ul>
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="left fl">
+                                                        <span class="h_bg">申请名单</span>
+                                                    </div>
+                                                    <div class="right fr">
+                                                        <span class="mar w_bg">@Model.v_name</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="left fl">
+                                                        <span class="h_bg">送签地点</span>
+                                                    </div>
+                                                    <div class="right fr">
+                                                        <span class="mar w_bg adres">@ViewBag.getSendAddrss</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="left fl">
+                                                        <span class="h_bg">送签日期</span>
+                                                    </div>
+                                                    <div class="right fr clearfix">
+                                                        <span class="time mar">@Convert.ToDateTime(Model.v_stime).ToString("yyyy-MM-dd") @Model.v_stime_shi : @Model.v_stime_fen</span>
+                                                        <div class="whether">
+                                                            <span class="h_bg">是否待送</span>
+                                                            <strong class="w_bg">
+                                                                @if (Model.WeToSend == true)
+                                                                {
+                                                                    <span>是</span>
+                                                                }
+                                                                else
+                                                                {
+                                                                    if (Model.finger == 1)
+                                                                    {
+                                                                        <span>是</span>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        if (Model.WeToSend != true)
+                                                                        {
+                                                                            <span>否</span>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <span>否</span>
+                                                                        }
+                                                                    }
+                                                                }
+                                                            </strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+
+
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="left fl">
+                                                        <span class="h_bg">申请国家</span>
+                                                    </div>
+                                                    <div class="right fr clearfix">
+                                                        <div class="mar county">@Model.v_type@Model.v_vtype@Model.v_vtype1@Model.v_vtype2@Model.v_vtype3</div>
+                                                        <div class="prise">
+                                                            <span class="h_bg">签证应收</span>
+                                                            <strong>@string.Format("{0:0.00}", Model.v_yshou)<a>收清</a></strong>
+                                                        </div>
+                                                        <div class="num">
+                                                            <span class="h_bg">人数</span>
+                                                            <strong>@Model.v_number</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="left fl">
+                                                        <span class="h_bg">订单编号</span>
+                                                    </div>
+                                                    <div class="right fr clearfix">
+                                                        <div class="mar county">@Model.orderid</div>
+                                                        <div class="prise">
+                                                            <span class="h_bg">订单日期</span>
+                                                            <strong>@Model.v_otime</strong>
+                                                        </div>
+                                                        <div class="num num1">
+                                                            <span class="h_bg">是否加急</span>
+                                                            <strong>
+                                                                @if (Model.v_package == 300)
+                                                                {
+                                                                    <span>是</span>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <span>否</span>
+                                                                }
+                                                            </strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="left fl">
+                                                        <span class="h_bg">出发日期</span>
+                                                    </div>
+                                                    <div class="right fr clearfix">
+                                                        <div class="mar county">@Convert.ToDateTime(Model.v_starttime).ToString("yyyy-MM-dd")</div>
+                                                        <div class="prise">
+                                                            <span class="h_bg">回国日期</span>
+                                                            <strong>@ViewBag.EndTime</strong>
+                                                        </div>
+                                                        <div class="num">
+                                                            <span class="h_bg">天数</span>
+                                                            <strong>@ViewBag.DaysTrip</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="left fl">
+                                                        <span class="h_bg">邮箱地址</span>
+                                                    </div>
+                                                    <div class="right fr clearfix">
+                                                        <div class="half half1">
+                                                            <strong>@Model.v_email <a>修改</a></strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="left fl">
+                                                        <span class="h_bg">缺失资料</span>
+                                                    </div>
+                                                    <div class="right fr">
+                                                        <span class="mar w_bg">
+                                                            @if (Model.mat == "材料不齐全")
+                                                            {
+                                                                <span>@Model.matinfo</span>
+                                                            }
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                                <div class="lab">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <a href="~/ClientWeb/ShowSampleVersion?MIds=@Base64Helper.Base64Encode(Base64Helper.get_uft8(ViewBag.MIds))&EncryptionID=@Model.oid&OrderInfo=@Base64Helper.Base64Encode(Base64Helper.get_uft8(Model.oid.ToString()))" target="_blank">资料清单</a>
+                                        </li>
+                                        <li>
+                                            <span>我的行程</span>
+                                        </li>
+                                        <li>
+                                            <span>签证调查</span>
+                                        </li>
+                                        <li>
+                                            <span>我的保单</span>
+                                        </li>
+                                    </ul>
+                                    <p>以上所有可以下载的文件，有的话订单日期开始生效，回国日期开始失效（不是所有国家都有行程和保单）</p>
+                                </div>
+
+
+                                <div class="mainHua">
+                                    <div class="list">
+                                        <ul>
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="left fl">
+                                                        <span class="h_bg">专属客服</span>
+                                                    </div>
+                                                    <div class="right fr">
+                                                        <span class="mar w_bg">@ViewBag.NickName<a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=@ViewBag.NickName&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=@ViewBag.NickName&site=cntaobao&s=1&charset=utf-8" alt="@ViewBag.NickName" /></a></span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="left fl">
+                                                        <span class="h_bg">资料快递地址</span>
+                                                    </div>
+                                                    <div class="right fr">
+                                                        <span class="mar w_bg">@Model.sjaddress</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li style="display:none;">
+                                                <div class="item clearfix">
+                                                    <div class="left fl">
+                                                        <span class="h_bg">资料亲送地址</span>
+                                                    </div>
+                                                    <div class="right fr">
+                                                        <span class="mar w_bg"></span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <br />
+
+        <div class="bottom">
+            <span class="f12">
+                Copyright © 2015&nbsp;&nbsp;
+                公司地址: 上海市静安区青海路118号云海苑办公楼4楼（上海电视台旁）
+                <a href="http://www.miitbeian.gov.cn" target="_blank" style="color:#1c84c6;">沪ICP备18008280号-2</a>
+            </span>
+        </div>
+
+
+    </form>
+
+    <script>
+
+        jQuery(".list .my_div").click(function () {
+
+            var _this = jQuery(this);
+            if (!_this.hasClass('my_divon')) {
+                _this.addClass("my_divon");
+                _this.find("ul").slideDown();
+                _this.siblings(".my_div").find("ul").slideUp();
+                _this.siblings(".my_div").removeClass("my_divon");
+            } else {
+                _this.removeClass("my_divon");
+                _this.find("ul").slideUp();
+            }
+
+        })
+
+    </script>
+
+
+</body>
+</html>
+

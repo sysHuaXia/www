@@ -1,0 +1,64 @@
+@charset "GB2312";
+
+/* Reset Mates */
+body,table,tr,td,th,dl,dt,dd,form,p,img,ul,li,ol,dl,dd,p,input {margin:0; padding:0; border:0; text-decoration:none; text-indent:0; list-style:none; text-justify:inter-ideograph;}
+body {font-family:Arial, Helvetica, sans-serif,"Î¢ÈíÑÅºÚ", "ºÚÌå"; color:#333; }
+
+h1,h2,h3,h4,h5,h6 {border-style: none;
+    border-color: inherit;
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+    text-indent:0;
+}
+h1 {font-size:28px; font-family:"Î¢ÈíÑÅºÚ", "ºÚÌå"; line-height:1.8em; }
+h2 {font-size:22px; font-family:"Î¢ÈíÑÅºÚ", "ºÚÌå"; line-height:1.8em; }
+h3 {font-size:16px; line-height:2em; }
+h4 {font-size:14px; line-height:2em; }
+h5 {font-size:12px; line-height:2em; }
+h6 {font-size:12px; line-height:2em; font-style:italic; font-weight:normal;}
+
+ul,ol,li {margin-top:0; margin-bottom:0; list-style-position:outside;}
+
+/* Link Style */
+a {text-decoration:none;}
+a:hover {text-decoration: underline; color:#E74B3B;}
+
+/* Form Style */
+form {display:block;}
+label {font:menu; font:100%;color:#444;}
+button {}
+input {}
+textarea {}
+.f30 { color:#f30;}
+.f60 { color:#f60;}
+.f90 { color:#f90;}
+.lan { color:#2D5FAD;}
+/* Common Block */
+.block_1 {margin-bottom:10px; overflow:auto; zoom:1;}
+    .block_body {}
+    .block_head {}
+    .block_foot {}
+    .block_title {}
+
+/* Common Class */
+.wrapper {width:1000px; margin:0 auto; text-align:left;}
+.clear{ clear:both; line-height:0; height:0; margin:0; padding:0; font-size:0;}
+
+
+/*******¶þ¼¶Ò³ÃæStart******/
+
+body { background-image:url(images/bg.gif); font-family: "Î¢ÈíÑÅºÚ", "ºÚÌå";  }
+.top_t_h {height: 40px; line-height: 40px; background-color: #EDEDED; color: #959595;}
+.top_t_h p span, .top_t_h p a, .top_t_h p i {display: block; float: left; color: #959595;  height: 40px;}
+.top_t_h p {display: block; text-align: left; width: 1080px; height: 40px; margin: 0 auto; font-size: 12px;}
+.top_t_h p a {width: 65px; text-align: center;}
+.top_t_h p i {width: 1px; font-style: normal;}
+.top_t_hpem {display: block; float: left; width: 65px; height: 30px; margin: 5px; text-align: center; background: url(images/top_an.gif) no-repeat center center; line-height: 30px; color: #FFF; font-style: normal;}
+.top_t_hpem2 {display: block; float: left; width: 65px; height: 30px; margin: 5px; text-align: center; background: url(../images/top_an2.gif) no-repeat center center; line-height: 30px; color: #FFF; font-style: normal;}
+.top_nav {height: 45px; background-color: #370354; clear: both;}
+.top_nav .top_nav_c {width: 1080px; height: 45px; margin: 0 auto; color: #FFF;}
+.top_nav .top_nav_c span {display: block; float: left; width: 200px; height: 45px; line-height: 45px; text-align: left; padding: 0 30px; margin-right: 5px; background: #E74B3B url(images/x_3.gif) no-repeat 210px center;}
+.top_nav .top_nav_c a {display: block; float: left; width: 100px;  height: 45px; line-height: 40px; background: url(images/top_a_li.gif) no-repeat right center; color: #FFF;}
+.top_nav .top_nav_c a:hover, .top_nav .top_nav_c a.on {background-color: #FFF; cursor: pointer; background-image: none; height: 40px; margin-top: 5px; color: #370354; text-decoration: none; line-height: 35px; font-weight: bold;}
+

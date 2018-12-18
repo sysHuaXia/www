@@ -1,0 +1,968 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="dhgl2013Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="T_Area">
+          <Key>
+            <PropertyRef Name="AId" />
+          </Key>
+          <Property Name="AId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AreaName" Type="varchar" MaxLength="20" />
+          <Property Name="Sorting" Type="int" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“dhgl2013.dbo.T_SysSupplierConfig”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="v_infolist">
+          <Key>
+            <PropertyRef Name="oid" />
+          </Key>
+          <Property Name="oid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IsOnline" Type="bit" />
+          <Property Name="finger" Type="int" />
+          <Property Name="parent" Type="int" />
+          <Property Name="RoleID" Type="int" />
+          <Property Name="HArea" Type="nvarchar" MaxLength="10" />
+          <Property Name="HArea_hangzhou" Type="int" />
+          <Property Name="jdr_id" Type="int" />
+          <Property Name="title" Type="nvarchar" MaxLength="100" />
+          <Property Name="sku_properties_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="orderid" Type="nvarchar" MaxLength="100" />
+          <Property Name="v_name" Type="nvarchar" MaxLength="120" />
+          <Property Name="name_note" Type="nvarchar" MaxLength="500" />
+          <Property Name="v_starttime" Type="datetime" />
+          <Property Name="v_tel" Type="nvarchar" MaxLength="50" />
+          <Property Name="loginID" Type="nvarchar" MaxLength="50" />
+          <Property Name="PassportNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="Passport" Type="nvarchar" MaxLength="50" />
+          <Property Name="ActiveTime" Type="datetime" />
+          <Property Name="hxwwhao" Type="nvarchar" MaxLength="1000" />
+          <Property Name="baoxian" Type="nvarchar" MaxLength="1000" />
+          <Property Name="taocan" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_result" Type="nvarchar(max)" />
+          <Property Name="vtype_result" Type="nvarchar" MaxLength="10" />
+          <Property Name="v_stime" Type="datetime" />
+          <Property Name="v_qdao" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_otime" Type="datetime" />
+          <Property Name="jiedan_yuefei" Type="int" />
+          <Property Name="jiedan_nianfei" Type="int" />
+          <Property Name="v_number" Type="int" />
+          <Property Name="v_endtime" Type="datetime" />
+          <Property Name="v_email" Type="nvarchar" MaxLength="120" />
+          <Property Name="v_yshou" Type="money" />
+          <Property Name="visafee" Type="money" />
+          <Property Name="v_cash" Type="money" />
+          <Property Name="v_yshou_B" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_cvisa" Type="datetime" />
+          <Property Name="v_fPiao" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_pHao" Type="nvarchar" MaxLength="300" />
+          <Property Name="tmall_country_id" Type="int" />
+          <Property Name="v_type" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_package_new" Type="int" />
+          <Property Name="v_package" Type="int" />
+          <Property Name="v_tShu" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_contact" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_yFu" Type="money" />
+          <Property Name="v_yFu_B" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_xlv" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_lping" Type="nvarchar" MaxLength="100" />
+          <Property Name="viptc" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_yyemail" Type="nvarchar" MaxLength="50" />
+          <Property Name="countries" Type="nvarchar" MaxLength="50" />
+          <Property Name="record" Type="nvarchar" MaxLength="50" />
+          <Property Name="income" Type="nvarchar" MaxLength="50" />
+          <Property Name="bad_record" Type="nvarchar" MaxLength="50" />
+          <Property Name="conditions" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_vtype" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_vtype1" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_vtype2" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_vtype3" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_vtypeT" Type="nvarchar" MaxLength="50" />
+          <Property Name="inputtime" Type="datetime" />
+          <Property Name="v_yuefei" Type="int" />
+          <Property Name="v_nianfei" Type="int" />
+          <Property Name="wwhao" Type="nvarchar" MaxLength="100" />
+          <Property Name="birth" Type="datetime" />
+          <Property Name="birth_B" Type="nvarchar" MaxLength="100" />
+          <Property Name="v_tuanhao" Type="nvarchar" MaxLength="100" />
+          <Property Name="v_yuytime" Type="datetime" />
+          <Property Name="v_sqryId" Type="int" />
+          <Property Name="v_sqry" Type="nvarchar" MaxLength="100" />
+          <Property Name="v_sqadd" Type="nvarchar" MaxLength="100" />
+          <Property Name="v_stime_shi" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_stime_fen" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpTime" Type="datetime" />
+          <Property Name="qi_type" Type="int" />
+          <Property Name="qi_content" Type="nvarchar" MaxLength="460" />
+          <Property Name="fahuo" Type="nvarchar" MaxLength="20" />
+          <Property Name="fahuo_content" Type="nvarchar" MaxLength="80" />
+          <Property Name="xingcheng_content" Type="nvarchar(max)" />
+          <Property Name="xctijiaoren" Type="int" />
+          <Property Name="xctijiaorenname" Type="nvarchar" MaxLength="10" />
+          <Property Name="CLJieDanRen" Type="nvarchar" MaxLength="10" />
+          <Property Name="quvisa" Type="nvarchar" MaxLength="50" />
+          <Property Name="quvisa_num" Type="nvarchar" MaxLength="100" />
+          <Property Name="audit" Type="int" />
+          <Property Name="audittime" Type="datetime" />
+          <Property Name="fp_enable" Type="int" />
+          <Property Name="fp_type" Type="nvarchar" MaxLength="20" />
+          <Property Name="fp_title" Type="nvarchar" MaxLength="50" />
+          <Property Name="fp_num" Type="nvarchar" MaxLength="10" />
+          <Property Name="fp_content" Type="nvarchar" MaxLength="10" />
+          <Property Name="fp_hao" Type="nvarchar" MaxLength="50" />
+          <Property Name="fp_billNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="fp_drawerId" Type="int" />
+          <Property Name="fp_drawerName" Type="nvarchar" MaxLength="50" />
+          <Property Name="fp_time" Type="datetime" />
+          <Property Name="imgpath" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaxPic" Type="nvarchar" MaxLength="200" />
+          <Property Name="insurance" Type="nvarchar" MaxLength="50" />
+          <Property Name="insur_num" Type="nvarchar" MaxLength="50" />
+          <Property Name="V_jdrid" Type="int" />
+          <Property Name="V_jdrname" Type="nvarchar" MaxLength="10" />
+          <Property Name="audit_id" Type="int" />
+          <Property Name="audit_er" Type="nvarchar" MaxLength="50" />
+          <Property Name="auditer_time" Type="datetime" />
+          <Property Name="auditertime" Type="datetime" />
+          <Property Name="Yemail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gemail" Type="int" />
+          <Property Name="xingji" Type="nvarchar" MaxLength="50" />
+          <Property Name="sjaddress" Type="nvarchar" MaxLength="200" />
+          <Property Name="mat" Type="nvarchar" MaxLength="10" />
+          <Property Name="matinfo" Type="nvarchar(max)" />
+          <Property Name="mattime" Type="datetime" />
+          <Property Name="CourierNumber" Type="nvarchar" MaxLength="10" />
+          <Property Name="CourierNumberinfo" Type="nvarchar" MaxLength="50" />
+          <Property Name="CNumber" Type="nvarchar" MaxLength="10" />
+          <Property Name="CNumberinfo" Type="nvarchar" MaxLength="50" />
+          <Property Name="CNumberTime" Type="datetime" />
+          <Property Name="dstime" Type="datetime" />
+          <Property Name="endtime" Type="datetime" />
+          <Property Name="jiudian_DTime" Type="datetime" />
+          <Property Name="jiudian_EndTime" Type="datetime" />
+          <Property Name="jiudian_Num" Type="int" />
+          <Property Name="jiudian_Cancel" Type="int" />
+          <Property Name="jiudian_Note" Type="nvarchar(max)" />
+          <Property Name="have_card" Type="int" />
+          <Property Name="IsTicket" Type="int" />
+          <Property Name="TicketMemo" Type="nvarchar(max)" />
+          <Property Name="LackTime" Type="datetime" />
+          <Property Name="WeProfits" Type="money" />
+          <Property Name="WeToSend" Type="bit" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Init_VisaNumber" Type="int" />
+          <Property Name="VisaType" Type="int" />
+          <Property Name="fp_PackageMail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fp_CourierNumber" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <Function Name="P_UserLogTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="V_AdminSignValidate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserAccount" Type="varchar" Mode="In" />
+          <Parameter Name="Pwd" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="dhgl2013ModelStoreContainer">
+          <EntitySet Name="T_Area" EntityType="Self.T_Area" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="v_infolist" EntityType="Self.v_infolist" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dhgl2013Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="dhgl2013Entities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="P_Article_Delete">
+            <Parameter Name="ArticleID" Mode="In" Type="Int32" />
+            <Parameter Name="ReturnValue" Mode="InOut" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="P_Order_Total" ReturnType="Collection(dhgl2013Model.P_Order_Total_Result)">
+          <Parameter Name="oid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="P_UserLogTime">
+          <Parameter Name="UserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="P_UserSignValidate" ReturnType="Collection(dhgl2013Model.P_UserSignValidate_Result)">
+            <Parameter Name="UserAccount" Mode="In" Type="String" />
+            <Parameter Name="Pwd" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="P_UserSignWebValidate" ReturnType="Collection(dhgl2013Model.P_UserSignWebValidate_Result)">
+            <Parameter Name="UserAccount" Mode="In" Type="String" />
+            <Parameter Name="Pwd" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="T_Product_Recommend" ReturnType="Collection(dhgl2013Model.T_Product_Recommend_Result)">
+          <Parameter Name="LineSite" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="V_Admin_Delete">
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
+            <Parameter Name="ReturnValue" Mode="InOut" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="V_AdminSignValidate" ReturnType="Collection(dhgl2013Model.V_AdminSignValidate_Result)">
+            <Parameter Name="UserAccount" Mode="In" Type="String" />
+            <Parameter Name="Pwd" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="T_Area" EntityType="dhgl2013Model.T_Area" />
+          <EntitySet Name="v_infolist" EntityType="dhgl2013Model.v_infolist" />
+        </EntityContainer>
+        <ComplexType Name="P_Order_Total_Result">
+          <Property Type="Int32" Name="oid" Nullable="false" />
+          <Property Type="Int32" Name="finger" Nullable="true" />
+          <Property Type="Int32" Name="parent" Nullable="true" />
+          <Property Type="Int32" Name="RoleID" Nullable="true" />
+          <Property Type="String" Name="HArea" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="HArea_hangzhou" Nullable="true" />
+          <Property Type="Int32" Name="jdr_id" Nullable="true" />
+          <Property Type="String" Name="orderid" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="v_name" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="name_note" Nullable="true" MaxLength="500" />
+          <Property Type="DateTime" Name="v_starttime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="v_tel" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="loginID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PassportNO" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Passport" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="ActiveTime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="hxwwhao" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="baoxian" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="taocan" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_result" Nullable="true" />
+          <Property Type="String" Name="vtype_result" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="v_stime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="v_qdao" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="v_otime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="jiedan_yuefei" Nullable="true" />
+          <Property Type="Int32" Name="jiedan_nianfei" Nullable="true" />
+          <Property Type="Int32" Name="v_number" Nullable="true" />
+          <Property Type="DateTime" Name="v_endtime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="v_email" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="v_yshou" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="v_cash" Nullable="true" Precision="19" />
+          <Property Type="String" Name="v_yshou_B" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="v_cvisa" Nullable="true" Precision="23" />
+          <Property Type="String" Name="v_fPiao" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_pHao" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_type" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="v_package_new" Nullable="true" />
+          <Property Type="Int32" Name="v_package" Nullable="true" />
+          <Property Type="String" Name="v_tShu" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_contact" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="v_yFu" Nullable="true" Precision="19" />
+          <Property Type="String" Name="v_yFu_B" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_xlv" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_lping" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="viptc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_yyemail" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="countries" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="record" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="income" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="bad_record" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="conditions" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_vtype" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_vtype1" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_vtype2" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_vtype3" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_vtypeT" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="inputtime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="v_yuefei" Nullable="true" />
+          <Property Type="Int32" Name="v_nianfei" Nullable="true" />
+          <Property Type="String" Name="wwhao" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="birth" Nullable="true" Precision="23" />
+          <Property Type="String" Name="birth_B" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="v_tuanhao" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="v_yuytime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="v_sqry" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="v_sqadd" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="v_stime_shi" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_stime_fen" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="UpTime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="qi_type" Nullable="true" />
+          <Property Type="String" Name="qi_content" Nullable="true" MaxLength="180" />
+          <Property Type="String" Name="fahuo" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="fahuo_content" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="xingcheng_content" Nullable="true" />
+          <Property Type="Int32" Name="xctijiaoren" Nullable="true" />
+          <Property Type="String" Name="xctijiaorenname" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CLJieDanRen" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="quvisa" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="quvisa_num" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="audit" Nullable="true" />
+          <Property Type="DateTime" Name="audittime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="fp_type" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="fp_title" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="fp_num" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="fp_content" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="fp_hao" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="imgpath" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MaxPic" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="insurance" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="insur_num" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="V_jdrid" Nullable="true" />
+          <Property Type="String" Name="V_jdrname" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="audit_er" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="auditer_time" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="auditertime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Yemail" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Gemail" Nullable="true" />
+          <Property Type="String" Name="xingji" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="sjaddress" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="mat" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="matinfo" Nullable="true" />
+          <Property Type="DateTime" Name="mattime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CourierNumber" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CourierNumberinfo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CNumber" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CNumberinfo" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CNumberTime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="dstime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="endtime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="jiudian_DTime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="jiudian_EndTime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="jiudian_Num" Nullable="true" />
+          <Property Type="Int32" Name="jiudian_Cancel" Nullable="true" />
+          <Property Type="String" Name="jiudian_Note" Nullable="true" />
+          <Property Type="Int32" Name="have_card" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="P_UserSignValidate_Result">
+          <Property Type="Int32" Name="oid" Nullable="false" />
+          <Property Type="Int32" Name="finger" Nullable="true" />
+          <Property Type="Int32" Name="parent" Nullable="true" />
+          <Property Type="Int32" Name="RoleID" Nullable="true" />
+          <Property Type="String" Name="HArea" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="HArea_hangzhou" Nullable="true" />
+          <Property Type="Int32" Name="jdr_id" Nullable="true" />
+          <Property Type="String" Name="orderid" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="v_name" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="name_note" Nullable="true" MaxLength="500" />
+          <Property Type="DateTime" Name="v_starttime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="v_tel" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="loginID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PassportNO" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Passport" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="ActiveTime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="hxwwhao" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="baoxian" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="taocan" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_result" Nullable="true" />
+          <Property Type="String" Name="vtype_result" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="v_stime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="v_qdao" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="v_otime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="jiedan_yuefei" Nullable="true" />
+          <Property Type="Int32" Name="jiedan_nianfei" Nullable="true" />
+          <Property Type="Int32" Name="v_number" Nullable="true" />
+          <Property Type="DateTime" Name="v_endtime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="v_email" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="v_yshou" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="v_cash" Nullable="true" Precision="19" />
+          <Property Type="String" Name="v_yshou_B" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="v_cvisa" Nullable="true" Precision="23" />
+          <Property Type="String" Name="v_fPiao" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_pHao" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_type" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="v_package_new" Nullable="true" />
+          <Property Type="Int32" Name="v_package" Nullable="true" />
+          <Property Type="String" Name="v_tShu" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_contact" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="v_yFu" Nullable="true" Precision="19" />
+          <Property Type="String" Name="v_yFu_B" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_xlv" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_lping" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="viptc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_yyemail" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="countries" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="record" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="income" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="bad_record" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="conditions" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_vtype" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_vtype1" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_vtype2" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_vtype3" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_vtypeT" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="inputtime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="v_yuefei" Nullable="true" />
+          <Property Type="Int32" Name="v_nianfei" Nullable="true" />
+          <Property Type="String" Name="wwhao" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="birth" Nullable="true" Precision="23" />
+          <Property Type="String" Name="birth_B" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="v_tuanhao" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="v_yuytime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="v_sqry" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="v_sqadd" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="v_stime_shi" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_stime_fen" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="UpTime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="qi_type" Nullable="true" />
+          <Property Type="String" Name="qi_content" Nullable="true" MaxLength="180" />
+          <Property Type="String" Name="fahuo" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="fahuo_content" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="xingcheng_content" Nullable="true" />
+          <Property Type="Int32" Name="xctijiaoren" Nullable="true" />
+          <Property Type="String" Name="xctijiaorenname" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CLJieDanRen" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="quvisa" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="quvisa_num" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="audit" Nullable="true" />
+          <Property Type="DateTime" Name="audittime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="fp_type" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="fp_title" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="fp_num" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="fp_content" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="fp_hao" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="imgpath" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MaxPic" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="insurance" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="insur_num" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="V_jdrid" Nullable="true" />
+          <Property Type="String" Name="V_jdrname" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="audit_er" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="auditer_time" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="auditertime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Yemail" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Gemail" Nullable="true" />
+          <Property Type="String" Name="xingji" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="sjaddress" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="mat" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="matinfo" Nullable="true" />
+          <Property Type="DateTime" Name="mattime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CourierNumber" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CourierNumberinfo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CNumber" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CNumberinfo" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CNumberTime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="dstime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="endtime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="jiudian_DTime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="jiudian_EndTime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="jiudian_Num" Nullable="true" />
+          <Property Type="Int32" Name="jiudian_Cancel" Nullable="true" />
+          <Property Type="String" Name="jiudian_Note" Nullable="true" />
+          <Property Type="Int32" Name="have_card" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="P_UserSignWebValidate_Result">
+          <Property Type="Int32" Name="oid" Nullable="false" />
+          <Property Type="Int32" Name="finger" Nullable="true" />
+          <Property Type="Int32" Name="parent" Nullable="true" />
+          <Property Type="Int32" Name="RoleID" Nullable="true" />
+          <Property Type="String" Name="HArea" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="HArea_hangzhou" Nullable="true" />
+          <Property Type="Int32" Name="jdr_id" Nullable="true" />
+          <Property Type="String" Name="orderid" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="v_name" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="name_note" Nullable="true" MaxLength="500" />
+          <Property Type="DateTime" Name="v_starttime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="v_tel" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="loginID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PassportNO" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Passport" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="ActiveTime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="hxwwhao" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="baoxian" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="taocan" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_result" Nullable="true" />
+          <Property Type="String" Name="vtype_result" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="v_stime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="v_qdao" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="v_otime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="jiedan_yuefei" Nullable="true" />
+          <Property Type="Int32" Name="jiedan_nianfei" Nullable="true" />
+          <Property Type="Int32" Name="v_number" Nullable="true" />
+          <Property Type="DateTime" Name="v_endtime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="v_email" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="v_yshou" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="v_cash" Nullable="true" Precision="19" />
+          <Property Type="String" Name="v_yshou_B" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="v_cvisa" Nullable="true" Precision="23" />
+          <Property Type="String" Name="v_fPiao" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_pHao" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_type" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="v_package_new" Nullable="true" />
+          <Property Type="Int32" Name="v_package" Nullable="true" />
+          <Property Type="String" Name="v_tShu" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_contact" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="v_yFu" Nullable="true" Precision="19" />
+          <Property Type="String" Name="v_yFu_B" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_xlv" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_lping" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="viptc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_yyemail" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="countries" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="record" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="income" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="bad_record" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="conditions" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_vtype" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_vtype1" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_vtype2" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_vtype3" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_vtypeT" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="inputtime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="v_yuefei" Nullable="true" />
+          <Property Type="Int32" Name="v_nianfei" Nullable="true" />
+          <Property Type="String" Name="wwhao" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="birth" Nullable="true" Precision="23" />
+          <Property Type="String" Name="birth_B" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="v_tuanhao" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="v_yuytime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="v_sqry" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="v_sqadd" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="v_stime_shi" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="v_stime_fen" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="UpTime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="qi_type" Nullable="true" />
+          <Property Type="String" Name="qi_content" Nullable="true" MaxLength="180" />
+          <Property Type="String" Name="fahuo" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="fahuo_content" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="xingcheng_content" Nullable="true" />
+          <Property Type="Int32" Name="xctijiaoren" Nullable="true" />
+          <Property Type="String" Name="xctijiaorenname" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CLJieDanRen" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="quvisa" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="quvisa_num" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="audit" Nullable="true" />
+          <Property Type="DateTime" Name="audittime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="fp_type" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="fp_title" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="fp_num" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="fp_content" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="fp_hao" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="imgpath" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MaxPic" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="insurance" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="insur_num" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="V_jdrid" Nullable="true" />
+          <Property Type="String" Name="V_jdrname" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="audit_er" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="auditer_time" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="auditertime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Yemail" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Gemail" Nullable="true" />
+          <Property Type="String" Name="xingji" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="sjaddress" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="mat" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="matinfo" Nullable="true" />
+          <Property Type="DateTime" Name="mattime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CourierNumber" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CourierNumberinfo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CNumber" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CNumberinfo" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CNumberTime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="dstime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="endtime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="jiudian_DTime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="jiudian_EndTime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="jiudian_Num" Nullable="true" />
+          <Property Type="Int32" Name="jiudian_Cancel" Nullable="true" />
+          <Property Type="String" Name="jiudian_Note" Nullable="true" />
+          <Property Type="Int32" Name="have_card" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="T_Product_Recommend_Result">
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="String" Name="ProductBrand" Nullable="false" MaxLength="80" />
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="300" />
+          <Property Type="Int32" Name="LineID" Nullable="false" />
+          <Property Type="Int32" Name="DepartureID" Nullable="false" />
+          <Property Type="String" Name="ProductBrand1" Nullable="false" MaxLength="80" />
+          <Property Type="Decimal" Name="Price1" Nullable="false" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="V_AdminSignValidate_Result">
+          <Property Type="Int32" Name="UserID" Nullable="false" />
+          <Property Type="Int32" Name="CodeID" Nullable="true" />
+          <Property Type="Int32" Name="SysType" Nullable="true" />
+          <Property Type="Int32" Name="SupplierID" Nullable="false" />
+          <Property Type="String" Name="UserDpt" Nullable="false" MaxLength="40" />
+          <Property Type="String" Name="UserCode" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="UserTel" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="UserMobile" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="UserFax" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="UserQQName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="UserQQ" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="UserMail" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="UserAccount" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="UserPwd" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="UserBrief" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="IsReceiveSms" Nullable="false" />
+          <Property Type="Boolean" Name="IsOncallSms" Nullable="false" />
+          <Property Type="Int32" Name="RoleID" Nullable="false" />
+          <Property Type="Boolean" Name="IsEnable" Nullable="false" />
+          <Property Type="Boolean" Name="IsDelete" Nullable="false" />
+          <Property Type="DateTime" Name="ActiveTime" Nullable="false" Precision="23" />
+          <Property Type="String" Name="LoginIP" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="UserSex" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="UserPosition" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="UserPositionCall" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="UserBirthday" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="UserLogo" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="CreateUserID" Nullable="false" />
+          <Property Type="String" Name="CreateUserName" Nullable="false" MaxLength="30" />
+        </ComplexType>
+        <EntityType Name="T_Area">
+          <Key>
+            <PropertyRef Name="AId" />
+          </Key>
+          <Property Name="AId" Type="Int32" Nullable="false" />
+          <Property Name="AreaName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Sorting" Type="Int32" />
+        </EntityType>
+        <EntityType Name="v_infolist">
+          <Key>
+            <PropertyRef Name="oid" />
+          </Key>
+          <Property Name="oid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsOnline" Type="Boolean" />
+          <Property Name="finger" Type="Int32" />
+          <Property Name="parent" Type="Int32" />
+          <Property Name="RoleID" Type="Int32" />
+          <Property Name="HArea" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="HArea_hangzhou" Type="Int32" />
+          <Property Name="jdr_id" Type="Int32" />
+          <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="sku_properties_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="orderid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="v_name" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="name_note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="v_starttime" Type="DateTime" Precision="3" />
+          <Property Name="v_tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="loginID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PassportNO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Passport" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ActiveTime" Type="DateTime" Precision="3" />
+          <Property Name="hxwwhao" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="baoxian" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="taocan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_result" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="vtype_result" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="v_stime" Type="DateTime" Precision="3" />
+          <Property Name="v_qdao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_otime" Type="DateTime" Precision="3" />
+          <Property Name="jiedan_yuefei" Type="Int32" />
+          <Property Name="jiedan_nianfei" Type="Int32" />
+          <Property Name="v_number" Type="Int32" />
+          <Property Name="v_endtime" Type="DateTime" Precision="3" />
+          <Property Name="v_email" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="v_yshou" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="visafee" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="v_cash" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="v_yshou_B" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_cvisa" Type="DateTime" Precision="3" />
+          <Property Name="v_fPiao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_pHao" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="tmall_country_id" Type="Int32" />
+          <Property Name="v_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_package_new" Type="Int32" />
+          <Property Name="v_package" Type="Int32" />
+          <Property Name="v_tShu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_yFu" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="v_yFu_B" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_xlv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_lping" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="viptc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_yyemail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="countries" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="record" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="income" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bad_record" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="conditions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_vtype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_vtype1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_vtype2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_vtype3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_vtypeT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="inputtime" Type="DateTime" Precision="3" />
+          <Property Name="v_yuefei" Type="Int32" />
+          <Property Name="v_nianfei" Type="Int32" />
+          <Property Name="wwhao" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="birth" Type="DateTime" Precision="3" />
+          <Property Name="birth_B" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="v_tuanhao" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="v_yuytime" Type="DateTime" Precision="3" />
+          <Property Name="v_sqryId" Type="Int32" />
+          <Property Name="v_sqry" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="v_sqadd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="v_stime_shi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_stime_fen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpTime" Type="DateTime" Precision="3" />
+          <Property Name="qi_type" Type="Int32" />
+          <Property Name="qi_content" Type="String" MaxLength="460" FixedLength="false" Unicode="true" />
+          <Property Name="fahuo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="fahuo_content" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="xingcheng_content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="xctijiaoren" Type="Int32" />
+          <Property Name="xctijiaorenname" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CLJieDanRen" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="quvisa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="quvisa_num" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="audit" Type="Int32" />
+          <Property Name="audittime" Type="DateTime" Precision="3" />
+          <Property Name="fp_enable" Type="Int32" />
+          <Property Name="fp_type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="fp_title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fp_num" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="fp_content" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="fp_hao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fp_billNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fp_PackageMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fp_CourierNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="fp_drawerId" Type="Int32" />
+          <Property Name="fp_drawerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fp_time" Type="DateTime" Precision="3" />
+          <Property Name="imgpath" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaxPic" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="insurance" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="insur_num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="V_jdrid" Type="Int32" />
+          <Property Name="V_jdrname" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="audit_id" Type="Int32" />
+          <Property Name="audit_er" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="auditer_time" Type="DateTime" Precision="3" />
+          <Property Name="auditertime" Type="DateTime" Precision="3" />
+          <Property Name="Yemail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gemail" Type="Int32" />
+          <Property Name="xingji" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sjaddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="mat" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="matinfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mattime" Type="DateTime" Precision="3" />
+          <Property Name="CourierNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CourierNumberinfo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CNumberinfo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CNumberTime" Type="DateTime" Precision="3" />
+          <Property Name="dstime" Type="DateTime" Precision="3" />
+          <Property Name="endtime" Type="DateTime" Precision="3" />
+          <Property Name="jiudian_DTime" Type="DateTime" Precision="3" />
+          <Property Name="jiudian_EndTime" Type="DateTime" Precision="3" />
+          <Property Name="jiudian_Num" Type="Int32" />
+          <Property Name="jiudian_Cancel" Type="Int32" />
+          <Property Name="jiudian_Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="have_card" Type="Int32" />
+          <Property Name="IsTicket" Type="Int32" />
+          <Property Name="TicketMemo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LackTime" Type="DateTime" Precision="3" />
+          <Property Name="WeProfits" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="WeToSend" Type="Boolean" />
+          <Property Name="RowVersion" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Init_VisaNumber" Type="Int32" />
+          <Property Name="VisaType" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dhgl2013ModelStoreContainer" CdmEntityContainer="dhgl2013Entities">
+          <FunctionImportMapping FunctionImportName="P_UserLogTime" FunctionName="dhgl2013Model.Store.P_UserLogTime" />
+          <FunctionImportMapping FunctionImportName="V_AdminSignValidate" FunctionName="dhgl2013Model.Store.V_AdminSignValidate">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dhgl2013Model.V_AdminSignValidate_Result">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+                <ScalarProperty Name="SysType" ColumnName="SysType" />
+                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+                <ScalarProperty Name="UserDpt" ColumnName="UserDpt" />
+                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserTel" ColumnName="UserTel" />
+                <ScalarProperty Name="UserMobile" ColumnName="UserMobile" />
+                <ScalarProperty Name="UserFax" ColumnName="UserFax" />
+                <ScalarProperty Name="UserQQName" ColumnName="UserQQName" />
+                <ScalarProperty Name="UserQQ" ColumnName="UserQQ" />
+                <ScalarProperty Name="UserMail" ColumnName="UserMail" />
+                <ScalarProperty Name="UserAccount" ColumnName="UserAccount" />
+                <ScalarProperty Name="UserPwd" ColumnName="UserPwd" />
+                <ScalarProperty Name="UserBrief" ColumnName="UserBrief" />
+                <ScalarProperty Name="IsReceiveSms" ColumnName="IsReceiveSms" />
+                <ScalarProperty Name="IsOncallSms" ColumnName="IsOncallSms" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="ActiveTime" ColumnName="ActiveTime" />
+                <ScalarProperty Name="LoginIP" ColumnName="LoginIP" />
+                <ScalarProperty Name="UserSex" ColumnName="UserSex" />
+                <ScalarProperty Name="UserPosition" ColumnName="UserPosition" />
+                <ScalarProperty Name="UserPositionCall" ColumnName="UserPositionCall" />
+                <ScalarProperty Name="UserBirthday" ColumnName="UserBirthday" />
+                <ScalarProperty Name="UserLogo" ColumnName="UserLogo" />
+                <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
+                <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="T_Area">
+            <EntityTypeMapping TypeName="dhgl2013Model.T_Area">
+              <MappingFragment StoreEntitySet="T_Area">
+                <ScalarProperty Name="Sorting" ColumnName="Sorting" />
+                <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+                <ScalarProperty Name="AId" ColumnName="AId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_infolist">
+            <EntityTypeMapping TypeName="dhgl2013Model.v_infolist">
+              <MappingFragment StoreEntitySet="v_infolist">
+                <ScalarProperty Name="VisaType" ColumnName="VisaType" />
+                <ScalarProperty Name="Init_VisaNumber" ColumnName="Init_VisaNumber" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="WeToSend" ColumnName="WeToSend" />
+                <ScalarProperty Name="WeProfits" ColumnName="WeProfits" />
+                <ScalarProperty Name="LackTime" ColumnName="LackTime" />
+                <ScalarProperty Name="TicketMemo" ColumnName="TicketMemo" />
+                <ScalarProperty Name="IsTicket" ColumnName="IsTicket" />
+                <ScalarProperty Name="have_card" ColumnName="have_card" />
+                <ScalarProperty Name="jiudian_Note" ColumnName="jiudian_Note" />
+                <ScalarProperty Name="jiudian_Cancel" ColumnName="jiudian_Cancel" />
+                <ScalarProperty Name="jiudian_Num" ColumnName="jiudian_Num" />
+                <ScalarProperty Name="jiudian_EndTime" ColumnName="jiudian_EndTime" />
+                <ScalarProperty Name="jiudian_DTime" ColumnName="jiudian_DTime" />
+                <ScalarProperty Name="endtime" ColumnName="endtime" />
+                <ScalarProperty Name="dstime" ColumnName="dstime" />
+                <ScalarProperty Name="CNumberTime" ColumnName="CNumberTime" />
+                <ScalarProperty Name="CNumberinfo" ColumnName="CNumberinfo" />
+                <ScalarProperty Name="CNumber" ColumnName="CNumber" />
+                <ScalarProperty Name="CourierNumberinfo" ColumnName="CourierNumberinfo" />
+                <ScalarProperty Name="CourierNumber" ColumnName="CourierNumber" />
+                <ScalarProperty Name="mattime" ColumnName="mattime" />
+                <ScalarProperty Name="matinfo" ColumnName="matinfo" />
+                <ScalarProperty Name="mat" ColumnName="mat" />
+                <ScalarProperty Name="sjaddress" ColumnName="sjaddress" />
+                <ScalarProperty Name="xingji" ColumnName="xingji" />
+                <ScalarProperty Name="Gemail" ColumnName="Gemail" />
+                <ScalarProperty Name="Yemail" ColumnName="Yemail" />
+                <ScalarProperty Name="auditertime" ColumnName="auditertime" />
+                <ScalarProperty Name="auditer_time" ColumnName="auditer_time" />
+                <ScalarProperty Name="audit_er" ColumnName="audit_er" />
+                <ScalarProperty Name="audit_id" ColumnName="audit_id" />
+                <ScalarProperty Name="V_jdrname" ColumnName="V_jdrname" />
+                <ScalarProperty Name="V_jdrid" ColumnName="V_jdrid" />
+                <ScalarProperty Name="insur_num" ColumnName="insur_num" />
+                <ScalarProperty Name="insurance" ColumnName="insurance" />
+                <ScalarProperty Name="MaxPic" ColumnName="MaxPic" />
+                <ScalarProperty Name="imgpath" ColumnName="imgpath" />
+                <ScalarProperty Name="fp_time" ColumnName="fp_time" />
+                <ScalarProperty Name="fp_drawerName" ColumnName="fp_drawerName" />
+                <ScalarProperty Name="fp_drawerId" ColumnName="fp_drawerId" />
+                <ScalarProperty Name="fp_CourierNumber" ColumnName="fp_CourierNumber" />
+                <ScalarProperty Name="fp_PackageMail" ColumnName="fp_PackageMail" />
+                <ScalarProperty Name="fp_billNo" ColumnName="fp_billNo" />
+                <ScalarProperty Name="fp_hao" ColumnName="fp_hao" />
+                <ScalarProperty Name="fp_content" ColumnName="fp_content" />
+                <ScalarProperty Name="fp_num" ColumnName="fp_num" />
+                <ScalarProperty Name="fp_title" ColumnName="fp_title" />
+                <ScalarProperty Name="fp_type" ColumnName="fp_type" />
+                <ScalarProperty Name="fp_enable" ColumnName="fp_enable" />
+                <ScalarProperty Name="audittime" ColumnName="audittime" />
+                <ScalarProperty Name="audit" ColumnName="audit" />
+                <ScalarProperty Name="quvisa_num" ColumnName="quvisa_num" />
+                <ScalarProperty Name="quvisa" ColumnName="quvisa" />
+                <ScalarProperty Name="CLJieDanRen" ColumnName="CLJieDanRen" />
+                <ScalarProperty Name="xctijiaorenname" ColumnName="xctijiaorenname" />
+                <ScalarProperty Name="xctijiaoren" ColumnName="xctijiaoren" />
+                <ScalarProperty Name="xingcheng_content" ColumnName="xingcheng_content" />
+                <ScalarProperty Name="fahuo_content" ColumnName="fahuo_content" />
+                <ScalarProperty Name="fahuo" ColumnName="fahuo" />
+                <ScalarProperty Name="qi_content" ColumnName="qi_content" />
+                <ScalarProperty Name="qi_type" ColumnName="qi_type" />
+                <ScalarProperty Name="UpTime" ColumnName="UpTime" />
+                <ScalarProperty Name="v_stime_fen" ColumnName="v_stime_fen" />
+                <ScalarProperty Name="v_stime_shi" ColumnName="v_stime_shi" />
+                <ScalarProperty Name="v_sqadd" ColumnName="v_sqadd" />
+                <ScalarProperty Name="v_sqry" ColumnName="v_sqry" />
+                <ScalarProperty Name="v_sqryId" ColumnName="v_sqryId" />
+                <ScalarProperty Name="v_yuytime" ColumnName="v_yuytime" />
+                <ScalarProperty Name="v_tuanhao" ColumnName="v_tuanhao" />
+                <ScalarProperty Name="birth_B" ColumnName="birth_B" />
+                <ScalarProperty Name="birth" ColumnName="birth" />
+                <ScalarProperty Name="wwhao" ColumnName="wwhao" />
+                <ScalarProperty Name="v_nianfei" ColumnName="v_nianfei" />
+                <ScalarProperty Name="v_yuefei" ColumnName="v_yuefei" />
+                <ScalarProperty Name="inputtime" ColumnName="inputtime" />
+                <ScalarProperty Name="v_vtypeT" ColumnName="v_vtypeT" />
+                <ScalarProperty Name="v_vtype3" ColumnName="v_vtype3" />
+                <ScalarProperty Name="v_vtype2" ColumnName="v_vtype2" />
+                <ScalarProperty Name="v_vtype1" ColumnName="v_vtype1" />
+                <ScalarProperty Name="v_vtype" ColumnName="v_vtype" />
+                <ScalarProperty Name="conditions" ColumnName="conditions" />
+                <ScalarProperty Name="bad_record" ColumnName="bad_record" />
+                <ScalarProperty Name="income" ColumnName="income" />
+                <ScalarProperty Name="record" ColumnName="record" />
+                <ScalarProperty Name="countries" ColumnName="countries" />
+                <ScalarProperty Name="v_yyemail" ColumnName="v_yyemail" />
+                <ScalarProperty Name="viptc" ColumnName="viptc" />
+                <ScalarProperty Name="v_lping" ColumnName="v_lping" />
+                <ScalarProperty Name="v_xlv" ColumnName="v_xlv" />
+                <ScalarProperty Name="v_yFu_B" ColumnName="v_yFu_B" />
+                <ScalarProperty Name="v_yFu" ColumnName="v_yFu" />
+                <ScalarProperty Name="v_contact" ColumnName="v_contact" />
+                <ScalarProperty Name="v_tShu" ColumnName="v_tShu" />
+                <ScalarProperty Name="v_package" ColumnName="v_package" />
+                <ScalarProperty Name="v_package_new" ColumnName="v_package_new" />
+                <ScalarProperty Name="v_type" ColumnName="v_type" />
+                <ScalarProperty Name="tmall_country_id" ColumnName="tmall_country_id" />
+                <ScalarProperty Name="v_pHao" ColumnName="v_pHao" />
+                <ScalarProperty Name="v_fPiao" ColumnName="v_fPiao" />
+                <ScalarProperty Name="v_cvisa" ColumnName="v_cvisa" />
+                <ScalarProperty Name="v_yshou_B" ColumnName="v_yshou_B" />
+                <ScalarProperty Name="v_cash" ColumnName="v_cash" />
+                <ScalarProperty Name="visafee" ColumnName="visafee" />
+                <ScalarProperty Name="v_yshou" ColumnName="v_yshou" />
+                <ScalarProperty Name="v_email" ColumnName="v_email" />
+                <ScalarProperty Name="v_endtime" ColumnName="v_endtime" />
+                <ScalarProperty Name="v_number" ColumnName="v_number" />
+                <ScalarProperty Name="jiedan_nianfei" ColumnName="jiedan_nianfei" />
+                <ScalarProperty Name="jiedan_yuefei" ColumnName="jiedan_yuefei" />
+                <ScalarProperty Name="v_otime" ColumnName="v_otime" />
+                <ScalarProperty Name="v_qdao" ColumnName="v_qdao" />
+                <ScalarProperty Name="v_stime" ColumnName="v_stime" />
+                <ScalarProperty Name="vtype_result" ColumnName="vtype_result" />
+                <ScalarProperty Name="v_result" ColumnName="v_result" />
+                <ScalarProperty Name="taocan" ColumnName="taocan" />
+                <ScalarProperty Name="baoxian" ColumnName="baoxian" />
+                <ScalarProperty Name="hxwwhao" ColumnName="hxwwhao" />
+                <ScalarProperty Name="ActiveTime" ColumnName="ActiveTime" />
+                <ScalarProperty Name="Passport" ColumnName="Passport" />
+                <ScalarProperty Name="PassportNO" ColumnName="PassportNO" />
+                <ScalarProperty Name="loginID" ColumnName="loginID" />
+                <ScalarProperty Name="v_tel" ColumnName="v_tel" />
+                <ScalarProperty Name="v_starttime" ColumnName="v_starttime" />
+                <ScalarProperty Name="name_note" ColumnName="name_note" />
+                <ScalarProperty Name="v_name" ColumnName="v_name" />
+                <ScalarProperty Name="orderid" ColumnName="orderid" />
+                <ScalarProperty Name="sku_properties_name" ColumnName="sku_properties_name" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="jdr_id" ColumnName="jdr_id" />
+                <ScalarProperty Name="HArea_hangzhou" ColumnName="HArea_hangzhou" />
+                <ScalarProperty Name="HArea" ColumnName="HArea" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="parent" ColumnName="parent" />
+                <ScalarProperty Name="finger" ColumnName="finger" />
+                <ScalarProperty Name="IsOnline" ColumnName="IsOnline" />
+                <ScalarProperty Name="oid" ColumnName="oid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

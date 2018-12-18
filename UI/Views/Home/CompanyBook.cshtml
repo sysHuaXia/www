@@ -1,0 +1,135 @@
+﻿@model CoreModels.Models.UserViewModel
+@{
+    Layout = null;
+    ViewBag.Title = "CompanyBook";
+    ViewBag.Index = 1;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/sweet-alert.css">
+    <link href="/css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+    <link href="/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+    <link href="/css/plugins/footable/footable.core.css" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="/css/style.css?v=3.0.0" rel="stylesheet">
+    <link href="/ShareCss/productShow.css" rel="stylesheet" type="text/css" />
+    <link href="/images/jquery-webox.css" rel="stylesheet" type="text/css">
+    <link href="/ShareCss/product.css" rel="stylesheet" type="text/css" />
+    <link href="/ShareCss/productShow.css" rel="stylesheet" type="text/css" />
+    
+</head>
+<body>
+    <form name="form1" id="form1" action="">
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="">
+                    <table width="100%" class="pro_table" border="0" cellpadding="0" cellspacing="0">
+
+                        <tr style="background-color:#f4f4f4;align-content:center;">
+                            <td width="4%">ID</td>
+                            <td width="12%">姓名</td>
+                            <td width="22%">手机/座机</td>
+                            @*<td width="16%">座机</td>*@
+                            <td width="19%">充值号</td>
+                            <td width="19%">QQ号</td>
+                            <td>部门</td>
+                        </tr>
+                        @foreach (var c in Model.Users)
+                        {
+
+                            //定义一个字符串
+                            string FTel = "";
+                            string STel = "";
+                            string str = c.UserFax;
+                            if (str.Contains('/'))
+                            {
+                                string[] tel = str.Split('/');
+                                FTel = tel[0];
+                                STel = tel[1];
+                            }
+                            else
+                            {
+                                FTel = c.UserFax;
+                            }
+                            
+                            <tr style="align-content:center;">
+                                <td>@ViewBag.Index</td>
+                                <td>@c.UserName</td>
+                                <td>@c.UserMobile <br> @c.UserTel </td>
+                                @*<td>@c.UserTel</td>*@
+                                <td>@FTel<br>@STel</td>
+                                <td>@c.UserQQ</td>
+                                <td>@c.UserPositionCall<br/><span style="color:blue">@c.RContent</span></td>
+                            </tr>
+                            ViewBag.Index++;
+                        }
+                    </table>
+
+                    <table width="100%" id="tab" class="pro_table" border="0" cellpadding="0" cellspacing="0" align="center">
+                        <tr class="trNew">
+                            <td colspan="8" class="pro_color2" style="background-color: #fff;">
+
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#version" href="#244" aria-expanded="false" class="collapsed">离职人员</a>
+                                    </h5>
+                                </div>
+                                <div id="244" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                    <table style="width:100%;background-color:#F5F5F5;border:1px solid #fff;">
+                                        <tr style="align-content:center;">
+                                            <td width="14%" align="center">姓名</td>
+                                            <td width="16%" align="center">手机</td>
+                                            <td width="16%" align="center">座机</td>
+                                            <td width="16%" align="center">QQ号</td>
+                                            <td width="20%" align="center">部门</td>
+                                            <td align="center" >角色</td>
+                                        </tr>
+                                        @foreach (var log in Model.UsersDeparture)
+                                        {
+                                            <tr style="align-content:center;">
+                                                <td width="16%" align="center">@log.UserName</td>
+                                                <td width="16%" align="center">@log.UserMobile</td>
+                                                <td width="16%" align="center">@log.UserTel</td>
+                                                <td width="16%" align="center">@log.UserQQ</td>
+                                                <td width="20%" align="center">@log.UserDpt</td>
+                                                <td align="center">@log.RContent</td>
+                                            </tr>
+                                        }
+                                    </table>
+
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+
+
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- 全局js -->
+    <script src="/js/jquery-2.1.1.min.js"></script>
+    <script src="/js/bootstrap.min.js?v=3.4.0"></script>
+    <script src="/js/plugins/footable/footable.all.min.js"></script>
+    <script src="/js/sweet-alert.js"></script>
+    <script src="/AdminJsCss/DatePicker/WdatePicker.js" type="text/javascript"></script>
+    <script src="/js/jquery-webox.js"></script>
+
+    <!-- 自定义js -->
+    <script src="/js/content.js?v=1.0.0"></script>
+    <script>
+                $(document).ready(function () {
+
+                    $('.footable').footable();
+                    $('.footable2').footable();
+
+                });
+
+    </script>
+</body>
+</html>
+

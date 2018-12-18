@@ -1,0 +1,118 @@
+﻿/*kennanwang*/
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select { margin:0; padding:0 }
+body, td, selezs, input, div { font-size:12px; color:#5C5C5D; font-family:"Microsoft YaHei", "微软雅黑","宋体"; }
+body { }
+a:link, a:visited { text-decoration:none; color:#5C5C5D; }
+a:hover { color:#055EAF; text-decoration:underline; }
+
+/*sprite*/
+.box1L,.img01,.img02,.img03,.img04,.box1R{ background:url(companyImg/indexSprite.gif) no-repeat}
+#content { width:100%; margin:0px auto; overflow:hidden; }
+#head{ width:100%; height:105px; margin:0px auto; overflow:hidden; background:url(companyImg/headbg.gif) repeat-x}
+.headBox{ width:1000px; margin:0px auto; overflow:hidden}
+.headBox .hlogo{ float:left; width:700px; }
+
+.headBox dl { padding-top:5px;}
+.headBox dl dt { width:160px; height:80px; padding:2px 2px; float:left; margin-right:10px; border:1px solid #f1f1f1;}
+.headBox dl dt img { width:160px; height:80px;}
+.headBox dl dd {line-height:24px;}
+.headBox dl dd.Title {font-size:18px; font-weight:bold;margin: 5px 2px;}
+.headBox dl dd.subTitle {margin:5px 5px 15px 0; padding-left:18px;}
+
+
+
+.proImg {background-color:#fffcf5; border:1px solid #edd28b; margin-left:90px; margin-top:5px;margin-bottom:5px;  width:660px; padding:15px 10px;}
+.proImg .simg {border: solid 1px #ccc;width: 200px;height:128px;padding: 2px; margin:2px 2px;}
+.proImg .simg:hover {border: solid 1px #edd28b;}
+
+
+
+
+
+/*main*/
+#main{ width:100%; margin:0px auto; overflow:hidden; background:url(companyImg/bg1.gif) repeat}
+#fsD1{ width:100%; height:420px; overflow:hidden}
+.indexMain{ padding-bottom:30px;}
+.mainBox{ width:1008px; margin:0px auto; padding:60px 0px 60px; overflow:hidden; background:url(companyImg/mainbg.gif) repeat-y}
+.fs_D1{  } 
+.fs_D1 .pw{width:1000px; height:400px; margin:0 auto;position:relative;}
+.fs_D1 .fPic{ width:500px; height:420px; border:1px solid red;position:absolute; top:100px ; left:200px; } 
+.fs_D1 .fcon{ width:100%; height:526px; float:left; display:none; } 
+.bg01{ background:url(companyImg/bg01.jpg) no-repeat top center} 
+
+.w980{ position:relative; width:680px; height:250px; margin:0px auto; border:1px solid red; overflow:hidden} 
+.w980 .pptimg{ position:absolute; width:470px; height:458px; top:0px; _top:-1px; right:43px;}  
+.w980 .prev{ position:absolute; width:50px;height:50px;top:208px;right:250px;margin-right:10px;background:url(http://mat1.gtimg.com/news/2012/qqnews/btnLeft.png) no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='http://mat1.gtimg.com/news/2012/qqnews/btnLeft.png'); cursor:pointer; }  
+.w980 .next{ position:absolute; width:50px;height:50px;margin-right:-480px;top:208px;right:300px;background:url(http://mat1.gtimg.com/news/2012/qqnews/btnRight.png) no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='http://mat1.gtimg.com/news/2012/qqnews/btnRight.png'); cursor:pointer; }  
+
+
+.fs_D1 .fbg{ width:304px; bottom:20px; left:890px; position:absolute; height:11px; text-align:center;  }  
+.fs_D1 .fbg div{margin:0px auto 0;overflow:hidden;zoom:1;height:11px}    
+.fs_D1 .D1fBt a{display:inline-block; background:url(http://mat1.gtimg.com/news/2012/qqnews/num.png) no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='http://mat1.gtimg.com/news/2012/qqnews/num.png'); width:10px; height:11px; position:relative; margin:0 5px; outline:0px;  text-decoration:none; }    
+.fs_D1 .D1fBt .current,.fs_D1 .D1fBt a:hover{background:url(http://mat1.gtimg.com/news/2012/qqnews/numOn.png) no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='http://mat1.gtimg.com/news/2012/qqnews/numOn.png');}    
+.fs_D1 .D1fBt img{display:none}    
+.fs_D1 .D1fBt i{display:none; font-style:normal; }    
+
+.version {margin: 0 auto;width: 1000px;height: 320px;background: url(companyImg/version_bg.jpg) repeat-x;padding-bottom: 60px; padding: 15px 10px;}
+
+.box1{ width:1010px; margin:0px auto; overflow:hidden}
+.box1L{ float:left; width:572px; height:328px; background-position:0px 0px;}
+.box1Lbox{ display:inline; float:left; width:195px; height:108px; margin:44px 0px 0px 60px; overflow:hidden}
+.box1Lbox .img{ display:inline; float:left; width:61px; height:61px; }
+.box1Lbox .img a{ display:block; width:61px; height:61px; text-indent:-9999em}
+.img01{ background-position:-417px -328px;}
+.img02{ background-position:-478px -328px;}
+.img03{ background-position:-417px -389px;}
+.img04{ background-position:-478px -389px;}
+.box1Lbox .text{ float:right; width:124px; overflow:hidden; padding-top:18px;}
+.box1Lbox .text h3{ margin-bottom:10px; color:#2E2E2E; font-size:16px; font-family:"微软雅黑","黑体"; font-weight:normal;}
+.box1Lbox .text p{ line-height:20px; color:#7D7D7E}
+.box1Lbox .text p a{ color:#7D7D7E}
+.box1R{ float:right; width:408px; height:328px; background-position:0px -328px;}
+.box1Rt{ width:278px; height:46px; margin:0px auto; line-height:46px; overflow:hidden; font-size:16px; font-family:"微软雅黑","黑体"; font-weight:normal; color:#7C7C7C}
+.box1Rbox{ width:278px; margin:10px auto 0px; overflow:hidden}
+.box1Rbox h3{ margin-bottom:5px; font-size:16px; font-family:"微软雅黑","黑体"; font-weight:normal; color:#2E2E2E}
+.box1Rbox h3 a{ color:#2E2E2E}
+.box1Rbox ul li{ height:22px; line-height:22px; padding-left:15px; background:url(http://mat1.gtimg.com/news/2012/qqnews/iconDian.gif) no-repeat scroll 0px 9px; color:#7D7D7D; _background:url(http://mat1.gtimg.com/news/2012/qqnews/iconDian.gif) no-repeat scroll 0px 6px; color:#7D7D7D}
+.box1Rbox ul li a{ color:#7D7D7D}
+.box1Rbox ul li span{ float:right;}
+.box1Rbox ul li .new{ display:inline-block; width:35px; height:14px; background:url(http://mat1.gtimg.com/news/2012/qqnews/iconNew.gif) no-repeat; margin-left:3px;}
+
+.i01,.i02,.i03,.i04{background:url(companyImg/indexSprite.gif) no-repeat 0 0;}
+.i01{width:62px;height:61px;background-position:-417px -452px}
+.i02{width:62px;height:61px;background-position:-480px -452px}
+.i03{width:62px;height:61px;background-position:-417px -519px}
+.i04{width:62px;height:61px;background-position:-482px -519px}
+
+.pad{background-color:#fff; width:100%}
+.pad_download_intro{width:960px; margin:10px auto;}
+.pad_download_intro .li{position:relative;background:url(companyImg/bg_dot.png) repeat-x left bottom;width:960px;padding:0 0 20px;margin:0 0 20px}
+.pad_download_intro h5{margin:0 0 12px;height:20px;line-height:20px;overflow:hidden;font-size:18px;font-weight:500;color:#333;font-family:"Microsoft Yahei"}
+.pad_download_intro .intro_img{width:62px;height:61px;position:absolute;top:0;left:0}
+.pad_download_intro .i1 .intro_img{background:url(companyImg/indexSprite.gif) no-repeat -417px -452px}
+.pad_download_intro .i2 .intro_img{background:url(companyImg/indexSprite.gif) no-repeat -480px -452px}
+.pad_download_intro .i3 .intro_img{background:url(companyImg/indexSprite.gif) no-repeat -417px -519px}
+.pad_download_intro .i4 .intro_img{background:url(companyImg/indexSprite.gif) no-repeat -482px -519px}
+
+.pad_download_intro .pad_intro,.pad_download_intro .latest_version{margin-left:100px;line-height:20px}
+.pad_download_intro .latest_version a{margin:0 30px 0 0}
+.pad_download_intro .pad_intro{margin-bottom:0px}
+.pad_download_intro h5{margin-left:100px}
+.pad_download_intro .download_way{width:154px;position:absolute;right:0;top:0;bottom:0;text-align:right}
+.pad_download_intro .ipad .download_way{*height:262px}
+.pad_download_intro .android .download_way{*height:242px}
+.pad_download_intro .download_way a{display:block;width:154px;height:33px;line-height:33px;text-align:left;background-image:url(img/download_bg.png);background-repeat:no-repeat;overflow:hidden;font-size:16px;font-family:"Microsoft Yahei";color:#fff;text-indent:50px}
+.pad_download_intro .download_way a:hover{color:#fff}
+.pad_download_intro .download_way p{width:200px;position:absolute;bottom:20px;right:0}
+.pad_download_intro .download_way .btn_appstore{width:154px;height:52px;background-position:-169px -150px;margin:0 0 7px;line-height:9999px}
+.pad_download_intro .download_way .btn_ipa{background-position:-169px -211px}
+.pad_download_intro .download_way .btn_apk{background-position:-169px -211px;position:absolute;right:0;top:0}
+.pad_download_intro .download_way img{display:block;width:87px;height:87px;position:absolute;right:30px;bottom:56px}
+.pad_download_intro .download_way .btn_location{background-position:-169px -211px;margin:0 0 10px}
+
+#yg_table { border:solid 1px #ddd; width:680px; margin-left:90px;}
+#yg_table td { border:dotted 1px #ccc; width:312px;}
+.user_list { width:285px; height:84px; padding:15px;}
+.user_list .user_photo { float:left; width:75px; height:80px; margin-left:20px; float:left; padding:2px; border:solid 1px #ddd;}
+.user_list .user_photo img{ width:75px; height:80px; }
+.user_list li { float:right; width:170px; line-height:23px;}

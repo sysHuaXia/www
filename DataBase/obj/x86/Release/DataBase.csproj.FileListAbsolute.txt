@@ -1,0 +1,4 @@
+F:\华夏系统\SystemVisa\SysUI\DataBase\bin\x86\Release\DataBase.dll
+F:\华夏系统\SystemVisa\SysUI\DataBase\bin\x86\Release\DataBase.pdb
+F:\华夏系统\SystemVisa\SysUI\DataBase\obj\x86\Release\DataBase.dll
+F:\华夏系统\SystemVisa\SysUI\DataBase\obj\x86\Release\DataBase.pdb

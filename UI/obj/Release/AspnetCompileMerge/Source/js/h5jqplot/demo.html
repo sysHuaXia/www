@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html5图表</title>
+
+    <script type="text/javascript" src="jQuery.js"></script>
+    <script type="text/javascript" src="jqplot.js"></script>
+
+
+    <!--@*
+    <script language="JavaScript" type="text/javascript" src="~/js/h5jqplot/jqplot/jquery.jqplot.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/js/h5jqplot/jqplot/examples/syntaxhighlighter/scripts/shCore.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/js/h5jqplot/jqplot/examples/syntaxhighlighter/scripts/shBrushJScript.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/js/h5jqplot/jqplot/examples/syntaxhighlighter/scripts/shBrushXml.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/js/h5jqplot/jqplot/plugins/jqplot.logAxisRenderer.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/js/h5jqplot/jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/js/h5jqplot/jqplot/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/js/h5jqplot/jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/js/h5jqplot/jqplot/plugins/jqplot.dateAxisRenderer.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/js/h5jqplot/jqplot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/js/h5jqplot/jqplot/plugins/jqplot.barRenderer.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/js/h5jqplot/jqplot/plugins/jqplot.pointLabels.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/js/h5jqplot/jqplot/plugins/jqplot.dateAxisRenderer.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/js/h5jqplot/jqplot/plugins/jqplot.dateAxisRenderer.min.js"></script>
+    <link class="include" rel="stylesheet" type="text/css" href="~/js/h5jqplot/jqplot/jquery.jqplot.min.css" />
+    <link type="text/css" rel="stylesheet" href="~/js/h5jqplot/jqplot/examples/syntaxhighlighter/styles/shCoreDefault.min.css" />
+    <link type="text/css" rel="stylesheet" href="~/js/h5jqplot/jqplot/examples/syntaxhighlighter/styles/shThemejqPlot.min.css" />
+    <script language="JavaScript" type="text/javascript" src="~/js/h5jqplot/m_jqplot.js"></script>*@-->
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var data = [[1, 2, 3, 4, 5, 6, 7, 8, 9], [3, 6, 8, 1, 11, 22, 4, 21, 6], [6, 8, 10, 11, 21, 32, 14, 31, 16]];
+            var data_max = 50; //Y轴最大刻度
+            var line_title = ["A", "B", "C"]; //曲线名称
+            var y_label = "这是Y轴"; //Y轴标题
+            var x_label = "这是X轴"; //X轴标题
+            var x = [1, 2, 3, 4, 5, 6, 7, 8, 9]; //定义X轴刻度值
+            var title = "这是标题"; //统计图标标题
+            j.jqplot.diagram.base("chart1", data, line_title, "这是统计标题", x, x_label, y_label, data_max, 1);
+        <!--j.jqplot.diagram.base("chart2", data, line_title, "这是统计标题", x, x_label, y_label, data_max, 2); -->
+});
+    </script>
+
+</head>
+<body>
+
+	<div id="chart1"></div>
+	<!-- <div id="chart2"></div> -->
+
+</body>
+</html>
+

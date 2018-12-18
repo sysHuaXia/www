@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dhgl2013Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="T_Area">
+    <Key>
+      <PropertyRef Name="AId" />
+    </Key>
+    <Property Name="AId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AreaName" Type="varchar" MaxLength="20" />
+    <Property Name="Sorting" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“dhgl2013.dbo.T_SysSupplierConfig”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="v_infolist">
+    <Key>
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Name="oid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsOnline" Type="bit" />
+    <Property Name="finger" Type="int" />
+    <Property Name="parent" Type="int" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="HArea" Type="nvarchar" MaxLength="10" />
+    <Property Name="HArea_hangzhou" Type="int" />
+    <Property Name="jdr_id" Type="int" />
+    <Property Name="title" Type="nvarchar" MaxLength="100" />
+    <Property Name="sku_properties_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="orderid" Type="nvarchar" MaxLength="100" />
+    <Property Name="v_name" Type="nvarchar" MaxLength="120" />
+    <Property Name="name_note" Type="nvarchar" MaxLength="500" />
+    <Property Name="v_starttime" Type="datetime" />
+    <Property Name="v_tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="loginID" Type="nvarchar" MaxLength="50" />
+    <Property Name="PassportNO" Type="nvarchar" MaxLength="50" />
+    <Property Name="Passport" Type="nvarchar" MaxLength="50" />
+    <Property Name="ActiveTime" Type="datetime" />
+    <Property Name="hxwwhao" Type="nvarchar" MaxLength="1000" />
+    <Property Name="baoxian" Type="nvarchar" MaxLength="1000" />
+    <Property Name="taocan" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_result" Type="nvarchar(max)" />
+    <Property Name="vtype_result" Type="nvarchar" MaxLength="10" />
+    <Property Name="v_stime" Type="datetime" />
+    <Property Name="v_qdao" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_otime" Type="datetime" />
+    <Property Name="jiedan_yuefei" Type="int" />
+    <Property Name="jiedan_nianfei" Type="int" />
+    <Property Name="v_number" Type="int" />
+    <Property Name="v_endtime" Type="datetime" />
+    <Property Name="v_email" Type="nvarchar" MaxLength="120" />
+    <Property Name="v_yshou" Type="money" />
+    <Property Name="visafee" Type="money" />
+    <Property Name="v_cash" Type="money" />
+    <Property Name="v_yshou_B" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_cvisa" Type="datetime" />
+    <Property Name="v_fPiao" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_pHao" Type="nvarchar" MaxLength="300" />
+    <Property Name="tmall_country_id" Type="int" />
+    <Property Name="v_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_package_new" Type="int" />
+    <Property Name="v_package" Type="int" />
+    <Property Name="v_tShu" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_contact" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_yFu" Type="money" />
+    <Property Name="v_yFu_B" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_xlv" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_lping" Type="nvarchar" MaxLength="100" />
+    <Property Name="viptc" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_yyemail" Type="nvarchar" MaxLength="50" />
+    <Property Name="countries" Type="nvarchar" MaxLength="50" />
+    <Property Name="record" Type="nvarchar" MaxLength="50" />
+    <Property Name="income" Type="nvarchar" MaxLength="50" />
+    <Property Name="bad_record" Type="nvarchar" MaxLength="50" />
+    <Property Name="conditions" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_vtype" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_vtype1" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_vtype2" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_vtype3" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_vtypeT" Type="nvarchar" MaxLength="50" />
+    <Property Name="inputtime" Type="datetime" />
+    <Property Name="v_yuefei" Type="int" />
+    <Property Name="v_nianfei" Type="int" />
+    <Property Name="wwhao" Type="nvarchar" MaxLength="100" />
+    <Property Name="birth" Type="datetime" />
+    <Property Name="birth_B" Type="nvarchar" MaxLength="100" />
+    <Property Name="v_tuanhao" Type="nvarchar" MaxLength="100" />
+    <Property Name="v_yuytime" Type="datetime" />
+    <Property Name="v_sqryId" Type="int" />
+    <Property Name="v_sqry" Type="nvarchar" MaxLength="100" />
+    <Property Name="v_sqadd" Type="nvarchar" MaxLength="100" />
+    <Property Name="v_stime_shi" Type="nvarchar" MaxLength="50" />
+    <Property Name="v_stime_fen" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpTime" Type="datetime" />
+    <Property Name="qi_type" Type="int" />
+    <Property Name="qi_content" Type="nvarchar" MaxLength="460" />
+    <Property Name="fahuo" Type="nvarchar" MaxLength="20" />
+    <Property Name="fahuo_content" Type="nvarchar" MaxLength="80" />
+    <Property Name="xingcheng_content" Type="nvarchar(max)" />
+    <Property Name="xctijiaoren" Type="int" />
+    <Property Name="xctijiaorenname" Type="nvarchar" MaxLength="10" />
+    <Property Name="CLJieDanRen" Type="nvarchar" MaxLength="10" />
+    <Property Name="quvisa" Type="nvarchar" MaxLength="50" />
+    <Property Name="quvisa_num" Type="nvarchar" MaxLength="100" />
+    <Property Name="audit" Type="int" />
+    <Property Name="audittime" Type="datetime" />
+    <Property Name="fp_enable" Type="int" />
+    <Property Name="fp_type" Type="nvarchar" MaxLength="20" />
+    <Property Name="fp_title" Type="nvarchar" MaxLength="50" />
+    <Property Name="fp_num" Type="nvarchar" MaxLength="10" />
+    <Property Name="fp_content" Type="nvarchar" MaxLength="10" />
+    <Property Name="fp_hao" Type="nvarchar" MaxLength="50" />
+    <Property Name="fp_billNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="fp_drawerId" Type="int" />
+    <Property Name="fp_drawerName" Type="nvarchar" MaxLength="50" />
+    <Property Name="fp_time" Type="datetime" />
+    <Property Name="imgpath" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaxPic" Type="nvarchar" MaxLength="200" />
+    <Property Name="insurance" Type="nvarchar" MaxLength="50" />
+    <Property Name="insur_num" Type="nvarchar" MaxLength="50" />
+    <Property Name="V_jdrid" Type="int" />
+    <Property Name="V_jdrname" Type="nvarchar" MaxLength="10" />
+    <Property Name="audit_id" Type="int" />
+    <Property Name="audit_er" Type="nvarchar" MaxLength="50" />
+    <Property Name="auditer_time" Type="datetime" />
+    <Property Name="auditertime" Type="datetime" />
+    <Property Name="Yemail" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gemail" Type="int" />
+    <Property Name="xingji" Type="nvarchar" MaxLength="50" />
+    <Property Name="sjaddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="mat" Type="nvarchar" MaxLength="10" />
+    <Property Name="matinfo" Type="nvarchar(max)" />
+    <Property Name="mattime" Type="datetime" />
+    <Property Name="CourierNumber" Type="nvarchar" MaxLength="10" />
+    <Property Name="CourierNumberinfo" Type="nvarchar" MaxLength="50" />
+    <Property Name="CNumber" Type="nvarchar" MaxLength="10" />
+    <Property Name="CNumberinfo" Type="nvarchar" MaxLength="50" />
+    <Property Name="CNumberTime" Type="datetime" />
+    <Property Name="dstime" Type="datetime" />
+    <Property Name="endtime" Type="datetime" />
+    <Property Name="jiudian_DTime" Type="datetime" />
+    <Property Name="jiudian_EndTime" Type="datetime" />
+    <Property Name="jiudian_Num" Type="int" />
+    <Property Name="jiudian_Cancel" Type="int" />
+    <Property Name="jiudian_Note" Type="nvarchar(max)" />
+    <Property Name="have_card" Type="int" />
+    <Property Name="IsTicket" Type="int" />
+    <Property Name="TicketMemo" Type="nvarchar(max)" />
+    <Property Name="LackTime" Type="datetime" />
+    <Property Name="WeProfits" Type="money" />
+    <Property Name="WeToSend" Type="bit" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Init_VisaNumber" Type="int" />
+    <Property Name="VisaType" Type="int" />
+    <Property Name="fp_PackageMail" Type="nvarchar" MaxLength="50" />
+    <Property Name="fp_CourierNumber" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Function Name="P_UserLogTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="V_AdminSignValidate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserAccount" Type="varchar" Mode="In" />
+    <Parameter Name="Pwd" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="dhgl2013ModelStoreContainer">
+    <EntitySet Name="T_Area" EntityType="Self.T_Area" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_infolist" EntityType="Self.v_infolist" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

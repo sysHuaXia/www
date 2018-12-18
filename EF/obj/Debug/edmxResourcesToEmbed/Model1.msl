@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dhgl2013ModelStoreContainer" CdmEntityContainer="dhgl2013Entities">
+    <FunctionImportMapping FunctionImportName="P_UserLogTime" FunctionName="dhgl2013Model.Store.P_UserLogTime" />
+    <FunctionImportMapping FunctionImportName="V_AdminSignValidate" FunctionName="dhgl2013Model.Store.V_AdminSignValidate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dhgl2013Model.V_AdminSignValidate_Result">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+          <ScalarProperty Name="SysType" ColumnName="SysType" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="UserDpt" ColumnName="UserDpt" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserTel" ColumnName="UserTel" />
+          <ScalarProperty Name="UserMobile" ColumnName="UserMobile" />
+          <ScalarProperty Name="UserFax" ColumnName="UserFax" />
+          <ScalarProperty Name="UserQQName" ColumnName="UserQQName" />
+          <ScalarProperty Name="UserQQ" ColumnName="UserQQ" />
+          <ScalarProperty Name="UserMail" ColumnName="UserMail" />
+          <ScalarProperty Name="UserAccount" ColumnName="UserAccount" />
+          <ScalarProperty Name="UserPwd" ColumnName="UserPwd" />
+          <ScalarProperty Name="UserBrief" ColumnName="UserBrief" />
+          <ScalarProperty Name="IsReceiveSms" ColumnName="IsReceiveSms" />
+          <ScalarProperty Name="IsOncallSms" ColumnName="IsOncallSms" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="ActiveTime" ColumnName="ActiveTime" />
+          <ScalarProperty Name="LoginIP" ColumnName="LoginIP" />
+          <ScalarProperty Name="UserSex" ColumnName="UserSex" />
+          <ScalarProperty Name="UserPosition" ColumnName="UserPosition" />
+          <ScalarProperty Name="UserPositionCall" ColumnName="UserPositionCall" />
+          <ScalarProperty Name="UserBirthday" ColumnName="UserBirthday" />
+          <ScalarProperty Name="UserLogo" ColumnName="UserLogo" />
+          <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="T_Area">
+      <EntityTypeMapping TypeName="dhgl2013Model.T_Area">
+        <MappingFragment StoreEntitySet="T_Area">
+          <ScalarProperty Name="Sorting" ColumnName="Sorting" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+          <ScalarProperty Name="AId" ColumnName="AId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_infolist">
+      <EntityTypeMapping TypeName="dhgl2013Model.v_infolist">
+        <MappingFragment StoreEntitySet="v_infolist">
+          <ScalarProperty Name="VisaType" ColumnName="VisaType" />
+          <ScalarProperty Name="Init_VisaNumber" ColumnName="Init_VisaNumber" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="WeToSend" ColumnName="WeToSend" />
+          <ScalarProperty Name="WeProfits" ColumnName="WeProfits" />
+          <ScalarProperty Name="LackTime" ColumnName="LackTime" />
+          <ScalarProperty Name="TicketMemo" ColumnName="TicketMemo" />
+          <ScalarProperty Name="IsTicket" ColumnName="IsTicket" />
+          <ScalarProperty Name="have_card" ColumnName="have_card" />
+          <ScalarProperty Name="jiudian_Note" ColumnName="jiudian_Note" />
+          <ScalarProperty Name="jiudian_Cancel" ColumnName="jiudian_Cancel" />
+          <ScalarProperty Name="jiudian_Num" ColumnName="jiudian_Num" />
+          <ScalarProperty Name="jiudian_EndTime" ColumnName="jiudian_EndTime" />
+          <ScalarProperty Name="jiudian_DTime" ColumnName="jiudian_DTime" />
+          <ScalarProperty Name="endtime" ColumnName="endtime" />
+          <ScalarProperty Name="dstime" ColumnName="dstime" />
+          <ScalarProperty Name="CNumberTime" ColumnName="CNumberTime" />
+          <ScalarProperty Name="CNumberinfo" ColumnName="CNumberinfo" />
+          <ScalarProperty Name="CNumber" ColumnName="CNumber" />
+          <ScalarProperty Name="CourierNumberinfo" ColumnName="CourierNumberinfo" />
+          <ScalarProperty Name="CourierNumber" ColumnName="CourierNumber" />
+          <ScalarProperty Name="mattime" ColumnName="mattime" />
+          <ScalarProperty Name="matinfo" ColumnName="matinfo" />
+          <ScalarProperty Name="mat" ColumnName="mat" />
+          <ScalarProperty Name="sjaddress" ColumnName="sjaddress" />
+          <ScalarProperty Name="xingji" ColumnName="xingji" />
+          <ScalarProperty Name="Gemail" ColumnName="Gemail" />
+          <ScalarProperty Name="Yemail" ColumnName="Yemail" />
+          <ScalarProperty Name="auditertime" ColumnName="auditertime" />
+          <ScalarProperty Name="auditer_time" ColumnName="auditer_time" />
+          <ScalarProperty Name="audit_er" ColumnName="audit_er" />
+          <ScalarProperty Name="audit_id" ColumnName="audit_id" />
+          <ScalarProperty Name="V_jdrname" ColumnName="V_jdrname" />
+          <ScalarProperty Name="V_jdrid" ColumnName="V_jdrid" />
+          <ScalarProperty Name="insur_num" ColumnName="insur_num" />
+          <ScalarProperty Name="insurance" ColumnName="insurance" />
+          <ScalarProperty Name="MaxPic" ColumnName="MaxPic" />
+          <ScalarProperty Name="imgpath" ColumnName="imgpath" />
+          <ScalarProperty Name="fp_time" ColumnName="fp_time" />
+          <ScalarProperty Name="fp_drawerName" ColumnName="fp_drawerName" />
+          <ScalarProperty Name="fp_drawerId" ColumnName="fp_drawerId" />
+          <ScalarProperty Name="fp_CourierNumber" ColumnName="fp_CourierNumber" />
+          <ScalarProperty Name="fp_PackageMail" ColumnName="fp_PackageMail" />
+          <ScalarProperty Name="fp_billNo" ColumnName="fp_billNo" />
+          <ScalarProperty Name="fp_hao" ColumnName="fp_hao" />
+          <ScalarProperty Name="fp_content" ColumnName="fp_content" />
+          <ScalarProperty Name="fp_num" ColumnName="fp_num" />
+          <ScalarProperty Name="fp_title" ColumnName="fp_title" />
+          <ScalarProperty Name="fp_type" ColumnName="fp_type" />
+          <ScalarProperty Name="fp_enable" ColumnName="fp_enable" />
+          <ScalarProperty Name="audittime" ColumnName="audittime" />
+          <ScalarProperty Name="audit" ColumnName="audit" />
+          <ScalarProperty Name="quvisa_num" ColumnName="quvisa_num" />
+          <ScalarProperty Name="quvisa" ColumnName="quvisa" />
+          <ScalarProperty Name="CLJieDanRen" ColumnName="CLJieDanRen" />
+          <ScalarProperty Name="xctijiaorenname" ColumnName="xctijiaorenname" />
+          <ScalarProperty Name="xctijiaoren" ColumnName="xctijiaoren" />
+          <ScalarProperty Name="xingcheng_content" ColumnName="xingcheng_content" />
+          <ScalarProperty Name="fahuo_content" ColumnName="fahuo_content" />
+          <ScalarProperty Name="fahuo" ColumnName="fahuo" />
+          <ScalarProperty Name="qi_content" ColumnName="qi_content" />
+          <ScalarProperty Name="qi_type" ColumnName="qi_type" />
+          <ScalarProperty Name="UpTime" ColumnName="UpTime" />
+          <ScalarProperty Name="v_stime_fen" ColumnName="v_stime_fen" />
+          <ScalarProperty Name="v_stime_shi" ColumnName="v_stime_shi" />
+          <ScalarProperty Name="v_sqadd" ColumnName="v_sqadd" />
+          <ScalarProperty Name="v_sqry" ColumnName="v_sqry" />
+          <ScalarProperty Name="v_sqryId" ColumnName="v_sqryId" />
+          <ScalarProperty Name="v_yuytime" ColumnName="v_yuytime" />
+          <ScalarProperty Name="v_tuanhao" ColumnName="v_tuanhao" />
+          <ScalarProperty Name="birth_B" ColumnName="birth_B" />
+          <ScalarProperty Name="birth" ColumnName="birth" />
+          <ScalarProperty Name="wwhao" ColumnName="wwhao" />
+          <ScalarProperty Name="v_nianfei" ColumnName="v_nianfei" />
+          <ScalarProperty Name="v_yuefei" ColumnName="v_yuefei" />
+          <ScalarProperty Name="inputtime" ColumnName="inputtime" />
+          <ScalarProperty Name="v_vtypeT" ColumnName="v_vtypeT" />
+          <ScalarProperty Name="v_vtype3" ColumnName="v_vtype3" />
+          <ScalarProperty Name="v_vtype2" ColumnName="v_vtype2" />
+          <ScalarProperty Name="v_vtype1" ColumnName="v_vtype1" />
+          <ScalarProperty Name="v_vtype" ColumnName="v_vtype" />
+          <ScalarProperty Name="conditions" ColumnName="conditions" />
+          <ScalarProperty Name="bad_record" ColumnName="bad_record" />
+          <ScalarProperty Name="income" ColumnName="income" />
+          <ScalarProperty Name="record" ColumnName="record" />
+          <ScalarProperty Name="countries" ColumnName="countries" />
+          <ScalarProperty Name="v_yyemail" ColumnName="v_yyemail" />
+          <ScalarProperty Name="viptc" ColumnName="viptc" />
+          <ScalarProperty Name="v_lping" ColumnName="v_lping" />
+          <ScalarProperty Name="v_xlv" ColumnName="v_xlv" />
+          <ScalarProperty Name="v_yFu_B" ColumnName="v_yFu_B" />
+          <ScalarProperty Name="v_yFu" ColumnName="v_yFu" />
+          <ScalarProperty Name="v_contact" ColumnName="v_contact" />
+          <ScalarProperty Name="v_tShu" ColumnName="v_tShu" />
+          <ScalarProperty Name="v_package" ColumnName="v_package" />
+          <ScalarProperty Name="v_package_new" ColumnName="v_package_new" />
+          <ScalarProperty Name="v_type" ColumnName="v_type" />
+          <ScalarProperty Name="tmall_country_id" ColumnName="tmall_country_id" />
+          <ScalarProperty Name="v_pHao" ColumnName="v_pHao" />
+          <ScalarProperty Name="v_fPiao" ColumnName="v_fPiao" />
+          <ScalarProperty Name="v_cvisa" ColumnName="v_cvisa" />
+          <ScalarProperty Name="v_yshou_B" ColumnName="v_yshou_B" />
+          <ScalarProperty Name="v_cash" ColumnName="v_cash" />
+          <ScalarProperty Name="visafee" ColumnName="visafee" />
+          <ScalarProperty Name="v_yshou" ColumnName="v_yshou" />
+          <ScalarProperty Name="v_email" ColumnName="v_email" />
+          <ScalarProperty Name="v_endtime" ColumnName="v_endtime" />
+          <ScalarProperty Name="v_number" ColumnName="v_number" />
+          <ScalarProperty Name="jiedan_nianfei" ColumnName="jiedan_nianfei" />
+          <ScalarProperty Name="jiedan_yuefei" ColumnName="jiedan_yuefei" />
+          <ScalarProperty Name="v_otime" ColumnName="v_otime" />
+          <ScalarProperty Name="v_qdao" ColumnName="v_qdao" />
+          <ScalarProperty Name="v_stime" ColumnName="v_stime" />
+          <ScalarProperty Name="vtype_result" ColumnName="vtype_result" />
+          <ScalarProperty Name="v_result" ColumnName="v_result" />
+          <ScalarProperty Name="taocan" ColumnName="taocan" />
+          <ScalarProperty Name="baoxian" ColumnName="baoxian" />
+          <ScalarProperty Name="hxwwhao" ColumnName="hxwwhao" />
+          <ScalarProperty Name="ActiveTime" ColumnName="ActiveTime" />
+          <ScalarProperty Name="Passport" ColumnName="Passport" />
+          <ScalarProperty Name="PassportNO" ColumnName="PassportNO" />
+          <ScalarProperty Name="loginID" ColumnName="loginID" />
+          <ScalarProperty Name="v_tel" ColumnName="v_tel" />
+          <ScalarProperty Name="v_starttime" ColumnName="v_starttime" />
+          <ScalarProperty Name="name_note" ColumnName="name_note" />
+          <ScalarProperty Name="v_name" ColumnName="v_name" />
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="sku_properties_name" ColumnName="sku_properties_name" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="jdr_id" ColumnName="jdr_id" />
+          <ScalarProperty Name="HArea_hangzhou" ColumnName="HArea_hangzhou" />
+          <ScalarProperty Name="HArea" ColumnName="HArea" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="finger" ColumnName="finger" />
+          <ScalarProperty Name="IsOnline" ColumnName="IsOnline" />
+          <ScalarProperty Name="oid" ColumnName="oid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

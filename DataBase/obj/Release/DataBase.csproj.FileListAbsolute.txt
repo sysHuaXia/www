@@ -1,0 +1,17 @@
+F:\华夏系统\SystemVisa\SysUI\DataBase\bin\Release\DataBase.dll
+F:\华夏系统\SystemVisa\SysUI\DataBase\bin\Release\DataBase.pdb
+F:\华夏系统\SystemVisa\SysUI\DataBase\obj\Release\DataBase.csprojResolveAssemblyReference.cache
+F:\华夏系统\SystemVisa\SysUI\DataBase\obj\Release\DataBase.csproj.CoreCompileInputs.cache
+F:\华夏系统\SystemVisa\SysUI\DataBase\obj\Release\DataBase.dll
+F:\华夏系统\SystemVisa\SysUI\DataBase\obj\Release\DataBase.pdb
+E:\华夏系统\SystemVisa\SysUI\DataBase\bin\Release\DataBase.dll
+E:\华夏系统\SystemVisa\SysUI\DataBase\bin\Release\DataBase.pdb
+E:\华夏系统\SystemVisa\SysUI\DataBase\obj\Release\DataBase.csprojResolveAssemblyReference.cache
+E:\华夏系统\SystemVisa\SysUI\DataBase\obj\Release\DataBase.csproj.CoreCompileInputs.cache
+E:\华夏系统\SystemVisa\SysUI\DataBase\obj\Release\DataBase.dll
+E:\华夏系统\SystemVisa\SysUI\DataBase\obj\Release\DataBase.pdb
+E:\华夏WEB\Web\DataBase\bin\Release\DataBase.dll
+E:\华夏WEB\Web\DataBase\bin\Release\DataBase.pdb
+E:\华夏WEB\Web\DataBase\obj\Release\DataBase.csproj.CoreCompileInputs.cache
+E:\华夏WEB\Web\DataBase\obj\Release\DataBase.dll
+E:\华夏WEB\Web\DataBase\obj\Release\DataBase.pdb
