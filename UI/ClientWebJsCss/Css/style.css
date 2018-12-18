@@ -73,9 +73,10 @@
 .leftMod ul li ul{display:none;background:#fbfbfb;}
 .leftMod ul li ul li a{font-size:14px;}
 .leftMod ul li ul li a:hover{background:#fff;color:#FF7F00;}
-.leftMod ul li a img.my_img02{display: none;}
-.leftMod ul li.my_divon a img.my_img01{display: none;}
-.leftMod ul li.my_divon a img.my_img02{display: block;}
+.leftMod ul li a img.my_img02{display: block;}
+.leftMod ul li a img.my_img01{display: none;}
+.leftMod ul li.my_divon a img.my_img01{display: block;}
+.leftMod ul li.my_divon a img.my_img02{display: none;}
 .leftMod ul li i{display:inline-block;width:18px;height:13px;background: url(../img/icon1.png) no-repeat center;position:absolute;top:25px;right:25px;}
 
 .contTop .rightMod .mainBox{padding:30px 30px 20px; border:1px solid #ddd;border-bottom:none;}

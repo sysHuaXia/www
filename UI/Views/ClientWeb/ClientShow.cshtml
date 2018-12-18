@@ -690,18 +690,18 @@
                                             我的订单
                                             <i></i>
                                         </a>
-                                        <ul>
+                                        <ul style="display: block;">
                                             @foreach (var h in ViewBag.HistryList)
                                             {
-                                                
+
                                                 if (h.tmall_country_id == 34)
                                                 {
-                                                    <li><a href="#" style="color:gray;"><span style="color:blue;">@ViewBag.m.</span> @h.v_otime.ToString("D")&nbsp;@ViewBag.tag</a></li>
+                                                    <li><a href="#" style="color:gray;"><span style="color:blue;margin-left:-25px;">@ViewBag.m.</span> @h.v_otime.ToString("D")&nbsp; 新加坡旅游 2018年12月11日@*@ViewBag.tag*@</a></li>
                                                 }
                                                 else
                                                 {
                                                     string OId = Base64Helper.Base64Encode(Base64Helper.get_uft8(h.oid.ToString()));
-                                                    <li><a href="~/ClientWeb/ClientShow?oid=@OId"><span style="color:blue;">@ViewBag.m.</span>&nbsp;</a></li>
+                                                    <li><a href="~/ClientWeb/ClientShow?oid=@OId"><span style="color:blue;margin-left:-25px;">@ViewBag.m.</span>&nbsp; 新加坡旅游 2018年12月11日</a></li>
                                                 }
                                                 ViewBag.m++;
                                             }
@@ -759,7 +759,7 @@
                                                         <span class="h_bg">送签日期</span>
                                                     </div>
                                                     <div class="right fr clearfix">
-                                                        <span class="time mar">@Convert.ToDateTime(Model.v_stime).ToString("yyyy-MM-dd") @Model.v_stime_shi : @Model.v_stime_fen</span>
+                                                        <span class="time mar">@ViewBag.stime :@Model.v_stime_shi : @Model.v_stime_fen</span>
                                                         <div class="whether">
                                                             <span class="h_bg">是否待送</span>
                                                             <strong class="w_bg">
@@ -846,7 +846,7 @@ else
                                                         <span class="h_bg">出发日期</span>
                                                     </div>
                                                     <div class="right fr clearfix">
-                                                        <div class="mar county">@Convert.ToDateTime(Model.v_starttime).ToString("yyyy-MM-dd")</div>
+                                                        <div class="mar county">@ViewBag.StarTime &nbsp;</div>
                                                         <div class="prise">
                                                             <span class="h_bg">回国日期</span>
                                                             <strong>@ViewBag.EndTime</strong>
@@ -979,12 +979,13 @@ else
             var _this = jQuery(this);
             if (!_this.hasClass('my_divon')) {
                 _this.addClass("my_divon");
-                _this.find("ul").slideDown();
                 _this.siblings(".my_div").find("ul").slideUp();
                 _this.siblings(".my_div").removeClass("my_divon");
+                _this.find("ul").slideUp();
             } else {
                 _this.removeClass("my_divon");
-                _this.find("ul").slideUp();
+
+                _this.find("ul").slideDown();
             }
 
         })

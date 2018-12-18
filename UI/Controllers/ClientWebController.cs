@@ -97,6 +97,7 @@ namespace UI.Controllers
             //回国时间和出国时间相差天数
             DateTime beginTime1 = Convert.ToDateTime(order.v_starttime);
             DateTime endTime1 = Convert.ToDateTime(order.v_endtime);
+            ViewBag.StarTime = beginTime1 != null?Convert.ToDateTime(order.v_starttime).ToString("yyyy-MM-dd"):"";
             if (endTime1 != null)
             {
                 TimeSpan midTime = endTime1 - beginTime1;
@@ -108,13 +109,15 @@ namespace UI.Controllers
                 {
                     ViewBag.DaysTrip = "";
                 }
-                ViewBag.EndTime = Convert.ToDateTime(order.v_endtime).ToString("yyyy-MM-dd");
+                ViewBag.EndTime = endTime1 != null? Convert.ToDateTime(order.v_endtime).ToString("yyyy-MM-dd"):"";
             }
             else
             {
                 ViewBag.DaysTrip = "";
                 ViewBag.EndTime = "";
             }
+            //
+            ViewBag.stime = order.v_stime != null ? Convert.ToDateTime(order.v_stime).ToString("yyyy-MM-dd") : "";
 
             //读取历史订单
             var getOrderInfo = _VisaInfo.GetOrderHistoryList(order.wwhao, true);
