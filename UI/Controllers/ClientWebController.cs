@@ -225,7 +225,10 @@ namespace UI.Controllers
                 OId = Base64Helper.Base64Encode(Base64Helper.get_uft8(getOidStr));
 
             }
+
             return RedirectToAction("ClientShow", "ClientWeb", new { Oid = OId });
+            //return RedirectToAction("ClientShow", "ClientWeb", new { Oid = OId });
+
         }
 
 
