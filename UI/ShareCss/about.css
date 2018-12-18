@@ -1,0 +1,30 @@
+﻿.breadcrumb {width: 1000px;margin: 5px auto 0 auto;clear: both;overflow: hidden;height: 18px;line-height: 18px;border-bottom: 1px solid #ddd;margin-bottom: 8px;}
+
+
+/*左导航*/
+.con-left{ width:215px; overflow:hidden; background:#FFF; margin-top:-1px;}
+.con-left dt{ width:215px; height:32px; float:left;border-top:1px solid #e5e5e5;}
+.con-left dt .title{ font:14px/32px '微软雅黑',"宋体",Arial; padding-left:15px; color:#666;}
+.con-left dt.over{ background:#d20000;}
+.con-left dt.over span{ color:#FFF;}
+.con-left dt span{ font:12px/32px Arial,Helvetica,"宋体",sans-serif; padding-left:10px; color:#999;}
+.con-left dd{ width:215px; height:32px; float:left; border-top:1px solid #e5e5e5; margin-left:10px;}
+.con-left dd a{ width:210px;  height:32px; display:block; font:12px/32px "宋体",Arial,Helvetica,sans-serif; padding-left:15px;}
+.con-left .icon-Dot {background:url(CommonImg/artDot.jpg)  no-repeat; width:4px; height:7px; border:0 none; margin-right:4px;}
+/*右侧*/
+.con-right{ width:775px; overflow:hidden; background:#FFF;}
+.con-right .con-content{ padding:10px 30px;}
+.con-right .con-content h2{ font:22px/50px '微软雅黑'; color:#8A6D45;}
+.con-right .con-content p{ color:#333; line-height:2em;}
+.con-right .con-content p span{ color:#333; font:bold 12px/2 '宋体';}
+.con-right dl{ }
+.con-right dt a{ font-weight:bold; color:#ff6406;}
+.con-right dt a:hover{color:#5399c4;}
+.con-right dd{  text-indent:2em; border-bottom:1px dashed #999;  margin-bottom:15px;}
+.con-title{ background:#F1F1F1; height:30px; font:bold 14px/30px '宋体'; padding:0px 15px; margin:10px 0px; color:#333;}
+.con-content h3{ font:bold 15px/2 '微软雅黑';}
+
+.mt15{ margin-top:15px;}
+.mt20{ margin-top:20px;}
+.mt30{ margin-top:30px;}
+.mb10{ margin-bottom:10px;}

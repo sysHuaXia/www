@@ -1,0 +1,498 @@
+﻿@model CoreModels.Models.VisaInfoViewModel
+@{
+    Layout = null;
+    ViewBag.Title = "FinanceWelcomePage";
+    if (ViewBag.UserType == 2)
+    {
+        ViewBag.disabled = " disabled=\"disabled\"";
+    }
+    ViewBag.JiaJi = "升";
+    ViewBag.SJiaJi = "升急";
+    ViewBag.danWei = "人";
+    ViewBag.fenShu = "份";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>@ViewBag.UserName</title>
+    <meta name="keywords" content="收款项管理">
+    <meta name="description" content="收款项管理">
+    <script src="/js/sweet-alert.js"></script>
+    <link rel="stylesheet" href="/css/sweet-alert.css">
+    <link href="/css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+    <link href="/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="/css/style.css?v=2.2.0" rel="stylesheet">
+    <link href="/CSS/webuploader.css" rel="stylesheet" />
+    <link href="/CSS/style1.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="/css/fselect.css">
+
+    <script>
+        var UserType=@ViewBag.UserType;
+        var UserID=@ViewBag.UserID;
+    </script>
+
+    <!-- 全局js -->
+    <script src="/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js?v=3.4.0" type="text/javascript"></script>
+    <script src="/js/plugins/footable/footable.all.min.js" type="text/javascript"></script>
+    <script src="/js/sweet-alert.js" type="text/javascript"></script>
+    <script src="/AdminJsCss/DatePicker/WdatePicker.js" type="text/javascript"></script>
+    <script src="/js/jquery-webox.js" type="text/javascript"></script>
+    <script src="~/js/html/homepage.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/fselect.js"></script>
+    <script src="~/js/html/HomeOrder.js"></script>
+    @*新的webbox导入*@
+    <script src="~/js/asyncbox/AsyncBox.js"></script>
+    <link href="~/js/asyncbox/asyncbox.css" rel="stylesheet" />
+
+    @*自动弹出框*@
+    <link href="~/js/plugins/gritter/jquery.gritter.css" rel="stylesheet" />
+
+    <style>
+        .layer-photos-demo img {
+            width: 200px;
+            margin-bottom: 5px;
+        }
+    </style>
+
+</head>
+
+<body class="gray-bg" onload="BindHomeData(@ViewBag.OSatet,@ViewBag.OCountry,@ViewBag.ClientID,@ViewBag.XCtijiaoren,@ViewBag.Count);">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+
+                    <div id="main" style="background-color:#ffffff;">
+                        <div class="demo">
+                            <ul class="select">
+
+                                <li class="select-list" style="height:32px;">
+                                    <dl id="select2"></dl>
+                                </li>
+
+                                <li class="select-list" style="height:32px;">
+                                    <dl id="select1">
+                                        <dt>订单状态：</dt>
+                                        <dd class="select-all selected"><a href="javascript:void(0);" onclick="Seach(0,1)">全部</a></dd>
+                                        <dd><a href="javascript:void(0);" onclick="Seach(7,1)">缺材料</a></dd>
+                                        <dd><a href="javascript:void(0);" onclick="Seach(4,1)">待送</a></dd>
+                                        <dd><a href="javascript:void(0);" onclick="Seach(6,1)">审核中</a></dd>
+                                        <dd><a href="javascript:void(0);" onclick="Seach(5,1)">待取</a></dd>
+                                        <dd><a href="javascript:void(0);" onclick="Seach(1,1)">出签</a></dd>
+                                        <dd><a href="javascript:void(0);" onclick="Seach(2,1)">拒签</a></dd>
+                                        <dd><a href="javascript:void(0);" onclick="Seach(3,1)">退单</a></dd>
+                                        <dd><a href="javascript:void(0);" onclick="Seach(8,1)">待处理订单</a></dd>
+                                        <dd><a href="javascript:void(0);" onclick="Seach(9,1)">订单完成</a></dd>
+                                    </dl>
+                                </li>
+
+                                <li class="select-list" style="height:32px;">
+                                    <dl id="select9"></dl>
+                                </li>
+
+                                <li class="select-list" style="height:32px;">
+                                    <dl>
+                                        <dt>检索信息：</dt>
+                                        <dd>
+                                            <form id="form1" name="form1" method="post" action="">
+                                                <input name="OSatet" type="text" value="@ViewBag.OSatet" id="OSatet" style="display:none;" />
+                                                <input name="OCountry" type="text" value="@ViewBag.OCountry" id="OCountry" style="display:none;" />
+                                                <input name="ClientID" type="text" value="@ViewBag.ClientID" id="ClientID" style="display:none;" />
+                                                <input name="Page" type="text" value="1" id="Page" style="display:none;" />
+                                                <input name="XCtijiaoren" type="text" value="@ViewBag.XCtijiaoren" id="XCtijiaoren" style="display:none;" />
+                                                <input name="OProductName" type="text" style="padding:2px; margin:0px;width:200px;height:28px;" value="" id="OProductName" />&nbsp;&nbsp;<input id="stnOpen" type="button" value="查询" onclick="chhk();" class="btn btn-xs" style="height:28px;width:40px;background-color: #6495ed;color:#fff;"/>-(订单号，客户名，预邮箱，旺旺号，手机号)
+                                            </form>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="select-result" style="height:30px;">
+                                    <dl>
+                                        <dt>已选条件：</dt>
+                                        <dd class="select-no">暂时没有选择过滤条件</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ibox-content" style="overflow-x:auto; overflow-y:hidden;">
+                        <table class="footable table table-stripped toggle-arrow-tiny" id="t" border="1" cellspacing="0" bordercolor="#EFD1E0" width="100%">
+                            <thead>
+
+                                <tr style="background-color:#FFB5B5;color:#fff;">
+                                    <td height="35" bgcolor="#FF8E8E" width="3%"><div align="center">序号</div></td>
+                                    <td height="35" bgcolor="#FF8E8E" width="10%"><div align="center">姓名</div></td>
+                                    <td height="35" bgcolor="#FF8E8E" width="6%"><div align="center">国家</div></td>
+                                    <td height="35" bgcolor="#FF8E8E" width="3%"><div align="center">数量</div></td>
+                                    <td height="35" bgcolor="#FF8E8E" width="10%"><div align="center">最晚取消时间</div></td>
+                                    <td height="35" bgcolor="#FF8E8E" width="5%"><div align="center">是否取消</div></td>
+                                    <td height="35" bgcolor="#FF8E8E" width="10%"><div align="center">酒店邮箱</div></td>
+                                    <td height="35" bgcolor="#FF8E8E" width="8%"><div align="center">出发日期</div></td>
+                                    <td height="35" bgcolor="#FF8E8E"><div align="center">备注</div></td>
+                                    <td height="35" bgcolor="#FF8E8E" width="6%"><div align="center">状态</div></td>
+                                    <td height="35" bgcolor="#FF8E8E" width="6%"><div align="center">操作人</div></td>
+                                    <td height="35" bgcolor="#FF8E8E" width="6%"><div align="center">卡类型</div></td>
+                                    @*<th data-hide="all" style="width:1%">
+                        <table></table>
+                    </th>*@
+                                </tr>
+
+                                @*<tr>
+                    <th>宝贝/套餐</th>
+                    <th style="width:5%" id="cptd">应收</th>
+                    <th style="width:5%;text-align:center;">数量</th>
+                    <th style="width:8%;text-align:center;">买家</th>
+                    <th style="width:6%;text-align:center;">订单状态</th>
+                    <th style="width:12%;text-align:center;">送签/出发时间</th>
+                    <th style="width:6%;text-align:center;">接单人</th>
+                    <th style="width:6%;text-align:center;">付款情况</th>
+                    <th data-hide="all" style="width:1%">
+                        <table></table>
+                    </th>
+                </tr>*@
+
+                            </thead>
+                            <tbody></tbody>
+                            <tfoot>
+                            </tfoot>
+                        </table>
+                        @*<table style="border: dashed 1.5px #CCC;width:130px;height:30px;" >
+            <tr>
+                <td width="60px" align="left" style="padding:4px;">材料出签：<span style="font-size:18px;color:red;">@ViewBag.getUserPrivateC</span>人</td>
+            </tr>
+        </table>
+        <table style="border: dashed 1.5px #CCC;width:130px;height:30px;">
+            <tr>
+                <td width="60px" align="left" style="padding:4px;">客服出签：<span style="font-size:18px;color:red;">@ViewBag.getUserPrivateK</span>人</td>
+            </tr>
+        </table>*@
+
+
+                        <table style="border:1px solid #CCC;">
+                            <tr style="padding-top:10px;">
+                                <td height="69px" align="center">@ViewBag.Month 月</td>
+                                <td rowspan="3">
+                                    <table>
+                                        <tr>
+                                            <td style="color:#C2C2C2;height:26px;width:80px;" align="center"><img src="~/images/top1.png" /></td>
+                                            <td style="color:#C2C2C2;height:26px;width:80px;" align="center"><img src="~/images/top2.png" /></td>
+                                            <td style="color:#C2C2C2;height:26px;width:80px;" align="center"><img src="~/images/top3.png" /></td>
+                                            <td style="color:#C2C2C2;height:26px;width:80px;" align="center"><img src="~/images/top4.png" /></td>
+                                            <td style="color:#C2C2C2;height:26px;width:80px;" align="center"><img src="~/images/top5.png" /></td>
+                                        </tr>
+                                        <tr>
+                                            @foreach (var u in ViewBag.getUserList)
+                        {
+                            ViewBag.LSum++;
+                            if (ViewBag.LSum < 11)
+                            {
+                                <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #CCC;" align="center">
+                                    @u.xctijiaorenname
+                                </td>
+        }
+    }
+                                        </tr>
+                                        <tr>
+                                            @foreach (var k in ViewBag.getUserKeFuList)
+                        {
+                            ViewBag.LKFSum++;
+                            if (ViewBag.LKFSum < 11)
+                            {
+                                <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #CCC;" align="center">
+                                    @k.V_jdrname
+                                </td>
+        }
+    }
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px" align="center" style="color:#C2C2C2;">材料组</td>
+                            </tr>
+                            <tr>
+                                <td width="60px" align="center" style="color:#C2C2C2;">客服组</td>
+                            </tr>
+                        </table>
+
+                        <br />
+                        <table style="border:1px solid #CCC;">
+                            <tr style="padding-top:10px;">
+                                <td height="30px" align="center">@ViewBag.onMonth 月</td>
+                                <td rowspan="3">
+                                    <table>
+                                        @*<tr>
+                            <td style="color:#C2C2C2;height:26px;width:80px;" align="center"><img src="~/images/top1.png" /></td>
+                            <td style="color:#C2C2C2;height:26px;width:80px;" align="center"><img src="~/images/top2.png" /></td>
+                            <td style="color:#C2C2C2;height:26px;width:80px;" align="center"><img src="~/images/top3.png" /></td>
+                            <td style="color:#C2C2C2;height:26px;width:80px;" align="center"><img src="~/images/top4.png" /></td>
+                            <td style="color:#C2C2C2;height:26px;width:80px;" align="center"><img src="~/images/top5.png" /></td>
+                        </tr>*@
+                                        <tr>
+                                            @foreach (var onu in ViewBag.ongetUserList)
+                        {
+                            ViewBag.onLSum++;
+                            if (ViewBag.onLSum < 11)
+                            {
+                                <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #CCC;" align="center">
+                                    @onu.xctijiaorenname
+                                </td>
+        }
+    }
+                                        </tr>
+                                        <tr>
+                                            @foreach (var onk in ViewBag.ongetUserKeFuList)
+                        {
+                            ViewBag.onLKFSum++;
+                            if (ViewBag.onLKFSum < 11)
+                            {
+                                <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #CCC;" align="center">
+                                    @onk.V_jdrname
+                                </td>
+        }
+    }
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px" align="center" style="color:#C2C2C2;">材料组</td>
+                            </tr>
+                            <tr>
+                                <td width="60px" align="center" style="color:#C2C2C2;">客服组</td>
+                            </tr>
+                        </table>
+
+                        @*上个月的数据*@
+                        <table style="border: dashed 1.5px #e2b95f;display:none;">
+                            <tr style="padding-top:10px;">
+                                <td height="30px" align="center" style="color:#cc9a41;">@ViewBag.onMonth 月</td>
+                                <td rowspan="3">
+                                    <table>
+                                        <tr>
+                                            <td style="color:#979797;height:26px;width:60px;" align="center">出签</td>
+                                            <td style="color:#979797;height:26px;width:60px;" align="center">拒签</td>
+                                            <td style="color:#979797;height:26px;width:60px;" align="center">退单</td>
+                                            <td style="color:#979797;height:26px;width:60px;" align="center">基数</td>
+                                            <td style="color:#979797;height:26px;width:150px;" align="center">标准套餐</td>
+                                            <td style="color:#979797;height:26px;width:150px;" align="center">加急套餐</td>
+                                            <td style="color:#979797;height:26px;width:80px;" align="center">总份数</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.getOnUserPrivateC@ViewBag.danWei
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.getOnUserPrivateC1@ViewBag.danWei
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.getOnUserPrivateC2@ViewBag.danWei
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.getType1
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:120px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.OnStandard <span style="color:red;font-size:4px;">+@ViewBag.OnStandardUrgent</span>
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:120px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.OnUrgent <span style="color:red;font-size:4px;">+@ViewBag.OnUrgentUrgent</span>
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.OnSumNumber
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.getOnUserPrivateK@ViewBag.danWei
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.getOnUserPrivateK1@ViewBag.danWei
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.getOnUserPrivateK2@ViewBag.danWei
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.getType2
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.OnStandardKF <span style="color:red;font-size:4px;">+@ViewBag.OnStandardUrgentKF</span>
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.OnUrgentKF <span style="color:red;font-size:4px;">+@ViewBag.OnUrgentUrgentKF</span>
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.OnSumNumberKF
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px" align="center" style="color:#C2C2C2;">材料组</td>
+                            </tr>
+                            <tr>
+                                <td width="60px" align="center" style="color:#C2C2C2;">客服组</td>
+                            </tr>
+                        </table>
+
+                        <br />
+                        <table style="border: dashed 1.5px #e2b95f;">
+                            <tr style="padding-top:10px;">
+                                <td height="30px" align="center" style="color:#cc9a41;">@ViewBag.Month 月</td>
+                                <td rowspan="3">
+                                    <table>
+                                        <tr>
+                                            <td style="color:#979797;height:26px;width:60px;" align="center">出签</td>
+                                            <td style="color:#979797;height:26px;width:60px;" align="center">拒签</td>
+                                            <td style="color:#979797;height:26px;width:60px;" align="center">退单</td>
+                                            <td style="color:#979797;height:26px;width:60px;" align="center">基数</td>
+                                            <td style="color:#979797;height:26px;width:150px;" align="center">标准套餐</td>
+                                            <td style="color:#979797;height:26px;width:150px;" align="center">加急套餐</td>
+                                            <td style="color:#979797;height:26px;width:80px;" align="center">总份数</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.getUserPrivateC@ViewBag.danWei
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.getUserPrivateC1@ViewBag.danWei
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.getUserPrivateC2@ViewBag.danWei
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.getType1
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:120px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.Standard <span style="color:red;font-size:4px;">@ViewBag.StandardUrgent</span>
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:120px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.Urgent <span style="color:red;font-size:4px;">@ViewBag.UrgentUrgent</span>
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.SumNumber
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.getUserPrivateK@ViewBag.danWei
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.getUserPrivateK1@ViewBag.danWei
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.getUserPrivateK2@ViewBag.danWei
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.getType2
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.StandardKF <span style="color:red;font-size:4px;">@ViewBag.StandardUrgentKF</span>
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.UrgentKF <span style="color:red;font-size:4px;">@ViewBag.UrgentUrgentKF</span>
+                                            </td>
+                                            <td style="color:#A1A1A1; height:26px; width:80px; border: dashed 1.5px #fbe592;" align="center">
+                                                @ViewBag.SumNumberKF
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px" align="center" style="color:#C2C2C2;">材料组</td>
+                            </tr>
+                            <tr>
+                                <td width="60px" align="center" style="color:#C2C2C2;">客服组</td>
+                            </tr>
+                        </table>
+
+                        <br />
+                        @if (ViewBag.addUserTypeTemp == 1)
+                        {
+                            <table style="border: dashed 1.5px #C2C2C2;">
+                                <tr>
+                                    <td width="100px" align="center" style="color:#CCC;">辅助版块</td>
+                                </tr>
+                                <tr>
+                                    <td width="100px" align="left" style="color:#CCC;">
+                                        <span onclick="CurveValue()">&nbsp;1.曲线图</span><br/>
+                                        <span onclick="Detail()">&nbsp;2.登记明细</span><br/>
+                                        <span onclick="opAdd()">&nbsp;3.我的排班</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id='preview' style="display:none;"></div>
+    <!-- 自定义js -->
+    <script src="/js/content.js?v=1.0.0"></script>
+
+    <!--弹出JS-->
+    <script src="~/js/jquery-2.1.1.min.js"></script>
+    <script src="~/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="~/js/plugins/gritter/jquery.gritter.min.js"></script>
+
+    <script>
+
+        function CurveValue() {
+            var winUrl = '/SysDesktop/DepartmentDateEffect';
+            asyncbox.open({
+                id: '123',
+                title: '部门曲线',
+                url: winUrl,
+                width: 800,
+                height: 550
+            });
+        }
+
+        function Detail() {
+            var winUrl = '/MaterialsRegistration/Detail';
+            asyncbox.open({
+                id: '123',
+                title: '材料登记明细',
+                url: winUrl,
+                width: 700,
+                height: 600
+            });
+        }
+
+        function opAdd() {
+            var winUrl = '/Scheduling/AddSchedulingShowNew';
+            asyncbox.open({
+                id: '123',
+                title: '新增日常事务',
+                url: winUrl,
+                width: 680,
+                height: 500
+            });
+        }
+
+        $(document).ready(function () {
+            WinMove();
+            setTimeout(function () {
+                $.gritter.add({
+                    title: '美好的一天，从现在开始！',
+                    text: '请前往查看今日我的任务吧',
+                    time: 10000
+                });
+            }, 2000);
+        });
+
+    </script>
+</body>
+
+</html>

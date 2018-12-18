@@ -1,0 +1,20 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/.vs/WebPage
+/Common/bin
+/Common/obj
+/.vs/config
+/CommonHelper/bin
+/CommonHelper/obj
+/Core/bin
+/Core/obj
+/CoreModels/bin
+/CoreModels/obj
+/DataBase/bin
+/DataBase/obj
+/EF/bin
+/EF/obj
+/UI/bin
+/UI/obj

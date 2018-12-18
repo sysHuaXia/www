@@ -1,0 +1,239 @@
+﻿
+@{
+    Layout = null;
+    ViewBag.Title = "AppDetails";
+}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>订单详情</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    @*<link href="css/style.css" rel="stylesheet" type="text/css" />*@
+    <link href="~/ClientWebJsCss/Css/style_Details.css" rel="stylesheet" />
+    @*<script type="text/javascript" src="js/jquery.js"></script>*@
+    <script src="/js/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+
+    <section class="aui-flexView">
+        <header class="aui-navBar aui-navBar-fixed">
+            <a href="javascript:;" class="aui-navBar-item">
+                <i class="icon icon-return"></i>
+            </a>
+            <div class="aui-center">
+                <span class="aui-center-title">订单详情</span>
+            </div>
+            <a href="javascript:;" class="aui-navBar-item">
+                <i class="icon icon-share"></i>
+            </a>
+        </header>
+        <section class="aui-scrollView">
+            <div class="aui-order-list">
+                <div class="aui-order-complete">
+                    <i class="icon icon-complete"></i>
+                    完成
+
+                </div>
+                <div class="aui-order-process">
+                    <div class="aui-order-process-hd">
+                        <i class="icon icon-car"></i>
+                        感谢您在商城购物,欢迎您的再次光临!
+                    </div>
+                    <div class="aui-order-process-bd"></div>
+                </div>
+            </div>
+            <div class="aui-palace clearfix">
+                <a href="javascript:;" class="aui-palace-grid">
+                    <div class="aui-palace-grid-icon">
+                        <img src="~/ClientWebJsCss/Img//icon-item-001.png" alt="">
+                    </div>
+                    <div class="aui-palace-grid-text">
+                        <h2>电脑发烧友</h2>
+                    </div>
+                </a>
+                <a href="javascript:;" class="aui-palace-grid">
+                    <div class="aui-palace-grid-icon">
+                        <img src="~/ClientWebJsCss/Img//icon-item-002.png" alt="">
+                    </div>
+                    <div class="aui-palace-grid-text">
+                        <h2>手机数码</h2>
+                    </div>
+                </a>
+                <a href="javascript:;" class="aui-palace-grid">
+                    <div class="aui-palace-grid-icon">
+                        <img src="~/ClientWebJsCss/Img//icon-item-003.png" alt="">
+                    </div>
+                    <div class="aui-palace-grid-text">
+                        <h2>潮流电子</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="divHeight"></div>
+            <div class="aui-order-shop ">
+                <div class="aui-order-shop-hd">
+                    <i class="icon icon-shop"></i>
+                    嘻哈杂货铺
+
+                </div>
+            </div>
+            <div class="aui-order-product">
+                <div class="aui-order-product-hd">
+                    <img src="~/ClientWebJsCss/Img/pd-001.png" alt="">
+                </div>
+                <div class="aui-order-product-bd">
+                    <h2>苹果新款笔记本电脑mac充电器MacBook Air/Pro电池电源适配器</h2>
+                    <p>数量:1 颜色:85W老款弯头18.5 4.6 A </p>
+                    <div class="aui-order-text">
+                        <span class="aui-order-text-hd">
+                            ￥199.90
+                        </span>
+                        <span class="aui-order-text-bd">
+                            <em>申请售后</em>
+                            <em>加入购物车</em>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="aui-order-service">
+                <div class="aui-order-service-hd">
+                    <i class="icon icon-service"></i>
+                    联系客服
+
+                </div>
+            </div>
+            <div class="divHeight"></div>
+            <div class="aui-order-service">
+                <div class="">
+                    发票类型:
+                </div>
+                <div class="">不开发票</div>
+            </div>
+            <div class="divHeight"></div>
+            <div class="aui-fk-list">
+                <div class="aui-fk-list-hd">
+                    订单编号: <em>700890888933</em>
+                </div>
+                <div class="aui-fk-list-bd">
+                    实付款: <em>￥199.20</em>
+                </div>
+            </div>
+            <div class="aui-show-box">
+                <a href="javascript:;">
+                    <div>下单时间:2018-09-22 18:20:22</div>
+                </a>
+                <a href="javascript:;">
+                    <div>支付方式:在线支付</div>
+                    <div>支付时间:2018-09-22 18:20:22</div>
+                </a>
+                <a href="javascript:;">
+                    <div>配送方式:商城物流</div>
+                    <div>工作日、双休与节假日均可送货</div>
+                </a>
+                <div class="divHeight"></div>
+                <a href="javascript:;">
+                    <div>李嘉桦 185****8888</div>
+                    <div>地址:北京市海淀区西三环北路43号首享科技</div>
+                </a>
+                <div class="divHeight"></div>
+                <div class="aui-order-up">
+                    <div class="aui-order-up-flex">
+                        <div class="aui-order-up-flex-hd">商品总额</div>
+                        <div class="aui-order-up-flex-bd">￥199.20</div>
+                    </div>
+                    <div class="aui-order-up-flex">
+                        <div class="aui-order-up-flex-hd">立减</div>
+                        <div class="aui-order-up-flex-bd">-￥10.00</div>
+                    </div>
+                    <div class="aui-order-up-flex">
+                        <div class="aui-order-up-flex-hd">运费</div>
+                        <div class="aui-order-up-flex-bd">+￥0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="aui-show-button">
+                <a class="" href="javascript:void(0);" id="aui-show-btn">
+                    <span id="aui-show-open">展开完整信息</span>
+                    <i class="icon fa fa-angle-right"></i>
+                </a>
+            </div>
+            <div class="aui-me-box">
+                <div class="aui-me-box-img">
+                    <img src="~/ClientWebJsCss/Img/icon-banner.png" alt="">
+                </div>
+                <div class="aui-shop-list aui-shop-list-selected">
+                    <a href="javascript:;" class="aui-shop-list-item">
+                        <div class="aui-shop-list-item-hd">
+                            <img src="~/ClientWebJsCss/Img/icon-page-001.png" alt="">
+                        </div>
+                        <div class="aui-shop-list-item-bd">
+                            <h3>
+                                <span class="aui-shop-list-item-tag">自营</span>
+                                Apple Watch Series 3智能手表（GPS+蜂窝网络款 铝金属表壳 回环式运动表带）(深橄榄色回环式表带 42mm)
+                            </h3>
+                            <p class="aui-special-etc">
+                                <span class="aui-special-etc-hd">￥598</span>
+                                <span class="aui-special-etc-bd">￥898</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="javascript:;" class="aui-shop-list-item">
+                        <div class="aui-shop-list-item-hd">
+                            @*<img src="images/icon-page-002.png" alt="">*@
+                            <img src="~/ClientWebJsCss/Img/icon-page-002.png" />
+                        </div>
+                        <div class="aui-shop-list-item-bd">
+                            <h3>
+                                <span class="aui-shop-list-item-tag">自营</span>
+                                Apple Watch Series 3智能手表（GPS+蜂窝网络款 铝金属表壳 回环式运动表带）(深橄榄色回环式表带 42mm)
+                            </h3>
+                            <p class="aui-special-etc">
+                                <span class="aui-special-etc-hd">￥598</span>
+                                <span class="aui-special-etc-bd">￥898</span>
+                            </p>
+                        </div>
+                    </a>
+
+                    
+                </div>
+            </div>
+        </section>
+        <footer class="aui-footer aui-footer-fixed">
+            <a href="javascript:;" class="aui-tabBar-item aui-tabBar-item-active">
+                <span class="aui-tabBar-item-text">删除订单</span>
+            </a>
+            <a href="javascript:;" class="aui-tabBar-item ">
+                <span class="aui-tabBar-item-text">申请售后</span>
+            </a>
+            <a href="javascript:;" class="aui-tabBar-item ">
+                <span class="aui-tabBar-item-text">再次购买</span>
+            </a>
+            <a href="javascript:;" class="aui-tabBar-item ">
+                <span class="aui-tabBar-item-text">评价晒单</span>
+            </a>
+        </footer>
+    </section>
+    <script type="text/javascript">
+
+            $(function view_details_click() {
+                $("#aui-show-btn").bind('click', function() {
+                    if ($(".aui-show-box").is(":hidden")) {
+                        $(".aui-show-box").show();
+                        $(this).find("#aui-show-open").text(" 收起");
+                        $(this).find(".fa").removeClass("fa-angle-right").addClass("fa-angle-down");
+                    } else {
+                        $(".aui-show-box").hide();
+                        $(this).find("#aui-show-open").text(" 展开完整信息");
+                        $(this).find(".fa").removeClass("fa-angle-down").addClass("fa-angle-right");
+                    }
+                });
+
+            });
+    </script>
+
+</body>
+</html>
+
