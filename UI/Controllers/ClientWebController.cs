@@ -97,7 +97,7 @@ namespace UI.Controllers
             //回国时间和出国时间相差天数
             DateTime beginTime1 = Convert.ToDateTime(order.v_starttime);
             DateTime endTime1 = Convert.ToDateTime(order.v_endtime);
-            ViewBag.StarTime = beginTime1 != null?Convert.ToDateTime(order.v_starttime).ToString("yyyy-MM-dd"):"";
+            ViewBag.StarTime = order.v_starttime != null?Convert.ToDateTime(order.v_starttime).ToString("yyyy-MM-dd"):"";
             if (endTime1 != null)
             {
                 TimeSpan midTime = endTime1 - beginTime1;
@@ -109,7 +109,7 @@ namespace UI.Controllers
                 {
                     ViewBag.DaysTrip = "";
                 }
-                ViewBag.EndTime = endTime1 != null? Convert.ToDateTime(order.v_endtime).ToString("yyyy-MM-dd"):"";
+                ViewBag.EndTime = order.v_endtime != null? Convert.ToDateTime(order.v_endtime).ToString("yyyy-MM-dd"):"";
             }
             else
             {

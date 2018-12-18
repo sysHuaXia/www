@@ -759,7 +759,7 @@
                                                         <span class="h_bg">送签日期</span>
                                                     </div>
                                                     <div class="right fr clearfix">
-                                                        <span class="time mar">@ViewBag.stime :@Model.v_stime_shi : @Model.v_stime_fen</span>
+                                                        <span class="time mar">@ViewBag.stime  @Model.v_stime_shi @(ViewBag.stime==""? "" : ":" ) @Model.v_stime_fen</span>
                                                         <div class="whether">
                                                             <span class="h_bg">是否待送</span>
                                                             <strong class="w_bg">
@@ -799,7 +799,7 @@ else
                                                         <span class="h_bg">申请国家</span>
                                                     </div>
                                                     <div class="right fr clearfix">
-                                                        <div class="mar county">@Model.v_type@Model.v_vtype@Model.v_vtype1@Model.v_vtype2@Model.v_vtype3</div>
+                                                        <div class="mar county">@Model.v_type@Model.v_vtype@Model.v_vtype1@Model.v_vtype2@Model.v_vtype3 &nbsp;</div>
                                                         <div class="prise">
                                                             <span class="h_bg">签证应收</span>
                                                             <strong>@string.Format("{0:0.00}", Model.v_yshou)<a>收清</a></strong>
@@ -821,7 +821,7 @@ else
                                                         <div class="mar county">@Model.orderid</div>
                                                         <div class="prise">
                                                             <span class="h_bg">订单日期</span>
-                                                            <strong>@Model.v_otime</strong>
+                                                            <strong>@(Model.v_otime==null?"": Model.v_otime.ToString())</strong>
                                                         </div>
                                                         <div class="num num1">
                                                             <span class="h_bg">是否加急</span>
