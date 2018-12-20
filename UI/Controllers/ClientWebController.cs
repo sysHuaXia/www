@@ -219,7 +219,7 @@ namespace UI.Controllers
                 var jsonClientInfor = Common.DataHelp.JsonHelper.Serialize<v_infolist>(client); 
 
                 HttpCookie cookieClientInfor = new HttpCookie(ClientudTypeVar.Cookie.clientWebSign);
-                cookieClientInfor.Value = Common.DataHelp.StringProcess.Encrypt(jsonClientInfor);
+                cookieClientInfor.Value = StringProcess.Encrypt(jsonClientInfor);
                 cookieClientInfor.Expires = DateTime.Now.AddHours(6);
                 HttpContext.Response.Cookies.Add(cookieClientInfor);
 

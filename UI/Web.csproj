@@ -2026,11 +2026,15 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ShowPageController.cs" />
     <Compile Include="Controllers\VisaAssessmentController.cs" />
+    <Compile Include="Controllers\VisaController.cs" />
     <Compile Include="Controllers\VisaProgressController.cs" />
+    <Compile Include="Helper\FileReadAsByte.cs" />
+    <Compile Include="Helper\WriteSomething.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\HandleErrorAttribute.cs" />
+    <Compile Include="Models\VisaForm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="UserDetail.cs" />
@@ -2045,7 +2049,7 @@
     <Folder Include="ManageUI\js\prettyphoto\facebook\" />
     <Folder Include="ManageUI\js\prettyphoto\light_rounded\" />
     <Folder Include="ManageUI\js\prettyphoto\light_square\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Visa\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
