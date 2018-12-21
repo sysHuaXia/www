@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="2" virtualPath="/Views/Home/ShowModifyPWD.cshtml" hash="ffffffff8ee60aa1" filehash="75bb07eb6fb" flags="110000" assembly="App_Web_sqonetbj" type="ASP._Page_Views_Home_ShowModifyPWD_cshtml">
-    <filedeps>
-        <filedep name="/Views/Home/ShowModifyPWD.cshtml" />
-    </filedeps>
-</preserve>
