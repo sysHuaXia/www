@@ -9,8 +9,12 @@ using System.Threading.Tasks;
 
 namespace Core.Realization
 {
-    public class SysCountry:ISysCountry
+    public class SysCountry : ISysCountry
     {
-
+        public IList<Tmall_Country> getCountries()
+        {
+            //获取正常的城市
+            return new dhgl2013Entities().Tmall_Country.Where(x=>x.SectorID!=null).ToList();
+        }
     }
 }

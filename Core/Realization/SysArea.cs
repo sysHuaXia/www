@@ -10,7 +10,7 @@ namespace Core.Realization
 {
     public class SysArea: ISysArea
     {
-        public IEnumerable<T_Area> GetSysArea()
+        public IList<T_Area> GetSysArea()
         {
             dhgl2013Entities db = new dhgl2013Entities();
             var Area = db.T_Area.Where(p => p.AId != 0).ToList();
@@ -20,7 +20,7 @@ namespace Core.Realization
         public T_Area GetSysAreaById(int AreaId)
         {
             dhgl2013Entities db = new dhgl2013Entities();
-            var a = db.T_Area.Where(p => p.AId == AreaId).First();
+            var a = db.T_Area.Where(p => p.AId == AreaId).FirstOrDefault();
             return a;
         }
     }

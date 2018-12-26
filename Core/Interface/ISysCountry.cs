@@ -10,5 +10,6 @@ namespace Core.Interface
 {
     public interface ISysCountry
     {
+        IList<Tmall_Country> getCountries();
     }
 }

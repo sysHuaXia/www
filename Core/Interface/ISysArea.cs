@@ -14,7 +14,7 @@ namespace Core.Interface
         /// 
         /// </summary>
         /// <returns></returns>
-        IEnumerable<T_Area> GetSysArea();
+        IList<T_Area> GetSysArea();
 
         /// <summary>
         /// 
