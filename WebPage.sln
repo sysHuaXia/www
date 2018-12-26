@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "UI\Web.csproj", "{F2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-WebApi", "4-WebApi", "{D623D594-80AB-4E99-9A87-0E66D16A7D0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TlscontactTest", "TlscontactTest\TlscontactTest.csproj", "{32796AAE-09FB-4901-AFA4-5168E3909BE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,14 @@ Global
 		{F2C6D513-A1EA-4AE0-8755-E3268573BEA4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F2C6D513-A1EA-4AE0-8755-E3268573BEA4}.Release|x86.ActiveCfg = Release|x86
 		{F2C6D513-A1EA-4AE0-8755-E3268573BEA4}.Release|x86.Build.0 = Release|x86
+		{32796AAE-09FB-4901-AFA4-5168E3909BE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32796AAE-09FB-4901-AFA4-5168E3909BE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32796AAE-09FB-4901-AFA4-5168E3909BE1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{32796AAE-09FB-4901-AFA4-5168E3909BE1}.Debug|x86.Build.0 = Debug|Any CPU
+		{32796AAE-09FB-4901-AFA4-5168E3909BE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32796AAE-09FB-4901-AFA4-5168E3909BE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32796AAE-09FB-4901-AFA4-5168E3909BE1}.Release|x86.ActiveCfg = Release|Any CPU
+		{32796AAE-09FB-4901-AFA4-5168E3909BE1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

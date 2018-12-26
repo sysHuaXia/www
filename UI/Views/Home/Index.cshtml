@@ -4,421 +4,1838 @@
     ViewBag.Title = "Home";
 }
 
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>星空旅行</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
-    <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-    <link rel="stylesheet" href="~/css/animate.css">
-    <link rel="stylesheet" href="~/css/icomoon.css">
-    <link rel="stylesheet" href="~/css/bootstrap.css">
-    <link rel="stylesheet" href="~/css/style.css">
-    <link rel="stylesheet" href="~/css/hwslider.css" />
-    <script src="~/js/modernizr-2.6.2.min.js"></script>
-    <!-- FOR IE9 below -->  
-
-    <style type="text/css">
-        .navigationCSS {
-            color: #1C205F;
-        }
-    </style>
-
+    <title>上海星空</title>
+    <link rel="stylesheet" type="text/css" href="~/NewUI/css/index.css">
+    <script src="~/NewUI/js/jquery-1.11.3.min.js"></script>
+    <script src="~/NewUI/js/index.js"></script>
+    <script type="text/javascript" src="~/NewUI/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="~/NewUI/js/jquery.SuperSlide.2.1.1.source.js"></script>
 </head>
-
 <body>
+    <!--侧边-->
+    <div class="jdm-toolbar-wrap J-wrap">
+        <div class="jdm-toolbar J-toolbar">
+            <div class="jdm-toolbar-panels J-panel"></div>
+            <div class="jdm-toolbar-tabs J-tab">
+                <div data-type="bar" class="J-trigger jdm-toolbar-tab jdm-tbar-tab-ger">
+                    <i class="tab-ico"></i>
+                    <em class="tab-text">购物车</em>
+                </div>
+                <div data-type="bar" class="J-trigger jdm-toolbar-tab jdm-tbar-tab-cart">
+                    <i class="tab-ico"></i>
+                    <em class="tab-text">购物车</em>
+                </div>
+                <div data-type="bar" clstag="h|keycount|cebianlan_h_follow|btn" class="J-trigger jdm-toolbar-tab jdm-tbar-tab-follow" data-name="follow" data-login="true">
+                    <i class="tab-ico"></i>
+                    <em class="tab-text">我的关注</em>
+                </div>
+            </div>
+            <div class="J-trigger jdm-toolbar-tab jdm-tbar-tab-message" data-name="message">
+                <a target="_blank" href="#">
+                    <i class="tab-ico"></i>
+                    <em class="tab-text">
+                        我的消息
+                    </em>
+                </a>
+            </div>
+        </div>
+        <div class="jdm-toolbar-footer">
+            <div data-type="link" id="#top" class="J-trigger jdm-toolbar-tab jdm-tbar-tab-top">
+                <a href="#" clstag="h|keycount|cebianlan_h|top">
+                    <i class="tab-ico"></i>
+                    <em class="tab-text">顶部</em>
+                </a>
+            </div>
+        </div>
+        <div class="jdm-toolbar-mini"></div>
+        <div id="J-toolbar-load-hook" clstag="h|keycount|cebianlan_h|load"></div>
+    </div>
 
-    <div class="fh5co-loader"></div>
 
-    <div id="page">
-
-        <nav class="fh5co-nav" role="navigation">
-            <div class="container">
-                <div class="row">
-                    <div class="left-menu text-right menu-1">
-                        <ul>
-                            <li>
-                                <a href="#" style="color: #1C205F;">首页</a>
-                            </li>
-                            <li>
-                                <a href="/About/index" style="color: #1C205F;">关于我们</a>
-                            </li>
-                            <li>
-                                <a href="/Contact/Index" style="color: #1C205F;">联系我们</a>
-                            </li>
-                        </ul>
+    <!--头部-->
+    <div id="header">
+        <div class="header-box">
+            <h3 class="huany">旅游签证，行业领先！</h3>
+            <ul class="header-left">
+                <li class="bj">
+                    <a class="dib" href="#">上海市</a>
+                    <i class="ci-leftll">
+                        <s class="jt">◇</s>
+                    </i>
+                    <div class="bj-1">
+                        <h3>热门城市：</h3>
+                        <a href="">北京</a><a href="">上海</a><a href="">广州</a><a href="qieh_cs.html">全部+</a>
                     </div>
-                    <div class="logo text-center">
-                        <div id="fh5co-logo">
-                            <a href="/Home/Index"><img src="~/images/logo.png.png" /></a>
+                </li>
+            </ul>
+            <ul class="header-right">
+                <li class="denglu">Hi~<a class="red" href="dengl.html">请登录!</a> <a href="zhuc.html">[免费注册]</a></li>
+                <li class="shu"></li>
+                <li class="denglu"><a class="ing_ps" href="#">我的收藏</a></li>
+                @*<li class="shu"></li>
+                <li class="denglu"><a class="ing_ps ps1" href="#">申请入驻</a></li>*@
+                <li class="shu"></li>
+                <li class="denglu"><a class="ing_ps ps2" href="#">客户服务</a></li>
+                <li class="shu"></li>
+                <li class="shouji bj">
+                    <a class="ing_ps ps3" href="#">手机版本</a>
+                    <i class="ci-right ">
+                        <s class="jt">◇</s>
+                    </i>
+                    <div class="shouji1">
+                        <img src="" class="shouji4">
+                        <div class="shouji2">
+                            <p>客户端</p>
+                            <p class="red">首次下单满1000元，送0元</p>
+                        </div>
+                        <div class="yi">
+                            <img src="" class="shouji4">
+                            <div class="er">
+                                <p>微信公众号</p>
+                                <p class="red">关注公众号，积分换大礼</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="right-menu text-left menu-1">
-                        <ul>
-                            <li>
-                                <a href="/VisaAssessment/Index" style="color: #1C205F;">签证评估</a>
-                            </li>
-                            <li>
-                                <a href="/ClientWeb/Index" style="color: #1C205F;">签证进度</a>
-                            </li>
-                            <li>
-                                <a href="/LocalFreeLine/Index" style="color: #1C205F;">当地自由行</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--搜索栏-->
+    <div class="toub_beij">
+        <div class="logo"><a href="./"><img src="~/NewUI/images/logo.png"></a></div>
+        <div class="search">
+            <input type="text" value="法国签证" class="text" id="textt">
+            <button class="button">搜索</button>
+        </div>
+        <div class="right">
+            <i class="gw-left"></i>
+            <i class="gw-right"></i>
+            <div class="sc">
+                <i class="gw-count">0</i>
+                <i class="sd"></i>
             </div>
-        </nav>
-
-        <section>
-            <div id="hwslider" class="hwslider">
+            <a href="gouw_che.html">我的订单</a>
+            <div class="dorpdown-layer">
                 <ul>
-
-                    <li>
-                        <a href="https://shhxgl.fliggy.com/" target="_blank"><img src="~/images/banner01.jpg" alt=""></a>
+                    <li class="meiyou">
+                        <img src="~/NewUI//images/settleup-nogoods.png">
+                        <span>查看</span>
                     </li>
-
-                    <li>
-                        <a href="https://shhxgl.fliggy.com/" target="_blank"><img src="~/images/banner02.jpg" alt=""></a>
-                    </li>
-
                 </ul>
             </div>
-        </section>
-        <div>
-            <section>
-                <div class="lightModuleOuterContent lightModuleOuterContent317" style="display:none;">
-                    <div class="fk-editor simpleText   ">
-                        <div style="text-align: center;">
-                            <span style="color: rgb(243, 243, 243); background-color: transparent;">
-                                <span style="font-size: 110px;"><font face="Arial">01</font></span>
-                            </span>
+        </div>
+        <div class="hotwords">
+            <a class="biaoti">热门搜索：</a>
+            <a href="#">法国签证</a>
+            <a href="#">英国签证</a>
+            <a href="#">澳大利亚签证</a>
+            <a href="#">美国签证</a>
+            <a href="#">日本签证</a>
+        </div>
+    </div>
+
+
+    <!--轮播图上方导航栏  一栏-->
+    <div id="navv">
+        <div class="focus">
+            <div class="focus-a">
+                <div class="fouc-font"><a href="">全部分类</a> </div>
+            </div>
+            <div class="focus-b">
+                <ul>
+                    <li><a href="#">签证首页</a></li>
+                    <li><a href="#">欧洲签证</a></li>
+                    <li><a href="#">澳洲签证</a></li>
+                    <li><a href="#">美洲签证 </a></li>
+                    <li><a href="#">东南亚签证</a></li>
+                    <li><a href="#">WIFI预定</a></li>
+                </ul>
+            </div>
+
+
+            <!--左边导航-->
+            <div class="dd-inner">
+                <div class="font-item">
+                    <div class="item fore1">
+                        <h3>
+                            <a class="da_zhu" href="#">欧洲签证</a>
+                            <p>
+                                <a href="#">法国</a>
+                                <a href="#">德国</a>
+                                <a href="#">西班牙</a>
+                                <a href="#">意大利</a>
+                            </p>
+                        </h3>
+                        <i>></i>
+                    </div>
+                    <div class="font-item1">
+                        <div class="font-lefty">
+                            <dl class="fore1">
+                                <dt><a href="">申请表<i>></i></a></dt>
+                                <dd>
+                                    <a href="">申根</a>
+                                </dd>
+                            </dl>
+                            <dl class="fore1">
+                                <dt><a href="">申请表<i>></i></a></dt>
+                                <dd>
+                                    <a href="">申根</a>
+                                </dd>
+                            </dl>
+                            <dl class="fore1">
+                                <dt><a href="">申请表<i>></i></a></dt>
+                                <dd>
+                                    <a href="">申根</a>
+                                </dd>
+                            </dl>
+                            <dl class="fore1">
+                                <dt><a href="">申请表<i>></i></a></dt>
+                                <dd>
+                                    <a href="">申根</a>
+                                </dd>
+                            </dl>
+                            <dl class="fore1">
+                                <dt><a href="">申请表<i>></i></a></dt>
+                                <dd>
+                                    <a href="">申根</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="font-right">
+                            <div>
+                                <a href="#">
+                                    <img src="~/NewUI/images/562f4971Na5379aba.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9eef9N5bb8d27f.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef02N99d26435.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef10Nd206a236.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef28N00328d44.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef34N7cc61f4c.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef3eN99aef1f0.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef4cN4fe57f9b.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="font-righty">
+                            <a href="#">
+                                <img src="~/NewUI/images/5673a854N10856704.jpg">
+                            </a>
+                            <a href="#">
+                                <img src="~/NewUI/images/5673a854N10856704.jpg">
+                            </a>
                         </div>
                     </div>
                 </div>
-                <a href="/ClientWeb/Index" target="_blank"><img src="~/images/搜索.jpg" /></a>
-                    <div class="lightModuleOuterContent lightModuleOuterContent318" style="position: relative; top: -118px;display:none;">
-                        <div class="fk-editor simpleText   ">
-                            <div style="text-align: center;">
-                                <span style="font-size: 30px; background-color: transparent;">
-                                    <font style="color: rgb(47, 47, 47);" color="#2f2f2f"><b>签证进度查询【<a href="/ClientWeb/Index" target="_blank">点击链接</a>】</b></font>
-                                    <a href="https://shhxgl.fliggy.com/" target="_blank">天猫官方旗舰店</a>
-                                </span>
+                <div class="fore-2" style="display:none;">
+                    <div class="item fore1">
+                        <h3>
+                            <a class="da_zhu" href="#">电脑数码</a>
+                            <p>
+                                <a href="#">手机</a>
+                                <a href="#">电脑</a>
+                                <a href="#">办公</a>
+                                <a href="#">钟表</a>
+                            </p>
+                        </h3>
+                        <i>></i>
+                    </div>
+                    <div class="font-item1">
+                        <div class="font-lefty">
+                            <dl class="fore1">
+                                <dt><a href="">电脑数码<i>></i></a></dt>
+                                <dd>
+                                    <a href="">平板电视</a><a href="">空调</a><a href="">冰箱</a><a href="">洗衣机</a><a href="">家庭影院</a><a href="">DVD</a><a href="">迷你音响</a>
+                                    <a href="">烟机/灶具</a><a href="">热水器</a><a href="">消毒具/洗碗柜</a><a href="">冰柜/冰吧</a><a href="">酒柜</a><a href="">家电配件</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="font-right">
+                            <div>
+                                <a href="#">
+                                    <img src="~/NewUI/images/562f4971Na5379aba.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/562f4971Na5379aba.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/562f4971Na5379aba.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/562f4971Na5379aba.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/562f4971Na5379aba.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/562f4971Na5379aba.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/562f4971Na5379aba.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/562f4971Na5379aba.jpg">
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="lightModuleOuterContent lightModuleOuterContent319" style="position: relative; top: -50px;display:none;">
-                        <div class="fk-editor simpleText  ">
-                            <span style="font-size: 15px;">
-                                <font color="#7d7d7d">
-                                    <span style="line-height: 29px;">
-                                        <font style="color: rgb(125, 125, 125);" color="#7d7d7d">
-                                            <div style="text-align: center;"><a href="https://shhxgl.fliggy.com/" target="_blank">天猫官方旗舰店</a></div>
-                                            <div style="text-align: center;"><a href="https://shhxgl.fliggy.com/" target="_blank">申根签证</a></div>
-                                            <div style="text-align: center;"><a href="https://shhxgl.fliggy.com/" target="_blank">澳新签证</a></div>
-                                        </font>
-                                    </span>
-                                </font>
-                            </span>
+                </div>
+                <div class="fore-3" style="display:none;">
+                    <div class="item fore1">
+                        <h3>
+                            <a class="da_zhu" href="#">服饰鞋帽</a>
+                            <p>
+                                <a href="#">男装</a>
+                                <a href="#">女装</a>
+                                <a href="#">童装</a>
+                                <a href="#">内衣</a>
+                            </p>
+                        </h3>
+                        <i>></i>
+                    </div>
+                    <div class="font-item1">
+                        <div class="font-lefty">
+                            <dl class="fore1">
+                                <dt><a href="">服饰鞋帽<i>></i></a></dt>
+                                <dd>
+                                    <a href="">平板电视</a><a href="">空调</a><a href="">冰箱</a><a href="">洗衣机</a><a href="">家庭影院</a><a href="">DVD</a><a href="">迷你音响</a>
+                                    <a href="">烟机/灶具</a><a href="">热水器</a><a href="">消毒具/洗碗柜</a><a href="">冰柜/冰吧</a><a href="">酒柜</a><a href="">家电配件</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="font-right">
+                            <div>
+                                <a href="#">
+                                    <img src="~/NewUI/images/562f4971Na5379aba.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9eef9N5bb8d27f.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef02N99d26435.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef10Nd206a236.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef28N00328d44.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef34N7cc61f4c.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef3eN99aef1f0.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef4cN4fe57f9b.jpg">
+                                </a>
+                            </div>
                         </div>
                     </div>
-            </section>
-            <div id="fh5co-services" class="fh5co-bg-section" style="display:none;">
-                <div class="container">
-                    <div class="row">
-                        <div class="i_serList">
-                            <ul>
-                                <li class="col-md-4 col-xs-12">
-                                    <div class="kuang">
-                                        <div class="img">
+                </div>
+                <div class="fore-4" style="display:none;">
+                    <div class="item fore1">
+                        <h3>
+                            <a class="da_zhu" href="#">汽车用品</a>
+                            <p>
+                                <a href="#">汽车配件</a>
+                                <a href="#">礼品</a>
+                                <a href="#">家政服务</a>
+                            </p>
+                        </h3>
+                        <i>></i>
+                    </div>
+                    <div class="font-item1">
+                        <div class="font-lefty">
+                            <dl class="fore1">
+                                <dt><a href="">汽车用品<i>></i></a></dt>
+                                <dd>
+                                    <a href="">平板电视</a><a href="">空调</a><a href="">冰箱</a><a href="">洗衣机</a><a href="">家庭影院</a><a href="">DVD</a><a href="">迷你音响</a>
+                                    <a href="">烟机/灶具</a><a href="">热水器</a><a href="">消毒具/洗碗柜</a><a href="">冰柜/冰吧</a><a href="">酒柜</a><a href="">家电配件</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="font-right">
+                            <div>
+                                <a href="#">
+                                    <img src="~/NewUI/images/562f4971Na5379aba.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9eef9N5bb8d27f.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef02N99d26435.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef10Nd206a236.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef28N00328d44.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef34N7cc61f4c.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef3eN99aef1f0.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef4cN4fe57f9b.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fore-5" style="display:none;">
+                    <div class="item fore1">
+                        <h3>
+                            <a class="da_zhu" href="#">食品保健</a>
+                            <p>
+                                <a href="#">美食</a>
+                                <a href="#">酒类</a>
+                                <a href="#">生鲜</a>
+                                <a href="#">特产</a>
+                            </p>
+                        </h3>
+                        <i>></i>
+                    </div>
+                    <div class="font-item1">
+                        <div class="font-lefty">
+                            <dl class="fore1">
+                                <dt><a href="">食品保健<i>></i></a></dt>
+                                <dd>
+                                    <a href="">食品保健</a><a href="">食品保健</a><a href="">冰箱</a><a href="">洗衣机</a><a href="">家庭影院</a><a href="">DVD</a><a href="">迷你音响</a>
+                                    <a href="">烟机/食品保健</a><a href="">热水器</a><a href="">消毒具/洗碗柜</a><a href="">冰柜/冰吧</a><a href="">酒柜</a><a href="">家电配件</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="font-right">
+                            <div>
+                                <a href="#">
+                                    <img src="~/NewUI/images/562f4971Na5379aba.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9eef9N5bb8d27f.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef02N99d26435.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef10Nd206a236.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef28N00328d44.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef34N7cc61f4c.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef3eN99aef1f0.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef4cN4fe57f9b.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fore-6" style="display:none;">
+                    <div class="item fore1">
+                        <h3>
+                            <a class="da_zhu" href="#">美酒鲜花</a>
+                            <p>
+                                <a href="#">手机</a>
+                                <a href="#">电脑</a>
+                                <a href="#">办公</a>
+                                <a href="#">钟表</a>
+                            </p>
+                        </h3>
+                        <i>></i>
+                    </div>
+                    <div class="font-item1">
+                        <div class="font-lefty">
+                            <dl class="fore1">
+                                <dt><a href="">美酒鲜花<i>></i></a></dt>
+                                <dd>
+                                    <a href="">平板电视</a><a href="">空调</a><a href="">冰箱</a><a href="">洗衣机</a><a href="">家庭影院</a><a href="">DVD</a><a href="">迷你音响</a>
+                                    <a href="">烟机/灶具</a><a href="">热水器</a><a href="">消毒具/洗碗柜</a><a href="">冰柜/冰吧</a><a href="">酒柜</a><a href="">家电配件</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="font-right">
+                            <div>
+                                <a href="#">
+                                    <img src="~/NewUI/images/562f4971Na5379aba.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9eef9N5bb8d27f.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef02N99d26435.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef10Nd206a236.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef28N00328d44.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef34N7cc61f4c.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef3eN99aef1f0.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef4cN4fe57f9b.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fore-7" style="display:none;">
+                    <div class="item fore1">
+                        <h3>
+                            <a class="da_zhu" href="#">图书</a>
+                            <p>
+                                <a href="#">图书</a>
+                                <a href="#">图书</a>
+                                <a href="#">办公</a>
+                                <a href="#">电子书</a>
+                            </p>
+                        </h3>
+                        <i>></i>
+                    </div>
+                    <div class="font-item1">
+                        <div class="font-lefty">
+                            <dl class="fore1">
+                                <dt><a href="">图书<i>></i></a></dt>
+                                <dd>
+                                    <a href="">平板电视</a><a href="">空调</a><a href="">冰箱</a><a href="">洗衣机</a><a href="">家庭影院</a><a href="">DVD</a><a href="">迷你音响</a>
+                                    <a href="">烟机/灶具</a><a href="">热水器</a><a href="">消毒具/洗碗柜</a><a href="">冰柜/冰吧</a><a href="">酒柜</a><a href="">家电配件</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="font-right">
+                            <div>
+                                <a href="#">
+                                    <img src="~/NewUI/images/562f4971Na5379aba.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9eef9N5bb8d27f.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef02N99d26435.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef10Nd206a236.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef28N00328d44.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef34N7cc61f4c.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef3eN99aef1f0.jpg">
+                                </a>
+                                <a href="#">
+                                    <img src="~/NewUI/images/54d9ef4cN4fe57f9b.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                            <a class="brand_name" href="/ShowPage/Index" style="display: inline;">
-                                                <img src="~/images/1定制行程.png">
-                                            </a>
-                                            <a class="brand_detail" href="/ShowPage/Index" style="display: none;">
-                                                <img src="~/images/1定制行程.png">
-                                            </a>
-                                        </div>
-                                        <span>
-                                            <h2>
-                                                <a>定制行程</a>
-                                            </h2>
-                                            <p>
-                                                定制行程
-                                            </p>
-                                        </span>
-                                    </div>
-                                </li>
-                                <li class="col-md-4 col-xs-12">
-                                    <div class="kuang">
-                                        <div class="img">
-                                            <a class="brand_name" href="/ShowPage/Index" style="display: inline;">
-                                                <img src="~/images/2贴心服务.png">
-                                            </a>
-                                            <a class="brand_detail" href="/ShowPage/Index" style="display: none;">
-                                                <img src="~/images/2贴心服务.png">
-                                            </a>
-                                        </div>
-                                        <span>
-                                            <h2>
-                                                <a>贴心服务</a>
-                                            </h2>
-                                            <p>
-                                                贴心服务
-                                            </p>
-                                        </span>
-                                    </div>
-                                </li>
-                                <li class="col-md-4 col-xs-12">
-                                    <div class="kuang">
-                                        <div class="img">
-                                            <a class="brand_name" href="/ShowPage/Index" style="display: inline;">
-                                                <img src="~/images/3机票酒店.png">
-                                            </a>
-                                            <a class="brand_detail" href="/ShowPage/Index" style="display: none;">
-                                                <img src="~/images/3机票酒店.png">
-                                            </a>
-                                        </div>
-                                        <span>
-                                            <h2>
-                                                <a>机票酒店</a>
-                                            </h2>
-                                            <p>
-                                                机票酒店
-                                            </p>
-                                        </span>
-                                    </div>
-                                </li>
+                <!---->
+            </div>
+        </div>
+    </div>
 
+    <!--轮播图-->
+    <div id="lunbo">
+        <ul id="one">
+            <li><a href=""><img src="~/NewUI/images/banner.jpg"></a></li>
+            <li><a href=""><img src="~/NewUI/images/banner1.jpg"></a></li>
+            <li><a href=""><img src="~/NewUI/images/banner.jpg"></a></li>
+            <li><a href=""><img src="~/NewUI/images/banner1.jpg"></a></li>
+        </ul>
+        <ul id="two">
+            <li class="on">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <!--轮播图左右箭头-->
+        <div class="slider-page">
+            <a href="javascript:void(0)" id="left"><</a>
+            <a href="javascript:void(0)" id="right">></a>
+        </div>
+    </div>
+
+    <!--内容一开始了-->
+    <div class="bend_beij">
+        <!--本地生活-->
+        <div class="bend_dhengh">
+            <div class="neir_biaot">
+                <p>本地生活</p>
+                <p class="yingw">Local life</p>
+            </div>
+            <div class="jiank_meis">
+                <div class="kuang_1">
+                    <a href="#">
+                        <img src="~/NewUI/images/jiank_meis.jpg">
+                        <div class="jiank_meis_wenz">
+                            <p>健康美食</p>
+                            <span>让生活&nbsp;&nbsp;更健康&nbsp;&nbsp;更美味&nbsp;&nbsp;更舒心</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="dianq_qvy">
+                    <div class="shiq">
+                        <h2>全部区域</h2>
+                        <ul>
+                            <li><a href="#">云岩区</a></li>
+                            <li><a href="#">南明区</a></li>
+                            <li><a href="#">白云区</a></li>
+                            <li><a href="#">乌当区</a></li>
+                            <li><a href="#">花溪区</a></li>
+                            <li><a href="#">清镇市</a></li>
+                            <li><a href="#">开阳县</a></li>
+                            <li><a href="#" class="hide">开阳县</a></li>
+                            <li><a href="#" class="hide">开阳县</a></li>
+                            <li id="show">更多 </li>
+                        </ul>
+                    </div>
+                    <div class="ktv_jiub">
+                        <ul>
+                            <li><a href="#">KTV/酒吧</a></li>
+                            <li><a href="#">周边游</a></li>
+                            <li><a href="#">生活服务</a></li>
+                            <li><a href="#">真人CS</a></li>
+                            <li><a href="#">中医养生</a></li>
+                            <li><a href="#">体检/齿科</a></li>
+                            <li><a href="#">棋牌室</a></li>
+                            <li><a href="#">洗浴/汗蒸</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lunb_t">
+                    <div class="picScroll_left_1">
+                        <div class="bd">
+                            <ul class="picList">
+                                <li>
+                                    <div class="pic"><a href="#" target="_blank"><img src="~/NewUI/images/lengy.jpg" /></a></div>
+                                    <div class="title"><a href="#" target="_blank">卡通美食冷饮</a><span>卡通美食冷饮全家福三人分</span><p>￥6.00</p></div>
+                                </li>
+                                <li>
+                                    <div class="pic"><a href="#" target="_blank"><img src="~/NewUI/images/lengy.jpg" /></a></div>
+                                    <div class="title"><a href="#" target="_blank">卡通美食冷饮</a><span>卡通美食冷饮全家福三人分</span><p>￥6.00</p></div>
+                                </li>
+                                <li>
+                                    <div class="pic"><a href="#" target="_blank"><img src="~/NewUI/images/lengy.jpg" /></a></div>
+                                    <div class="title"><a href="#" target="_blank">卡通美食冷饮</a><span>卡通美食冷饮全家福三人分</span><p>￥6.00</p></div>
+                                </li>
                             </ul>
                         </div>
+                        <div class="hd">
+                            <ul></ul>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        jQuery(".picScroll_left_1").slide({ titCell: ".hd ul", mainCell: ".bd ul", autoPage: true, effect: "left", autoPlay: true, vis: 1, trigger: "click" });
+                    </script>
+
+                </div>
+            </div>
+            <div class="toum_">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="~/NewUI/images/jiudi_kez.jpg">
+                            <div class="jiank_meis_wenz_1">
+                                <p>健康美食</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sdfs">
+                        <a href="#">
+                            <img src="~/NewUI/images/xiux_yvl.jpg">
+                            <div class="jiank_meis_wenz_1">
+                                <p>休闲娱乐</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/NewUI/images/liren.jpg">
+                            <div class="jiank_meis_wenz_1">
+                                <p>丽人</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--周边-->
+        <div class="zhoub">
+            <div class="neir_biaot">
+                <p>周边</p>
+                <p class="yingw">periphery</p>
+            </div>
+            <div class="zhoub_neir">
+                <ul>
+                    <li><a href="#"><img src="~/NewUI/images/zoub.jpg"></a></li>
+                    <li><a href="#"><img src="~/NewUI/images/zoub2.jpg"></a></li>
+                    <li><a href="#"><img src="~/NewUI/images/zoub3.jpg"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!--快速通道栏-->
+    <div class="kuanjlan">
+        <ul class="clearfix">
+            <li>
+                <div class="list-li-box">
+                    <a class="list-img" href="#" data-code="index01004-1" target="_blank">
+                        <img src="~/NewUI/images/meinv_1.jpg">
+                        <span class="list-bg"></span>
+                        <div class="list-cont">
+                            <p class="cont-item"><span>羽饰</span></p>
+                            <p class="cont-tile">秋季来点羽毛元素</p>
+                            <p class="cont-info">让你更加美丽迷人</p>
+                        </div>
+                    </a>
+                </div>
+
+            </li>
+            <li>
+                <div class="list-li-box">
+                    <a class="list-img" href="#" data-code="index01004-2" target="_blank">
+                        <img src="~/NewUI/images/meinv_2.jpg">
+                        <span class="list-bg"></span>
+                        <div class="list-cont">
+                            <p class="cont-item"><span>原宿风</span></p>
+                            <p class="cont-tile">个性夸张美衣</p>
+                            <p class="cont-info">潮流原宿风</p>
+                        </div>
+                    </a>
+                </div>
+
+            </li>
+            <li>
+                <div class="list-li-box">
+                    <a class="list-img" href="#" data-code="index01004-3" target="_blank">
+                        <img src="~/NewUI/images/meinv_3.jpg">
+                        <span class="list-bg"></span>
+                        <div class="list-cont">
+                            <p class="cont-item"><span>皮裤</span></p>
+                            <p class="cont-tile">高腰修身皮裤</p>
+                            <p class="cont-info">轻松享受女神感觉</p>
+                        </div>
+                    </a>
+                </div>
+
+            </li>
+            <li>
+                <div class="list-li-box">
+                    <a class="list-img" href="#" data-code="index01004-4" target="_blank">
+                        <img src="~/NewUI/images/meinv_4.jpg">
+                        <span class="list-bg"></span>
+                        <div class="list-cont">
+                            <p class="cont-item"><span>服装</span></p>
+                            <p class="cont-tile">变身女神范儿</p>
+                            <p class="cont-info">几种搭配轻松打造</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <!--层次-->
+    <div class="chengc_jvz">
+        <div class="slideTxtBox">
+            <div class="hd">
+                <h1>
+                    <p>办公家具</p>
+                    <p class="yingw_">Office furniture</p>
+                </h1>
+                <ul><li>精品热卖</li><li>卧室家具</li><li>灯饰照明</li><li>五金工具</li><li>厨房卫浴</li><li>办公文教</li></ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <div class="louc_tup_qieh">
+                        <div class="js-silder ws-slider">
+                            <div class="silder-scroll">
+                                <div class="silder-main">
+                                    <div class="silder-main-img">
+                                        <a href="#"><img src="~/NewUI/images/liuceng_1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="silder-main-img">
+                                        <a href="#"><img src="~/NewUI/images/2.png" alt=""></a>
+                                    </div>
+                                    <div class="silder-main-img">
+                                        <a href="#"><img src="~/NewUI/images/3.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="js-silder-ctrl">
+                                <span class="silder-ctrl-prev"></span>
+                                <span class="silder-ctrl-next"></span>
+                            </div>
+                        </div>
+                        <div class="kuas_daoh">
+                            <a href="#">客厅餐厅</a>
+                            <a href="#">床衣柜</a>
+                            <a href="#">书房儿童</a>
+                            <a href="#">五金工具</a>
+                            <a href="#">沙发实木</a>
+                            <a href="#">床垫</a>
+                            <a href="#">电脑桌</a>
+                            <a href="#">接线板</a>
+                            <a href="#">餐桌餐椅</a>
+                            <a href="#">简易衣柜</a>
+                            <a href="#">书桌</a>
+                            <a href="#">开关插座</a>
+                            <a href="#">酒柜餐边</a>
+                            <a href="#">乳胶床垫</a>
+                            <a href="#">办公桌</a>
+                            <a href="#">USB插座</a>
+                        </div>
+                    </div>
+                    <div class="you_lirb">
+                        <div class="shang_buf">
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_002.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                        <div class="xia_buf">
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_005.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="pangb_daoh">
+                        <h1><a href="#"><img src="~/NewUI/images/de111.jpg"></a></h1>
+                        <div class="kuas_daoh_houm">
+                            <a href="#">客厅餐厅</a>
+                            <a href="#">床衣柜</a>
+                            <a href="#">书房儿童</a>
+                            <a href="#">五金工具</a>
+                            <a href="#">沙发实木</a>
+                            <a href="#">床垫</a>
+                            <a href="#">电脑桌</a>
+                            <a href="#">接线板</a>
+                            <a href="#">餐桌餐椅</a>
+                            <a href="#">简易衣柜</a>
+                            <a href="#">书桌</a>
+                            <a href="#">开关插座</a>
+                            <a href="#">酒柜餐边</a>
+                            <a href="#">乳胶床垫</a>
+                            <a href="#">办公桌</a>
+                            <a href="#">USB插座</a>
+                        </div>
+                    </div>
+                    <div class="you_lirb you_lirb_hou">
+                        <div class="shang_buf">
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_002.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                        <div class="xia_buf">
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_005.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="pangb_daoh">
+                        <h1><a href="#"><img src="~/NewUI/images/de111.jpg"></a></h1>
+                        <div class="kuas_daoh_houm">
+                            <a href="#">客厅餐厅</a>
+                            <a href="#">床衣柜</a>
+                            <a href="#">书房儿童</a>
+                            <a href="#">五金工具</a>
+                            <a href="#">沙发实木</a>
+                            <a href="#">床垫</a>
+                            <a href="#">电脑桌</a>
+                            <a href="#">接线板</a>
+                            <a href="#">餐桌餐椅</a>
+                            <a href="#">简易衣柜</a>
+                            <a href="#">书桌</a>
+                            <a href="#">开关插座</a>
+                            <a href="#">酒柜餐边</a>
+                            <a href="#">乳胶床垫</a>
+                            <a href="#">办公桌</a>
+                            <a href="#">USB插座</a>
+                        </div>
+                    </div>
+                    <div class="you_lirb you_lirb_hou">
+                        <div class="shang_buf">
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_002.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                        <div class="xia_buf">
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_005.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="pangb_daoh">
+                        <h1><a href="#"><img src="~/NewUI/images/de111.jpg"></a></h1>
+                        <div class="kuas_daoh_houm">
+                            <a href="#">客厅餐厅</a>
+                            <a href="#">床衣柜</a>
+                            <a href="#">书房儿童</a>
+                            <a href="#">五金工具</a>
+                            <a href="#">沙发实木</a>
+                            <a href="#">床垫</a>
+                            <a href="#">电脑桌</a>
+                            <a href="#">接线板</a>
+                            <a href="#">餐桌餐椅</a>
+                            <a href="#">简易衣柜</a>
+                            <a href="#">书桌</a>
+                            <a href="#">开关插座</a>
+                            <a href="#">酒柜餐边</a>
+                            <a href="#">乳胶床垫</a>
+                            <a href="#">办公桌</a>
+                            <a href="#">USB插座</a>
+                        </div>
+                    </div>
+                    <div class="you_lirb you_lirb_hou">
+                        <div class="shang_buf">
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_002.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                        <div class="xia_buf">
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_005.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="pangb_daoh">
+                        <h1><a href="#"><img src="~/NewUI/images/de111.jpg"></a></h1>
+                        <div class="kuas_daoh_houm">
+                            <a href="#">客厅餐厅</a>
+                            <a href="#">床衣柜</a>
+                            <a href="#">书房儿童</a>
+                            <a href="#">五金工具</a>
+                            <a href="#">沙发实木</a>
+                            <a href="#">床垫</a>
+                            <a href="#">电脑桌</a>
+                            <a href="#">接线板</a>
+                            <a href="#">餐桌餐椅</a>
+                            <a href="#">简易衣柜</a>
+                            <a href="#">书桌</a>
+                            <a href="#">开关插座</a>
+                            <a href="#">酒柜餐边</a>
+                            <a href="#">乳胶床垫</a>
+                            <a href="#">办公桌</a>
+                            <a href="#">USB插座</a>
+                        </div>
+                    </div>
+                    <div class="you_lirb you_lirb_hou">
+                        <div class="shang_buf">
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_002.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                        <div class="xia_buf">
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_005.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="pangb_daoh">
+                        <h1><a href="#"><img src="~/NewUI/images/de111.jpg"></a></h1>
+                        <div class="kuas_daoh_houm">
+                            <a href="#">客厅餐厅</a>
+                            <a href="#">床衣柜</a>
+                            <a href="#">书房儿童</a>
+                            <a href="#">五金工具</a>
+                            <a href="#">沙发实木</a>
+                            <a href="#">床垫</a>
+                            <a href="#">电脑桌</a>
+                            <a href="#">接线板</a>
+                            <a href="#">餐桌餐椅</a>
+                            <a href="#">简易衣柜</a>
+                            <a href="#">书桌</a>
+                            <a href="#">开关插座</a>
+                            <a href="#">酒柜餐边</a>
+                            <a href="#">乳胶床垫</a>
+                            <a href="#">办公桌</a>
+                            <a href="#">USB插座</a>
+                        </div>
+                    </div>
+                    <div class="you_lirb you_lirb_hou">
+                        <div class="shang_buf">
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_002.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                        <div class="xia_buf">
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_005.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    @*<div class="chengc_jvz">
+        <div class="slideTxtBox2">
+            <div class="hd">
+                <h1>
+                    <p>手机数码</p>
+                    <p class="yingw_">Mobile phone digital</p>
+                </h1>
+                <ul><li>电脑整机</li><li>热门手机</li><li>智能数码</li><li>游戏组装</li><li>硬件存储</li><li>摄影产品</li></ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <div class="louc_tup_qieh">
+                        <div class="js-silder ws-slider">
+                            <div class="silder-scroll">
+                                <div class="silder-main">
+                                    <div class="silder-main-img">
+                                        <a href="#"><img src="~/NewUI/images/liuceng_1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="silder-main-img">
+                                        <a href="#"><img src="~/NewUI/images/2.png" alt=""></a>
+                                    </div>
+                                    <div class="silder-main-img">
+                                        <a href="#"><img src="~/NewUI/images/3.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="js-silder-ctrl">
+                                <span class="silder-ctrl-prev"></span>
+                                <span class="silder-ctrl-next"></span>
+                            </div>
+                        </div>
+                        <div class="kuas_daoh kuas_daoh_2">
+                            <a href="#">客厅餐厅</a>
+                            <a href="#">床衣柜</a>
+                            <a href="#">书房儿童</a>
+                            <a href="#">五金工具</a>
+                            <a href="#">沙发实木</a>
+                            <a href="#">床垫</a>
+                            <a href="#">电脑桌</a>
+                            <a href="#">接线板</a>
+                            <a href="#">餐桌餐椅</a>
+                            <a href="#">简易衣柜</a>
+                            <a href="#">书桌</a>
+                            <a href="#">开关插座</a>
+                            <a href="#">酒柜餐边</a>
+                            <a href="#">乳胶床垫</a>
+                            <a href="#">办公桌</a>
+                            <a href="#">USB插座</a>
+                        </div>
+                    </div>
+                    <div class="you_lirb you_lirb_2">
+                        <div class="shang_buf">
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_002.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                        <div class="xia_buf">
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_005.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="pangb_daoh">
+                        <h1><a href="#"><img src="~/NewUI/images/de111.jpg"></a></h1>
+                        <div class="kuas_daoh_houm kuas_daoh_houm_2">
+                            <a href="#">客厅餐厅</a>
+                            <a href="#">床衣柜</a>
+                            <a href="#">书房儿童</a>
+                            <a href="#">五金工具</a>
+                            <a href="#">沙发实木</a>
+                            <a href="#">床垫</a>
+                            <a href="#">电脑桌</a>
+                            <a href="#">接线板</a>
+                            <a href="#">餐桌餐椅</a>
+                            <a href="#">简易衣柜</a>
+                            <a href="#">书桌</a>
+                            <a href="#">开关插座</a>
+                            <a href="#">酒柜餐边</a>
+                            <a href="#">乳胶床垫</a>
+                            <a href="#">办公桌</a>
+                            <a href="#">USB插座</a>
+                        </div>
+                    </div>
+                    <div class="you_lirb you_lirb_hou you_lirb_2">
+                        <div class="shang_buf">
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_002.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                        <div class="xia_buf">
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_005.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="pangb_daoh">
+                        <h1><a href="#"><img src="~/NewUI/images/de111.jpg"></a></h1>
+                        <div class="kuas_daoh_houm kuas_daoh_houm_2">
+                            <a href="#">客厅餐厅</a>
+                            <a href="#">床衣柜</a>
+                            <a href="#">书房儿童</a>
+                            <a href="#">五金工具</a>
+                            <a href="#">沙发实木</a>
+                            <a href="#">床垫</a>
+                            <a href="#">电脑桌</a>
+                            <a href="#">接线板</a>
+                            <a href="#">餐桌餐椅</a>
+                            <a href="#">简易衣柜</a>
+                            <a href="#">书桌</a>
+                            <a href="#">开关插座</a>
+                            <a href="#">酒柜餐边</a>
+                            <a href="#">乳胶床垫</a>
+                            <a href="#">办公桌</a>
+                            <a href="#">USB插座</a>
+                        </div>
+                    </div>
+                    <div class="you_lirb you_lirb_hou you_lirb_2">
+                        <div class="shang_buf">
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_002.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                        <div class="xia_buf">
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_005.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="pangb_daoh">
+                        <h1><a href="#"><img src="~/NewUI/images/de111.jpg"></a></h1>
+                        <div class="kuas_daoh_houm kuas_daoh_houm_2">
+                            <a href="#">客厅餐厅</a>
+                            <a href="#">床衣柜</a>
+                            <a href="#">书房儿童</a>
+                            <a href="#">五金工具</a>
+                            <a href="#">沙发实木</a>
+                            <a href="#">床垫</a>
+                            <a href="#">电脑桌</a>
+                            <a href="#">接线板</a>
+                            <a href="#">餐桌餐椅</a>
+                            <a href="#">简易衣柜</a>
+                            <a href="#">书桌</a>
+                            <a href="#">开关插座</a>
+                            <a href="#">酒柜餐边</a>
+                            <a href="#">乳胶床垫</a>
+                            <a href="#">办公桌</a>
+                            <a href="#">USB插座</a>
+                        </div>
+                    </div>
+                    <div class="you_lirb you_lirb_hou you_lirb_2">
+                        <div class="shang_buf">
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_002.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                        <div class="xia_buf">
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_005.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="pangb_daoh">
+                        <h1><a href="#"><img src="~/NewUI/images/de111.jpg"></a></h1>
+                        <div class="kuas_daoh_houm kuas_daoh_houm_2">
+                            <a href="#">客厅餐厅</a>
+                            <a href="#">床衣柜</a>
+                            <a href="#">书房儿童</a>
+                            <a href="#">五金工具</a>
+                            <a href="#">沙发实木</a>
+                            <a href="#">床垫</a>
+                            <a href="#">电脑桌</a>
+                            <a href="#">接线板</a>
+                            <a href="#">餐桌餐椅</a>
+                            <a href="#">简易衣柜</a>
+                            <a href="#">书桌</a>
+                            <a href="#">开关插座</a>
+                            <a href="#">酒柜餐边</a>
+                            <a href="#">乳胶床垫</a>
+                            <a href="#">办公桌</a>
+                            <a href="#">USB插座</a>
+                        </div>
+                    </div>
+                    <div class="you_lirb you_lirb_hou you_lirb_2">
+                        <div class="shang_buf">
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_002.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                        <div class="xia_buf">
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_005.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <ul>
+                    <div class="pangb_daoh">
+                        <h1><a href="#"><img src="~/NewUI/images/de111.jpg"></a></h1>
+                        <div class="kuas_daoh_houm kuas_daoh_houm_2">
+                            <a href="#">客厅餐厅</a>
+                            <a href="#">床衣柜</a>
+                            <a href="#">书房儿童</a>
+                            <a href="#">五金工具</a>
+                            <a href="#">沙发实木</a>
+                            <a href="#">床垫</a>
+                            <a href="#">电脑桌</a>
+                            <a href="#">接线板</a>
+                            <a href="#">餐桌餐椅</a>
+                            <a href="#">简易衣柜</a>
+                            <a href="#">书桌</a>
+                            <a href="#">开关插座</a>
+                            <a href="#">酒柜餐边</a>
+                            <a href="#">乳胶床垫</a>
+                            <a href="#">办公桌</a>
+                            <a href="#">USB插座</a>
+                        </div>
+                    </div>
+                    <div class="you_lirb you_lirb_hou you_lirb_2">
+                        <div class="shang_buf">
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_002.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb ">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_001.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                        <div class="xia_buf">
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_003.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_004.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                            <div class="you_shangp_lieb cnm">
+                                <a href="#"><img class="you_tup_k" src="~/NewUI/images/yic_005.jpg"></a>
+                                <a href="#" class="_you_neir_biaot">林氏木业简约现代真皮转角客厅头层牛皮沙发家具2036</a>
+                                <span>¥ 2599 .00</span>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>*@
+
+
+
+    <script type="text/javascript">jQuery(".slideTxtBox").slide();</script>
+    <script type="text/javascript">jQuery(".slideTxtBox2").slide();</script>
+    <script type="text/javascript">jQuery(".slideTxtBox3").slide();</script>
+    <script type="text/javascript">jQuery(".slideTxtBox4").slide();</script>
+
+
+
+    <!--广告图-->
+    <div class="guangg_tu">
+        <a href="#"><img src="~/NewUI/images/guang_tu.jpg"></a>
+    </div>
+
+
+    <!--特色商品/ 热门商品-->
+
+    <div class="tes_shnagp_beij">
+        <div class="tes_shangp">
+            <div class="neir_biaot">
+                <p>特色商品</p>
+                <p class="yingw">featured</p>
+                <a href="#">MORE+</a>
+            </div>
+            <div class="tes_shangp_neir_k">
+                <div class="tes_dat">
+                    <a href="#">
+                        <h1><img class="tes_dat_dongh" src="~/NewUI/images/te_se_shangp_da.jpg"></h1>
+                        <h2>苹果手机iPhone6(32G)全网</h2>
+                        <span>¥ 4999 .00</span>
+                    </a>
+                </div>
+                <div class="tes_xiaot_beij">
+                    <div class="tes_xiaot_shang">
+                        <div class="tes_xiaot_neir">
+                            <a href="#">
+                                <h1><img class="tes_xiaot_dongh" src="~/NewUI/images/tes_shangp_xiao.jpg"></h1>
+                                <h2>海尔(Haier) BCD452WDPF 452</h2>
+                                <span>¥ 506 .00</span>
+                            </a>
+                        </div>
+                        <div class="tes_xiaot_neir tes_xiaot_wubian_kuang">
+                            <a href="#">
+                                <h1><img class="tes_xiaot_dongh" src="~/NewUI/images/tes_shangp_xiao2.jpg"></h1>
+                                <h2>海尔(Haier) BCD452WDPF 452</h2>
+                                <span>¥ 506 .00</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tes_xiaot_shang tes_xiaot_xia">
+                        <div class="tes_xiaot_neir">
+                            <a href="#">
+                                <h1><img class="tes_xiaot_dongh" src="~/NewUI/images/tes_shangp_xiao3.jpg"></h1>
+                                <h2>海尔(Haier) BCD452WDPF 452</h2>
+                                <span>¥ 506 .00</span>
+                            </a>
+                        </div>
+                        <div class="tes_xiaot_neir tes_xiaot_wubian_kuang">
+                            <a href="#">
+                                <h1><img class="tes_xiaot_dongh" src="~/NewUI/images/tes_shangp_xiao4.jpg"></h1>
+                                <h2>海尔(Haier) BCD452WDPF 452</h2>
+                                <span>¥ 506 .00</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="fh5co-project">
-            <div class="container">
-                <div class="row animate-box">
-                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                        <h2>签证专区·<span style="font-size: 25px;"> Tourism</span></h2>
-                        <p>签证。没有繁琐的计划，没有沉重的负担，只有最纯粹的态度。</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-                        <a href="https://traveldetail.fliggy.com/item.htm?spm=a1z10.1-b.w5003-13078719944.4.1a7f70a1koSF8J&id=37123094069&rn=ae034e9fe82b132b76332f170dbd3c7d&abbucket=6&scene=taobao_shop" target="_blank">
-                            <img src="~/images/签证1.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-                        <a href="https://traveldetail.fliggy.com/item.htm?spm=a1z10.1-b.w5003-13078719944.1.1a7f70a1koSF8J&id=37100432083&rn=ae034e9fe82b132b76332f170dbd3c7d&abbucket=6&scene=taobao_shop" target="_blank">
-                            <img src="~/images/签证2.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-                        <a href="https://traveldetail.fliggy.com/item.htm?spm=a1z10.5-b.w4011-12576750825.84.35d835293vqpsJ&id=37191850299&rn=a33708cf2497a4e5271e962fcf158290&abbucket=8" target="_blank">
-                            <img src="~/images/签证3.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                        </a>
-                    </div>
-                </div>
+
+        <div class="rem_shangp">
+            <div class="neir_biaot">
+                <p>热门商品</p>
+                <p class="yingw">Hot commodity</p>
+                <a href="#">MORE+</a>
             </div>
-        </div>
-        <div id="fh5co-testimonial" style="background-image:url(~/images/banner5.jpg);">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row animate-box col-md-12 zi">
-                    <div class="col-md-7 col-md-offset-2  fh5co-heading tou ">
-                        <h2>我们的服务/ <span style="font-size: 25px;">Our service</span> </h2>
-                        <p style="color: #fff; font-size: 14px;">
-                            旅行不是一次出行，也不只是一个假期。旅行是一个过程，一次发现。是一个自我发现的过程。真正的旅行让我们直面自我。 旅行不仅让我们看到世界，更让我们看到自己在其中的位置。
-                        </p>
+            <div class="rem_shangp_beij_k">
+                <!---->
+                <div class="picScroll_left">
+                    <div class="hd">
+                        <ul></ul>
                     </div>
-
-                    <div class="row animate-box col-md-7">
-                        <ul>
-                            <li class="col-md-7"> 高效快捷的提供商系统应用，聚集了2000+家各地的供应商</li>
-                            <li class="col-md-7">资源丰富，超过200万条旅游路线供你选择</li>
-                            <li class="col-md-7">
-                                八大核心保障， 选我们更放心
+                    <div class="bd">
+                        <ul class="picList">
+                            <li>
+                                <div class="pic"><a href="#" target="_blank"><img src="~/NewUI/images/rem_shangp.jpg" /></a></div>
+                                <div class="title"><a href="#" target="_blank">佳能(Canon)EOS80D单反套机</a><span>¥ 506 .00</span></div>
                             </li>
-                            <li class="col-md-7">
-                                我们与旅游战略品牌联盟，合作了很多很多战略伙伴
+                            <li>
+                                <div class="pic"><a href="#" target="_blank"><img src="~/NewUI/images/rem_shangp1.jpg" /></a></div>
+                                <div class="title"><a href="#" target="_blank">佳能(Canon)EOS80D单反套机</a><span>¥ 7940 .00</span></div>
                             </li>
-
+                            <li>
+                                <div class="pic"><a href="#" target="_blank"><img src="~/NewUI/images/rem_shangp.jpg" /></a></div>
+                                <div class="title"><a href="#" target="_blank">佳能(Canon)EOS80D单反套机</a><span>¥ 506 .00</span></div>
+                            </li>
+                            <li>
+                                <div class="pic"><a href="#" target="_blank"><img src="~/NewUI/images/rem_shangp1.jpg" /></a></div>
+                                <div class="title"><a href="#" target="_blank">佳能(Canon)EOS80D单反套机</a><span>¥ 7940 .00</span></div>
+                            </li>
+                            <li>
+                                <div class="pic"><a href="#" target="_blank"><img src="~/NewUI/images/rem_shangp1.jpg" /></a></div>
+                                <div class="title"><a href="#" target="_blank">佳能(Canon)EOS80D单反套机</a><span>¥ 506 .00</span></div>
+                            </li>
+                            <li>
+                                <div class="pic"><a href="#" target="_blank"><img src="~/NewUI/images/rem_shangp1.jpg" /></a></div>
+                                <div class="title"><a href="#" target="_blank">佳能(Canon)EOS80D单反套机</a><span>¥ 7940 .00</span></div>
+                            </li>
                         </ul>
-
-                    </div>
-                    <div class="col-md-5 tupian animate-box">
-                        <img src="~/images/我们的服务.jpg" />
                     </div>
                 </div>
-
+                <!---->
             </div>
         </div>
-        <div id="fh5co-blog" class="fh5co-bg-section" style="background-image: url(~/images/44.png);">
-            <div class="container">
-                <section>
-                    <div class="lightModuleOuterContent lightModuleOuterContent317">
-                        <div class="fk-editor simpleText   ">
-                            <div style="text-align: center;">
-                                <span style="color: rgb(208, 201, 201); background-color: transparent;">
-                                    <span style="font-size: 110px;"><font face="Arial">02</font></span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lightModuleOuterContent lightModuleOuterContent318" style="position: relative; top: -118px;">
-                        <div class="fk-editor simpleText   ">
-                            <div style="text-align: center;">
-                                <span style="font-size: 30px; background-color: transparent;">
-                                    <font style="color: rgb(47, 47, 47);" color="#2f2f2f"><b>让旅游者快乐愉快的旅行</b></font>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lightModuleOuterContent lightModuleOuterContent319" style="position: relative; top: -50px;">
-                        <div class="fk-editor simpleText  ">
-                            <span style="font-size: 15px;">
-                                <font color="#7d7d7d">
-                                    <span style="line-height: 29px;">
-                                        <font style="color: rgb(125, 125, 125);" color="#7d7d7d">
-                                            <div style="text-align: center;">旅行不是一次出行，也不只是一个假期。旅行是一个过程，一次发现。是一个自我发现的过程。真正的旅行让我们直面自我。</div>
-                                            <div style="text-align: center;">旅行不仅让我们看到世界，更让我们看到自己在其中的位置。</div>
-                                        </font>
-                                    </span>
-                                </font>
-                            </span>
-                        </div>
-                    </div>
-                </section>
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-                        <a href="https://traveldetail.fliggy.com/item.htm?spm=a1z10.1-b.w5003-13078719944.2.1a7f70a1koSF8J&id=37124046162&rn=ae034e9fe82b132b76332f170dbd3c7d&abbucket=6&scene=taobao_shop" target="_blank">
-                            <img src="~/images/签证4.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                            <span>&nbsp;</span>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-                        <a href="https://traveldetail.fliggy.com/item.htm?spm=a1z10.1-b.w5003-13078719944.3.1a7f70a1koSF8J&id=37117409608&rn=ae034e9fe82b132b76332f170dbd3c7d&abbucket=6&scene=taobao_shop" target="_blank">
-                            <img src="~/images/签证5.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                            <span>&nbsp;</span>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-                        <a href="https://traveldetail.fliggy.com/item.htm?spm=a1z10.1-b.w5003-13078719944.11.1a7f70a1koSF8J&id=37153288895&rn=ae034e9fe82b132b76332f170dbd3c7d&abbucket=6&scene=taobao_shop" target="_blank">
-                            <img src="~/images/签证6.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                            <span>&nbsp;</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-                        <a href="https://traveldetail.fliggy.com/item.htm?spm=a1z10.1-b.w5003-13078719944.5.1a7f70a1koSF8J&id=37118035990&rn=ae034e9fe82b132b76332f170dbd3c7d&abbucket=6&scene=taobao_shop" target="_blank">
-                            <img src="~/images/签证7.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-                        <a href="https://traveldetail.fliggy.com/item.htm?spm=a1z10.5-b.w4011-12576750825.87.67ab352955pWNh&id=540668932736&rn=5d6c129d4a57035e886e23ff31d3f08e&abbucket=8" target="_blank">
-                            <img src="~/images/签证8.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-                        <a href="https://traveldetail.fliggy.com/item.htm?spm=a1z10.1-b.w5003-13078719944.6.1a7f70a1koSF8J&id=37139509639&rn=ae034e9fe82b132b76332f170dbd3c7d&abbucket=6&scene=taobao_shop" target="_blank">
-                            <img src="~/images/签证9.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div id="fh5co-started">
-            <div class="container">
-
-                <div class="row animate-box ding">
-                    <div class="col-md-2 col-xs-4 col-sm-2 col-md-offset-2 fh5co-heading tu" style="text-align: center;">
-                        <img src="~/images/LOGO.png" />
-                    </div>
-                    <div class="col-md-7 col-xs-8 col-sm-7 col-md-offset-2  fh5co-heading tu">
-                        <h3>
-                            签证项目：旅游、商务、探亲、访友、家庭出行
-                        </h3>
-                        <p>
-                            拥有19年欧洲签证行业经验，值得成为您的旅程贴士
-                        </p>
-                    </div>
-                    <div class="col-md-3 col-xs-12 col-sm-3 col-md-offset-2 tu">
-                        <form class="form-inline">
-                            <div class="col-md-10 col-md-offset-3 col-sm-10 tu">
-                                <a href="/Contact/Index" class="btn btn-default btn-block ">联系我们</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="row animate-box"></div>
-            </div>
-        </div>
-        <footer class="footer_wrapper" id="contact">
-            <section class="lianxi">
-                <div class="container">
-                    <div class="b-nav wow fadeInUp" data-wow-delay=".1s">
-                        <a href="/Home/Index">首页</a>
-                        <a href="/About/index">关于我们</a>
-                        <a href="/Contact/Index">联系我们</a>
-                        <a href="/VisaAssessment/Index">签证评估</a>
-                        <a href="/VisaProgress/Index">签证进度</a>
-                        <a href="/LocalFreeLine/Index">当地自由行</a>
-                    </div>
-                    <p class="copy">©2017 All Rights Reserved Version 3.0 星空旅行</p>
-                    <p class="copy"><a href="http://www.miitbeian.gov.cn" target="_blank" style="color:#1c84c6;">沪ICP备18008280号-2</a></p>
-                </div>
-            </section>
-        </footer>
-        <div class="gototop js-top">
-            <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-        </div>
-
     </div>
-        <!-- jQuery -->
-        <script type="text/javascript" src="~/js/jquery.min.js"></script>
-        <!-- jQuery Easing -->
-        <script src="~/js/jquery.easing.1.3.js"></script>
-        <!-- Bootstrap -->
-        <script src="~/js/bootstrap.min.js"></script>
-        <!-- Waypoints -->
-        <script src="~/js/jquery.waypoints.min.js"></script>
-        <!-- Main -->
-        <script src="~/js/main.js"></script>
 
-        <script type="text/javascript" src="~/js/jquery.hwslider.min.js"></script>
-        <script>
-            /*banner*/
-            $(function () {
-                $("#hwslider").hwSlider({
-                    height: 190,
-                    autoPlay: true,
-                    arrShow: true,
-                    dotShow: true,
-                    touch: true
-                });
-                $("#hwslider1").hwSlider({
-                    height: 5,
-                    autoPlay: true,
-                    arrShow: true,
-                    dotShow: true,
-                    touch: true
-                });
-            });
+    <script type="text/javascript">
+        jQuery(".picScroll_left").slide({ titCell: ".hd ul", mainCell: ".bd ul", autoPage: true, effect: "left", autoPlay: true, vis: 2, trigger: "click" });
+    </script>
 
-        </script>
-
+    <!--底部-->
+    <div class="dib_beij">
+        <div class="dib_jvz_beij">
+            <div class="shangp_baoz" style="display:none;">
+                <p>本地购物&nbsp;&nbsp;看得见的商品</p>
+                <p class="beng1">正品行货&nbsp;&nbsp;购物无忧</p>
+                <p class="beng2">低价实惠&nbsp;&nbsp;帮你省钱</p>
+                <p class="beng3">本地直发&nbsp;&nbsp;专业配送</p>
+            </div>
+            <div class="zhongj_youx" style="display:none;">
+                <div class="lieb_daoh">
+                    <h4>物流配送</h4>
+                    <ul>
+                        <li><a href="#">配送查询</a></li>
+                    </ul>
+                </div>
+                <div class="lieb_daoh">
+                    <h4>支付与账户</h4>
+                    <ul>
+                        <li><a href="#">货到付款</a></li>
+                    </ul>
+                </div>
+                <div class="lieb_daoh">
+                    <h4>购物帮助</h4>
+                    <ul>
+                        <li><a href="#">购物保障</a></li>
+                    </ul>
+                </div>
+                <div class="lieb_daoh">
+                    <h4>售后服务</h4>
+                    <ul>
+                        <li><a href="#">退换货服务</a></li>
+                    </ul>
+                </div>
+                <div class="lieb_daoh">
+                    <div class="kef_dianh">
+                        <p>客服电话</p><span>400-6677-937</span>
+                    </div>
+                    <div class="kef_dianh kef_dianh_youx">
+                        <p>意见收集邮箱</p><p>Ask@wangid.com</p>
+                    </div>
+                </div>
+                <div class="lieb_daoh lieb_daoh_you">
+                    <div class="erw_ma_beij">
+                        <div class="erw_m">
+                            <h1><img src="~/NewUI/images/mb_wangid.png"></h1>
+                            <span>扫码下载通城客户端</span>
+                        </div>
+                        <div class="erw_m">
+                            <h1><img src="~/NewUI/images/mb_wangid.png"></h1>
+                            <span>扫码下载通城客户端</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="beia_hao">
+                <p>©2017 All Rights Reserved Version 3.0 星空旅行</p>
+                <p class="gonga_bei"><a style="color: rgb(28, 132, 198);" href="http://www.miitbeian.gov.cn" target="_blank">沪ICP备18008280号-2</a></p>
+                <div class="renz_">
+                    <span></span>
+                    <span class="span1"></span>
+                    <span class="span2"></span>
+                    <span class="span3"></span>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
+
+
+
+
 
 </body>
-
 </html>

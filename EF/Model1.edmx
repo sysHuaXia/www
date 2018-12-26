@@ -13,8 +13,92 @@
           <Property Name="AreaName" Type="varchar" MaxLength="20" />
           <Property Name="Sorting" Type="int" />
         </EntityType>
-        <!--生成过程中发现错误:
-警告 6002: 表/视图“dhgl2013.dbo.T_SysSupplierConfig”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="T_AreaSendSign">
+          <Key>
+            <PropertyRef Name="SId" />
+          </Key>
+          <Property Name="SId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryId" Type="int" />
+          <Property Name="CountryName" Type="varchar" MaxLength="20" />
+          <Property Name="AId" Type="int" />
+          <Property Name="AreaName" Type="varchar" MaxLength="20" />
+          <Property Name="SAddress" Type="varchar" MaxLength="200" />
+          <Property Name="JJAddress" Type="varchar" MaxLength="200" />
+          <Property Name="TLong" Type="varchar" MaxLength="200" />
+          <Property Name="CreateUserName" Type="varchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_SysLog">
+          <Key>
+            <PropertyRef Name="LogID" />
+          </Key>
+          <Property Name="LogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LogType" Type="int" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="LogInfo" Type="text" />
+          <Property Name="EnterTime" Type="datetime" />
+          <Property Name="LeaveTime" Type="datetime" />
+          <Property Name="Minute" Type="int" />
+        </EntityType>
+        <EntityType Name="Tmall_Country">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tmall_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="CountryName" Type="nvarchar" MaxLength="100" />
+          <Property Name="VisaType" Type="nvarchar" MaxLength="4" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="WeFingerprintToSend" Type="bit" />
+          <Property Name="WeToSend" Type="bit" />
+          <Property Name="CountrySorting" Type="int" />
+          <Property Name="EnableDelivery" Type="bit" />
+          <Property Name="ProgressType" Type="nvarchar" MaxLength="10" />
+          <Property Name="SectorID" Type="int" />
+          <Property Name="EnableDeliveryLockOf" Type="bit" />
+        </EntityType>
+        <EntityType Name="Tmall_CountryPackage">
+          <Key>
+            <PropertyRef Name="CPId" />
+          </Key>
+          <Property Name="CPId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryId" Type="int" />
+          <Property Name="CountryName" Type="varchar" MaxLength="50" />
+          <Property Name="PackageSorting" Type="int" />
+          <Property Name="PackageId" Type="int" Nullable="false" />
+          <Property Name="PackageName" Type="varchar" MaxLength="50" />
+          <Property Name="TmallPackageName" Type="varchar" MaxLength="120" />
+          <Property Name="BaseShare" Type="int" />
+          <Property Name="ImgTag" Type="int" />
+          <Property Name="IsEnable" Type="bit" />
+          <Property Name="EffectivePackage" Type="int" />
+          <Property Name="PackageType" Type="int" />
+          <Property Name="IsUrgent" Type="bit" />
+          <Property Name="IsKeFuMetering" Type="bit" />
+          <Property Name="IsVisaFee" Type="bit" />
+          <Property Name="IsFingerprintsOff" Type="bit" />
+          <Property Name="CreateUserName" Type="varchar" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="IsFuVisaFee" Type="bit" />
+          <Property Name="IsElectronicVisa" Type="bit" />
+          <Property Name="ProgressType" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Tmall_Package">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Huaxia_ID" Type="int" />
+          <Property Name="PackageName" Type="nvarchar" MaxLength="100" />
+          <Property Name="T_PackageId" Type="bigint" />
+          <Property Name="T_PackageName" Type="nvarchar" MaxLength="100" />
+          <Property Name="T_Type" Type="nvarchar" MaxLength="10" />
+          <Property Name="ImgTag" Type="int" />
+          <Property Name="IsEnable" Type="bit" />
+          <Property Name="Division" Type="int" />
+          <Property Name="PackageType" Type="tinyint" />
+        </EntityType>
         <EntityType Name="v_infolist">
           <Key>
             <PropertyRef Name="oid" />
@@ -31,7 +115,7 @@
           <Property Name="sku_properties_name" Type="nvarchar" MaxLength="100" />
           <Property Name="orderid" Type="nvarchar" MaxLength="100" />
           <Property Name="v_name" Type="nvarchar" MaxLength="120" />
-          <Property Name="name_note" Type="nvarchar" MaxLength="500" />
+          <Property Name="name_note" Type="nvarchar" MaxLength="800" />
           <Property Name="v_starttime" Type="datetime" />
           <Property Name="v_tel" Type="nvarchar" MaxLength="50" />
           <Property Name="loginID" Type="nvarchar" MaxLength="50" />
@@ -157,16 +241,29 @@
           <Property Name="fp_PackageMail" Type="nvarchar" MaxLength="50" />
           <Property Name="fp_CourierNumber" Type="nvarchar" MaxLength="100" />
         </EntityType>
-        <Function Name="P_UserLogTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="UserID" Type="int" Mode="In" />
-        </Function>
-        <Function Name="V_AdminSignValidate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="UserAccount" Type="varchar" Mode="In" />
-          <Parameter Name="Pwd" Type="varchar" Mode="In" />
-        </Function>
+        <EntityType Name="v_OrderType">
+          <Key>
+            <PropertyRef Name="VId" />
+          </Key>
+          <Property Name="VId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VType" Type="varchar" MaxLength="10" />
+          <Property Name="ParentId" Type="int" />
+          <Property Name="CrowdType" Type="varchar" MaxLength="20" />
+          <Property Name="CityId" Type="int" />
+          <Property Name="CityName" Type="varchar" MaxLength="10" />
+          <Property Name="CountryId" Type="int" />
+          <Property Name="CountryName" Type="varchar" MaxLength="10" />
+          <Property Name="SortingId" Type="int" />
+        </EntityType>
         <EntityContainer Name="dhgl2013ModelStoreContainer">
           <EntitySet Name="T_Area" EntityType="Self.T_Area" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_AreaSendSign" EntityType="Self.T_AreaSendSign" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_SysLog" EntityType="Self.T_SysLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tmall_Country" EntityType="Self.Tmall_Country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tmall_CountryPackage" EntityType="Self.Tmall_CountryPackage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tmall_Package" EntityType="Self.Tmall_Package" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="v_infolist" EntityType="Self.v_infolist" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="v_OrderType" EntityType="Self.v_OrderType" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -204,6 +301,12 @@
           </FunctionImport>
           <EntitySet Name="T_Area" EntityType="dhgl2013Model.T_Area" />
           <EntitySet Name="v_infolist" EntityType="dhgl2013Model.v_infolist" />
+          <EntitySet Name="T_AreaSendSign" EntityType="dhgl2013Model.T_AreaSendSign" />
+          <EntitySet Name="T_SysLog" EntityType="dhgl2013Model.T_SysLog" />
+          <EntitySet Name="Tmall_Country" EntityType="dhgl2013Model.Tmall_Country" />
+          <EntitySet Name="Tmall_CountryPackage" EntityType="dhgl2013Model.Tmall_CountryPackage" />
+          <EntitySet Name="Tmall_Package" EntityType="dhgl2013Model.Tmall_Package" />
+          <EntitySet Name="v_OrderType" EntityType="dhgl2013Model.v_OrderType" />
         </EntityContainer>
         <ComplexType Name="P_Order_Total_Result">
           <Property Type="Int32" Name="oid" Nullable="false" />
@@ -621,7 +724,7 @@
           <Property Name="sku_properties_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="orderid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="v_name" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
-          <Property Name="name_note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="name_note" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
           <Property Name="v_starttime" Type="DateTime" Precision="3" />
           <Property Name="v_tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="loginID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -747,49 +850,112 @@
           <Property Name="Init_VisaNumber" Type="Int32" />
           <Property Name="VisaType" Type="Int32" />
         </EntityType>
+        <EntityType Name="T_AreaSendSign">
+          <Key>
+            <PropertyRef Name="SId" />
+          </Key>
+          <Property Name="SId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryId" Type="Int32" />
+          <Property Name="CountryName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="AId" Type="Int32" />
+          <Property Name="AreaName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="JJAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TLong" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CreateUserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="T_SysLog">
+          <Key>
+            <PropertyRef Name="LogID" />
+          </Key>
+          <Property Name="LogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LogType" Type="Int32" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LogInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="EnterTime" Type="DateTime" Precision="3" />
+          <Property Name="LeaveTime" Type="DateTime" Precision="3" />
+          <Property Name="Minute" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Tmall_Country">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tmall_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CountryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="VisaType" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="WeFingerprintToSend" Type="Boolean" />
+          <Property Name="WeToSend" Type="Boolean" />
+          <Property Name="CountrySorting" Type="Int32" />
+          <Property Name="EnableDelivery" Type="Boolean" />
+          <Property Name="ProgressType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="SectorID" Type="Int32" />
+          <Property Name="EnableDeliveryLockOf" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Tmall_CountryPackage">
+          <Key>
+            <PropertyRef Name="CPId" />
+          </Key>
+          <Property Name="CPId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryId" Type="Int32" />
+          <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PackageSorting" Type="Int32" />
+          <Property Name="PackageId" Type="Int32" Nullable="false" />
+          <Property Name="PackageName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TmallPackageName" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="BaseShare" Type="Int32" />
+          <Property Name="ImgTag" Type="Int32" />
+          <Property Name="IsEnable" Type="Boolean" />
+          <Property Name="EffectivePackage" Type="Int32" />
+          <Property Name="PackageType" Type="Int32" />
+          <Property Name="IsUrgent" Type="Boolean" />
+          <Property Name="IsKeFuMetering" Type="Boolean" />
+          <Property Name="IsVisaFee" Type="Boolean" />
+          <Property Name="IsFingerprintsOff" Type="Boolean" />
+          <Property Name="CreateUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="IsFuVisaFee" Type="Boolean" />
+          <Property Name="IsElectronicVisa" Type="Boolean" />
+          <Property Name="ProgressType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tmall_Package">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Huaxia_ID" Type="Int32" />
+          <Property Name="PackageName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="T_PackageId" Type="Int64" />
+          <Property Name="T_PackageName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="T_Type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ImgTag" Type="Int32" />
+          <Property Name="IsEnable" Type="Boolean" />
+          <Property Name="Division" Type="Int32" />
+          <Property Name="PackageType" Type="Byte" />
+        </EntityType>
+        <EntityType Name="v_OrderType">
+          <Key>
+            <PropertyRef Name="VId" />
+          </Key>
+          <Property Name="VId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ParentId" Type="Int32" />
+          <Property Name="CrowdType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CityId" Type="Int32" />
+          <Property Name="CityName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CountryId" Type="Int32" />
+          <Property Name="CountryName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SortingId" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="dhgl2013ModelStoreContainer" CdmEntityContainer="dhgl2013Entities">
-          <FunctionImportMapping FunctionImportName="P_UserLogTime" FunctionName="dhgl2013Model.Store.P_UserLogTime" />
-          <FunctionImportMapping FunctionImportName="V_AdminSignValidate" FunctionName="dhgl2013Model.Store.V_AdminSignValidate">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="dhgl2013Model.V_AdminSignValidate_Result">
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
-                <ScalarProperty Name="CodeID" ColumnName="CodeID" />
-                <ScalarProperty Name="SysType" ColumnName="SysType" />
-                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
-                <ScalarProperty Name="UserDpt" ColumnName="UserDpt" />
-                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
-                <ScalarProperty Name="UserTel" ColumnName="UserTel" />
-                <ScalarProperty Name="UserMobile" ColumnName="UserMobile" />
-                <ScalarProperty Name="UserFax" ColumnName="UserFax" />
-                <ScalarProperty Name="UserQQName" ColumnName="UserQQName" />
-                <ScalarProperty Name="UserQQ" ColumnName="UserQQ" />
-                <ScalarProperty Name="UserMail" ColumnName="UserMail" />
-                <ScalarProperty Name="UserAccount" ColumnName="UserAccount" />
-                <ScalarProperty Name="UserPwd" ColumnName="UserPwd" />
-                <ScalarProperty Name="UserBrief" ColumnName="UserBrief" />
-                <ScalarProperty Name="IsReceiveSms" ColumnName="IsReceiveSms" />
-                <ScalarProperty Name="IsOncallSms" ColumnName="IsOncallSms" />
-                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
-                <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
-                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
-                <ScalarProperty Name="ActiveTime" ColumnName="ActiveTime" />
-                <ScalarProperty Name="LoginIP" ColumnName="LoginIP" />
-                <ScalarProperty Name="UserSex" ColumnName="UserSex" />
-                <ScalarProperty Name="UserPosition" ColumnName="UserPosition" />
-                <ScalarProperty Name="UserPositionCall" ColumnName="UserPositionCall" />
-                <ScalarProperty Name="UserBirthday" ColumnName="UserBirthday" />
-                <ScalarProperty Name="UserLogo" ColumnName="UserLogo" />
-                <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
-                <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <EntitySetMapping Name="T_Area">
             <EntityTypeMapping TypeName="dhgl2013Model.T_Area">
               <MappingFragment StoreEntitySet="T_Area">
@@ -939,6 +1105,112 @@
                 <ScalarProperty Name="finger" ColumnName="finger" />
                 <ScalarProperty Name="IsOnline" ColumnName="IsOnline" />
                 <ScalarProperty Name="oid" ColumnName="oid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_AreaSendSign">
+            <EntityTypeMapping TypeName="dhgl2013Model.T_AreaSendSign">
+              <MappingFragment StoreEntitySet="T_AreaSendSign">
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+                <ScalarProperty Name="TLong" ColumnName="TLong" />
+                <ScalarProperty Name="JJAddress" ColumnName="JJAddress" />
+                <ScalarProperty Name="SAddress" ColumnName="SAddress" />
+                <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+                <ScalarProperty Name="AId" ColumnName="AId" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="SId" ColumnName="SId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_SysLog">
+            <EntityTypeMapping TypeName="dhgl2013Model.T_SysLog">
+              <MappingFragment StoreEntitySet="T_SysLog">
+                <ScalarProperty Name="Minute" ColumnName="Minute" />
+                <ScalarProperty Name="LeaveTime" ColumnName="LeaveTime" />
+                <ScalarProperty Name="EnterTime" ColumnName="EnterTime" />
+                <ScalarProperty Name="LogInfo" ColumnName="LogInfo" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="LogType" ColumnName="LogType" />
+                <ScalarProperty Name="LogID" ColumnName="LogID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tmall_Country">
+            <EntityTypeMapping TypeName="dhgl2013Model.Tmall_Country">
+              <MappingFragment StoreEntitySet="Tmall_Country">
+                <ScalarProperty Name="EnableDeliveryLockOf" ColumnName="EnableDeliveryLockOf" />
+                <ScalarProperty Name="SectorID" ColumnName="SectorID" />
+                <ScalarProperty Name="ProgressType" ColumnName="ProgressType" />
+                <ScalarProperty Name="EnableDelivery" ColumnName="EnableDelivery" />
+                <ScalarProperty Name="CountrySorting" ColumnName="CountrySorting" />
+                <ScalarProperty Name="WeToSend" ColumnName="WeToSend" />
+                <ScalarProperty Name="WeFingerprintToSend" ColumnName="WeFingerprintToSend" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="VisaType" ColumnName="VisaType" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+                <ScalarProperty Name="Tmall_ID" ColumnName="Tmall_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tmall_CountryPackage">
+            <EntityTypeMapping TypeName="dhgl2013Model.Tmall_CountryPackage">
+              <MappingFragment StoreEntitySet="Tmall_CountryPackage">
+                <ScalarProperty Name="ProgressType" ColumnName="ProgressType" />
+                <ScalarProperty Name="IsElectronicVisa" ColumnName="IsElectronicVisa" />
+                <ScalarProperty Name="IsFuVisaFee" ColumnName="IsFuVisaFee" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+                <ScalarProperty Name="IsFingerprintsOff" ColumnName="IsFingerprintsOff" />
+                <ScalarProperty Name="IsVisaFee" ColumnName="IsVisaFee" />
+                <ScalarProperty Name="IsKeFuMetering" ColumnName="IsKeFuMetering" />
+                <ScalarProperty Name="IsUrgent" ColumnName="IsUrgent" />
+                <ScalarProperty Name="PackageType" ColumnName="PackageType" />
+                <ScalarProperty Name="EffectivePackage" ColumnName="EffectivePackage" />
+                <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+                <ScalarProperty Name="ImgTag" ColumnName="ImgTag" />
+                <ScalarProperty Name="BaseShare" ColumnName="BaseShare" />
+                <ScalarProperty Name="TmallPackageName" ColumnName="TmallPackageName" />
+                <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+                <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+                <ScalarProperty Name="PackageSorting" ColumnName="PackageSorting" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="CPId" ColumnName="CPId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tmall_Package">
+            <EntityTypeMapping TypeName="dhgl2013Model.Tmall_Package">
+              <MappingFragment StoreEntitySet="Tmall_Package">
+                <ScalarProperty Name="PackageType" ColumnName="PackageType" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+                <ScalarProperty Name="ImgTag" ColumnName="ImgTag" />
+                <ScalarProperty Name="T_Type" ColumnName="T_Type" />
+                <ScalarProperty Name="T_PackageName" ColumnName="T_PackageName" />
+                <ScalarProperty Name="T_PackageId" ColumnName="T_PackageId" />
+                <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+                <ScalarProperty Name="Huaxia_ID" ColumnName="Huaxia_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_OrderType">
+            <EntityTypeMapping TypeName="dhgl2013Model.v_OrderType">
+              <MappingFragment StoreEntitySet="v_OrderType">
+                <ScalarProperty Name="SortingId" ColumnName="SortingId" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="CrowdType" ColumnName="CrowdType" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="VType" ColumnName="VType" />
+                <ScalarProperty Name="VId" ColumnName="VId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -29,6 +29,12 @@ namespace EF
     
         public virtual DbSet<T_Area> T_Area { get; set; }
         public virtual DbSet<v_infolist> v_infolist { get; set; }
+        public virtual DbSet<T_AreaSendSign> T_AreaSendSign { get; set; }
+        public virtual DbSet<T_SysLog> T_SysLog { get; set; }
+        public virtual DbSet<Tmall_Country> Tmall_Country { get; set; }
+        public virtual DbSet<Tmall_CountryPackage> Tmall_CountryPackage { get; set; }
+        public virtual DbSet<Tmall_Package> Tmall_Package { get; set; }
+        public virtual DbSet<v_OrderType> v_OrderType { get; set; }
     
         public virtual int P_Article_Delete(Nullable<int> articleID, ObjectParameter returnValue)
         {
